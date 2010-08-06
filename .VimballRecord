@@ -1,0 +1,1 @@
+changes-0.11.vba: call delete('/home/jeroen/.vim/plugin/changesPlugin.vim')|call delete('/home/jeroen/.vim/autoload/changes.vim')|call delete('/home/jeroen/.vim/doc/ChangesPlugin.txt')
