@@ -1,0 +1,8 @@
+if has("gui_running")
+  " GUI is running or is about to start.
+  " Maximize gvim window.
+  set lines=55 columns=170
+endif
+
+" projects (with projtags.vim)
+autocmd BufNewFile,BufRead ~/Projecten/Bofas/bofas/* set tags=~/Projecten/Bofas/bofas/tags
