@@ -4,5 +4,5 @@ if has("gui_running")
   set lines=55 columns=170
 endif
 
-" projects (with projtags.vim)
+" projects
 autocmd BufNewFile,BufRead ~/Projecten/Bofas/bofas/* setlocal tags=~/Projecten/Bofas/bofas/tags
