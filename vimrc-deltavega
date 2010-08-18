@@ -5,4 +5,4 @@ if has("gui_running")
 endif
 
 " projects (with projtags.vim)
-autocmd BufNewFile,BufRead ~/Projecten/Bofas/bofas/* set tags=~/Projecten/Bofas/bofas/tags
+autocmd BufNewFile,BufRead ~/Projecten/Bofas/bofas/* setlocal tags=~/Projecten/Bofas/bofas/tags
