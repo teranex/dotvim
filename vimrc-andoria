@@ -1,2 +1,4 @@
-set cursorline
+if has("gui_running")
+    set cursorline
+endif
 set gfn=Monospace\ 9
