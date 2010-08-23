@@ -6,3 +6,5 @@ endif
 
 " projects
 autocmd BufNewFile,BufRead ~/Projecten/Bofas/bofas/* setlocal tags=~/Projecten/Bofas/bofas/tags
+
+map <leader>t :call fuf#givenfile#launch('', 0, '>', split(glob('~/Projecten/Bofas/bofas/**/*.php'), "\n"))<CR>
