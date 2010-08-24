@@ -4,7 +4,11 @@ if has("gui_running")
   set lines=55 columns=170
 endif
 
-" projects
+" projects ===============================================================
+" BOFAS -------------------------------
 autocmd BufNewFile,BufRead ~/Projecten/Bofas/bofas/* setlocal tags=~/Projecten/Bofas/bofas/tags
 
 map <leader>t :call fuf#givenfile#launch('', 0, '>', split(glob('~/Projecten/Bofas/bofas/**/*.php'), "\n"))<CR>
+
+autocmd BufRead ~/Projecten/Bofas/bofas/* setlocal makeprg=ant\ -find\ build.xml
+"autocmd BufRead ~/Projecten/Bofas/bofas/* setlocal efm=%#[exec]%m
