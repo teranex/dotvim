@@ -2,3 +2,9 @@ snippet th
 	$this->${1}
 snippet $
 	$${1:obj}->${2:msg}
+snippet try
+	try {
+		${3}
+	} catch (${1:Exception} $ex) {
+		${2}
+	}
