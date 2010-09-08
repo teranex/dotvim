@@ -6,6 +6,8 @@ endif
 
 " projects ===============================================================
 " BOFAS -------------------------------
+autocmd BufRead ~/Projecten/Bofas/bofas/* set wildignore=/home/jeroen/Projecten/Bofas/bofas/library/Zend/**
+
 autocmd BufNewFile,BufRead ~/Projecten/Bofas/bofas/* setlocal tags=~/Projecten/Bofas/bofas/tags
 
 map <leader>t :call fuf#givenfile#launch('', 0, '>', split(glob('~/Projecten/Bofas/bofas/**/*.php'), "\n"))<CR>
