@@ -14,5 +14,5 @@ autocmd BufRead ~/Projecten/Bofas/bofas/* setlocal makeprg=ant\ -find\ build.xml
 "autocmd BufRead ~/Projecten/Bofas/bofas/* setlocal efm=%#[exec]%m
 
 "grep current cursor word in project. to provide 'find usages'
-autocmd BufRead ~/Projecten/Bofas/bofas/* map <F12> :execute "noautocmd vimgrep /" . expand("<cword>") . "/j /home/jeroen/Projecten/Bofas/bofas/**/*.php" <Bar> cw<CR>
+autocmd BufRead ~/Projecten/Bofas/bofas/* map <F12> :execute "noautocmd vimgrep /" . expand("<cword>") . "/j ~/Projecten/Bofas/bofas/application/**/*.php ~/Projecten/Bofas/bofas/tests/**/*.php ~/Projecten/Bofas/bofas/library/Bofas/**/*.php" <Bar> cw<CR>
 
