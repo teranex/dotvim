@@ -7,10 +7,10 @@ endif
 " projects ===============================================================
 " BOFAS -------------------------------
 autocmd BufRead ~/Projecten/Bofas/bofas/* set wildignore=/home/jeroen/Projecten/Bofas/bofas/library/Zend/**
+autocmd BufNewFile,BufRead ~/Projecten/Bofas/bofas/* setlocal tags=~/Projecten/Bofas/bofas/tags noautochdir
+autocmd BufEnter ~/Projecten/Bofas/bofas/* cd ~/Projecten/Bofas/bofas/
 
-autocmd BufNewFile,BufRead ~/Projecten/Bofas/bofas/* setlocal tags=~/Projecten/Bofas/bofas/tags
-
-map <leader>t :call fuf#givenfile#launch('', 0, '>', split(glob('~/Projecten/Bofas/bofas/**/*.php'), "\n"))<CR>
+"map <leader>t :call fuf#givenfile#launch('', 0, '>', split(glob('~/Projecten/Bofas/bofas/**/*.php'), "\n"))<CR>
 
 autocmd BufRead ~/Projecten/Bofas/bofas/* setlocal makeprg=ant\ -find\ build.xml
 "autocmd BufRead ~/Projecten/Bofas/bofas/* setlocal efm=%#[exec]%m
