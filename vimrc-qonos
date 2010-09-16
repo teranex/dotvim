@@ -1,3 +1,3 @@
 " fix vimwiki -------------------------
 
-autocmd BufRead,BufNewFile ~/vimwiki/* map <Leader>o :VimwikiFollowLink<CR>
+autocmd BufRead,BufNewFile ~/vimwiki/* execute ":map <Leader>o :VimwikiFollowLink<CR>"
