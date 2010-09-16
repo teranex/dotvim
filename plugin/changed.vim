@@ -33,6 +33,9 @@
 "   Edit a buffer and wait seconds or execute :Changed.
 "   Then signs appear on changed lines.
 "
+if !has("signs")
+    finish
+endif
 
 command!  Changed       :call <SID>Changed_execute()
 command!  ChangedClear  :call <SID>Changed_clear()
