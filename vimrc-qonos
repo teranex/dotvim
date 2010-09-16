@@ -1,0 +1,3 @@
+" fix vimwiki -------------------------
+
+autocmd BufRead,BufNewFile ~/vimwiki/* map <CR> :VimwikiFollowLink<CR>
