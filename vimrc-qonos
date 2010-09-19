@@ -1,3 +1,9 @@
-" fix vimwiki -------------------------
+" options -----------------------------
+set shell=/bin/bash
 
-autocmd BufRead,BufNewFile ~/vimwiki/* execute ":map <Leader>o :VimwikiFollowLink<CR>"
+" fix vimwiki -------------------------
+map ,o :VimwikiFollowLink<CR>
+map ,f <C-]>
+
+" define mapping for quickbuffer ------
+let g:qb_hotkey = ",b"
