@@ -5,5 +5,3 @@ set shell=/bin/bash
 map ,o :VimwikiFollowLink<CR>
 map ,f <C-]>
 
-" define mapping for quickbuffer ------
-let g:qb_hotkey = ",b"
