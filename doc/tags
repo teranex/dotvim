@@ -13,6 +13,10 @@
 'NERDUsePlaceHolders'	NERD_commenter.txt	/*'NERDUsePlaceHolders'*
 'loaded_nerd_comments'	NERD_commenter.txt	/*'loaded_nerd_comments'*
 'snippets'	snipMate.txt	/*'snippets'*
+'syntastic_auto_loc_list'	syntastic.txt	/*'syntastic_auto_loc_list'*
+'syntastic_disabled_filetypes'	syntastic.txt	/*'syntastic_disabled_filetypes'*
+'syntastic_enable_signs'	syntastic.txt	/*'syntastic_enable_signs'*
+'syntastic_quiet_warnings'	syntastic.txt	/*'syntastic_quiet_warnings'*
 .snippet	snipMate.txt	/*.snippet*
 .snippets	snipMate.txt	/*.snippets*
 :AcpDisable	acp.txt	/*:AcpDisable*
@@ -21,6 +25,7 @@
 :AcpUnlock	acp.txt	/*:AcpUnlock*
 :CommandT	command-t.txt	/*:CommandT*
 :CommandTFlush	command-t.txt	/*:CommandTFlush*
+:Errors	syntastic.txt	/*:Errors*
 :FufAddBookmark	fuf.txt	/*:FufAddBookmark*
 :FufAddBookmarkAsSelectedText	fuf.txt	/*:FufAddBookmarkAsSelectedText*
 :FufBookmark	fuf.txt	/*:FufBookmark*
@@ -43,6 +48,8 @@
 :FufTag	fuf.txt	/*:FufTag*
 :FufTagWithCursorWord	fuf.txt	/*:FufTagWithCursorWord*
 :FufTaggedFile	fuf.txt	/*:FufTaggedFile*
+:SyntasticDisable	syntastic.txt	/*:SyntasticDisable*
+:SyntasticEnable	syntastic.txt	/*:SyntasticEnable*
 :VWS	vimwiki.txt	/*:VWS*
 :Vimwiki2HTML	vimwiki.txt	/*:Vimwiki2HTML*
 :VimwikiAll2HTML	vimwiki.txt	/*:VimwikiAll2HTML*
@@ -106,6 +113,7 @@ NERDCommenter	NERD_commenter.txt	/*NERDCommenter*
 NERDCommenterContents	NERD_commenter.txt	/*NERDCommenterContents*
 NERD_commenter.txt	NERD_commenter.txt	/*NERD_commenter.txt*
 ResetSnippets()	snipMate.txt	/*ResetSnippets()*
+SyntasticMake()	syntastic.txt	/*SyntasticMake()*
 VimwikiWeblinkHandler	vimwiki.txt	/*VimwikiWeblinkHandler*
 abc	fuf.txt	/*abc*
 acp	acp.txt	/*acp*
@@ -364,6 +372,21 @@ snipMate.txt	snipMate.txt	/*snipMate.txt*
 snippet	snipMate.txt	/*snippet*
 snippet-syntax	snipMate.txt	/*snippet-syntax*
 snippets	snipMate.txt	/*snippets*
+syntastic	syntastic.txt	/*syntastic*
+syntastic-about	syntastic.txt	/*syntastic-about*
+syntastic-changelog	syntastic.txt	/*syntastic-changelog*
+syntastic-commands	syntastic.txt	/*syntastic-commands*
+syntastic-contents	syntastic.txt	/*syntastic-contents*
+syntastic-credits	syntastic.txt	/*syntastic-credits*
+syntastic-error-signs	syntastic.txt	/*syntastic-error-signs*
+syntastic-error-window	syntastic.txt	/*syntastic-error-window*
+syntastic-functionality	syntastic.txt	/*syntastic-functionality*
+syntastic-intro	syntastic.txt	/*syntastic-intro*
+syntastic-license	syntastic.txt	/*syntastic-license*
+syntastic-options	syntastic.txt	/*syntastic-options*
+syntastic-statusline-flag	syntastic.txt	/*syntastic-statusline-flag*
+syntastic-syntax-checkers	syntastic.txt	/*syntastic-syntax-checkers*
+syntastic.txt	syntastic.txt	/*syntastic.txt*
 vimwiki	vimwiki.txt	/*vimwiki*
 vimwiki-calendar	vimwiki.txt	/*vimwiki-calendar*
 vimwiki-changelog	vimwiki.txt	/*vimwiki-changelog*
