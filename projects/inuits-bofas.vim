@@ -9,4 +9,5 @@ setlocal makeprg=ant\ -find\ build.xml
 
 "grep current cursor word in project. to provide 'find usages'
 map <F12> :execute "noautocmd vimgrep /" . expand("<cword>") . "/j ~/Projecten/Bofas/bofas/application/**/*.php ~/Projecten/Bofas/bofas/tests/**/*.php ~/Projecten/Bofas/bofas/library/Bofas/**/*.php" <Bar> cw<CR>
+map <S-F12> :execute "noautocmd vimgrep /" . input('Search Project For: ') . "/j ~/Projecten/Bofas/bofas/application/**/*.php ~/Projecten/Bofas/bofas/tests/**/*.php ~/Projecten/Bofas/bofas/library/Bofas/**/*.php" <Bar> cw<CR>
 
