@@ -8,3 +8,5 @@ endif
 " BOFAS -------------------------------
 autocmd BufRead,BufNewFile ~/Projecten/Bofas/bofas/* source ~/.vim/projects/inuits-bofas.vim
 
+" Politie Brasschaat ------------------
+autocmd BufRead,BufNewFile ~/Projecten/PolBras/intranet/* source ~/.vim/projects/inuits-polbra-intranet.vim
