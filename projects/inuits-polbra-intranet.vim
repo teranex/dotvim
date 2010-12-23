@@ -1,5 +1,5 @@
 " Politie Brasschaat  -------------------------------
-cd ~/Projecten/PolBras/intranet/
+"cd ~/Projecten/PolBras/intranet/
 
-setlocal noautochdir
+"setlocal noautochdir
 autocmd FileType php setlocal shiftwidth=2 tabstop=2 softtabstop=2
