@@ -62,7 +62,6 @@ endfunction
 function! s:ChangeToRootDirectory()
   let root_dir = s:FindRootDirectory()
   if !empty(root_dir) 
-    echo "changing dir:".root_dir
     setlocal noautochdir
     exe ":cd " . root_dir
   endif
