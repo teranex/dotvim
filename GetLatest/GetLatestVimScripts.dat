@@ -1,7 +1,7 @@
 ScriptID SourceID Filename
 --------------------------
 " defaults added by plugin
-"294  1 Align.vim
+294 10110 :AutoInstall: Align.vim
 "302  2 AnsiEsc.vim
 "122  3 astronaut.vim
 "104  4 blockhl.vim 
