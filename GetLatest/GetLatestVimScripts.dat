@@ -1,5 +1,6 @@
 ScriptID SourceID Filename
 --------------------------
+" defaults added by plugin
 "294  1 Align.vim
 "302  2 AnsiEsc.vim
 "122  3 astronaut.vim
@@ -8,7 +9,6 @@ ScriptID SourceID Filename
 " 40  6 DrawIt.tar.gz
 "451  7 EasyAccents.vim
 "195  8 engspchk.vim
-642  9 GetLatestVimScripts.vim
 "489 10 Manpageview.vim
 "551 11 Mines.vim
 "514 12 mrswin.vim
@@ -16,3 +16,11 @@ ScriptID SourceID Filename
 "628 14 SeeTab.vim
 "508 15 ZoomWin.vim
 "877 16 gvcolor.vim
+642 8136 GetLatestVimScripts.vim
+
+" auto added by plugin
+1879 11894 :AutoInstall: AutoComplPop
+1984 13961 :AutoInstall: FuzzyFinder
+642 8136 :AutoInstall: getscript.vim
+2226 13756 :AutoInstall: vimwiki
+3252 13948 :AutoInstall: L9
