@@ -24,3 +24,17 @@ ScriptID SourceID Filename
 642 8136 :AutoInstall: getscript.vim
 2226 13756 :AutoInstall: vimwiki
 3252 13948 :AutoInstall: L9
+
+" manually added
+1641 8679 :AutoInstall: AfterColors.vim
+1343 12473 :AutoInstall: autotag.vim
+1147 14658 :AutoInstall: bufkill.vim
+2496 9835 :AutoInstall: changed.vim
+3025 14383 :AutoInstall: command-t.vim
+1218 14455 :AutoInstall: NERD_commenter.vim
+1910 9909 :AutoInstall: qbuf.vim
+1928 7262 :AutoInstall: Rename.vim
+2010 8836 :AutoInstall: sessionman.vim
+2142 8240 :AutoInstall: showmarks.vim
+2540 11006 :AutoInstall: snipMate.vim
+2736 14139 :AutoInstall: syntastic.vim
