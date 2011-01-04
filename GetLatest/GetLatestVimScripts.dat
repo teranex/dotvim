@@ -28,7 +28,7 @@ ScriptID SourceID Filename
 " manually added
 1641 8679 :AutoInstall: AfterColors.vim
 1343 12473 :AutoInstall: autotag.vim
-1147 14658 :AutoInstall: bufkill.vim
+1147 14660 :AutoInstall: bufkill.vim
 2496 9835 :AutoInstall: changed.vim
 3025 14383 :AutoInstall: command-t.vim
 1218 14455 :AutoInstall: NERD_commenter.vim
@@ -38,3 +38,4 @@ ScriptID SourceID Filename
 2142 8240 :AutoInstall: showmarks.vim
 2540 11006 :AutoInstall: snipMate.vim
 2736 14139 :AutoInstall: syntastic.vim
+1066 7618 :AutoInstall: cecutil.vim
