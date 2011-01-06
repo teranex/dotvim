@@ -30,7 +30,7 @@ ScriptID SourceID Filename
 1343 12473 :AutoInstall: autotag.vim
 1147 14660 :AutoInstall: bufkill.vim
 2496 9835 :AutoInstall: changed.vim
-3025 14383 :AutoInstall: command-t.vim
+3025 14688 :AutoInstall: command-t.vim
 1218 14455 :AutoInstall: NERD_commenter.vim
 1910 9909 :AutoInstall: qbuf.vim
 1928 7262 :AutoInstall: Rename.vim
@@ -39,3 +39,4 @@ ScriptID SourceID Filename
 2540 11006 :AutoInstall: snipMate.vim
 2736 14139 :AutoInstall: syntastic.vim
 1066 7618 :AutoInstall: cecutil.vim
+1234 13554 :AutoInstall: YankRing.vim
