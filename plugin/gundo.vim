@@ -17,7 +17,7 @@ endif
 let loaded_gundo = 1"}}}
 
 if v:version < '703'"{{{
-    echo  "Gundo requires Vim 7.3+"
+    "echo  "Gundo requires Vim 7.3+"
     finish
 endif"}}}
 
