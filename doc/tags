@@ -19,6 +19,8 @@
 'syntastic_quiet_warnings'	syntastic.txt	/*'syntastic_quiet_warnings'*
 .snippet	snipMate.txt	/*.snippet*
 .snippets	snipMate.txt	/*.snippets*
+:Ack	ack.txt	/*:Ack*
+:AckAdd	ack.txt	/*:AckAdd*
 :AcpDisable	acp.txt	/*:AcpDisable*
 :AcpEnable	acp.txt	/*:AcpEnable*
 :AcpLock	acp.txt	/*:AcpLock*
@@ -62,6 +64,8 @@
 :FufTaggedFile	fuf.txt	/*:FufTaggedFile*
 :GLVS	pi_getscript.txt	/*:GLVS*
 :GetLatestVimScripts_dat	pi_getscript.txt	/*:GetLatestVimScripts_dat*
+:LAck	ack.txt	/*:LAck*
+:LAckAdd	ack.txt	/*:LAckAdd*
 :MatchDebug	matchit.txt	/*:MatchDebug*
 :SyntasticDisable	syntastic.txt	/*:SyntasticDisable*
 :SyntasticEnable	syntastic.txt	/*:SyntasticEnable*
@@ -170,6 +174,9 @@ YRYankRange-example	yankring.txt	/*YRYankRange-example*
 [%	matchit.txt	/*[%*
 ]%	matchit.txt	/*]%*
 abc	fuf.txt	/*abc*
+ack	ack.txt	/*ack*
+ack-author	ack.txt	/*ack-author*
+ack.txt	ack.txt	/*ack.txt*
 acp	acp.txt	/*acp*
 acp-about	acp.txt	/*acp-about*
 acp-author	acp.txt	/*acp-author*
