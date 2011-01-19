@@ -733,6 +733,12 @@ vimwiki_i_<S-CR>	vimwiki.txt	/*vimwiki_i_<S-CR>*
 vimwiki_i_<Tab>	vimwiki.txt	/*vimwiki_i_<Tab>*
 viwmiki-global-options	vimwiki.txt	/*viwmiki-global-options*
 viwmiki-local-options	vimwiki.txt	/*viwmiki-local-options*
+xml-plugin-callbacks	xml-plugin.txt	/*xml-plugin-callbacks*
+xml-plugin-filetypes	xml-plugin.txt	/*xml-plugin-filetypes*
+xml-plugin-html	xml-plugin.txt	/*xml-plugin-html*
+xml-plugin-mappings	xml-plugin.txt	/*xml-plugin-mappings*
+xml-plugin-settings	xml-plugin.txt	/*xml-plugin-settings*
+xml-plugin.txt	xml-plugin.txt	/*xml-plugin.txt*
 yankring	yankring.txt	/*yankring*
 yankring-commands	yankring.txt	/*yankring-commands*
 yankring-configure	yankring.txt	/*yankring-configure*
