@@ -1,1 +1,0 @@
-/home/jeroen/scripts/vim/ftplugin/xml.vim
