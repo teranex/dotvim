@@ -45,3 +45,4 @@ ScriptID SourceID Filename
 2572 10433 :AutoInstall: ack.vim
 301 13387 :AutoInstall: xmledit.vim
 1590 12570 :AutoInstall: unimpaired.vim
+3037 12790 :AutoInstall: vim-indent-object
