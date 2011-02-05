@@ -17,6 +17,9 @@
 'syntastic_disabled_filetypes'	syntastic.txt	/*'syntastic_disabled_filetypes'*
 'syntastic_enable_signs'	syntastic.txt	/*'syntastic_enable_signs'*
 'syntastic_quiet_warnings'	syntastic.txt	/*'syntastic_quiet_warnings'*
+,b	camelcasemotion.txt	/*,b*
+,e	camelcasemotion.txt	/*,e*
+,w	camelcasemotion.txt	/*,w*
 .snippet	snipMate.txt	/*.snippet*
 .snippets	snipMate.txt	/*.snippets*
 :Ack	ack.txt	/*:Ack*
@@ -207,6 +210,7 @@ YRYankRange-example	yankring.txt	/*YRYankRange-example*
 ]xx	unimpaired.txt	/*]xx*
 ]y	unimpaired.txt	/*]y*
 ]yy	unimpaired.txt	/*]yy*
+aI	indent-object.txt	/*aI*
 abc	fuf.txt	/*abc*
 ack	ack.txt	/*ack*
 ack-author	ack.txt	/*ack-author*
@@ -225,6 +229,7 @@ acp-snipMate	acp.txt	/*acp-snipMate*
 acp-thanks	acp.txt	/*acp-thanks*
 acp-usage	acp.txt	/*acp-usage*
 acp.txt	acp.txt	/*acp.txt*
+ai	indent-object.txt	/*ai*
 any-item-example	yankring.txt	/*any-item-example*
 autocomplpop	acp.txt	/*autocomplpop*
 b:match_col	matchit.txt	/*b:match_col*
@@ -240,6 +245,16 @@ b:match_tail	matchit.txt	/*b:match_tail*
 b:match_wholeBR	matchit.txt	/*b:match_wholeBR*
 b:match_word	matchit.txt	/*b:match_word*
 b:match_words	matchit.txt	/*b:match_words*
+camelcasemotion-configuration	camelcasemotion.txt	/*camelcasemotion-configuration*
+camelcasemotion-dependencies	camelcasemotion.txt	/*camelcasemotion-dependencies*
+camelcasemotion-description	camelcasemotion.txt	/*camelcasemotion-description*
+camelcasemotion-history	camelcasemotion.txt	/*camelcasemotion-history*
+camelcasemotion-installation	camelcasemotion.txt	/*camelcasemotion-installation*
+camelcasemotion-known-problems	camelcasemotion.txt	/*camelcasemotion-known-problems*
+camelcasemotion-todo	camelcasemotion.txt	/*camelcasemotion-todo*
+camelcasemotion-usage	camelcasemotion.txt	/*camelcasemotion-usage*
+camelcasemotion.txt	camelcasemotion.txt	/*camelcasemotion.txt*
+camelcasemotion.vim	camelcasemotion.txt	/*camelcasemotion.vim*
 cecutil	cecutil.txt	/*cecutil*
 cecutil-cmd	cecutil.txt	/*cecutil-cmd*
 cecutil-contents	cecutil.txt	/*cecutil-contents*
@@ -525,7 +540,14 @@ gundo_preview_bottom	gundo.txt	/*gundo_preview_bottom*
 gundo_preview_height	gundo.txt	/*gundo_preview_height*
 gundo_right	gundo.txt	/*gundo_right*
 gundo_width	gundo.txt	/*gundo_width*
+iI	indent-object.txt	/*iI*
 i_CTRL-R_<Tab>	snipMate.txt	/*i_CTRL-R_<Tab>*
+idntobj-about	indent-object.txt	/*idntobj-about*
+idntobj-blanklines	indent-object.txt	/*idntobj-blanklines*
+idntobj-introduction	indent-object.txt	/*idntobj-introduction*
+idntobj-objects	indent-object.txt	/*idntobj-objects*
+ii	indent-object.txt	/*ii*
+indent-object.txt	indent-object.txt	/*indent-object.txt*
 l9	l9.txt	/*l9*
 l9-about	l9.txt	/*l9-about*
 l9-author	l9.txt	/*l9-author*
