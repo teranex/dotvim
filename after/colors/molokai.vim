@@ -9,4 +9,5 @@ if &t_Co > 255
    hi Error           ctermfg=16 ctermbg=red
    hi ErrorMsg        ctermfg=red ctermbg=16    cterm=bold
    hi NonText         ctermfg=59
+   hi SpellBad        ctermbg=53
 endif
