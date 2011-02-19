@@ -1,52 +1,31 @@
 ScriptID SourceID Filename
 --------------------------
-" defaults added by plugin
-"294 10110 :AutoInstall: Align.vim
-"302  2 AnsiEsc.vim
-"122  3 astronaut.vim
-"104  4 blockhl.vim 
-"120  5 decho.vim
-" 40  6 DrawIt.tar.gz
-"451  7 EasyAccents.vim
-"195  8 engspchk.vim
-"489 10 Manpageview.vim
-"551 11 Mines.vim
-"514 12 mrswin.vim
-"670 13 visincr.vim
-"628 14 SeeTab.vim
-"508 15 ZoomWin.vim
-"877 16 gvcolor.vim
-642 8136 GetLatestVimScripts.vim
-
-" auto added by plugin
-1879 11894 :AutoInstall: AutoComplPop
-1984 13961 :AutoInstall: FuzzyFinder
-642 8136 :AutoInstall: getscript.vim
-2226 13756 :AutoInstall: vimwiki
-3252 13948 :AutoInstall: L9
-
-" manually added
-1641 8679 :AutoInstall: AfterColors.vim
-1343 12473 :AutoInstall: autotag.vim
-1147 14660 :AutoInstall: bufkill.vim
-2496 9835 :AutoInstall: changed.vim
-3025 14688 :AutoInstall: command-t.vim
-1218 14455 :AutoInstall: NERD_commenter.vim
-1910 9909 :AutoInstall: qbuf.vim
-1928 7262 :AutoInstall: Rename.vim
-2010 8836 :AutoInstall: sessionman.vim
-2142 8240 :AutoInstall: showmarks.vim
-2540 11006 :AutoInstall: snipMate.vim
-2736 14139 :AutoInstall: syntastic.vim
-####1066 7618 :AutoInstall: cecutil.vim
-1234 13554 :AutoInstall: YankRing.vim
+1879 11894  AutoComplPop
+1984 13961  FuzzyFinder
+642 8136  getscript.vim
+2226 13756  vimwiki
+3252 13948  L9
+1641 8679  AfterColors.vim
+1343 12473  autotag.vim
+1147 14660  bufkill.vim
+" 2496 9835  changed.vim
+3025 14688  command-t.vim
+1218 14455  NERD_commenter.vim
+1910 9909  qbuf.vim
+1928 7262  Rename.vim
+2010 8836  sessionman.vim
+2142 8240  showmarks.vim
+2540 11006 snipMate.vim
+2736 14139  syntastic.vim
+" 1066 7618  cecutil.vim
+1234 13554  YankRing.vim
 3304 14226 gundo.vim
-39 8196 :AutoInstall: matchit.vim
-2572 10433 :AutoInstall: ack.vim
-####301 13387 :AutoInstall: xmledit.vim
-####1590 12570 :AutoInstall: unimpaired.vim
-3037 12790 :AutoInstall: vim-indent-object
-1905 10530 :AutoInstall: camelcasemotion
-####311 7645 :AutoInstall: grep.vim
-1697 12566 :AutoInstall: surround.vim
-1929 7285 :AutoInstall: debugger
+39 8196  matchit.vim
+2572 10433  ack.vim
+" 301 13387  xmledit.vim
+" 1590 12570  unimpaired.vim
+3037 12790  vim-indent-object
+1905 10530  camelcasemotion
+" 311 7645  grep.vim
+1697 12566  surround.vim
+1929 7285  debugger
