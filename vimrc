@@ -230,7 +230,7 @@ au Syntax * syn match CamelCase "\<\%(\u\l*\)\{2,}\>\|\<\%(\l\l*\)\%(\u\l*\)\{1,
 " check for the existence of a host-specific vimrc file and source it
 " by example: if your host is named 'andoria', this will source
 " ~/scripts/vim/vimrc-andoria if it exists
-let hostfile=$HOME.'/scripts/vim/vimrc-'.hostname()
+let hostfile=$HOME.'/.vim/vimrc-'.hostname()
 if filereadable(hostfile)
     exe 'source ' . hostfile
 endif
