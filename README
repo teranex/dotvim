@@ -33,5 +33,10 @@ sourced. So if the hostname of your machine is 'andoria', my vimrc checks for
 ~/.vim/vimrc-andoria. If this file exists it sources it only on that machine,
 to allow you to set host-specific settings.
 
+=== non-gui vim ===
+for some reason, this configuration can be very slow when opening specific
+files, such as PHP-code. This is only when running vim on the terminal. In
+GVim opening the same files is very fast. I do not know yet why this is :/
+
 
 vim: filetype=vimwiki tw=78 wrap
