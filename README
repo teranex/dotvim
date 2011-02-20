@@ -1,0 +1,37 @@
+== This is my git repository for my vim configuration. ==
+To use it:
+
+    1. clone the repository to ~/.vim
+    2. symlink your .vimrc to ~/.vim/vimrc with the following command:
+        ln -s ~/.vim/vimrc .vimrc
+
+
+== Some notes and warnings about my configuration ==
+
+I have commented most settings in the vimrc file
+
+=== Swap- and backupfiles ===
+My vimrc disables all the swapfiles and backupfiles. Personally I think they
+are just annoying and vim (almost :)) never crashes so I simply disable them.
+If you don't trust this, you should remove the corresponding lines from the
+vimrc. You have been warned :)!
+
+=== Pathogen ===
+I use Pathogen to manage my plugins. (https://github.com/tpope/vim-pathogen).
+By default vim plugins are stored all together in the .vim folder. When you
+start to use more than just a few plugins this quickly becomes a mess and it
+is nearly impossible to disable or remove a single plugin. With Pathogen you
+create one folder for every plugin in .vim/bundle. This keeps your .vim-folder
+nice and clean.
+
+=== host-specific vimrc ===
+As I use my vim configuration on multiple machines, I like to be able to make
+small configuration changes for every machine, while still keeping everything
+together and synced (with git). That's why, at the end of my vimrc, a check is
+performed to see if a 'host-specific' vimrc can be found. If so, it is also
+sourced. So if the hostname of your machine is 'andoria', my vimrc checks for
+~/.vim/vimrc-andoria. If this file exists it sources it only on that machine,
+to allow you to set host-specific settings.
+
+
+vim: filetype=vimwiki tw=78 wrap
