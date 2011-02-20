@@ -5,10 +5,3 @@ if has("gui_running")
 endif
 
 autocmd FileType php setlocal shiftwidth=2 tabstop=2 softtabstop=2
-
-"projects ===============================================================
-"BOFAS -------------------------------
-"autocmd BufRead,BufNewFile ~/Projecten/Bofas/bofas/* source ~/.vim/projects/inuits-bofas.vim
-
-"Politie Brasschaat ------------------
-"autocmd BufRead,BufNewFile ~/Projecten/PolBras/intranet/* source ~/.vim/projects/inuits-polbra-intranet.vim
