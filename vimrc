@@ -1,9 +1,5 @@
 " first enable pathogen
-if v:version < '703' " Gundo requires at least vim 7.3
-    let g:pathogen_disabled = ['gundo']
-endif
-"filetype off 
-call pathogen#runtime_append_all_bundles()
+source ~/.vim/pathogen_init
 
 " first some settings copied from Debian config
 set nocompatible                        " no compatibility with old-skool vi
