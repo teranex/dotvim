@@ -220,7 +220,7 @@ command! ToggleWritingMode call ToggleWritingModeFunc()
 " Spelling configuration =================================================
 " the following line makes vim ignore camelCase and CamelCase word so they
 " are not highlighted as spelling mistakes
-au Syntax * syn match CamelCase "\<\%(\u\l*\)\{2,}\>\|\<\%(\l\l*\)\%(\u\l*\)\{1,}\>" transparent containedin=.*Comment.*,.*String.*,VimwikiLink contains=@NoSpell contained
+au Syntax * syn match CamelCase "\(\<\|_\)\%(\u\l*\)\{2,}\(\>\|_\)\|\<\%(\l\l*\)\%(\u\l*\)\{1,}\>" transparent containedin=.*Comment.*,.*String.*,VimwikiLink contains=@NoSpell contained
 
 " Host specific config ===================================================
 " check for the existence of a host-specific vimrc file and source it
