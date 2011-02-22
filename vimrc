@@ -124,6 +124,9 @@ let g:syntastic_auto_loc_list=1
 " settings for debugger.vim ==============================================
 let g:debuggerMaxDepth = 3
 
+" settings for yankring ==================================================
+let g:yankring_min_element_length = 2
+
 " settings for indent guidelines =========================================
 if !has("gui_running") " define our own colors when running in terminal
     let g:indent_guides_auto_colors = 0
