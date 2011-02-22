@@ -123,6 +123,9 @@ if filereadable($VIMRUNTIME."/plugin/debugger.py")
   pyfile $VIMRUNTIME/plugin/debugger.py
 elseif filereadable($HOME."/.vim/plugin/debugger.py")
   pyfile $HOME/.vim/plugin/debugger.py
+" patch from https://github.com/ornicar/vim-php-debugger/commit/709b32b6f2340637599a3d936199453fd03988b2
+elseif filereadable($HOME."/.vim/bundle/debugger/plugin/debugger.py")
+  pyfile $HOME/.vim/bundle/debugger/plugin/debugger.py
 else
   call confirm('debugger.vim: Unable to find debugger.py. Place it in either your home vim directory or in the Vim runtime directory.', 'OK')
 endif
