@@ -67,6 +67,7 @@ endif
 set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
 
 " enable filetype detection and indentation specific for filetype
+syntax on
 filetype on
 filetype indent on
 filetype plugin indent on

@@ -8,7 +8,7 @@ if !has('gui_running')
 endif
 
 " Gundo requires at least vim 7.3
-if v:version < '703' 
+if v:version < '703' || !has('python')
     call add(g:pathogen_disabled, 'gundo')
 endif
 
