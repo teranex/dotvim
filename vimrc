@@ -140,7 +140,13 @@ endif
 "http://stackoverflow.com/questions/95072/what-are-your-favorite-vim-tricks/96492#96492
 cmap w!! %!sudo tee > /dev/null %
 
-map <leader>l :FufBuffer<CR>
+" key mappings for fuzzy finder
+map <leader>l   :FufBuffer<CR>
+map <leader>ff  :FufFileWithCurrentBufferDir<CR>
+map <leader>fF  :FufFile<CR>
+map <leader>ft  :FufBufferTag<CR>
+map <leader>fT  :FufTag<CR>
+map <leader>fO  :FufTaggedFile<CR>
 
 " Quickly insert semicolon at the end of the string
 " http://stackoverflow.com/questions/164847/what-is-in-your-vimrc/1636961#1636961
