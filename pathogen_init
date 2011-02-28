@@ -12,6 +12,12 @@ if v:version < '703' || !has('python')
     call add(g:pathogen_disabled, 'gundo')
 endif
 
+if v:version < '701'
+    call add(g:pathogen_disabled, 'autocomplpop')
+    call add(g:pathogen_disabled, 'fuzzyfinder')
+    call add(g:pathogen_disabled, 'l9')
+endif
+
 "filetype off 
 call pathogen#runtime_append_all_bundles()
 
