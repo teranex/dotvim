@@ -95,6 +95,24 @@ set statusline+=%c,                            " cursor column
 set statusline+=%l/%L                          " cursor line/total lines
 set statusline+=\ %P                           " percent through file
 
+" helper function for titlestring. Returns the name of the current
+" session, if any is loaded, or an empty string when no session is loaded
+function! TitleCurrentSession()
+    if exists('g:LAST_SESSION')
+        return g:LAST_SESSION.': '
+    else
+        return ''
+    endif
+endfunction
+
+" title string
+set titlestring=                               " completely reset titlestring
+set titlestring+=%{TitleCurrentSession()}      " get the name of the current session, if available
+set titlestring+=%t                            " the current filename
+set titlestring+=%(\ %M%)                      " modified flag
+set titlestring+=%(\ (%{expand(\"%:~:h\")})%)  " relative path to current file
+set titlestring+=%(\ %a%)                      " extra attributes
+
 
 if has("gui_running")
   " GUI is running or is about to start.
