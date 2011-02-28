@@ -206,6 +206,8 @@ au InsertLeave * hi StatusLine term=reverse guifg=#444444 ctermfg=238
 abbr publiic public
 abbr funciton function
 abbr functin function
+" command line only Abbreviations
+cabbrev help tab help
 
 " Functions ==============================================================
 " this function allows you to quickly toggle between a mode to write
