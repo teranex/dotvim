@@ -135,6 +135,13 @@ if !has("gui_running") " define our own colors when running in terminal
     autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#17191a ctermbg=234
 endif
 
+" settings for easygrep ==================================================
+let g:EasyGrepCommand=1
+let g:EasyGrepRecursive=1
+let g:EasyGrepIgnoreCase=0
+let g:EasyGrepOpenWindowOnMatch=1
+let g:EasyGrepJumpToMatch=0
+
 " Key mapping ============================================================
 "allow to use w!! to write to a file with sudo, in case forgotten
 "http://stackoverflow.com/questions/95072/what-are-your-favorite-vim-tricks/96492#96492
