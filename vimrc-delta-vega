@@ -1,7 +1,7 @@
 if has("gui_running")
   " GUI is running or is about to start.
   " Maximize gvim window.
-  set lines=55 columns=170
+  set lines=50 columns=170
 endif
 
 autocmd FileType php setlocal shiftwidth=2 tabstop=2 softtabstop=2

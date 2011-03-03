@@ -117,9 +117,11 @@ set titlestring+=%(\ %a%)                      " extra attributes
 if has("gui_running")
   " GUI is running or is about to start.
   " Maximize GVim window.
-  set lines=40 columns=135
+  set lines=37 columns=135
   " and remove the toolbar
   set guioptions-=T
+  " but always show the tabline (window otherwise resizes when first showing tabline)
+  set showtabline=2
 endif
 
 " Settings for Changed.vim 
