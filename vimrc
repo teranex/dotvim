@@ -52,6 +52,7 @@ set nowritebackup                       " don't make a (temporary) backup while 
 if v:version > '702'
     set undofile                        " save undo history to an external file
     set undodir=~/.vimundo,.,/tmp       " where to save undo history files
+    set relativenumber                  " use relative line numbering
 endif
 
 set autowrite                           " write the modified file when switching to another file
