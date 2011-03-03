@@ -144,7 +144,7 @@ let g:syntastic_auto_loc_list=1
 let g:debuggerMaxDepth = 3
 
 " settings for yankring ==================================================
-let g:yankring_min_element_length = 2
+"let g:yankring_min_element_length = 2
 
 " settings for indent guidelines =========================================
 if !has("gui_running") " define our own colors when running in terminal
