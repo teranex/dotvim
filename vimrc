@@ -22,6 +22,7 @@ set listchars=tab:→\ ,eol:·             " chars to show for list
 set laststatus=2                        " always show the statusline
 set title                               " set the title
 set ruler                               " show cursor position in left bottom corner
+set report=0                            " always report number of lines changed via : command
 set splitbelow                          " open a new horizontal window below the current window instead of above
 set scrolloff=3                         " minimal number of screen lines to keep above and below the cursor.
 set sidescrolloff=3                     " minimal number of screen columns to keep next to the cursor
