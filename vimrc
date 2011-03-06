@@ -259,7 +259,7 @@ endfunction
 command! ToggleWritingMode call ToggleWritingModeFunc()
 
 " Spelling configuration =================================================
-" the following line makes vim ignore camelCase and CamelCase word so they
+" the following line makes vim ignore camelCase and CamelCase words so they
 " are not highlighted as spelling mistakes
 au Syntax * syn match CamelCase "\(\<\|_\)\%(\u\l*\)\{2,}\(\>\|_\)\|\<\%(\l\l*\)\%(\u\l*\)\{1,}\>" transparent containedin=.*Comment.*,.*String.*,VimwikiLink contains=@NoSpell contained
 
