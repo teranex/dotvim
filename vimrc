@@ -55,6 +55,7 @@ if v:version > '702'
     set relativenumber                  " use relative line numbering
     set nonumber                        " and disable default line numbering
 endif
+set updatetime=500                      " wait this many milliseconds before firing the CursorHold autocmd (and write swap files)
 
 set autowrite                           " write the modified file when switching to another file
 set hidden                              " allow Vim to switch to another buffer while the current is not saved
@@ -163,6 +164,9 @@ let g:EasyGrepRecursive=1
 let g:EasyGrepIgnoreCase=0
 let g:EasyGrepOpenWindowOnMatch=1
 let g:EasyGrepJumpToMatch=0
+
+" settings for ShowMarks =================================================
+let g:showmarks_marks='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ<>^''.'
 
 " Key mapping ============================================================
 "allow to use w!! to write to a file with sudo, in case forgotten
