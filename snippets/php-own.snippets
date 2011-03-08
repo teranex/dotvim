@@ -10,3 +10,6 @@ snippet try
 	}
 snippet trans
 	<?php print $this->translate('${1}'); ?>
+snippet update_ret
+	$ret[] = array('success' => TRUE, 'query' => '${1:instant success!}');
+	return $ret;
