@@ -185,6 +185,9 @@ map <leader>fO  :FufTaggedFile<CR>
 " http://stackoverflow.com/questions/164847/what-is-in-your-vimrc/1636961#1636961
 inoremap ;; <End>;
 
+" enter to the previous line
+imap <S-CR> <C-O>O
+
 " clear the search buffer with ,/
 " http://nvie.com/posts/how-i-boosted-my-vim/
 nmap <silent> ,/ :let @/=""<CR>
