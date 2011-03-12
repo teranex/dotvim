@@ -19,7 +19,7 @@ ScriptID SourceID Filename
 2736 14139  syntastic.vim
 " 1066 7618  cecutil.vim
 1234 13554  YankRing.vim
-3304 14226 gundo.vim
+3304 15184 gundo.vim
 39 8196  matchit.vim
 2572 10433  ack.vim
 " 301 13387  xmledit.vim
@@ -32,3 +32,4 @@ ScriptID SourceID Filename
 3052 12942 changes
 3464 15091 tabular
 2438 14198 EasyGrep
+2666 14741 Mark (highlight)
