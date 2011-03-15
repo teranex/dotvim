@@ -222,8 +222,7 @@ autocmd FileType php setlocal comments=sl:/*,mb:*,elx:*/
 autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " Configure certain extensions as the correct filetype
-autocmd BufRead,BufNewFile *.profile setlocal filetype=php
-autocmd BufRead,BufNewFile *.install setlocal filetype=php
+autocmd BufRead,BufNewFile *.profile,*.install,*.test setlocal filetype=php
 
 " run the rooter plugin for every file
 autocmd BufRead,BufNewFile * Rooter
