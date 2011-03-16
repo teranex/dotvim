@@ -117,6 +117,43 @@ set titlestring+=%(\ %M%)                      " modified flag
 set titlestring+=%(\ (%{expand(\"%:~:h\")})%)  " relative path to current file
 set titlestring+=%(\ %a%)                      " extra attributes
 
+" GUI tab labels
+function! TabLabelName(n)
+    let buflist = tabpagebuflist(a:n)
+    let bufnam  = bufname(buflist[tabpagewinnr(a:n) - 1])
+    return substitute(bufnam, '.*/', '', '') " get basename of the buffer
+endfunction
+
+
+function TabLabelProperties()
+    let label = ''
+    let bufnrlist = tabpagebuflist(v:lnum)
+
+    " Append the number of windows in the tab page if more than one
+    let wincount = tabpagewinnr(v:lnum, '$')
+    if wincount > 1
+        let label = ' ('.wincount.')'
+    endif
+
+    " Add '+' if one of the buffers in the tab page is modified
+    for bufnr in bufnrlist
+        if getbufvar(bufnr, "&modified")
+            let label .= ' [+]'
+            break
+        endif
+    endfor
+
+    " Append the buffer name
+    return label
+endfunction
+
+function! MyGuiTabLine()
+ let s = '#%N%{TabLabelProperties()}: %{TabLabelName(' . tabpagenr() . ')} '
+ return s
+endfunction
+
+set guitablabel=%!MyGuiTabLine() 
+
 
 if has("gui_running")
   " GUI is running or is about to start.
@@ -128,16 +165,6 @@ if has("gui_running")
   set showtabline=2
 endif
 
-" Settings for Changed.vim 
-"if has("signs")
-    "let g:Changed_definedSigns = 1
-    "sign define SIGN_CHANGED_DELETED_VIM text=- texthl=ChangedDeleted
-    "sign define SIGN_CHANGED_ADDED_VIM   text=+ texthl=ChangedAdded
-    "sign define SIGN_CHANGED_VIM         text=* texthl=ChangedModified 
-    "highlight ChangedDeleted cterm=bold ctermbg=208 ctermfg=black gui=bold guibg=#ff9800 guifg=black 
-    "highlight ChangedAdded cterm=bold ctermbg=148 ctermfg=black gui=bold guibg=#b1d631 guifg=black 
-    "highlight ChangedModified cterm=bold ctermbg=yellow ctermfg=black gui=bold guibg=#f6f382 guifg=black 
-"endif
 
 " define mapping for QuickBuffer =========================================
 let g:qb_hotkey = ",l"
