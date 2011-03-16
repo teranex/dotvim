@@ -89,7 +89,7 @@ hi User1 gui=bold guibg=#960050 guifg=white ctermfg=white ctermbg=162
 set statusline=                                " completely reset statusline
 set statusline+=%f\                            " relative path of the file
 set statusline+=%1*%m%r%*\ \                   " modified flag and read only flag
-set statusline+=[%{&filetype},                 " filetype
+set statusline+=[%{strlen(&filetype)?&filetype:'none'},      " filetype
 set statusline+=%{strlen(&fenc)?&fenc:'none'}, " file encoding
 set statusline+=%{&ff}]                        " file format
 set statusline+=%=                             " left/right separator
