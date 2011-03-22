@@ -292,6 +292,9 @@ endfunction
 
 command! ToggleWritingMode call ToggleWritingModeFunc()
 
+" easily copy relative path to clipboard
+command! CopyPath let @+ = expand('%')
+
 " Spelling configuration =================================================
 " the following line makes vim ignore camelCase and CamelCase words so they
 " are not highlighted as spelling mistakes
