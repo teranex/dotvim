@@ -218,7 +218,7 @@ imap <S-CR> <C-O>O
 
 " fix indent of the entire block when inserting }. (Might have to change this
 " to only active for the PHP filetype)
-inoremap }} }<ESC>=iB']/}<CR>a
+inoremap } }<ESC>mi=iB`ia
 
 " clear the search buffer with ,/
 " http://nvie.com/posts/how-i-boosted-my-vim/
