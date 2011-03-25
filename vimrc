@@ -246,6 +246,9 @@ vmap <C-Down> ]egv
 " map control-backspace to delete the previous word in insert mode
 imap <C-BS> <C-W>
 
+" try to automagically align what should be aligned
+map <leader>a :Tab /\(=>\\|,\zs\\|=\\|\|\)<CR>
+
 " Auto Commands ==========================================================
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
