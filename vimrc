@@ -57,6 +57,7 @@ if v:version > '702'
 endif
 set updatetime=500                      " wait this many milliseconds before firing the CursorHold autocmd (and write swap files)
 
+set autoread                            " automatically reload the file when modified outside and not modified inside vim
 set autowrite                           " write the modified file when switching to another file
 set hidden                              " allow Vim to switch to another buffer while the current is not saved
 
