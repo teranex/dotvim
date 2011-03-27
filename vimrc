@@ -39,6 +39,7 @@ set shiftround                          " round the indent to a multiple of shif
 set expandtab                           " expand tabs to spaces
 set autoindent                          " automatically indent a new line
 set formatoptions+=r                    " automatic formatting: auto insert current comment leader after enter
+set virtualedit=block                   " allow cursor after end of line in visual block mode
 
 set incsearch                           " while searching, immediately show first match
 set ignorecase                          " ignore case in (search) patterns
