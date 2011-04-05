@@ -179,13 +179,6 @@ let g:debuggerMaxDepth = 3
 " settings for yankring ==================================================
 "let g:yankring_min_element_length = 2
 
-" settings for indent guidelines =========================================
-if !has("gui_running") " define our own colors when running in terminal
-    let g:indent_guides_auto_colors = 0
-    autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#2b2f31 ctermbg=235
-    autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#17191a ctermbg=234
-endif
-
 " settings for easygrep ==================================================
 let g:EasyGrepCommand=1
 let g:EasyGrepRecursive=1
