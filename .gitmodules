@@ -25,3 +25,6 @@
 [submodule "bundle/phpcomplete"]
 	path = bundle/phpcomplete
 	url = git://github.com/vim-scripts/phpcomplete.vim.git
+[submodule "bundle/changes"]
+	path = bundle/changes
+	url = git://github.com/chrisbra/changesPlugin.git
