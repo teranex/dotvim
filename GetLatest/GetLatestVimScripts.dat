@@ -20,7 +20,7 @@ ScriptID SourceID Filename
 " 1066 7618  cecutil.vim
 1234 13554  YankRing.vim
 3304 15211 gundo.vim
-39 8196  matchit.vim
+" 39 8196  matchit.vim
 " 2572 10433  ack.vim
 " 301 13387  xmledit.vim
 " 1590 12570  unimpaired.vim
