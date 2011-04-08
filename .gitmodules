@@ -28,3 +28,6 @@
 [submodule "bundle/changes"]
 	path = bundle/changes
 	url = git://github.com/chrisbra/changesPlugin.git
+[submodule "bundle/autocomplpop"]
+	path = bundle/autocomplpop
+	url = git://github.com/vim-scripts/AutoComplPop.git
