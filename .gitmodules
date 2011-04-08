@@ -43,3 +43,6 @@
 [submodule "bundle/aftercolors"]
 	path = bundle/aftercolors
 	url = git://github.com/vim-scripts/AfterColors.vim.git
+[submodule "bundle/quickbuf"]
+	path = bundle/quickbuf
+	url = git://github.com/vim-scripts/QuickBuf.git
