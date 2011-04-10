@@ -58,3 +58,6 @@
 [submodule "bundle/mark"]
 	path = bundle/mark
 	url = git://github.com/vim-scripts/Mark--Karkat.git
+[submodule "bundle/easygrep"]
+	path = bundle/easygrep
+	url = git://github.com/vim-scripts/EasyGrep.git
