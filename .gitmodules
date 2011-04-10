@@ -61,3 +61,6 @@
 [submodule "bundle/easygrep"]
 	path = bundle/easygrep
 	url = git://github.com/vim-scripts/EasyGrep.git
+[submodule "bundle/autotag"]
+	path = bundle/autotag
+	url = git://github.com/vim-scripts/AutoTag.git
