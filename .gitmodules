@@ -55,3 +55,6 @@
 [submodule "bundle/unimpaired"]
 	path = bundle/unimpaired
 	url = git://github.com/tpope/vim-unimpaired.git
+[submodule "bundle/mark"]
+	path = bundle/mark
+	url = git://github.com/vim-scripts/Mark--Karkat.git
