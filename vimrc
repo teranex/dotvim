@@ -222,9 +222,9 @@ map ,c<space> <plug>NERDCommenterToggle
 " open the session list
 map ,s :SessionList<CR>
 " show the YankRing
-map ,y :YRShow<CR>
+"map ,y :YRShow<CR>
 " show the undo window from GUndo
-map ,u :GundoToggle<CR>
+"map ,u :GundoToggle<CR>
 
 " quickly escape a single character
 map \\ i\<ESC>l
