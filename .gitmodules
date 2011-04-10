@@ -64,3 +64,6 @@
 [submodule "bundle/autotag"]
 	path = bundle/autotag
 	url = git://github.com/vim-scripts/AutoTag.git
+[submodule "bundle/showmarks"]
+	path = bundle/showmarks
+	url = git://github.com/vim-scripts/showmarks--Politz.git
