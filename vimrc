@@ -40,7 +40,9 @@ set expandtab                           " expand tabs to spaces
 set autoindent                          " automatically indent a new line
 set formatoptions+=r                    " automatic formatting: auto insert current comment leader after enter
 set virtualedit=block,onemore           " allow cursor after end of line in visual block mode and allow cursor one char after line end
-set colorcolumn=80,120                  " show a vertical line at these positions
+if v:version > '702'
+    set colorcolumn=80,120              " show a vertical line at these positions
+endif
 
 set incsearch                           " while searching, immediately show first match
 set ignorecase                          " ignore case in (search) patterns
