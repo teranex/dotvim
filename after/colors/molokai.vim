@@ -5,6 +5,7 @@ hi Todo            guifg=#000000 guibg=#E6DB74 gui=bold
 hi clear NonText
 hi NonText         guifg=#75715E
 hi VertSplit       guifg=#808080 guibg=#808080 gui=bold
+hi ColorColumn     guibg=#232526
 
 if &t_Co > 255
    hi Error           ctermfg=16 ctermbg=red
@@ -13,4 +14,5 @@ if &t_Co > 255
    hi clear SpellBad
    hi SpellBad        cterm=underline
    hi VertSplit       ctermfg=244 ctermbg=244   cterm=bold
+   hi ColorColumn     ctermbg=234
 endif
