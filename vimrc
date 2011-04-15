@@ -164,6 +164,8 @@ if has("gui_running")
   set lines=37 columns=135
   " and remove the toolbar
   set guioptions-=T
+  " and enable the horizontal scrollbar
+  set guioptions+=b
   " but always show the tabline (window otherwise resizes when first showing tabline)
   set showtabline=2
 endif
