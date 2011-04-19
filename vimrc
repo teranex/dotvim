@@ -243,6 +243,8 @@ vmap <C-Down> ]egv
 
 " map control-backspace to delete the previous word in insert mode
 imap <C-BS> <C-W>
+" and map control-delete to delete the next word in insert mode
+imap <C-Del> <C-O>dw
 
 " try to automagically align what should be aligned
 map <leader>a :Tab /\(=>\\|,\zs\\|=\\|\|\)<CR>
