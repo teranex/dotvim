@@ -18,7 +18,9 @@ if v:version < '702'
     call add(g:pathogen_disabled, 'l9')
 endif
 
+" disable autocomplpop plugin to try out neocomplcache
+call add(g:pathogen_disabled, 'autocomplpop')
+
 "filetype off 
 call pathogen#runtime_append_all_bundles()
-
 " vim: ft=vim
