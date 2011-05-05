@@ -198,6 +198,9 @@ let g:neocomplcache_enable_quick_match=1
 " settings for ShowMarks =================================================
 let g:showmarks_marks='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ<>^''.'
 
+" settings for gitv ======================================================
+let g:Gitv_OpenHorizontal='auto'
+
 " Key mapping ============================================================
 "allow to use w!! to write to a file with sudo, in case forgotten
 "http://stackoverflow.com/questions/95072/what-are-your-favorite-vim-tricks/96492#96492
