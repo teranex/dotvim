@@ -260,7 +260,7 @@ map <leader>a :Tab /\(=>\\|,\zs\\|=\\|\|\)<CR>
 " Auto Commands ==========================================================
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType php setlocal comments=sl:/*,mb:*,elx:*/
+autocmd FileType php setlocal comments=sl:/*,mb:*,elx:*/ fdm=manual
 autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2 | ColorHighlight
 
 " Configure certain extensions as the correct filetype
