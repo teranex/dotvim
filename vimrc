@@ -29,6 +29,7 @@ set wildmenu                            " show command line completions
 set wildmode=longest:full               " complete mode for wildmenu
 set linebreak                           " only wrap after words, not inside words
 set cursorline                          " highlight the current line
+set cursorcolumn                        " highlight the current column
 set completeopt=menu,longest,preview    " options for insert mode completion
 set spell                               " enable spell check by default
 
