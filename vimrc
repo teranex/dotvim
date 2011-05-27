@@ -165,6 +165,8 @@ if has("gui_running")
   " GUI is running or is about to start.
   " Maximize GVim window.
   set lines=37 columns=135
+  " remove the menu bar
+  set guioptions-=m
   " and remove the toolbar
   set guioptions-=T
   " and enable the horizontal scrollbar
