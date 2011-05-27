@@ -15,6 +15,7 @@ set number                              " show line numbers by default
 set t_Co=256                            " force the terminal to use 256 colors
 set showcmd                             " show the current command in the statusline
 set nofoldenable                        " disable folding. I hate it
+set foldlevelstart=999999               " get rid of folds, yuk
 set mouse=a                             " enable the mouse
 set mousemodel=popup                    " produce pop up for right click
 set list                                " show special chars, such as tab and eol
@@ -73,7 +74,7 @@ if exists('+autochdir')
 endif
 
 " options for sessions. These define what should be saved in a session
-set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
+set sessionoptions=blank,buffers,curdir,help,resize,tabpages,winsize
 
 " enable filetype detection and indentation specific for filetype
 syntax on
