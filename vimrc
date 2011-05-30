@@ -273,6 +273,9 @@ autocmd BufRead,BufNewFile *.profile,*.install,*.test setlocal filetype=php
 " run the rooter plugin for every file
 autocmd BufRead,BufNewFile * Rooter
 
+" close fugitive buffers when they are not shown anymore
+autocmd BufReadPost fugitive://* set bufhidden=wipe
+
 " enable the marks plugin by default
 if has("signs")
     autocmd BufEnter * DoShowMarks
