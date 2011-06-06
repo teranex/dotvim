@@ -219,6 +219,9 @@ map <leader>ft  :FufBufferTag<CR>
 map <leader>fT  :FufTag<CR>
 map <leader>fO  :FufTaggedFile<CR>
 
+" mapping to quickly open current directory in netrw
+map <leader>e :Ex<CR>
+
 " Quickly insert semicolon at the end of the string
 " http://stackoverflow.com/questions/164847/what-is-in-your-vimrc/1636961#1636961
 inoremap ;; <End>;
