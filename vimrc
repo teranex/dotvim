@@ -175,6 +175,19 @@ if has("gui_running")
   set showtabline=2
 endif
 
+" tab switching: easily switch back to the previous tab
+" see http://groups.google.com/group/vim_use/msg/b5f64d02a49b1348
+au TabLeave * :let g:last_tab=tabpagenr()
+
+fu! <sid>LastTab()
+    if !exists("g:last_tab")
+        return
+    endif
+    exe "tabn" g:last_tab
+endfu
+
+nmap <silent> <M-6> :call <sid>LastTab()<cr>
+
 
 " define mapping for QuickBuffer =========================================
 let g:qb_hotkey = ",l"
