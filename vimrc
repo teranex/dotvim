@@ -211,7 +211,6 @@ let g:EasyGrepJumpToMatch=0
 
 " settings for neocomplcache =============================================
 let g:neocomplcache_enable_at_startup=1
-let g:neocomplcache_enable_quick_match=1
 
 " settings for ShowMarks =================================================
 let g:showmarks_marks='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ<>^''.'
