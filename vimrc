@@ -26,6 +26,7 @@ set ruler                               " show cursor position in left bottom co
 set splitbelow                          " open a new horizontal window below the current window instead of above
 set scrolloff=3                         " minimal number of screen lines to keep above and below the cursor.
 set sidescrolloff=3                     " minimal number of screen columns to keep next to the cursor
+set sidescroll=5                        " horizontally scroll 5 characters, instead of centering the cursor
 set wildmenu                            " show command line completions
 set wildmode=longest:full               " complete mode for wildmenu
 set linebreak                           " only wrap after words, not inside words
