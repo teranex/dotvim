@@ -19,7 +19,7 @@ set foldlevelstart=999999               " get rid of folds, yuk
 set mouse=a                             " enable the mouse
 set mousemodel=popup                    " produce pop up for right click
 set list                                " show special chars, such as tab and eol
-set listchars=tab:→\ ,eol:·             " chars to show for list
+set listchars=tab:→\ ,eol:·,trail:☐,extends:❱,precedes:❰ " chars to show for list
 set laststatus=2                        " always show the statusline
 set title                               " set the title
 set ruler                               " show cursor position in left bottom corner
