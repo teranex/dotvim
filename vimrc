@@ -172,7 +172,11 @@ if has("gui_running")
   " and remove the toolbar
   set guioptions-=T
   " and enable the horizontal scrollbar
-  set guioptions+=b
+  "set guioptions+=b
+  " no right scrollbar
+  set guioptions-=r
+  " no left scrollbar
+  set guioptions-=L
   " but always show the tabline (window otherwise resizes when first showing tabline)
   set showtabline=2
 endif
