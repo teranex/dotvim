@@ -9,6 +9,7 @@ hi ColorColumn     guibg=#232526
 hi CursorColumn    guibg=#232526
 hi SpecialKey      guifg=#66D9EF               gui=none
 hi SpecialKey      guifg=#888A85               gui=none
+hi DiffText                      guibg=#080808 gui=bold
 
 if &t_Co > 255
    hi Error           ctermfg=16 ctermbg=red
