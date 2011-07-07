@@ -2,3 +2,5 @@ if has("gui_running")
     set cursorline
 endif
 set gfn=Monospace\ 8
+
+autocmd FileType php setlocal shiftwidth=2 tabstop=2 softtabstop=2
