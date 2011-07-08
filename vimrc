@@ -95,9 +95,9 @@ colorscheme molokai
 
 function! FileSize()
   let bytes = getfsize(expand("%:p"))
-  "if bytes <= 0
-    "return ""
-  "endif
+  if bytes <= 0
+    return ""
+  endif
   if bytes < 1024
     return bytes . "b"
   else
