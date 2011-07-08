@@ -78,6 +78,9 @@ endif
 " options for sessions. These define what should be saved in a session
 set sessionoptions=buffers,curdir,help,resize,tabpages,winsize,winpos
 
+" set the path, so we can easily open files with the gf command etc
+set path+=./**;,,
+
 " enable filetype detection and indentation specific for filetype
 syntax on
 filetype plugin indent on
