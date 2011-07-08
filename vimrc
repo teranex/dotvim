@@ -76,7 +76,7 @@ if exists('+autochdir')
 endif
 
 " options for sessions. These define what should be saved in a session
-set sessionoptions=blank,buffers,curdir,help,resize,tabpages,winsize
+set sessionoptions=buffers,curdir,help,resize,tabpages,winsize,winpos
 
 " enable filetype detection and indentation specific for filetype
 syntax on
