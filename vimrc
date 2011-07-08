@@ -304,7 +304,7 @@ endif
 
 " set up to change the status line based on mode
 au InsertEnter * hi StatusLine term=reverse guifg=#005000 ctermfg=22
-au InsertLeave * hi StatusLine term=reverse guifg=#444444 ctermfg=238
+au InsertLeave * hi StatusLine term=reverse guifg=#455354 ctermfg=238
 " and go to command mode when focus lost
 "au FocusLost,TabLeave * call feedkeys("\<C-\>\<C-n>")
 
