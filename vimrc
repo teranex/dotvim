@@ -90,6 +90,18 @@ let php_folding = 1                     " enable PHP syntax folding (when foldin
 let g:molokai_original=0
 colorscheme molokai
 
+function! FileSize()
+  let bytes = getfsize(expand("%:p"))
+  "if bytes <= 0
+    "return ""
+  "endif
+  if bytes < 1024
+    return bytes . "b"
+  else
+    return (bytes / 1024) . "k"
+  endif
+endfunction
+
 " status line
 hi User1 gui=bold guibg=#960050 guifg=white ctermfg=white ctermbg=162
 
@@ -103,8 +115,8 @@ set statusline+=%{&ff}]                        " file format
 set statusline+=%=                             " left/right separator
 set statusline+=[%{&wrap?'wrap':'nowrap'},     " wrap state
 set statusline+=%{&expandtab?'spaces':'tabs'}:%{&tabstop}]\  " expand tab and tab stop info
-set statusline+=%c,                            " cursor column
-set statusline+=%l/%L                          " cursor line/total lines
+set statusline+=%{FileSize()}\                 " filesize
+set statusline+=%l/%L:%-3c                     " cursor line/total lines:cursor column
 set statusline+=\ %P                           " percent through file
 
 " helper function for titlestring. Returns the name of the current
