@@ -188,7 +188,7 @@ if has("gui_running")
   set guioptions-=T
   " and enable the horizontal scrollbar
   "set guioptions+=b
-  " no right scrollbar
+  " and remove the vertical scrollbar
   set guioptions-=r
   " no left scrollbar
   set guioptions-=L
@@ -318,10 +318,8 @@ if has("signs")
 endif
 
 " set up to change the status line based on mode
-au InsertEnter * hi StatusLine term=reverse guifg=#005000 ctermfg=22
-au InsertLeave * hi StatusLine term=reverse guifg=#455354 ctermfg=238
-" and go to command mode when focus lost
-"au FocusLost,TabLeave * call feedkeys("\<C-\>\<C-n>")
+au InsertEnter * hi! link StatusLine StatusLineInsert
+au InsertLeave * hi! link StatusLine NONE
 
 " Abbreviations ==========================================================
 abbr publiic public
