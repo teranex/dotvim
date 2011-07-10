@@ -4,12 +4,16 @@ hi MatchParen      guifg=#000000 guibg=#3E3D32 gui=bold
 hi Todo            guifg=#000000 guibg=#E6DB74 gui=bold
 hi clear NonText
 hi NonText         guifg=#75715E
-hi VertSplit       guifg=#808080 guibg=#808080 gui=bold
+hi VertSplit       guifg=#455354  guibg=#455354
 hi ColorColumn     guibg=#232526
 hi CursorColumn    guibg=#232526
 hi SpecialKey      guifg=#66D9EF               gui=none
 hi SpecialKey      guifg=#888A85               gui=none
 hi DiffText                      guibg=#080808 gui=bold
+
+hi StatusLine       guifg=#FD971F guibg=#121212 gui=bold,reverse
+hi StatusLineInsert guifg=#005000 ctermfg=white guibg=white ctermbg=22 gui=reverse
+hi StatusLineNC     guifg=#455354 guibg=fg
 
 if &t_Co > 255
    hi Error           ctermfg=16 ctermbg=red
