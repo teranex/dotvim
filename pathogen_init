@@ -12,14 +12,22 @@ if v:version < '703' || !has('python')
     call add(g:pathogen_disabled, 'gundo')
 endif
 
-if v:version < '702'
-    call add(g:pathogen_disabled, 'autocomplpop')
-    call add(g:pathogen_disabled, 'fuzzyfinder')
-    call add(g:pathogen_disabled, 'l9')
-endif
+"if v:version < '702'
+    "call add(g:pathogen_disabled, 'autocomplpop')
+    "call add(g:pathogen_disabled, 'fuzzyfinder')
+    "call add(g:pathogen_disabled, 'l9')
+"endif
 
 " disable autocomplpop plugin to try out neocomplcache
-call add(g:pathogen_disabled, 'autocomplpop')
+"call add(g:pathogen_disabled, 'autocomplpop')
+
+" disable some plugins which i don't use anymore/not often
+call add(g:pathogen_disabled, 'debugger')
+call add(g:pathogen_disabled, 'fuzzyfinder')
+call add(g:pathogen_disabled, 'l9')
+call add(g:pathogen_disabled, 'surround')
+call add(g:pathogen_disabled, 'changes')
+call add(g:pathogen_disabled, 'neocomplcache')
 
 "filetype off 
 call pathogen#runtime_append_all_bundles()
