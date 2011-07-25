@@ -71,12 +71,12 @@ set hidden                              " allow Vim to switch to another buffer 
 
 set tags=tags;/                         " where to find the tags file: current directory and up
 
-if exists('+autochdir') 
+if exists('+autochdir')
   set autochdir                         " automatically change to the current directory when loading a file
 endif
 
 " options for sessions. These define what should be saved in a session
-set sessionoptions=buffers,curdir,help,resize,tabpages,winsize,winpos
+set sessionoptions=buffers,help,resize,tabpages,winsize,winpos
 
 " set the path, so we can easily open files with the gf command etc
 set path+=./**;,,
