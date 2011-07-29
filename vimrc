@@ -230,6 +230,9 @@ let g:EasyGrepIgnoreCase=0
 let g:EasyGrepOpenWindowOnMatch=1
 let g:EasyGrepJumpToMatch=0
 
+" settings for Ack =======================================================
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
 " settings for neocomplcache =============================================
 let g:neocomplcache_enable_at_startup=1
 

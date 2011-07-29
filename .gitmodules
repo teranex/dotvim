@@ -88,3 +88,6 @@
 [submodule "bundle/idsearch"]
 	path = bundle/idsearch
 	url = git://github.com/milkbikis/IDSearch.vim.git
+[submodule "bundle/ack"]
+	path = bundle/ack
+	url = git://github.com/mileszs/ack.vim.git
