@@ -1,5 +1,8 @@
 if has("gui_running")
     set cursorline
+
+  " move it to the left upper corner
+  winpos 0 0
 endif
 set gfn=Monospace\ 8
 
