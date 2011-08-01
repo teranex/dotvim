@@ -91,3 +91,6 @@
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = git://github.com/mileszs/ack.vim.git
+[submodule "bundle/molokai"]
+	path = bundle/molokai
+	url = git://github.com/tomasr/molokai.git
