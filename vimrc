@@ -247,14 +247,6 @@ let g:Gitv_OpenHorizontal='auto'
 "http://stackoverflow.com/questions/95072/what-are-your-favorite-vim-tricks/96492#96492
 cmap w!! %!sudo tee > /dev/null %
 
-" key mappings for fuzzy finder
-"map <leader>l   :FufBuffer<CR>
-"map <leader>ff  :FufFileWithCurrentBufferDir<CR>
-"map <leader>fF  :FufFile<CR>
-"map <leader>ft  :FufBufferTag<CR>
-"map <leader>fT  :FufTag<CR>
-"map <leader>fO  :FufTaggedFile<CR>
-
 " mapping to quickly open current directory in netrw
 map <leader>e :Ex<CR>
 
