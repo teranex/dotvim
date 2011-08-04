@@ -226,9 +226,6 @@ let g:debuggerMaxDepth = 3
 " settings for Ack =======================================================
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
-" settings for neocomplcache =============================================
-let g:neocomplcache_enable_at_startup=1
-
 " settings for ShowMarks =================================================
 let g:showmarks_marks='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ<>^''.'
 
