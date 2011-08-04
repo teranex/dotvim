@@ -223,13 +223,6 @@ let g:debuggerMaxDepth = 3
 " settings for yankring ==================================================
 "let g:yankring_min_element_length = 2
 
-" settings for easygrep ==================================================
-let g:EasyGrepCommand=1
-let g:EasyGrepRecursive=1
-let g:EasyGrepIgnoreCase=0
-let g:EasyGrepOpenWindowOnMatch=1
-let g:EasyGrepJumpToMatch=0
-
 " settings for Ack =======================================================
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
