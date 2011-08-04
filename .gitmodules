@@ -70,9 +70,6 @@
 [submodule "bundle/colorizer"]
 	path = bundle/colorizer
 	url = git://github.com/lilydjwg/colorizer.git
-[submodule "bundle/lusty"]
-	path = bundle/lusty
-	url = git://github.com/sjbach/lusty.git
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = git://github.com/mileszs/ack.vim.git
