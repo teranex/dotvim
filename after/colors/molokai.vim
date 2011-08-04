@@ -15,6 +15,8 @@ hi StatusLine       guifg=#FD971F guibg=#121212 gui=bold,reverse
 hi StatusLineInsert guifg=#005000 ctermfg=white guibg=white ctermbg=22 gui=reverse
 hi StatusLineNC     guifg=#455354 guibg=fg
 
+hi Search           guibg=#A6E22E guifg=#232526
+
 if &t_Co > 255
    hi Error           ctermfg=16 ctermbg=red
    hi ErrorMsg        ctermfg=red ctermbg=16    cterm=bold
