@@ -76,9 +76,6 @@
 [submodule "bundle/lusty"]
 	path = bundle/lusty
 	url = git://github.com/sjbach/lusty.git
-[submodule "bundle/idsearch"]
-	path = bundle/idsearch
-	url = git://github.com/milkbikis/IDSearch.vim.git
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = git://github.com/mileszs/ack.vim.git
