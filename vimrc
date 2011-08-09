@@ -226,6 +226,9 @@ let g:debuggerMaxDepth = 3
 " settings for Ack =======================================================
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
+" settings for taglist ===================================================
+let g:Tlist_Show_One_File=1 " only show current file
+
 " settings for ShowMarks =================================================
 let g:showmarks_marks='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ<>^''.'
 
