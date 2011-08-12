@@ -11,6 +11,7 @@ endif
 call add(g:pathogen_disabled, 'debugger')
 call add(g:pathogen_disabled, 'changes')
 
-"filetype off 
-call pathogen#runtime_append_all_bundles()
+runtime pathogen/autoload/pathogen.vim
+call pathogen#infect()
+
 " vim: ft=vim
