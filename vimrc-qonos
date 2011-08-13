@@ -7,3 +7,7 @@ set sessionoptions-=resize
 map ,o :VimwikiFollowLink<CR>
 map ,f <C-]>
 
+" set the ctags cmd for the taglist plugin to some value. This is to avoid the
+" annoying start up warning from the plugin when it can't detect the ctags cmd
+" itself. Just trick it with a fake value
+let g:Tlist_Ctags_Cmd = 'ctags'
