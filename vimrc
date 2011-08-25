@@ -88,6 +88,7 @@ filetype plugin indent on
 " syntax configuring
 let php_htmlInStrings = 1               " html syntax highlighting inside PHP strings
 let php_folding = 1                     " enable PHP syntax folding (when folding is enabled)
+let g:is_bash=1                         " configure shell script syntax as being bash syntax
 
 " color scheme
 let g:molokai_original=0
