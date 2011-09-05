@@ -236,6 +236,10 @@ let g:showmarks_marks='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ<>^''
 " settings for gitv ======================================================
 let g:Gitv_OpenHorizontal='auto'
 
+" settings for vimwiki ===================================================
+let g:vimwiki_hl_cb_checked=1
+let g:vimwiki_hl_headers=1
+
 " Key mapping ============================================================
 "allow to use w!! to write to a file with sudo, in case forgotten
 "http://stackoverflow.com/questions/95072/what-are-your-favorite-vim-tricks/96492#96492
