@@ -195,6 +195,10 @@ if has("gui_running")
   set guioptions-=L
   " but always show the tabline (window otherwise resizes when first showing tabline)
   set showtabline=2
+
+  if has("win32") || has("win64")
+      set guifont=Consolas:h10:cANSI
+  endif
 endif
 
 " tab switching: easily switch back to the previous tab
