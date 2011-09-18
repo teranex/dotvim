@@ -244,13 +244,19 @@ let g:Gitv_OpenHorizontal='auto'
 let g:vimwiki_hl_cb_checked=1
 let g:vimwiki_hl_headers=1
 
+" settings for ctrlp =====================================================
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_map = '<leader>t'
+map <leader>e :CtrlP %:p:h<CR>
+map <leader>b :CtrlPBuffer<CR>
+
 " Key mapping ============================================================
 "allow to use w!! to write to a file with sudo, in case forgotten
 "http://stackoverflow.com/questions/95072/what-are-your-favorite-vim-tricks/96492#96492
 cmap w!! %!sudo tee > /dev/null %
 
 " mapping to quickly open current directory in netrw
-map <leader>e :Ex<CR>
+"map <leader>e :Ex<CR>
 
 " Quickly insert semicolon at the end of the string
 " http://stackoverflow.com/questions/164847/what-is-in-your-vimrc/1636961#1636961
@@ -304,7 +310,7 @@ autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2 | ColorHighli
 autocmd BufRead,BufNewFile *.profile,*.install,*.test setlocal filetype=php
 
 " run the rooter plugin for every file
-autocmd BufRead,BufNewFile * Rooter
+autocmd SessionLoadPost * Rooter
 
 " close fugitive buffers when they are not shown anymore
 autocmd BufReadPost fugitive://* set bufhidden=wipe
