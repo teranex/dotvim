@@ -81,6 +81,9 @@ set sessionoptions=buffers,help,resize,tabpages,winsize,winpos
 " set the path, so we can easily open files with the gf command etc
 set path+=./**;,,
 
+" set wildignore to ignore scm folders by default
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
+
 " enable filetype detection and indentation specific for filetype
 syntax on
 filetype plugin indent on
