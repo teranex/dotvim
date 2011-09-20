@@ -4,7 +4,6 @@ let g:pathogen_disabled = []
 " disable some plugins which i don't use anymore/not often
 call add(g:pathogen_disabled, 'debugger')
 call add(g:pathogen_disabled, 'changes')
-call add(g:pathogen_disabled, 'taglist')
 call add(g:pathogen_disabled, 'command-t')
 
 runtime pathogen/autoload/pathogen.vim
