@@ -82,9 +82,6 @@ set sessionoptions=buffers,help,resize,tabpages,winsize,winpos
 " set the path, so we can easily open files with the gf command etc
 set path+=./**;,,
 
-" set wildignore to ignore scm folders by default
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
-
 " enable filetype detection and indentation specific for filetype
 syntax on
 filetype plugin indent on
@@ -250,6 +247,7 @@ let g:vimwiki_hl_headers=1
 
 " settings for ctrlp =====================================================
 let g:ctrlp_working_path_mode = 0
+let g:ctrlp_dotfiles=0
 let g:ctrlp_map = '<leader>t'
 map <leader>e :CtrlP %:p:h<CR>
 map <leader>b :CtrlPBuffer<CR>
