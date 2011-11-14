@@ -356,6 +356,12 @@ command! ToggleWritingMode call ToggleWritingModeFunc()
 " easily copy relative path to clipboard
 command! CopyPath let @+ = expand('%')
 
+function! BufDelExcptActv()
+    let buf = bufnr('%')
+    bufdo if bufnr('%') != buf | bdelete | endif
+endfunction
+command! Bonly call BufDelExcptActv()
+
 " Spelling configuration =================================================
 " the following line makes vim ignore camelCase and CamelCase words so they
 " are not highlighted as spelling mistakes
