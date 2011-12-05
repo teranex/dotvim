@@ -249,7 +249,7 @@ let g:vimwiki_hl_headers=1
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_dotfiles=0
 let g:ctrlp_map = '<leader>t'
-map <leader>e :CtrlP %:p:h<CR>
+map <leader>e :CtrlPCurFile<CR>
 map <leader>b :CtrlPBuffer<CR>
 
 " Key mapping ============================================================
