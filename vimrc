@@ -254,6 +254,9 @@ map <leader>e :CtrlPCurFile<CR>
 map <leader>b :CtrlPBuffer<CR>
 map <leader>] :CtrlPTag<CR>
 
+" settings for snipmate ==================================================
+let g:snippets_dir = $HOME.'/.vim/snippets/snipmate-snippets/,'.$HOME.'/.vim/snippets/own/'
+
 " Key mapping ============================================================
 "allow to use w!! to write to a file with sudo, in case forgotten
 "http://stackoverflow.com/questions/95072/what-are-your-favorite-vim-tricks/96492#96492
