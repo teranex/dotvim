@@ -217,7 +217,7 @@ nmap <silent> <M-6> :call <sid>LastTab()<cr>
 
 
 " define mapping for QuickBuffer =========================================
-let g:qb_hotkey = ",l"
+"let g:qb_hotkey = ",l"
 
 " settings for Syntastic =================================================
 let g:syntastic_enable_signs=1
@@ -248,9 +248,11 @@ let g:vimwiki_hl_headers=1
 " settings for ctrlp =====================================================
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_dotfiles=0
+let g:ctrlp_extensions = ['tag']
 let g:ctrlp_map = '<leader>t'
 map <leader>e :CtrlPCurFile<CR>
 map <leader>b :CtrlPBuffer<CR>
+map <leader>] :CtrlPTag<CR>
 
 " Key mapping ============================================================
 "allow to use w!! to write to a file with sudo, in case forgotten
