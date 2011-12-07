@@ -5,6 +5,7 @@ let g:pathogen_disabled = []
 call add(g:pathogen_disabled, 'debugger')
 call add(g:pathogen_disabled, 'changes')
 call add(g:pathogen_disabled, 'command-t')
+call add(g:pathogen_disabled, 'quickbuf')
 
 runtime pathogen/autoload/pathogen.vim
 call pathogen#infect()
