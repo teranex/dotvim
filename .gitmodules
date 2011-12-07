@@ -82,3 +82,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar
+[submodule "snippets/snipmate-snippets"]
+	path = snippets/snipmate-snippets
+	url = git://github.com/scrooloose/snipmate-snippets.git
