@@ -255,7 +255,10 @@ map <leader>b :CtrlPBuffer<CR>
 map <leader>] :CtrlPTag<CR>
 
 " settings for snipmate ==================================================
+" configure our custom snippets directories
 let g:snippets_dir = $HOME.'/.vim/snippets/snipmate-snippets/,'.$HOME.'/.vim/snippets/own/'
+" and source the support functions
+exec 'source '.$HOME.'/.vim/snippets/snipmate-snippets/support_functions.vim'
 
 " Key mapping ============================================================
 "allow to use w!! to write to a file with sudo, in case forgotten
