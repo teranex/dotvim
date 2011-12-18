@@ -16,7 +16,7 @@ set t_Co=256                            " force the terminal to use 256 colors
 set showcmd                             " show the current command in the statusline
 set nofoldenable                        " disable folding. I hate it
 set foldlevelstart=999999               " get rid of folds, yuk
-set foldmethod=manual                   " manual fold method by default
+set foldmethod=indent                   " indent fold method by default
 set mouse=a                             " enable the mouse
 set mousemodel=popup                    " produce pop up for right click
 set list                                " show special chars, such as tab and eol
@@ -287,10 +287,8 @@ nmap <silent> ,/ :let @/=""<CR>
 map ,c<space> <plug>NERDCommenterToggle
 " open the session list
 map ,s :SessionList<CR>
-" show the YankRing
-"map ,y :YRShow<CR>
-" show the undo window from GUndo
-"map ,u :GundoToggle<CR>
+" open a new Tab
+map ,t :tabnew<CR>\t
 
 " quickly escape a single character
 map \\ i\<ESC>l
