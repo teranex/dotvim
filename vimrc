@@ -288,8 +288,6 @@ inoremap } }<ESC>m'=iB`'a
 " http://nvie.com/posts/how-i-boosted-my-vim/
 nmap <silent> ,/ :let @/=""<CR>
 
-" toggle comment of entire line
-map ,c<space> <plug>NERDCommenterToggle
 " open the session list
 map ,s :SessionList<CR>
 " open a new Tab
