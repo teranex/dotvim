@@ -260,6 +260,11 @@ let g:snippets_dir = $HOME.'/.vim/snippets/snipmate-snippets/,'.$HOME.'/.vim/sni
 " and source the support functions
 exec 'source '.$HOME.'/.vim/snippets/snipmate-snippets/support_functions.vim'
 
+" setting for colorizer ==================================================
+" mapped to \tc by default, but this slows down the \t mapping for ctrlp so
+" remap it to ,tc
+nmap ,tc <Plug>Colorizer
+
 " Key mapping ============================================================
 "allow to use w!! to write to a file with sudo, in case forgotten
 "http://stackoverflow.com/questions/95072/what-are-your-favorite-vim-tricks/96492#96492
