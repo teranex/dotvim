@@ -15,6 +15,11 @@ hi StatusLine       guifg=#FD971F guibg=#121212 gui=bold,reverse
 hi StatusLineInsert guifg=#005000 ctermfg=white guibg=white ctermbg=22 gui=reverse
 hi StatusLineNC     guifg=#455354 guibg=fg
 
+hi diffAdd      ctermfg=bg  guifg=bg      ctermbg=151 guibg=#afdfaf
+hi diffDelete   ctermfg=bg  guifg=bg      ctermbg=246 guibg=#949494 cterm=none gui=none
+hi diffChange   ctermfg=bg  guifg=bg      ctermbg=181 guibg=#dfafaf
+hi diffText     ctermfg=bg  guifg=bg      ctermbg=174 guibg=#f05c5c cterm=bold gui=bold
+
 hi Search           guibg=#A6E22E guifg=#232526
 
 if &t_Co > 255
