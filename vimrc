@@ -236,7 +236,7 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 let g:Tlist_Show_One_File=1 " only show current file
 
 " settings for ShowMarks =================================================
-let g:showmarks_marks='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ<>^''.'
+" let g:showmarks_marks='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ<>^''.'
 
 " settings for gitv ======================================================
 let g:Gitv_OpenHorizontal='auto'
@@ -327,9 +327,9 @@ autocmd SessionLoadPost * Rooter
 autocmd BufReadPost fugitive://* set bufhidden=wipe
 
 " enable the marks plugin by default
-if has("signs")
-    autocmd BufEnter * DoShowMarks
-endif
+" if has("signs")
+"     autocmd BufEnter * DoShowMarks
+" endif
 
 " set up to change the status line based on mode
 au InsertEnter * hi! link StatusLine StatusLineInsert

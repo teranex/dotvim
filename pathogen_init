@@ -7,6 +7,7 @@ call add(g:pathogen_disabled, 'changes')
 call add(g:pathogen_disabled, 'command-t')
 call add(g:pathogen_disabled, 'quickbuf')
 call add(g:pathogen_disabled, 'nerdcommenter')
+call add(g:pathogen_disabled, 'showmarks')
 
 runtime pathogen/autoload/pathogen.vim
 call pathogen#infect()
