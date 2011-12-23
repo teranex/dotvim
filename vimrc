@@ -215,10 +215,6 @@ endfu
 
 nmap <silent> <M-6> :call <sid>LastTab()<cr>
 
-
-" define mapping for QuickBuffer =========================================
-"let g:qb_hotkey = ",l"
-
 " settings for Syntastic =================================================
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
@@ -264,6 +260,9 @@ exec 'source '.$HOME.'/.vim/snippets/snipmate-snippets/support_functions.vim'
 " mapped to \tc by default, but this slows down the \t mapping for ctrlp so
 " remap it to ,tc
 nmap ,tc <Plug>Colorizer
+
+" settings for quickfixsigns =============================================
+let g:quickfixsigns#marks#texthl = 'Type'
 
 " Key mapping ============================================================
 "allow to use w!! to write to a file with sudo, in case forgotten
