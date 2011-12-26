@@ -88,7 +88,7 @@ filetype plugin indent on
 
 " syntax configuring
 let php_htmlInStrings = 1               " html syntax highlighting inside PHP strings
-let php_folding = 1                     " enable PHP syntax folding (when folding is enabled)
+let php_folding = 0                     " disable PHP syntax folding
 let g:is_bash=1                         " configure shell script syntax as being bash syntax
 
 " color scheme
@@ -313,7 +313,7 @@ map <leader>a :Tab /\(=>\\|,\zs\\|=\\|\|\)<CR>
 " Auto Commands ==========================================================
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType php setlocal comments=sl:/*,mb:*,elx:*/ fdm=manual
+autocmd FileType php setlocal comments=sl:/*,mb:*,elx:*/ fdm=indent
 autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2 | ColorHighlight
 
 " Configure certain extensions as the correct filetype
