@@ -49,6 +49,8 @@ if v:version > '702'
     set colorcolumn=80,120              " show a vertical line at these positions
 endif
 
+set diffopt+=iwhite                     " diff options: ignore whitespace
+
 set incsearch                           " while searching, immediately show first match
 set ignorecase                          " ignore case in (search) patterns
 set smartcase                           " when the (search) pattern contains uppercase chars, don't ignore case
