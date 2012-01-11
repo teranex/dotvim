@@ -1,15 +1,10 @@
 " To disable a plugin, add it's bundle name to the following list
 let g:pathogen_disabled = []
 
-" disable some plugins which i don't use anymore/not often
-call add(g:pathogen_disabled, 'debugger')
-call add(g:pathogen_disabled, 'changes')
-call add(g:pathogen_disabled, 'command-t')
-call add(g:pathogen_disabled, 'quickbuf')
-call add(g:pathogen_disabled, 'nerdcommenter')
-call add(g:pathogen_disabled, 'showmarks')
-call add(g:pathogen_disabled, 'puppet')
-call add(g:pathogen_disabled, 'autoclose')
+" disable some plugins which I don't use anymore/not often
+" After the clean-up, no more unused plugins left :)
+" for future reference:
+" call add(g:pathogen_disabled, '<bundle-name>')
 
 runtime pathogen/autoload/pathogen.vim
 call pathogen#infect()
