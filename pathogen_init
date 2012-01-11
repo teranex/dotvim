@@ -9,6 +9,7 @@ call add(g:pathogen_disabled, 'quickbuf')
 call add(g:pathogen_disabled, 'nerdcommenter')
 call add(g:pathogen_disabled, 'showmarks')
 call add(g:pathogen_disabled, 'puppet')
+call add(g:pathogen_disabled, 'autoclose')
 
 runtime pathogen/autoload/pathogen.vim
 call pathogen#infect()
