@@ -14,8 +14,7 @@ set nowrap                              " disable wrapping of text
 set number                              " show line numbers by default
 set t_Co=256                            " force the terminal to use 256 colors
 set showcmd                             " show the current command in the statusline
-set nofoldenable                        " disable folding. I hate it
-set foldlevelstart=999999               " get rid of folds, yuk
+set foldlevelstart=99                   " by default, open all folds
 set foldmethod=indent                   " indent fold method by default
 set mouse=a                             " enable the mouse
 set mousemodel=popup                    " produce pop up for right click
