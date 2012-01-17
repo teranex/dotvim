@@ -263,6 +263,7 @@ exec 'source '.$HOME.'/.vim/snippets/snipmate-snippets/support_functions.vim'
 nmap ,tc <Plug>Colorizer
 
 " settings for quickfixsigns =============================================
+let g:quickfixsigns_classes = ['marks', 'vcsdiff', 'breakpoints']
 let g:quickfixsigns#marks#texthl = 'Type'
 
 " Key mapping ============================================================
