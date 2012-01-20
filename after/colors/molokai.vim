@@ -7,6 +7,7 @@ hi NonText         guifg=#75715E
 hi VertSplit       guifg=#455354  guibg=#455354
 hi ColorColumn     guibg=#232526
 hi CursorColumn    guibg=#232526
+hi CursorLine      guibg=#232526
 hi SpecialKey      guifg=#66D9EF               gui=none
 hi SpecialKey      guifg=#888A85               gui=none
 hi DiffText                      guibg=#080808 gui=bold
