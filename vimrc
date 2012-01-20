@@ -266,6 +266,14 @@ nmap ,tc <Plug>Colorizer
 let g:quickfixsigns_classes = ['marks', 'vcsdiff', 'breakpoints']
 let g:quickfixsigns#marks#texthl = 'Type'
 
+" settings for Mark ======================================================
+" Better highlighting for Marked words with the mark.vim plugin.
+highlight def MarkWord1 ctermbg=Yellow  guibg=#960050
+highlight def MarkWord2 ctermbg=Magenta guibg=#005000
+highlight def MarkWord3 ctermbg=Red     guibg=#465457
+highlight def MarkWord4 ctermbg=Cyan    guibg=#13354A
+highlight def MarkWord5 ctermbg=Green   guibg=#1E0010
+
 " Key mapping ============================================================
 "allow to use w!! to write to a file with sudo, in case forgotten
 "http://stackoverflow.com/questions/95072/what-are-your-favorite-vim-tricks/96492#96492
