@@ -27,6 +27,7 @@ hi VimwikiHeader1   guifg=#F92672 gui=bold
 hi VimwikiHeader2   guifg=#A6E22E gui=bold
 hi VimwikiHeader3   guifg=#66D9EF gui=bold
 hi VimwikiHeader4   guifg=#AE81FF gui=bold
+hi VimwikiHeaderChar guifg=#465457
 
 if &t_Co > 255
    hi Error           ctermfg=16 ctermbg=red
