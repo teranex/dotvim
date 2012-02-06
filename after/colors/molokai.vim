@@ -23,6 +23,11 @@ hi diffText     ctermfg=bg  guifg=bg      ctermbg=208 guibg=#FD971F cterm=bold g
 
 hi Search           guibg=#A6E22E guifg=#232526
 
+hi VimwikiHeader1   guifg=#F92672 gui=bold
+hi VimwikiHeader2   guifg=#A6E22E gui=bold
+hi VimwikiHeader3   guifg=#66D9EF gui=bold
+hi VimwikiHeader4   guifg=#AE81FF gui=bold
+
 if &t_Co > 255
    hi Error           ctermfg=16 ctermbg=red
    hi ErrorMsg        ctermfg=red ctermbg=16    cterm=bold
