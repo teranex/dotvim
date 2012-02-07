@@ -290,10 +290,6 @@ inoremap ;; <End>;
 " enter to the previous line
 imap <S-CR> <C-O>O
 
-" fix indent of the entire block when inserting }. (Might have to change this
-" to only active for the PHP filetype)
-inoremap } }<ESC>m'=iB`'a
-
 " clear the search buffer with ,/
 " http://nvie.com/posts/how-i-boosted-my-vim/
 nmap <silent> ,/ :let @/=""<CR>
@@ -344,6 +340,13 @@ endfunction
 " configure vimwiki
 autocmd FileType vimwiki call s:ConfigureVimwiki()
 
+function! s:ConfigurePHP()
+    " fix indent of the entire block when inserting }.
+    inoremap } }<ESC>m'=iB`'a
+endfunction
+
+" configure PHP
+autocmd FileType php call s:ConfigurePHP()
 
 " close fugitive buffers when they are not shown anymore
 autocmd BufReadPost fugitive://* set bufhidden=wipe
