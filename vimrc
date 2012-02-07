@@ -338,7 +338,7 @@ function! s:ConfigureVimwiki()
     iabbrev <buffer><expr> DATE strftime("%Y-%m-%d")
     map j gj
     map k gk
-    setlocal wrap spell nolist lbr
+    setlocal wrap spell nolist lbr foldmethod=marker foldlevelstart=0
 endfunction
 
 " configure vimwiki
