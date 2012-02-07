@@ -241,6 +241,7 @@ let g:Gitv_OpenHorizontal='auto'
 " settings for vimwiki ===================================================
 let g:vimwiki_hl_cb_checked=1
 let g:vimwiki_hl_headers=1
+let g:vimwiki_dir_link='index'
 
 " settings for ctrlp =====================================================
 let g:ctrlp_working_path_mode = 0
