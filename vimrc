@@ -330,8 +330,20 @@ autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2 | ColorHighli
 " Configure certain extensions as the correct filetype
 autocmd BufRead,BufNewFile *.profile,*.install,*.test setlocal filetype=php
 
-" run the rooter plugin for every file
+" run the rooter plugin after a session is loaded
 autocmd SessionLoadPost * Rooter
+
+function! s:ConfigureVimwiki()
+    Rooter
+    iabbrev <buffer><expr> DATE strftime("%Y-%m-%d")
+    map j gj
+    map k gk
+    setlocal wrap spell nolist lbr
+endfunction
+
+" configure vimwiki
+autocmd FileType vimwiki call s:ConfigureVimwiki()
+
 
 " close fugitive buffers when they are not shown anymore
 autocmd BufReadPost fugitive://* set bufhidden=wipe
