@@ -1,2 +1,6 @@
 snippet todo
 	@todo [jbu] 
+snippet today
+	`strftime("%Y-%m-%d")`
+snippet tomorrow
+	`strftime("%Y-%m-%d", localtime()+86400)`
