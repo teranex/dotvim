@@ -335,6 +335,7 @@ function! s:ConfigureVimwiki()
     map j gj
     map k gk
     setlocal wrap spell nolist lbr foldmethod=marker foldlevelstart=0
+    inoremap <buffer> <C-tab> <C-R>=TriggerSnippet()<CR>
 endfunction
 
 " configure vimwiki
