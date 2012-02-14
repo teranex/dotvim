@@ -1,16 +1,29 @@
+set wrap
+set spell
+set nolist
+set lbr
+set foldmethod=marker
+set foldlevelstart=0
+
+" assign ctrl-tab to snipmate, tab is used for table cells
+inoremap <buffer> <C-tab> <C-R>=TriggerSnippet()<CR>
+
+" natural j
+map j gj
+" natural k
+map k gk
+" quickly open the general task list
+map ,tl :e tasks/index.wiki<CR>
+" quickly add a new general task
+map ,ta ,tlggjO
+" quickly archive (_F_ile) a task
+map ,tf ddGp''
+
+" configure vimwiki
 function! s:ConfigureVimwiki()
     Rooter
     setlocal wrap spell nolist lbr foldmethod=marker foldlevelstart=0
 endfunction
-
-map j gj
-map k gk
-set wrap spell nolist lbr foldmethod=marker foldlevelstart=0
-inoremap <buffer> <C-tab> <C-R>=TriggerSnippet()<CR>
-map ,tl :e tasks/index.wiki<CR>
-map ,ta ,tlggjO
-
-" configure vimwiki
 autocmd FileType vimwiki call s:ConfigureVimwiki()
 
 " vim: ft=vim
