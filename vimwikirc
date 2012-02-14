@@ -1,0 +1,14 @@
+function! s:ConfigureVimwiki()
+    Rooter
+    setlocal wrap spell nolist lbr foldmethod=marker foldlevelstart=0
+endfunction
+
+map j gj
+map k gk
+set wrap spell nolist lbr foldmethod=marker foldlevelstart=0
+inoremap <buffer> <C-tab> <C-R>=TriggerSnippet()<CR>
+
+" configure vimwiki
+autocmd FileType vimwiki call s:ConfigureVimwiki()
+
+" vim: ft=vim

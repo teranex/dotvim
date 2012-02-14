@@ -329,18 +329,6 @@ autocmd BufRead,BufNewFile *.profile,*.install,*.test setlocal filetype=php
 " run the rooter plugin after a session is loaded
 autocmd SessionLoadPost * Rooter
 
-function! s:ConfigureVimwiki()
-    Rooter
-    iabbrev <buffer><expr> DATE strftime("%Y-%m-%d")
-    map j gj
-    map k gk
-    setlocal wrap spell nolist lbr foldmethod=marker foldlevelstart=0
-    inoremap <buffer> <C-tab> <C-R>=TriggerSnippet()<CR>
-endfunction
-
-" configure vimwiki
-autocmd FileType vimwiki call s:ConfigureVimwiki()
-
 function! s:ConfigurePHP()
     " fix indent of the entire block when inserting }.
     inoremap } }<ESC>m'=iB`'a
