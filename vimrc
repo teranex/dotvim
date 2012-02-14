@@ -388,6 +388,11 @@ function! BufDelExcptActv()
 endfunction
 command! Bonly call BufDelExcptActv()
 
+function! InsertDateForDay(dayname)
+    exec 'r!date -d next-'.a:dayname.' +\%Y-\%m-\%d | tr -d ''\n'''
+    return ''
+endfunction
+
 " Spelling configuration =================================================
 " the following line makes vim ignore camelCase and CamelCase words so they
 " are not highlighted as spelling mistakes
