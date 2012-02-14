@@ -7,6 +7,8 @@ map j gj
 map k gk
 set wrap spell nolist lbr foldmethod=marker foldlevelstart=0
 inoremap <buffer> <C-tab> <C-R>=TriggerSnippet()<CR>
+map ,tl :e tasks/index.wiki<CR>
+map ,ta ,tlggjO
 
 " configure vimwiki
 autocmd FileType vimwiki call s:ConfigureVimwiki()
