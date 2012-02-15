@@ -17,7 +17,7 @@ map ,tl :e tasks/index.wiki<CR>
 " quickly add a new general task
 map ,ta ,tlggjO
 " quickly archive (_F_ile) a task
-map ,tf ddGp''
+map ,tf ddzRGkp''
 
 " configure vimwiki
 function! s:ConfigureVimwiki()
