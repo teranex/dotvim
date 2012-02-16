@@ -29,6 +29,7 @@ set sidescrolloff=3                     " minimal number of screen columns to ke
 set sidescroll=5                        " horizontally scroll 5 characters, instead of centering the cursor
 set wildmenu                            " show command line completions
 set wildmode=longest:full               " complete mode for wildmenu
+set wildmode+=full                      " when pressing tab a second time, fully complete
 set linebreak                           " only wrap after words, not inside words
 set cursorline                          " highlight the current line
 set cursorcolumn                        " highlight the current column
