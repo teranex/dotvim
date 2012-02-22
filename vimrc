@@ -328,7 +328,7 @@ autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2 | ColorHighli
 autocmd BufRead,BufNewFile *.profile,*.install,*.test setlocal filetype=php
 
 " run the rooter plugin after a session is loaded
-autocmd SessionLoadPost * Rooter
+autocmd BufRead,BufNewFile * Rooter
 
 function! s:ConfigurePHP()
     " fix indent of the entire block when inserting }.
