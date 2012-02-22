@@ -389,9 +389,32 @@ function! BufDelExcptActv()
 endfunction
 command! Bonly call BufDelExcptActv()
 
-function! InsertDateForDay(dayname)
-    exec 'r!date -d next-'.a:dayname.' +\%Y-\%m-\%d | tr -d ''\n'''
-    return ''
+" function to be used by snipMate.
+" Monday is first day: 0, Sunday last: 6
+function! InsertDateForWeekday(daynumber)
+    let weekday = strftime('%a')
+    let current_daynumber = 0
+    if weekday == 'Mon'
+        let current_daynumber = 0
+    elseif weekday == 'Tue'
+        let current_daynumber = 1
+    elseif weekday == 'Wed'
+        let current_daynumber = 2
+    elseif weekday == 'Thu'
+        let current_daynumber = 3
+    elseif weekday == 'Fri'
+        let current_daynumber = 4
+    elseif weekday == 'Sat'
+        let current_daynumber = 5
+    elseif weekday == 'Sun'
+        let current_daynumber = 6
+    endif
+
+    let day_difference = a:daynumber - current_daynumber
+    if day_difference <= 0
+        let day_difference += 7
+    endif
+    return strftime("%Y-%m-%d", localtime()+86400*day_difference)
 endfunction
 
 " Spelling configuration =================================================
