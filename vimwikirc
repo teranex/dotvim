@@ -6,7 +6,7 @@ set foldmethod=marker
 set foldlevelstart=0
 
 " assign ctrl-tab to snipmate, tab is used for table cells
-inoremap <C-tab> <C-R>=TriggerSnippet()<CR>
+inoremap <C-Space> <C-R>=TriggerSnippet()<CR>
 
 " natural j
 map j gj
