@@ -27,4 +27,6 @@ function! s:ConfigureVimwiki()
 endfunction
 autocmd FileType vimwiki call s:ConfigureVimwiki()
 
+command! Sync !~/scripts/vimwiki-full-sync
+
 " vim: ft=vim
