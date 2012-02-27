@@ -330,6 +330,12 @@ autocmd BufRead,BufNewFile *.profile,*.install,*.test setlocal filetype=php
 " run the rooter plugin after a session is loaded
 autocmd BufRead,BufNewFile * Rooter
 
+" Enable relativenumber only when in normal mode
+if exists('+relativenumber')
+    autocmd InsertEnter * setlocal number
+    autocmd InsertLeave * setlocal relativenumber
+endif
+
 function! s:ConfigurePHP()
     " fix indent of the entire block when inserting }.
     inoremap } }<ESC>m'=iB`'a
