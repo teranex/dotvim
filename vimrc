@@ -54,7 +54,7 @@ set diffopt+=iwhite                     " diff options: ignore whitespace
 set incsearch                           " while searching, immediately show first match
 set ignorecase                          " ignore case in (search) patterns
 set smartcase                           " when the (search) pattern contains uppercase chars, don't ignore case
-"set hlsearch                            " highlight all the matches for the search
+set hlsearch                            " highlight all the matches for the search (disable until next search with :noh)
 
 set directory=~/.vimswaps,.,/tmp        " where to store the swap files
 set noswapfile                          " disable swap files, most of the time they are just annoying
