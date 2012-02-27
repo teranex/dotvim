@@ -5,6 +5,9 @@ let g:pathogen_disabled = []
 " After the clean-up, no more unused plugins left :)
 " for future reference:
 " call add(g:pathogen_disabled, '<bundle-name>')
+call add(g:pathogen_disabled, 'tagbar')
+call add(g:pathogen_disabled, 'php-syntax')
+call add(g:pathogen_disabled, 'phpcomplete')
 
 runtime pathogen/autoload/pathogen.vim
 call pathogen#infect()
