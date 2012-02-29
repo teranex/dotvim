@@ -9,6 +9,8 @@ call add(g:pathogen_disabled, 'tagbar')
 call add(g:pathogen_disabled, 'php-syntax')
 call add(g:pathogen_disabled, 'phpcomplete')
 
+call add(g:pathogen_disabled, 'autocomplpop')
+
 runtime pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
