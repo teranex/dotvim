@@ -30,6 +30,7 @@ hi VimwikiHeader4   guifg=#AE81FF gui=bold
 hi VimwikiHeaderChar guifg=#465457
 hi VimwikiHR        guifg=#465457
 hi VimwikiNoExistsLink guifg=#465457 gui=italic
+hi link VimwikiCellSeparator Ignore
 
 hi VimwikiTag       guifg=#66D9EF gui=italic
 hi VimwikiDate      guifg=#F92672
