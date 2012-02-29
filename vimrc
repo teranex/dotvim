@@ -276,6 +276,9 @@ highlight def MarkWord3 ctermbg=Red     guibg=#465457
 highlight def MarkWord4 ctermbg=Cyan    guibg=#13354A
 highlight def MarkWord5 ctermbg=Green   guibg=#1E0010
 
+" settings for neocomplecache ============================================
+let g:neocomplcache_enable_at_startup = 1
+
 " Key mapping ============================================================
 "allow to use w!! to write to a file with sudo, in case forgotten
 "http://stackoverflow.com/questions/95072/what-are-your-favorite-vim-tricks/96492#96492
