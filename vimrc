@@ -300,8 +300,6 @@ nmap <silent> ,/ :let @/=""<CR>
 
 " open the session list
 map ,s :SessionList<CR>
-" open a new Tab
-map ,t :tabnew<CR>\t
 
 " quickly escape a single character
 map \\ i\<ESC>l
