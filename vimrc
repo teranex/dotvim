@@ -196,6 +196,8 @@ if has("gui_running")
   set guioptions-=r
   " no left scrollbar
   set guioptions-=L
+  " use console style dialogs
+  set guioptions+=c
   " but always show the tabline (window otherwise resizes when first showing tabline)
   set showtabline=2
 
