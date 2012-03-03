@@ -257,9 +257,9 @@ map <leader>] :CtrlPTag<CR>
 
 " settings for snipmate ==================================================
 " configure our custom snippets directories
-let g:snippets_dir = $HOME.'/.vim/snippets/snipmate-snippets/,'.$HOME.'/.vim/snippets/own/'
+" let g:snippets_dir = $HOME.'/.vim/snippets/snipmate-snippets/,'.$HOME.'/.vim/snippets/own/'
 " and source the support functions
-exec 'source '.$HOME.'/.vim/snippets/snipmate-snippets/support_functions.vim'
+" exec 'source '.$HOME.'/.vim/snippets/snipmate-snippets/support_functions.vim'
 
 " setting for colorizer ==================================================
 " mapped to \tc by default, but this slows down the \t mapping for ctrlp so
