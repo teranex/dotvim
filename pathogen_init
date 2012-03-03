@@ -11,6 +11,8 @@ call add(g:pathogen_disabled, 'phpcomplete')
 
 call add(g:pathogen_disabled, 'autocomplpop')
 
+call add(g:pathogen_disabled, 'snipmate')
+
 runtime pathogen/autoload/pathogen.vim
 call pathogen#infect()
 

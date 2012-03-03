@@ -79,3 +79,6 @@
 [submodule "bundle/neocomplcache"]
 	path = bundle/neocomplcache
 	url = git://github.com/Shougo/neocomplcache.git
+[submodule "bundle/snipmate-fork"]
+	path = bundle/snipmate-fork
+	url = git://github.com/teranex/snipmate.vim.git
