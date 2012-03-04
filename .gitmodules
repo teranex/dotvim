@@ -52,9 +52,6 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
-[submodule "snippets/snipmate-snippets"]
-	path = snippets/snipmate-snippets
-	url = git://github.com/scrooloose/snipmate-snippets.git
 [submodule "bundle/tcomment"]
 	path = bundle/tcomment
 	url = git://github.com/tomtom/tcomment_vim.git
