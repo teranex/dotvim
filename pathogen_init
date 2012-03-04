@@ -5,8 +5,6 @@ let g:pathogen_disabled = []
 " After the clean-up, no more unused plugins left :)
 " for future reference:
 " call add(g:pathogen_disabled, '<bundle-name>')
-call add(g:pathogen_disabled, 'phpcomplete')
-
 call add(g:pathogen_disabled, 'autocomplpop')
 
 call add(g:pathogen_disabled, 'snipmate')
