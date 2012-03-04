@@ -40,9 +40,6 @@
 [submodule "bundle/autotag"]
 	path = bundle/autotag
 	url = git://github.com/vim-scripts/AutoTag.git
-[submodule "bundle/php-syntax"]
-	path = bundle/php-syntax
-	url = git://github.com/vim-scripts/php.vim--Hodge.git
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
