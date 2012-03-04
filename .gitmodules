@@ -10,9 +10,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
-[submodule "bundle/snipmate"]
-	path = bundle/snipmate
-	url = git://github.com/msanders/snipmate.vim.git
 [submodule "bundle/vimwiki"]
 	path = bundle/vimwiki
 	url = git://github.com/vim-scripts/vimwiki.git
