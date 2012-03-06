@@ -4,7 +4,9 @@ set nolist
 set lbr
 set foldmethod=marker
 set foldlevelstart=0
-set concealcursor=nc
+if has('conceal')
+    set concealcursor=nc
+endif
 
 " assign ctrl-tab to snipmate, tab is used for table cells
 inoremap <C-j> <C-R>=TriggerSnippet()<CR>
