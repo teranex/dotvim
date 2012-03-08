@@ -21,7 +21,9 @@ hi diffDelete   ctermfg=bg  guifg=bg      ctermbg=181 guibg=#dfafaf cterm=none g
 hi diffChange   ctermfg=bg  guifg=bg      ctermbg=229 guibg=#E6DB74
 hi diffText     ctermfg=bg  guifg=bg      ctermbg=208 guibg=#FD971F cterm=bold gui=bold
 
-hi Search           guibg=#A6E22E guifg=#232526
+" hi Search           guibg=#A6E22E guifg=#232526
+hi clear Search
+hi Search           guibg=#3a2a4c
 
 hi VimwikiHeader1   guifg=#F92672 gui=bold
 hi VimwikiHeader2   guifg=#A6E22E gui=bold
