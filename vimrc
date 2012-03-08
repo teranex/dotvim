@@ -315,7 +315,10 @@ vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
 " map control-backspace to delete the previous word in insert mode
-imap <C-BS> <C-W>
+" imap <C-BS> <C-W>
+" temporarily change <C-BS> to do something annoying to 'unlearn' the shortcut
+imap <C-BS> [use ctrl-W to do that :)]
+
 " and map control-delete to delete the next word in insert mode
 imap <C-Del> <C-O>dw
 
