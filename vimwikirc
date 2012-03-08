@@ -29,6 +29,13 @@ function! s:ConfigureVimwiki()
 endfunction
 autocmd FileType vimwiki call s:ConfigureVimwiki()
 
-command! Sync !~/scripts/vimwiki-full-sync
+function! s:SyncVimwiki()
+    let old_shell=&shell
+    set shell=/bin/bash\ -i
+    !~/scripts/vimwiki-full-sync
+    exec 'set shell='.old_shell
+endfunction
+
+command! Sync call s:SyncVimwiki()
 
 " vim: ft=vim
