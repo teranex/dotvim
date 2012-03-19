@@ -216,7 +216,7 @@ endif
 
 " tab switching: easily switch back to the previous tab
 " see http://groups.google.com/group/vim_use/msg/b5f64d02a49b1348
-au TabLeave * :let g:last_tab=tabpagenr()
+autocmd TabLeave * :let g:last_tab=tabpagenr()
 
 fu! <sid>LastTab()
     if !exists("g:last_tab")
@@ -366,8 +366,8 @@ autocmd BufReadPost fugitive://* set bufhidden=wipe
 " endif
 
 " set up to change the status line based on mode
-au InsertEnter * hi! link StatusLine StatusLineInsert
-au InsertLeave * hi! link StatusLine NONE
+autocmd InsertEnter * hi! link StatusLine StatusLineInsert
+autocmd InsertLeave * hi! link StatusLine NONE
 
 " Abbreviations ==========================================================
 abbr publiic public
