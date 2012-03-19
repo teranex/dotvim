@@ -225,7 +225,7 @@ fu! <sid>LastTab()
     exe "tabn" g:last_tab
 endfu
 
-nmap <silent> <M-6> :call <sid>LastTab()<cr>
+nnoremap <silent> <M-6> :call <sid>LastTab()<cr>
 
 " settings for Syntastic =================================================
 let g:syntastic_enable_signs=1
@@ -259,9 +259,9 @@ let g:ctrlp_working_path_mode = 0
 let g:ctrlp_dotfiles=0
 let g:ctrlp_extensions = ['tag']
 let g:ctrlp_map = '<leader>t'
-map <leader>e :CtrlPCurFile<CR>
-map <leader>b :CtrlPBuffer<CR>
-map <leader>] :CtrlPTag<CR>
+noremap <leader>e :CtrlPCurFile<CR>
+noremap <leader>b :CtrlPBuffer<CR>
+noremap <leader>] :CtrlPTag<CR>
 
 " settings for snipmate ==================================================
 " configure our custom snippets directories
@@ -272,7 +272,7 @@ map <leader>] :CtrlPTag<CR>
 " setting for colorizer ==================================================
 " mapped to \tc by default, but this slows down the \t mapping for ctrlp so
 " remap it to ,tc
-nmap ,tc <Plug>Colorizer
+nnoremap ,tc <Plug>Colorizer
 
 " settings for quickfixsigns =============================================
 let g:quickfixsigns_classes = ['marks', 'vcsdiff', 'breakpoints']
@@ -292,7 +292,7 @@ let g:neocomplcache_enable_at_startup = 1
 " Key mapping ============================================================
 "allow to use w!! to write to a file with sudo, in case forgotten
 "http://stackoverflow.com/questions/95072/what-are-your-favorite-vim-tricks/96492#96492
-cmap w!! %!sudo tee > /dev/null %
+cnoremap w!! %!sudo tee > /dev/null %
 
 " mapping to quickly open current directory in netrw
 "map <leader>e :Ex<CR>
@@ -302,34 +302,34 @@ cmap w!! %!sudo tee > /dev/null %
 inoremap ;; <End>;
 
 " enter to the previous line
-imap <S-CR> <C-O>O
+inoremap <S-CR> <C-O>O
 
 " clear the search buffer with ,/
 " http://nvie.com/posts/how-i-boosted-my-vim/
-nmap <silent> ,/ :let @/=""<CR>
+nnoremap <silent> ,/ :let @/=""<CR>
 
 " open the session list
-map ,s :SessionList<CR>
+noremap ,s :SessionList<CR>
 
 " quickly escape a single character
-map \\ i\<ESC>l
+noremap \\ i\<ESC>l
 
 " Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
+nnoremap <C-Up> [e
+nnoremap <C-Down> ]e
 " Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
+vnoremap <C-Up> [egv
+vnoremap <C-Down> ]egv
 
 " map control-backspace to delete the previous word in insert mode
 " imap <C-BS> <C-W>
-imap <C-BS> <C-W>
+inoremap <C-BS> <C-W>
 
 " and map control-delete to delete the next word in insert mode
-imap <C-Del> <C-O>dw
+inoremap <C-Del> <C-O>dw
 
 " try to automagically align what should be aligned
-map <leader>a :Tab /\(=>\\|,\zs\\|=\\|\|\)<CR>
+noremap <leader>a :Tab /\(=>\\|,\zs\\|=\\|\|\)<CR>
 
 " Auto Commands ==========================================================
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
