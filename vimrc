@@ -85,19 +85,35 @@ set sessionoptions=buffers,help,resize,tabpages,winsize,winpos
 " set the path, so we can easily open files with the gf command etc
 set path+=./**;,,
 
+if has("gui_running")
+  " GUI is running or is about to start.
+  " Maximize GVim window.
+  set lines=37 columns=135
+  " remove the menu bar
+  set guioptions-=m
+  " and remove the toolbar
+  set guioptions-=T
+  " and enable the horizontal scrollbar
+  "set guioptions+=b
+  " and remove the vertical scrollbar
+  set guioptions-=r
+  " no left scrollbar
+  set guioptions-=L
+  " use console style dialogs
+  set guioptions+=c
+  " but always show the tabline (window otherwise resizes when first showing tabline)
+  set showtabline=2
+
+  if has("win32") || has("win64")
+      set guifont=Consolas:h10:cANSI
+  endif
+endif
+
 " enable filetype detection and indentation specific for filetype
 syntax on
 filetype plugin indent on
 
-" syntax configuring
-let php_htmlInStrings = 1               " html syntax highlighting inside PHP strings
-let php_folding = 0                     " disable PHP syntax folding
-let g:is_bash=1                         " configure shell script syntax as being bash syntax
-
-" color scheme
-let g:molokai_original=0
-colorscheme molokai
-
+" Status line configuration {{{
 function! FileSize()
   let bytes = getfsize(expand("%:p"))
   if bytes <= 0
@@ -109,9 +125,6 @@ function! FileSize()
     return (bytes / 1024) . "k"
   endif
 endfunction
-
-" status line
-hi User1 gui=bold guibg=#960050 guifg=white ctermfg=white ctermbg=162
 
 set statusline=                                " completely reset statusline
 set statusline+=%f\                            " relative path of the file
@@ -126,7 +139,9 @@ set statusline+=%{&expandtab?'spaces':'tabs'}:%{&tabstop}]\  " expand tab and ta
 set statusline+=%{FileSize()}\                 " filesize
 set statusline+=%l/%L:%-3c                     " cursor line/total lines:cursor column
 set statusline+=\ %P                           " percent through file
+" }}}
 
+" Title configuration {{{
 " helper function for titlestring. Returns the name of the current
 " session, if any is loaded, or an empty string when no session is loaded
 function! TitleCurrentSession()
@@ -144,8 +159,9 @@ set titlestring+=%t                            " the current filename
 set titlestring+=%(\ %M%)                      " modified flag
 set titlestring+=%(\ (%{expand(\"%:~:h\")})%)  " relative path to current file
 set titlestring+=%(\ %a%)                      " extra attributes
+" }}}
 
-" GUI tab labels
+" GUI tab labels {{{
 function! TabLabelName(n)
     let buflist = tabpagebuflist(a:n)
     let bufnam  = bufname(buflist[tabpagewinnr(a:n) - 1])
@@ -180,71 +196,25 @@ function! MyGuiTabLine()
  return s
 endfunction
 
-set guitablabel=%!MyGuiTabLine() 
+set guitablabel=%!MyGuiTabLine()
+" }}}
 
+" Configuration of plugins, syntax, colorschemes {{{
+" syntax configuring
+let php_htmlInStrings = 1               " html syntax highlighting inside PHP strings
+let php_folding = 0                     " disable PHP syntax folding
+let g:is_bash=1                         " configure shell script syntax as being bash syntax
 
-if has("gui_running")
-  " GUI is running or is about to start.
-  " Maximize GVim window.
-  set lines=37 columns=135
-  " remove the menu bar
-  set guioptions-=m
-  " and remove the toolbar
-  set guioptions-=T
-  " and enable the horizontal scrollbar
-  "set guioptions+=b
-  " and remove the vertical scrollbar
-  set guioptions-=r
-  " no left scrollbar
-  set guioptions-=L
-  " use console style dialogs
-  set guioptions+=c
-  " but always show the tabline (window otherwise resizes when first showing tabline)
-  set showtabline=2
-
-  if has("win32") || has("win64")
-      set guifont=Consolas:h10:cANSI
-  endif
-endif
-
-" When running Vim inside Tmux by default <C-arrow> doesn't work in insert
-" mode. Tmux sets $TERM to screen.
-if $TERM == 'screen'
-    inoremap [D <C-Left>
-    inoremap [C <C-Right>
-endif
-
-" tab switching: easily switch back to the previous tab
-" see http://groups.google.com/group/vim_use/msg/b5f64d02a49b1348
-autocmd TabLeave * :let g:last_tab=tabpagenr()
-
-fu! <sid>LastTab()
-    if !exists("g:last_tab")
-        return
-    endif
-    exe "tabn" g:last_tab
-endfu
-
-nnoremap <silent> <M-6> :call <sid>LastTab()<cr>
+" color scheme
+let g:molokai_original=0
+colorscheme molokai
 
 " settings for Syntastic =================================================
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 
-" settings for debugger.vim ==============================================
-let g:debuggerMaxDepth = 3
-
-" settings for yankring ==================================================
-"let g:yankring_min_element_length = 2
-
 " settings for Ack =======================================================
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-
-" settings for taglist ===================================================
-let g:Tlist_Show_One_File=1 " only show current file
-
-" settings for ShowMarks =================================================
-" let g:showmarks_marks='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ<>^''.'
 
 " settings for gitv ======================================================
 let g:Gitv_OpenHorizontal='auto'
@@ -262,12 +232,6 @@ let g:ctrlp_map = '<leader>t'
 noremap <leader>e :CtrlPCurFile<CR>
 noremap <leader>b :CtrlPBuffer<CR>
 noremap <leader>] :CtrlPTag<CR>
-
-" settings for snipmate ==================================================
-" configure our custom snippets directories
-" let g:snippets_dir = $HOME.'/.vim/snippets/snipmate-snippets/,'.$HOME.'/.vim/snippets/own/'
-" and source the support functions
-" exec 'source '.$HOME.'/.vim/snippets/snipmate-snippets/support_functions.vim'
 
 " setting for colorizer ==================================================
 " mapped to \tc by default, but this slows down the \t mapping for ctrlp so
@@ -288,25 +252,15 @@ highlight def MarkWord5 ctermbg=Green   guibg=#1E0010
 
 " settings for neocomplecache ============================================
 let g:neocomplcache_enable_at_startup = 1
+" }}}
 
-" Key mapping ============================================================
+" Key mapping {{{
 "allow to use w!! to write to a file with sudo, in case forgotten
 "http://stackoverflow.com/questions/95072/what-are-your-favorite-vim-tricks/96492#96492
 cnoremap w!! %!sudo tee > /dev/null %
 
-" mapping to quickly open current directory in netrw
-"map <leader>e :Ex<CR>
-
-" Quickly insert semicolon at the end of the string
-" http://stackoverflow.com/questions/164847/what-is-in-your-vimrc/1636961#1636961
-inoremap ;; <End>;
-
 " enter to the previous line
 inoremap <S-CR> <C-O>O
-
-" clear the search buffer with ,/
-" http://nvie.com/posts/how-i-boosted-my-vim/
-nnoremap <silent> ,/ :let @/=""<CR>
 
 " open the session list
 noremap ,s :SessionList<CR>
@@ -315,11 +269,11 @@ noremap ,s :SessionList<CR>
 noremap \\ i\<ESC>l
 
 " Bubble single lines
-nnoremap <C-Up> [e
-nnoremap <C-Down> ]e
+nmap <C-Up> [e
+nmap <C-Down> ]e
 " Bubble multiple lines
-vnoremap <C-Up> [egv
-vnoremap <C-Down> ]egv
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
 
 " map control-backspace to delete the previous word in insert mode
 " imap <C-BS> <C-W>
@@ -331,12 +285,28 @@ inoremap <C-Del> <C-O>dw
 " try to automagically align what should be aligned
 noremap <leader>a :Tab /\(=>\\|,\zs\\|=\\|\|\)<CR>
 
-" Auto Commands ==========================================================
-autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType php setlocal comments=sl:/*,mb:*,elx:*/ fdm=indent
-autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2 | ColorHighlight
+" When running Vim inside Tmux by default <C-arrow> doesn't work in insert
+" mode. Tmux sets $TERM to screen.
+if $TERM == 'screen'
+    inoremap [D <C-Left>
+    inoremap [C <C-Right>
+endif
 
+" tab switching: easily switch back to the previous tab
+" see http://groups.google.com/group/vim_use/msg/b5f64d02a49b1348
+autocmd TabLeave * :let g:last_tab=tabpagenr()
+
+fu! <sid>LastTab()
+    if !exists("g:last_tab")
+        return
+    endif
+    exe "tabn" g:last_tab
+endfu
+
+nnoremap <silent> <M-6> :call <sid>LastTab()<cr>
+" }}}
+
+" Auto Commands {{{
 " Configure certain extensions as the correct filetype
 autocmd BufRead,BufNewFile *.profile,*.install,*.test setlocal filetype=php
 
@@ -352,24 +322,28 @@ endif
 function! s:ConfigurePHP()
     " fix indent of the entire block when inserting }.
     inoremap } }<ESC>m'=iB`'a
+    setlocal comments=sl:/*,mb:*,elx:*/ fdm=indent
 endfunction
 
-" configure PHP
+" configure Filetypes
 autocmd FileType php call s:ConfigurePHP()
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2 | ColorHighlight
 
 " close fugitive buffers when they are not shown anymore
 autocmd BufReadPost fugitive://* set bufhidden=wipe
-
-" enable the marks plugin by default
-" if has("signs")
-"     autocmd BufEnter * DoShowMarks
-" endif
 
 " set up to change the status line based on mode
 autocmd InsertEnter * hi! link StatusLine StatusLineInsert
 autocmd InsertLeave * hi! link StatusLine NONE
 
-" Abbreviations ==========================================================
+" the following line makes vim ignore camelCase and CamelCase words so they
+" are not highlighted as spelling mistakes
+autocmd Syntax * syn match CamelCase "\(\<\|_\)\%(\u\l*\)\{2,}\(\>\|_\)\|\<\%(\l\l*\)\%(\u\l*\)\{1,}\>" transparent containedin=.*Comment.*,.*String.*,VimwikiLink contains=@NoSpell contained
+" }}}
+
+" Abbreviations {{{
 abbr publiic public
 abbr funciton function
 abbr functin function
@@ -378,8 +352,9 @@ cabbrev help tab help
 cabbrev h tab help
 cabbrev <expr> mv '!mv '.expand('%:p').' '.expand('%:p:h')
 cabbrev <expr> rm '!rm '.expand('%:p')
+" }}}
 
-" Functions ==============================================================
+" Functions {{{
 " this function allows you to quickly toggle between a mode to write
 " code and a mode to write text
 let g:toggleWritingModeEnabled = 0
@@ -435,11 +410,7 @@ function! InsertDateForWeekday(daynumber)
     endif
     return strftime("%Y-%m-%d", localtime()+86400*day_difference)
 endfunction
-
-" Spelling configuration =================================================
-" the following line makes vim ignore camelCase and CamelCase words so they
-" are not highlighted as spelling mistakes
-au Syntax * syn match CamelCase "\(\<\|_\)\%(\u\l*\)\{2,}\(\>\|_\)\|\<\%(\l\l*\)\%(\u\l*\)\{1,}\>" transparent containedin=.*Comment.*,.*String.*,VimwikiLink contains=@NoSpell contained
+" }}}
 
 " Host specific config ===================================================
 " check for the existence of a host-specific vimrc file and source it
@@ -449,3 +420,5 @@ let hostfile=$HOME.'/.vim/vimrc-'.hostname()
 if filereadable(hostfile)
     exe 'source ' . hostfile
 endif
+
+" vim: fdm=marker fdl=0
