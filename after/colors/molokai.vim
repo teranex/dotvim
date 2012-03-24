@@ -23,7 +23,7 @@ hi diffChange   ctermfg=bg  guifg=bg      ctermbg=229 guibg=#E6DB74
 hi diffText     ctermfg=bg  guifg=bg      ctermbg=208 guibg=#FD971F cterm=bold gui=bold
 
 hi clear Search
-hi Search           gui=reverse
+hi Search           gui=reverse cterm=reverse
 
 hi VimwikiHeader1   guifg=#F92672 gui=bold
 hi VimwikiHeader2   guifg=#A6E22E gui=bold
