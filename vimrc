@@ -259,6 +259,9 @@ let g:neocomplcache_enable_at_startup = 1
 "http://stackoverflow.com/questions/95072/what-are-your-favorite-vim-tricks/96492#96492
 cnoremap w!! %!sudo tee > /dev/null %
 
+" remove currently highlighted search by pressing Escape twice
+nnoremap <Esc><Esc> :nohlsearch<CR>
+
 " enter to the previous line
 inoremap <S-CR> <C-O>O
 
