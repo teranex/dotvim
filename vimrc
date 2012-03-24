@@ -227,11 +227,14 @@ let g:vimwiki_dir_link='index'
 " settings for ctrlp =====================================================
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_dotfiles=0
-let g:ctrlp_extensions = ['tag']
+let g:ctrlp_extensions = ['tag', 'buffertag']
 let g:ctrlp_map = '<leader>t'
+let g:ctrlp_max_height = 25
+let g:ctrlp_buftag_types = {'php': '--language-force=php --php-types=cdfi'}
 noremap <leader>e :CtrlPCurFile<CR>
 noremap <leader>b :CtrlPBuffer<CR>
 noremap <leader>] :CtrlPTag<CR>
+noremap ,] :CtrlPBufTag<CR>
 
 " setting for colorizer ==================================================
 " mapped to \tc by default, but this slows down the \t mapping for ctrlp so
