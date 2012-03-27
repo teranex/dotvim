@@ -5,6 +5,10 @@ let g:pathogen_disabled = []
 " After the clean-up, no more unused plugins left :)
 " for future reference:
 " call add(g:pathogen_disabled, '<bundle-name>')
+if $SUDO_USER != ''
+    " neocomplcache doesn't like sudo and gives annoying warnings
+    call add(g:pathogen_disabled, 'neocomplcache')
+endif
 
 runtime pathogen/autoload/pathogen.vim
 call pathogen#infect()
