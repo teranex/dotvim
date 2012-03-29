@@ -67,3 +67,6 @@
 [submodule "bundle/snipmate-snippets"]
 	path = bundle/snipmate-snippets
 	url = git://github.com/honza/snipmate-snippets.git
+[submodule "bundle/text-object-left-and-right"]
+	path = bundle/text-object-left-and-right
+	url = git://github.com/vim-scripts/text-object-left-and-right.git
