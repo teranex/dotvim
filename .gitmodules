@@ -73,3 +73,6 @@
 [submodule "bundle/text-object-indent"]
 	path = bundle/text-object-indent
 	url = git://github.com/michaeljsmith/vim-indent-object.git
+[submodule "bundle/camelcasemotion"]
+	path = bundle/camelcasemotion
+	url = git://github.com/vim-scripts/camelcasemotion.git
