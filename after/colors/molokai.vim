@@ -8,6 +8,8 @@ hi VertSplit       guifg=#455354  guibg=#455354
 hi ColorColumn     guibg=#232526
 hi CursorColumn    guibg=#232526
 hi CursorLine      guibg=#232526
+hi clear Cursor
+hi Cursor          gui=reverse
 hi SpecialKey      guifg=#66D9EF               gui=none
 hi SpecialKey      guifg=#888A85               gui=none
 hi DiffText                      guibg=#080808 gui=bold
@@ -16,7 +18,7 @@ hi StatusLine       guifg=#FD971F ctermfg=208 ctermbg=black guibg=#121212 gui=bo
 if $SUDO_USER != ''
     hi StatusLine guifg=red ctermfg=red
 endif
-hi StatusLineInsert guifg=#005000 ctermfg=white guibg=white ctermbg=22 gui=reverse
+hi StatusLineInsert guifg=#A6E22E ctermfg=black guibg=black ctermbg=118 gui=reverse,bold
 hi StatusLineNC     guifg=#455354 guibg=fg
 hi User1 gui=bold guibg=#960050 guifg=white ctermfg=white ctermbg=162
 
