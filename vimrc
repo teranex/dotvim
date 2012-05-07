@@ -340,6 +340,9 @@ autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2 | ColorHighli
 " close fugitive buffers when they are not shown anymore
 autocmd BufReadPost fugitive://* set bufhidden=wipe
 
+" open the quickfix window after grepping
+autocmd QuickFixCmdPost *grep* copen
+
 " set up to change the status line based on mode
 autocmd InsertEnter * hi! link StatusLine StatusLineInsert
 autocmd InsertLeave * hi! link StatusLine NONE
