@@ -76,3 +76,6 @@
 [submodule "bundle/camelcasemotion"]
 	path = bundle/camelcasemotion
 	url = git://github.com/vim-scripts/camelcasemotion.git
+[submodule "bundle/dbgpavim"]
+	path = bundle/dbgpavim
+	url = git://github.com/brookhong/DBGPavim.git
