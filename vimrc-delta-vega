@@ -8,3 +8,9 @@ if has("gui_running")
 endif
 
 autocmd FileType php setlocal shiftwidth=2 tabstop=2 softtabstop=2
+
+" project configs should not be public, so they are in a different
+" file which is ignored in git
+let projectsfile=$HOME.'/.vim/delta-vega-projects'
+exe 'source ' . projectsfile
+
