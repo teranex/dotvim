@@ -82,3 +82,6 @@
 [submodule "bundle/enter-indent"]
 	path = bundle/enter-indent
 	url = git://github.com/acustodioo/vim-enter-indent.git
+[submodule "bundle/smartinput"]
+	path = bundle/smartinput
+	url = git://github.com/kana/vim-smartinput.git
