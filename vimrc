@@ -62,7 +62,7 @@ set hlsearch                            " highlight all the matches for the sear
 set directory=~/.vimswaps,.,/tmp        " where to store the swap files
 set noswapfile                          " disable swap files, most of the time they are just annoying
 set nobackup                            " don't make a (permanent) backup when saving files
-set nowritebackup                       " don't make a (temporary) backup while saving files
+set writebackup                         " make a (temporary) backup while saving files
 if v:version > '702'
     set undofile                        " save undo history to an external file
     set undodir=~/.vimundo,.,/tmp       " where to save undo history files
