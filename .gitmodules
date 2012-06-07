@@ -79,3 +79,6 @@
 [submodule "bundle/dbgpavim"]
 	path = bundle/dbgpavim
 	url = git://github.com/brookhong/DBGPavim.git
+[submodule "bundle/enter-indent"]
+	path = bundle/enter-indent
+	url = git://github.com/acustodioo/vim-enter-indent.git
