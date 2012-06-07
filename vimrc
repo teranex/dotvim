@@ -30,7 +30,9 @@ set sidescroll=5                        " horizontally scroll 5 characters, inst
 set wildmenu                            " show command line completions
 set wildmode=longest:full               " complete mode for wildmenu
 set wildmode+=full                      " when pressing tab a second time, fully complete
-set wildignorecase                      " ignore case when completing filenames
+if exists("&wildignorecase")
+    set wildignorecase                  " ignore case when completing filenames
+endif
 set linebreak                           " only wrap after words, not inside words
 set cursorline                          " highlight the current line
 set cursorcolumn                        " highlight the current column
