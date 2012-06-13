@@ -276,6 +276,9 @@ noremap ,s :SessionList<CR>
 " quickly escape a single character
 noremap \\ i\<ESC>l
 
+" by default search with 'very no magic'
+nnoremap / /\V
+
 " Bubble single lines
 nmap <C-Up> [e
 nmap <C-Down> ]e
