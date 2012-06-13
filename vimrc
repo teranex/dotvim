@@ -293,6 +293,10 @@ inoremap <C-BS> <C-W>
 " and map control-delete to delete the next word in insert mode
 inoremap <C-Del> <C-O>dw
 
+" smart semi-colon insert at end of line
+inoremap ;<cr> <C-O>A;<cr>
+inoremap ;; <Esc>m'A;<Esc>`'li
+
 " try to automagically align what should be aligned
 noremap <leader>a :Tab /\(=>\\|,\zs\\|=\\|\|\)<CR>
 
