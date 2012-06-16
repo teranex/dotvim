@@ -257,6 +257,15 @@ highlight def MarkWord5 ctermbg=Green   guibg=#1E0010
 
 " settings for neocomplecache ============================================
 let g:neocomplcache_enable_at_startup = 1
+
+" settings for smartinput ================================================
+" add a smartinput rule to enter-indent between empty html tags
+call smartinput#define_rule({
+            \   'at': '\v\<([a-z][a-z0-9]*)[^\>]*\>\s*%#\s*\<\/\1\>',
+            \   'char': '<Enter>',
+            \   'input': '<Enter><Enter><Up><Esc>"_S',
+            \   'filetype': ['html', 'php', 'xml'],
+            \ })
 " }}}
 
 " Key mapping {{{
