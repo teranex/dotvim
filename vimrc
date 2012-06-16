@@ -279,6 +279,9 @@ noremap \\ i\<ESC>l
 " by default search with 'very no magic'
 nnoremap / /\V
 
+" easily insert an escaped / on the search prompt
+cnoremap <expr> /  getcmdtype() == '/' ? '\/' : '/'
+
 " remap ctrl-] to jump to tag, or display list of multiple results
 nnoremap <c-]> g<c-]>
 vnoremap <c-]> g<c-]>
