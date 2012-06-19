@@ -236,12 +236,11 @@ let g:ctrlp_buftag_types = {'php': '--language-force=php --php-types=cdfi'}
 noremap <leader>e :CtrlPCurFile<CR>
 noremap <leader>b :CtrlPBuffer<CR>
 noremap <leader>] :CtrlPTag<CR>
-noremap ,] :CtrlPBufTag<CR>
+noremap <leader>} :CtrlPBufTag<CR>
 
 " setting for colorizer ==================================================
-" mapped to \tc by default, but this slows down the \t mapping for ctrlp so
-" remap it to ,tc
-nnoremap ,tc <Plug>Colorizer
+" do not map anything
+let g:colorizer_nomap = 1
 
 " settings for quickfixsigns =============================================
 let g:quickfixsigns_classes = ['marks', 'vcsdiff', 'breakpoints']
@@ -280,7 +279,7 @@ nnoremap <Esc><Esc> :nohlsearch<CR>
 inoremap <S-CR> <C-O>O
 
 " open the session list
-noremap ,s :SessionList<CR>
+noremap <leader>s :SessionList<CR>
 
 " quickly escape a single character
 noremap \\ i\<ESC>l
