@@ -14,7 +14,7 @@ hi SpecialKey      guifg=#66D9EF               gui=none
 hi SpecialKey      guifg=#888A85               gui=none
 hi DiffText                      guibg=#080808 gui=bold
 
-hi StatusLine       guifg=#FD971F ctermfg=208 ctermbg=black guibg=#121212 gui=bold,reverse
+" hi StatusLine       guifg=#FD971F ctermfg=208 ctermbg=black guibg=#121212 gui=bold,reverse
 if $SUDO_USER != ''
     hi StatusLine guifg=red ctermfg=red
 endif

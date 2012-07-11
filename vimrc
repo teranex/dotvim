@@ -238,6 +238,21 @@ noremap <leader>b :CtrlPBuffer<CR>
 noremap <leader>] :CtrlPTag<CR>
 noremap <leader>} :CtrlPBufTag<CR>
 
+" settings for Powerline =================================================
+let g:Powerline_symbols_override = { 'LINE': '' }
+let g:Powerline_colorscheme = 'trex'
+call Pl#Theme#InsertSegment('trex:root_indicator', 'before', 'mode_indicator')
+call Pl#Theme#RemoveSegment('paste_indicator')
+call Pl#Theme#RemoveSegment('hgrev:branch')
+call Pl#Theme#RemoveSegment('syntastic:errors')
+call Pl#Theme#RemoveSegment('tagbar:currenttag')
+call Pl#Theme#RemoveSegment('rvm:string')
+call Pl#Theme#RemoveSegment('virtualenv:statusline')
+call Pl#Theme#ReplaceSegment('fugitive:branch', 'filesize')
+call Pl#Theme#ReplaceSegment('lineinfo', 'trex:lineinfo')
+call Pl#Theme#InsertSegment('trex:bufnumber', 'after', 'trex:lineinfo')
+call Pl#Theme#InsertSegment('ws_marker', 'after', 'trex:bufnumber')
+
 " setting for colorizer ==================================================
 " do not map anything
 let g:colorizer_nomap = 1
