@@ -79,9 +79,9 @@ let g:Powerline#Colorschemes#trex#colorscheme = Pl#Colorscheme#Init([
 		\ }),
 	\
 	\ Pl#Hi#Segments(['fileinfo.flags'], {
-		\ 'n': ['brightestred', ['bold']],
-		\ 'N': ['darkred'],
-		\ 'i': ['brightestred', ['bold']],
+		\ 'n': ['white', 'brightestred', ['bold']],
+		\ 'N': ['white', 'darkred'],
+		\ 'i': ['white', 'brightestred', ['bold']],
 		\ }),
 	\
 	\ Pl#Hi#Segments(['currenttag', 'fileformat', 'fileencoding', 'pwd', 'filetype', 'rvm:string', 'rvm:statusline', 'virtualenv:statusline', 'charcode', 'currhigroup'], {
