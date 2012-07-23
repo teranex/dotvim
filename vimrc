@@ -301,6 +301,7 @@ noremap \\ i\<ESC>l
 
 " by default search with 'very no magic'
 nnoremap / /\V
+nnoremap ? ?\V
 
 " easily insert an escaped / on the search prompt
 cnoremap <expr> /  getcmdtype() == '/' ? '\/' : '/'
