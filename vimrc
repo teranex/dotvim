@@ -331,6 +331,10 @@ inoremap ;; <Esc>m'A;<Esc>`'li
 " try to automagically align what should be aligned
 noremap <leader>a :Tab /\(=>\\|,\zs\\|=\\|\|\)<CR>
 
+" mappings for splitjoin
+noremap <leader>jj :SplitjoinJoin<CR>
+noremap <leader>js :SplitjoinSplit<CR>
+
 " When running Vim inside Tmux by default <C-arrow> doesn't work in insert
 " mode. Tmux sets $TERM to screen.
 if $TERM == 'screen'
