@@ -251,7 +251,7 @@ call Pl#Theme#RemoveSegment('virtualenv:statusline')
 call Pl#Theme#ReplaceSegment('fugitive:branch', 'filesize')
 call Pl#Theme#ReplaceSegment('lineinfo', 'trex:lineinfo')
 call Pl#Theme#InsertSegment('trex:bufnumber', 'after', 'trex:lineinfo')
-call Pl#Theme#InsertSegment('ws_marker', 'after', 'trex:bufnumber')
+" call Pl#Theme#InsertSegment('ws_marker', 'after', 'trex:bufnumber')
 
 " setting for colorizer ==================================================
 " do not map anything
