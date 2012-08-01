@@ -30,13 +30,18 @@ function! s:ConfigureVimwiki()
 endfunction
 autocmd FileType vimwiki call s:ConfigureVimwiki()
 
-function! s:SyncVimwiki()
+function! s:SyncVimwiki(op)
     let old_shell=&shell
     set shell=/bin/bash\ -i
-    !~/scripts/vimwiki-full-sync
+    let cmd = "!~/scripts/vimwiki-full-sync ".a:op
+    exec cmd
     exec 'set shell='.old_shell
 endfunction
 
-command! Sync call s:SyncVimwiki()
+command! Sync call s:SyncVimwiki("full")
+
+call s:SyncVimwiki("pull")
+
+autocmd VimLeave * call s:SyncVimwiki("full")
 
 " vim: ft=vim
