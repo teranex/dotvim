@@ -88,3 +88,6 @@
 [submodule "bundle/splitjoin"]
 	path = bundle/splitjoin
 	url = git://github.com/AndrewRadev/splitjoin.vim.git
+[submodule "bundle/vdebug"]
+	path = bundle/vdebug
+	url = git://github.com/joonty/vdebug.git
