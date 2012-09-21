@@ -359,6 +359,7 @@ nnoremap <silent> <M-6> :call <sid>LastTab()<cr>
 " Auto Commands {{{
 " Configure certain extensions as the correct filetype
 autocmd BufRead,BufNewFile *.profile,*.install,*.test setlocal filetype=php
+autocmd BufRead,BufNewFile *.json setlocal ft=javascript
 
 " run the rooter plugin after a session is loaded
 autocmd BufRead,BufNewFile * Rooter
