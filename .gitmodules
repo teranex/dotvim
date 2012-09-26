@@ -88,3 +88,6 @@
 [submodule "bundle/vdebug"]
 	path = bundle/vdebug
 	url = git://github.com/joonty/vdebug.git
+[submodule "bundle/php-fold"]
+	path = bundle/php-fold
+	url = git://github.com/vim-scripts/phpfolding.vim.git
