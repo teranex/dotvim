@@ -42,6 +42,9 @@ hi link VimwikiCellSeparator Ignore
 hi VimwikiTag       guifg=#66D9EF gui=italic
 hi VimwikiDate      guifg=#F92672
 
+hi DbgBreakPt guibg=#973b46 guifg=white gui=bold
+hi DbgCurrent guibg=#ffec63 guifg=black gui=bold
+
 if &t_Co > 255
    hi Error           ctermfg=16 ctermbg=red
    hi ErrorMsg        ctermfg=red ctermbg=16    cterm=bold
