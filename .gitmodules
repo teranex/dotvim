@@ -16,9 +16,6 @@
 [submodule "bundle/aftercolors"]
 	path = bundle/aftercolors
 	url = git://github.com/vim-scripts/AfterColors.vim.git
-[submodule "bundle/sessionman"]
-	path = bundle/sessionman
-	url = git://github.com/vim-scripts/sessionman.vim.git
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = git://github.com/vim-scripts/matchit.zip.git
@@ -97,3 +94,6 @@
 [submodule "bundle/visual-star-search"]
 	path = bundle/visual-star-search
 	url = git://github.com/nelstrom/vim-visual-star-search.git
+[submodule "bundle/sessionman-fork"]
+	path = bundle/sessionman-fork
+	url = git://github.com/teranex/sessionman.vim.git
