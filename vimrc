@@ -238,6 +238,7 @@ noremap <leader>e :CtrlPCurFile<CR>
 noremap <leader>b :CtrlPBuffer<CR>
 noremap <leader>] :CtrlPTag<CR>
 noremap <leader>} :CtrlPBufTag<CR>
+noremap <leader>s :CtrlPSession<CR>
 
 " settings for Powerline =================================================
 let g:Powerline_symbols_override = { 'LINE': '' }
@@ -293,9 +294,6 @@ nnoremap <Esc><Esc> :nohlsearch<CR>
 
 " enter to the previous line
 inoremap <S-CR> <C-O>O
-
-" open the session list
-noremap <leader>s :SessionList<CR>
 
 " quickly escape a single character
 noremap \\ i\<ESC>l
