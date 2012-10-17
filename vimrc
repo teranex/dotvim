@@ -472,16 +472,6 @@ function! InsertDateForWeekday(daynumber)
     endif
     return strftime("%Y-%m-%d", localtime()+86400*day_difference)
 endfunction
-" }}}
-
-" Host specific config ===================================================
-" check for the existence of a host-specific vimrc file and source it
-" by example: if your host is named 'andoria', this will source
-" ~/scripts/vim/vimrc-andoria if it exists
-let hostfile=$HOME.'/.vim/vimrc-'.hostname()
-if filereadable(hostfile)
-    exe 'source ' . hostfile
-endif
 
 " Highlight characters found by f, F, t, and T.
 " Unhighlights on a cursorhold.
@@ -596,6 +586,16 @@ if exists('*matchadd')
       exec 'normal! '.a:count.a:op
     endif
   endfunction
+endif
+" }}}
+
+" Host specific config ===================================================
+" check for the existence of a host-specific vimrc file and source it
+" by example: if your host is named 'andoria', this will source
+" ~/scripts/vim/vimrc-andoria if it exists
+let hostfile=$HOME.'/.vim/vimrc-'.hostname()
+if filereadable(hostfile)
+    exe 'source ' . hostfile
 endif
 
 " vim: fdm=marker fdl=0
