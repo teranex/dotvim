@@ -282,6 +282,16 @@ call smartinput#define_rule({
             \   'input': '<Enter><Enter><Up><Esc>"_S',
             \   'filetype': ['html', 'php', 'xml'],
             \ })
+
+" settings for vdebug ====================================================
+" set the default configuration (only options which are different from default
+" configuration)
+let g:vdebug_options= {
+    \    "watch_window_style" : 'compact',
+    \    "server" : '192.168.56.1',
+    \}
+" add a keymapping to quickly remove all breakpoints
+nnoremap <leader>dr :BreakpointRemove *<CR>
 " }}}
 
 " Key mapping {{{
