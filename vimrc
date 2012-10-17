@@ -288,7 +288,6 @@ call smartinput#define_rule({
 " configuration)
 let g:vdebug_options= {
     \    "watch_window_style" : 'compact',
-    \    "server" : '192.168.56.1',
     \}
 " add a keymapping to quickly remove all breakpoints
 nnoremap <leader>dr :BreakpointRemove *<CR>
