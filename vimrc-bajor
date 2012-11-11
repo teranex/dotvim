@@ -1,0 +1,16 @@
+if has("gui_running")
+  " GUI is running or is about to start.
+  " Maximize gvim window.
+  set lines=50 columns=170
+
+  " move it to the left upper corner
+  winpos 0 0
+endif
+
+autocmd FileType php setlocal shiftwidth=2 tabstop=2 softtabstop=2
+
+" project configs should not be public, so they are in a different
+" file which is ignored in git
+let projectsfile=$HOME.'/.vim/delta-vega-projects'
+exe 'source ' . projectsfile
+
