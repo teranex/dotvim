@@ -1,0 +1,452 @@
+# converted from snipmate-snippets repo
+snippet <? "<?"
+<?php
+${1}
+endsnippet
+
+snippet ec "ec"
+echo ${1};
+endsnippet
+
+snippet <?e "<?e"
+<?php echo ${1} ?>
+endsnippet
+
+snippet <?= "<?="
+<?=${1}?>
+endsnippet
+
+snippet ns "ns"
+namespace ${1:Foo\Bar\Baz};
+${2}
+endsnippet
+
+snippet use "use"
+use ${1:Foo\Bar\Baz};
+${2}
+endsnippet
+
+snippet c "class"
+${1:abstract }class ${2:`!v Filename()`}
+{
+	${3}
+}
+endsnippet
+
+snippet i "i"
+interface ${1:`!v Filename()`}
+{
+	${2}
+}
+endsnippet
+
+snippet t. "t."
+$this->${1}
+endsnippet
+
+snippet f "f"
+function ${1:foo}(${2:array }${3:$bar})
+{
+	${4}
+}
+endsnippet
+
+snippet m "m"
+${1:abstract }${2:protected}${3: static} function ${4:foo}(${5:array }${6:$bar})
+{
+	${7}
+}
+endsnippet
+
+snippet sm "sm"
+${1:public} function set${2:Foo}(${3:$2 }$${4:`!v tolower('$2')`})
+{
+	$this->${5:$4} = $$4;
+	${6}
+	return $this;
+}
+endsnippet
+
+snippet gm "gm"
+${1:public} function get${2:Foo}()
+{
+	return $this->${3:$2};
+}
+endsnippet
+
+snippet $s "$s"
+${1:$foo}->set${2:Bar}(${3});
+endsnippet
+
+snippet $g "$g"
+${1:$foo}->get${2:Bar}();
+endsnippet
+
+snippet =?: "=?:"
+$${1:foo} = ${2:true} ? ${3:a} : ${4};
+endsnippet
+
+snippet ?: "?:"
+${1:true} ? ${2:a} : ${3}
+endsnippet
+
+snippet C "C"
+$_COOKIE['${1:variable}']${2}
+endsnippet
+
+snippet E "E"
+$_ENV['${1:variable}']${2}
+endsnippet
+
+snippet F "F"
+$_FILES['${1:variable}']${2}
+endsnippet
+
+snippet G "G"
+$_GET['${1:variable}']${2}
+endsnippet
+
+snippet P "P"
+$_POST['${1:variable}']${2}
+endsnippet
+
+snippet R "R"
+$_REQUEST['${1:variable}']${2}
+endsnippet
+
+snippet S "S"
+$_SERVER['${1:variable}']${2}
+endsnippet
+
+snippet SS "SS"
+$_SESSION['${1:variable}']${2}
+endsnippet
+
+snippet inc "inc"
+include '${1:file}';${2}
+endsnippet
+
+snippet inc1 "inc1"
+include_once '${1:file}';${2}
+endsnippet
+
+snippet req "req"
+require '${1:file}';${2}
+endsnippet
+
+snippet req1 "req1"
+require_once '${1:file}';${2}
+endsnippet
+
+snippet /* "/*"
+/**
+ * ${1}
+ */
+endsnippet
+
+snippet doc_cp "doc_cp"
+/**
+ * ${1:undocumented class}
+ *
+ * @package ${2:default}
+ * @subpackage ${3:default}
+ * @author ${4:`!v g:snips_author`}
+ */${5}
+endsnippet
+
+snippet doc_vp "doc_vp"
+/**
+ * ${1:undocumented class variable}
+ *
+ * @var ${2:string}
+ */${3}
+endsnippet
+
+snippet doc_v "doc_v"
+/**
+ * ${3:undocumented class variable}
+ *
+ * @var ${4:string}
+ */
+${1:var} $${2};${5}
+endsnippet
+
+snippet doc_c "doc_c"
+/**
+ * ${3:undocumented class}
+ *
+ * @package ${4:default}
+ * @subpackage ${5:default}
+ * @author ${6:`!v g:snips_author`}
+ */
+${1:}class ${2:}
+{
+	${7}
+} // END $1class $2
+endsnippet
+
+snippet doc_dp "doc_dp"
+/**
+ * ${1:undocumented constant}
+ */${2}
+endsnippet
+
+snippet doc_d "doc_d"
+/**
+ * ${3:undocumented constant}
+ */
+define(${1}, ${2});${4}
+endsnippet
+
+snippet doc_fp "doc_fp"
+/**
+ * ${1:undocumented function}
+ *
+ * @return ${2:void}
+ * @author ${3:`!v g:snips_author`}
+ */${4}
+endsnippet
+
+snippet doc_s "doc_s"
+/**
+ * ${4:undocumented function}
+ *
+ * @return ${5:void}
+ * @author ${6:`!v g:snips_author`}
+ */
+${1}function ${2}(${3});${7}
+endsnippet
+
+snippet doc_f "doc_f"
+/**
+ * ${4:undocumented function}
+ *
+ * @return ${5:void}
+ * @author ${6:`!v g:snips_author`}
+ */
+${1}function ${2}(${3})
+{${7}
+}
+endsnippet
+
+snippet doc_h "doc_h"
+/**
+ * ${1}
+ *
+ * @author ${2:`!v g:snips_author`}
+ * @version ${3:$Id$}
+ * @copyright ${4:$2}, `!v strftime('%d %B, %Y')`
+ * @package ${5:default}
+ */
+endsnippet
+
+snippet interface "interface"
+/**
+ * ${2:undocumented class}
+ *
+ * @package ${3:default}
+ * @author ${4:`!v g:snips_author`}
+ */
+interface ${1:}
+{
+	${5}
+}
+endsnippet
+
+snippet class "class"
+/**
+ * ${1}
+ */
+class ${2:ClassName}
+{
+	${3}
+	/**
+	 * ${4}
+	 */
+	${5:public} function ${6:__construct}(${7:argument})
+	{
+		${8:// code...}
+	}
+}
+endsnippet
+
+snippet def "def"
+define('${1}'${2});${3}
+endsnippet
+
+snippet def? "def?"
+${1}defined('${2}')${3}
+endsnippet
+
+snippet wh "wh"
+while (${1:/* condition */}) {
+	${2:// code...}
+}
+endsnippet
+
+snippet do "do"
+do {
+	${2:// code... }
+} while (${1:/* condition */});
+endsnippet
+
+snippet if "if"
+if (${1:/* condition */}) {
+	${2:// code...}
+}
+endsnippet
+
+snippet ifil "ifil"
+<?php if (${1:/* condition */}): ?>
+	${2:<!-- code... -->}
+<?php endif; ?>
+endsnippet
+
+# snippet ife "ife"
+# if (${1:/* condition */}) {
+# 	${2:// code...}
+# } else {
+# 	${3:// code...}
+# }
+# ${4}
+# endsnippet
+
+snippet ifeil "ifeil"
+<?php if (${1:/* condition */}): ?>
+	${2:<!-- html... -->}
+<?php else: ?>
+	${3:<!-- html... -->}
+<?php endif; ?>
+${4}
+endsnippet
+
+snippet else "else"
+else {
+	${1:// code...}
+}
+endsnippet
+
+snippet elseif "elseif"
+elseif (${1:/* condition */}) {
+	${2:// code...}
+}
+endsnippet
+
+snippet switch "switch"
+switch ($${1:variable}) {
+	case '${2:value}':
+		${3:// code...}
+		break;
+	${5}
+	default:
+		${4:// code...}
+		break;
+}
+endsnippet
+
+snippet case "case"
+case '${1:value}':
+	${2:// code...}
+	break;${3}
+endsnippet
+
+snippet for "for"
+for ($${2:i} = 0; $$2 < ${1:count}; $$2${3:++}) {
+	${4: // code...}
+}
+endsnippet
+
+snippet foreach "foreach"
+foreach ($${1:variable} as $${2:value}) {
+	${3:// code...}
+}
+endsnippet
+
+snippet foreachil "foreachil"
+<?php foreach ($${1:variable} as $${2:value}): ?>
+	${3:<!-- html... -->}
+<?php endforeach; ?>
+endsnippet
+
+snippet foreachk "foreachk" !
+foreach ($${1:variable} as $${2:key} => $${3:value}) {
+	${4:// code...}
+}
+endsnippet
+
+snippet foreachkil "foreachkil"
+<?php foreach ($${1:variable} as $${2:key} => $${3:value}): ?>
+	${4:<!-- html... -->}
+<?php endforeach; ?>
+endsnippet
+
+snippet array "array"
+$${1:arrayName} = array('${2}' => ${3});${4}
+endsnippet
+
+snippet try "try"
+try {
+	${2}
+} catch (${1:Exception} $e) {
+}
+endsnippet
+
+snippet lambda "lambda"
+${1:static }function (${2:args}) use (${3:&$x, $y /*put vars in scope (closure) */}) {
+	${4}
+};
+endsnippet
+
+snippet pd "pd"
+echo '<pre>'; var_dump(${1}); echo '</pre>';
+endsnippet
+
+snippet pdd "pdd"
+echo '<pre>'; var_dump(${1}); echo '</pre>'; die(${2:});
+endsnippet
+
+snippet vd "vd"
+var_dump(${1});
+endsnippet
+
+snippet vdd "vdd"
+var_dump(${1}); die(${2:});
+endsnippet
+
+snippet http_redirect "http_redirect"
+header ("HTTP/1.1 301 Moved Permanently"); 
+header ("Location: ".URL); 
+exit();
+endsnippet
+
+snippet getset "getset"
+/**
+ * Gets the value of ${1:}
+ *
+ * @return ${2}
+ */
+public function get$1()
+{
+	return $this->$1;
+}
+/**
+ * Sets the value of $1
+ *
+ * @param mixed $$1 ${3}
+ */
+public function set$1($$1)
+{
+	$this->$1 = $$1;
+	return $this;
+}
+endsnippet
+
+snippet rett "rett"
+return true;
+endsnippet
+
+snippet retf "retf"
+return false;
+endsnippet
+
+

@@ -1,0 +1,45 @@
+#snippet todo "todo"
+#@todo [jbu] 
+#endsnippet
+
+snippet todo "TODO"
+TODO [jbu] $1 (added `!v strftime("%Y-%m-%d %H:%M")`)
+endsnippet
+
+snippet today "today"
+`!v strftime("%Y-%m-%d")`
+endsnippet
+
+snippet tomorrow "tomorrow"
+`!v strftime("%Y-%m-%d", localtime()+86400)`
+endsnippet
+
+snippet monday "monday"
+`!v InsertDateForWeekday(0)`
+endsnippet
+
+snippet tuesday "tuesday"
+`!v InsertDateForWeekday(1)`
+endsnippet
+
+snippet wednesday "wednesday"
+`!v InsertDateForWeekday(2)`
+endsnippet
+
+snippet thursday "thursday"
+`!v InsertDateForWeekday(3)`
+endsnippet
+
+snippet friday "friday"
+`!v InsertDateForWeekday(4)`
+endsnippet
+
+snippet saturday "saturday"
+`!v InsertDateForWeekday(5)`
+endsnippet
+
+snippet sunday "sunday"
+`!v InsertDateForWeekday(6)`
+endsnippet
+
+
