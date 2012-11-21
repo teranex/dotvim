@@ -230,7 +230,7 @@ let g:vimwiki_dir_link='index'
 " settings for ctrlp =====================================================
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_dotfiles=0
-let g:ctrlp_extensions = ['tag', 'buffertag']
+let g:ctrlp_extensions = ['tag', 'buffertag', 'filetype']
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_max_height = 25
 let g:ctrlp_buftag_types = {'php': '--language-force=php --php-types=cdfi'}
@@ -239,6 +239,7 @@ noremap <leader>b :CtrlPBuffer<CR>
 noremap <leader>] :CtrlPTag<CR>
 noremap <leader>} :CtrlPBufTag<CR>
 noremap <leader>s :CtrlPSession<CR>
+noremap <leader>f :CtrlPFiletype<CR>
 
 " settings for Powerline =================================================
 let g:Powerline_symbols_override = { 'LINE': '' }
