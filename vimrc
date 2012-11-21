@@ -514,8 +514,8 @@ if exists('*matchadd')
 
   " <C-U> in normal mode to remove any count, in visual mode to remove range
   " Do not provide this command in op-pending mode, it doesn't do anything
-  nnoremap <Leader>f :<C-U>call HighlightFoundChar()<CR>
-  xnoremap <Leader>f :<C-U>call HighlightFoundChar()<CR>gv
+  " nnoremap <Leader>f :<C-U>call HighlightFoundChar()<CR>
+  " xnoremap <Leader>f :<C-U>call HighlightFoundChar()<CR>gv
 
   hi FindChar gui=bold,undercurl,italic guisp=orange guibg=black
 
