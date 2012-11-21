@@ -100,3 +100,6 @@
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = git://github.com/SirVer/ultisnips.git
+[submodule "bundle/ctrlp-filetype"]
+	path = bundle/ctrlp-filetype
+	url = git://github.com/endel/ctrlp-filetype.vim.git
