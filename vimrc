@@ -295,6 +295,14 @@ let g:vdebug_options= {
     \}
 " add a keymapping to quickly remove all breakpoints
 nnoremap <leader>dr :BreakpointRemove *<CR>
+
+" settings for ultisnips =================================================
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "snippets"]
+let g:UltiSnipsNoPythonWarning = 1
+
 " }}}
 
 " Key mapping {{{
