@@ -8,6 +8,7 @@ set history=500                         " keep the last 500 commands (was 50 in 
 
 " and some other default options, just to be sure
 set encoding=utf-8                      " by default set the encoding to UTF-8
+set fileformats=unix,dos,mac            " also read mac files correctly, just in case we are dealing with that
 
 " then my own
 set nowrap                              " disable wrapping of text
