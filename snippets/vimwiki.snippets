@@ -1,0 +1,25 @@
+snippet section "section"
+=== $1 ===
+%% {{{
+$0
+%% }}}
+endsnippet
+
+snippet t "task"
+	* [ ] 
+endsnippet
+
+snippet l "list"
+    * 
+endsnippet
+
+snippet - "line" b
+----------------------------------------------------------------------------------------------------
+
+endsnippet
+
+snippet n "note"
+**`!v strftime("%Y-%m-%d %H:%M")`** $1
+    $0
+----------------------------------------------------------------------------------------------------
+endsnippet
