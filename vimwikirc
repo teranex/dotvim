@@ -10,7 +10,7 @@ if has('conceal')
 endif
 
 " assign ctrl-j to expand snippets, tab is used for table cells
-inoremap <C-j> <C-R>=UltiSnips_ExpandSnippet()<CR>
+inoremap <C-j> <C-R>=UltiSnips_ExpandSnippetOrJump()<CR>
 
 " natural j
 map j gj
