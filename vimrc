@@ -519,7 +519,7 @@ if exists('*matchadd')
   " nnoremap <Leader>f :<C-U>call HighlightFoundChar()<CR>
   " xnoremap <Leader>f :<C-U>call HighlightFoundChar()<CR>gv
 
-  hi FindChar gui=bold,undercurl,italic guisp=orange guibg=black
+  hi FindChar gui=bold,underline guisp=orange guibg=black
 
   " highlight the last found character
   function! HighlightFoundChar()
