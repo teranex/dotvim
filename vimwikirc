@@ -6,7 +6,7 @@ set lbr
 set foldmethod=marker
 set foldlevelstart=0
 if has('conceal')
-    set concealcursor=nc
+    set concealcursor=c
 endif
 
 " assign ctrl-j to expand snippets, tab is used for table cells
