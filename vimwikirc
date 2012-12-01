@@ -4,6 +4,7 @@ set spell
 set nolist
 set lbr
 set foldmethod=marker
+set foldmarker=%%\ {{{,%%\ }}} " set the foldmarker to include comments so syntax regions are not folded
 set foldlevelstart=0
 if has('conceal')
     set concealcursor=c
