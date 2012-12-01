@@ -1,4 +1,5 @@
 set wrap
+set textwidth=100
 set spell
 set nolist
 set lbr
