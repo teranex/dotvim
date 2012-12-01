@@ -25,6 +25,19 @@ map ,ta ,tlggjO
 " map ,tf ddzRGkp''
 map ,tf :m$-1<CR>'.
 
+" define the default wiki
+let wiki = {}
+let wiki.path = '~/vimwiki/'
+let wiki.nested_syntaxes = {
+    \ 'bash': 'sh',
+    \ 'python': 'python',
+    \ 'ruby': 'ruby',
+    \ 'html': 'html',
+    \ 'php': 'php',
+    \}
+let g:vimwiki_list = [wiki]
+
+
 " configure vimwiki
 function! s:ConfigureVimwiki()
     Rooter
