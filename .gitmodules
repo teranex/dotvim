@@ -100,3 +100,6 @@
 [submodule "bundle/ctrlp-filetype"]
 	path = bundle/ctrlp-filetype
 	url = git://github.com/endel/ctrlp-filetype.vim.git
+[submodule "bundle/namazu-fork"]
+	path = bundle/namazu-fork
+	url = git://github.com/teranex/namazu.vim.git
