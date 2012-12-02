@@ -408,6 +408,15 @@ autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2 | ColorHighli
 " close fugitive buffers when they are not shown anymore
 autocmd BufReadPost fugitive://* set bufhidden=wipe
 
+" configure git commit messages
+function! s:ConfigureGitCommit()
+    setlocal foldmethod=expr
+    setlocal foldexpr=UnifiedDiffFolds()
+    setlocal foldlevel=0
+endfunction
+
+autocmd FileType gitcommit call s:ConfigureGitCommit()
+
 " open the quickfix window after grepping
 autocmd QuickFixCmdPost *grep* copen
 
@@ -601,6 +610,13 @@ if exists('*matchadd')
     endif
   endfunction
 endif
+
+function! UnifiedDiffFolds()
+    if getline(v:lnum) =~ "^diff\ "
+        return ">1"
+    endif
+    return "="
+endfunction
 " }}}
 
 " Host specific config ===================================================
