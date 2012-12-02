@@ -37,6 +37,8 @@ let wiki.nested_syntaxes = {
     \}
 let g:vimwiki_list = [wiki]
 
+" configure namazu
+let g:namazu_index = "~/vimwiki/.namazu"
 
 " configure vimwiki
 function! s:ConfigureVimwiki()
