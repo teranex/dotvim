@@ -62,7 +62,6 @@ if has("gui_running")
 endif
 
 function! s:InsertWebpage(url)
-    echo "Loading webpage..."
     let startline = line('.')
     exec "normal! a%% {{{ ".a:url
     exec "read !links -dump ".a:url." -width ".&textwidth
@@ -74,5 +73,12 @@ function! s:InsertWebpage(url)
 endfunction
 
 command! -nargs=1 InsertWebpage call s:InsertWebpage(<f-args>)
+
+function! UpdateDiaryLinks()
+    VimwikiDiaryGenerateLinks
+    write
+endfunction
+
+autocmd BufRead diary.wiki call UpdateDiaryLinks()
 
 " vim: ft=vim
