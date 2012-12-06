@@ -41,8 +41,10 @@ hi VimwikiHR        guifg=#465457
 hi VimwikiNoExistsLink guifg=#465457 gui=italic
 hi link VimwikiCellSeparator Ignore
 
-hi VimwikiTag       guifg=#66D9EF gui=italic
+hi VimwikiTag       guifg=#66D9EF gui=italic,underline
 hi VimwikiDate      guifg=#F92672
+hi VimwikiNoteDate  guifg=#E6DB74 gui=bold,underline
+hi VimwikiNoteHeader guifg=#66D9EF gui=italic
 
 hi DbgBreakPt guibg=#973b46 guifg=white gui=bold
 hi DbgCurrent guibg=#ffec63 guifg=black gui=bold
