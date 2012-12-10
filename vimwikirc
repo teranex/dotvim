@@ -1,6 +1,7 @@
 set wrap
 set textwidth=100
 set spell
+set spelllang=en,nl          " check spelling in both English and Dutch by default
 set nolist
 set lbr
 set foldmethod=marker
