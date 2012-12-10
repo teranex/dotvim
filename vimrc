@@ -243,6 +243,10 @@ noremap <leader>} :CtrlPBufTag<CR>
 noremap <leader>s :CtrlPSession<CR>
 noremap <leader>f :CtrlPFiletype<CR>
 
+" settings for tmarks ====================================================
+autocmd FileType tlibInputList setlocal nolist
+noremap <leader>' :TMarks<CR>
+
 " settings for Powerline =================================================
 let g:Powerline_symbols_override = { 'LINE': '' }
 let g:Powerline_colorscheme = 'trex'
