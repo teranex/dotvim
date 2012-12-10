@@ -109,3 +109,6 @@
 [submodule "bundle/tmarks"]
 	path = bundle/tmarks
 	url = git://github.com/tomtom/tmarks_vim.git
+[submodule "bundle/surround"]
+	path = bundle/surround
+	url = git://github.com/tpope/vim-surround.git
