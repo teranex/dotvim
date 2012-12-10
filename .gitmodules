@@ -106,3 +106,6 @@
 [submodule "bundle/tlib"]
 	path = bundle/tlib
 	url = git://github.com/tomtom/tlib_vim.git
+[submodule "bundle/tmarks"]
+	path = bundle/tmarks
+	url = git://github.com/tomtom/tmarks_vim.git
