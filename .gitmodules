@@ -103,3 +103,6 @@
 [submodule "bundle/namazu-fork"]
 	path = bundle/namazu-fork
 	url = git://github.com/teranex/namazu.vim.git
+[submodule "bundle/tlib"]
+	path = bundle/tlib
+	url = git://github.com/tomtom/tlib_vim.git
