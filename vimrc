@@ -466,12 +466,6 @@ command! ToggleWritingMode call ToggleWritingModeFunc()
 " easily copy relative path to clipboard
 command! CopyPath let @+ = expand('%')
 
-function! BufDelExcptActv()
-    let buf = bufnr('%')
-    bufdo if bufnr('%') != buf | bdelete | endif
-endfunction
-command! Bonly call BufDelExcptActv()
-
 " function to be used by snipMate.
 " Monday is first day: 0, Sunday last: 6
 function! InsertDateForWeekday(daynumber)
