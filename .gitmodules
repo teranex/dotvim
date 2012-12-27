@@ -112,3 +112,6 @@
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = git://github.com/tpope/vim-surround.git
+[submodule "bundle/bufonly"]
+	path = bundle/bufonly
+	url = git://github.com/vim-scripts/BufOnly.vim.git
