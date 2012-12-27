@@ -115,3 +115,6 @@
 [submodule "bundle/bufonly"]
 	path = bundle/bufonly
 	url = git://github.com/vim-scripts/BufOnly.vim.git
+[submodule "bundle/gruvbox"]
+	path = bundle/gruvbox
+	url = git://github.com/morhetz/gruvbox.git
