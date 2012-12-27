@@ -36,6 +36,7 @@ let wiki.nested_syntaxes = {
     \ 'html': 'html',
     \ 'php': 'php',
     \ 'vim': 'vim',
+    \ 'conf': 'conf',
     \}
 let g:vimwiki_list = [wiki]
 
