@@ -21,6 +21,7 @@ set incsearch                           " while searching, immediately show firs
 set hlsearch                            " highlight all the matches for the search (disable until next search with :noh)
 set ignorecase                          " ignore case in (search) patterns
 set smartcase                           " when the (search) pattern contains uppercase chars, don't ignore case
+set titleold=                           " don't set the title when quitting
 
 syntax on
 filetype plugin indent on
