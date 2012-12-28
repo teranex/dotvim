@@ -1,0 +1,28 @@
+set nocompatible                        " no compatibility with old-skool vi
+set backspace=indent,eol,start          " define behavior of backspace key
+set nowrap                              " disable wrapping of text
+set tabstop=4                           " number of spaces that a tab counts for
+set shiftwidth=4                        " number of spaces to use for each step of indent
+set softtabstop=4                       " number of spaces that a tab counts for while editing
+set shiftround                          " round the indent to a multiple of shiftwidth
+set expandtab                           " expand tabs to spaces
+set number                              " show line numbers by default
+if exists('+relativenumber')
+    set relativenumber
+endif
+set laststatus=2                        " always show the statusline
+set wildmenu                            " show command line completions
+set wildmode=longest:full               " complete mode for wildmenu
+set wildmode+=full                      " when pressing tab a second time, fully complete
+set cursorline                          " highlight the current line
+set autoindent                          " automatically indent a new line
+set virtualedit=block,onemore           " allow cursor after end of line in visual block mode and allow cursor one char after line end
+set incsearch                           " while searching, immediately show first match
+set hlsearch                            " highlight all the matches for the search (disable until next search with :noh)
+set ignorecase                          " ignore case in (search) patterns
+set smartcase                           " when the (search) pattern contains uppercase chars, don't ignore case
+
+syntax on
+filetype plugin indent on
+
+colorscheme slate
