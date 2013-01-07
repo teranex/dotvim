@@ -363,13 +363,6 @@ noremap <leader>a :Tab /\(=>\\|,\zs\\|=\\|\|\)<CR>
 noremap <leader>jj :SplitjoinJoin<CR>
 noremap <leader>js :SplitjoinSplit<CR>
 
-" When running Vim inside Tmux by default <C-arrow> doesn't work in insert
-" mode. Tmux sets $TERM to screen.
-if $TERM == 'screen'
-    inoremap [D <C-Left>
-    inoremap [C <C-Right>
-endif
-
 " tab switching: easily switch back to the previous tab
 " see http://groups.google.com/group/vim_use/msg/b5f64d02a49b1348
 autocmd TabLeave * :let g:last_tab=tabpagenr()
