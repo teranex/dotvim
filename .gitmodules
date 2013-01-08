@@ -118,3 +118,6 @@
 [submodule "bundle/gruvbox"]
 	path = bundle/gruvbox
 	url = git://github.com/morhetz/gruvbox.git
+[submodule "bundle/tslime-fork"]
+	path = bundle/tslime-fork
+	url = git://github.com/teranex/tslime.vim.git
