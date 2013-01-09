@@ -121,3 +121,6 @@
 [submodule "bundle/tslime-fork"]
 	path = bundle/tslime-fork
 	url = git://github.com/teranex/tslime.vim.git
+[submodule "bundle/detectindent"]
+	path = bundle/detectindent
+	url = git://github.com/ciaranm/detectindent.git
