@@ -7,7 +7,7 @@ if has("gui_running")
   winpos 0 0
 endif
 
-autocmd FileType php setlocal shiftwidth=2 tabstop=2 softtabstop=2
+" autocmd FileType php setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " project configs should not be public, so they are in a different
 " file which is ignored in git

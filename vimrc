@@ -315,6 +315,9 @@ let g:UltiSnipsNoPythonWarning = 1
 vmap <C-c><C-c> <Plug>SendSelectionToTmux
 nmap <C-c><C-c> <Plug>NormalModeSendToTmux
 nmap <C-c>r <Plug>SetTmuxVars
+
+" settings for detectindent ==============================================
+let g:detectindent_preferred_expandtab=1
 " }}}
 
 " Key mapping {{{
@@ -425,6 +428,9 @@ autocmd QuickFixCmdPost *grep* copen
 " set up to change the status line based on mode
 autocmd InsertEnter * hi! link StatusLine StatusLineInsert
 autocmd InsertLeave * hi! link StatusLine NONE
+
+" automatically try to detect correct indent
+autocmd BufReadPost * :DetectIndent 
 
 " the following line makes vim ignore camelCase and CamelCase words so they
 " are not highlighted as spelling mistakes
