@@ -22,6 +22,8 @@ set hlsearch                            " highlight all the matches for the sear
 set ignorecase                          " ignore case in (search) patterns
 set smartcase                           " when the (search) pattern contains uppercase chars, don't ignore case
 set titleold=                           " don't set the title when quitting
+set showcmd                             " show the current command in the statusline
+set display+=lastline                   " display wrapped lines at bottom instead of @ symbols
 
 syntax on
 filetype plugin indent on
