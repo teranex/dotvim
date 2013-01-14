@@ -318,6 +318,9 @@ nmap <C-c>r <Plug>SetTmuxVars
 
 " settings for detectindent ==============================================
 let g:detectindent_preferred_expandtab=1
+
+" settings for indent lines ==============================================
+let g:indentLine_color_gui='#31373a'
 " }}}
 
 " Key mapping {{{
