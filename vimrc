@@ -321,6 +321,7 @@ let g:detectindent_preferred_expandtab=1
 
 " settings for indent lines ==============================================
 let g:indentLine_color_gui='#31373a'
+let g:indentLine_char='│'
 " }}}
 
 " Key mapping {{{
