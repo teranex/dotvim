@@ -14,7 +14,7 @@ hi SpecialKey      guifg=#66D9EF               gui=none
 hi SpecialKey      guifg=#888A85               gui=none
 hi DiffText                      guibg=#080808 gui=bold
 hi CursorLineNr    guifg=#232526 guibg=#465457 ctermfg=234 ctermbg=250
-hi Conceal         guibg=#808080 guifg=black
+hi Conceal         ctermfg=39 guifg=#31373a
 
 " hi StatusLine       guifg=#FD971F ctermfg=208 ctermbg=black guibg=#121212 gui=bold,reverse
 if $SUDO_USER != ''
@@ -54,11 +54,11 @@ hi phpDocParam guifg=#5e801a
 hi phpDocVariable guifg=#804c10
 
 if &t_Co > 255
-   hi Error           ctermfg=16 ctermbg=red
-   hi ErrorMsg        ctermfg=red ctermbg=16    cterm=bold
-   hi NonText         ctermfg=59
-   hi clear SpellBad
-   hi SpellBad        cterm=underline
-   hi VertSplit       ctermfg=244 ctermbg=244   cterm=bold
-   hi ColorColumn     ctermbg=234
+    hi Error           ctermfg=16 ctermbg=red
+    hi ErrorMsg        ctermfg=red ctermbg=16    cterm=bold
+    hi NonText         ctermfg=59
+    hi clear SpellBad
+    hi SpellBad        cterm=underline
+    hi VertSplit       ctermfg=244 ctermbg=244   cterm=bold
+    hi ColorColumn     ctermbg=234
 endif
