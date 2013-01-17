@@ -14,7 +14,7 @@ hi SpecialKey      guifg=#66D9EF               gui=none
 hi SpecialKey      guifg=#888A85               gui=none
 hi DiffText                      guibg=#080808 gui=bold
 hi CursorLineNr    guifg=#232526 guibg=#465457 ctermfg=234 ctermbg=250
-hi Conceal         ctermfg=39 guifg=#31373a
+hi Conceal         guifg=#31373a ctermfg=235
 
 " hi StatusLine       guifg=#FD971F ctermfg=208 ctermbg=black guibg=#121212 gui=bold,reverse
 if $SUDO_USER != ''
