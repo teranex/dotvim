@@ -291,6 +291,16 @@ let g:detectindent_preferred_expandtab=1
 let g:indentLine_color_gui='#31373a'
 let g:indentLine_char='│'
 let g:indentLine_indentLevel=7
+
+" settings for python-mode ===============================================
+let g:pymode_rope_enable_shortcuts=0 " Does this work??
+let g:pymode_rope_goto_def_newwin = 'vnew'
+let g:pymode_rope_extended_complete=1
+let g:pymode_run = 0
+let g:pymode_lint_ignore = "W191,E128,E501"
+let g:pymode_lint_cwindow = 0
+let g:pymode_breakpoint = 0
+let g:pymode_utils_whitespaces = 0
 " }}}
 
 " Key mapping {{{
