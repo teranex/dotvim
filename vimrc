@@ -304,9 +304,6 @@ nnoremap <Esc><Esc> :nohlsearch<CR>
 " enter to the previous line
 inoremap <S-CR> <C-O>O
 
-" quickly escape a single character
-noremap \\ i\<ESC>l
-
 " by default search with 'very no magic'
 nnoremap / /\V
 nnoremap ? ?\V
@@ -445,9 +442,6 @@ function! ToggleWritingModeFunc()
 endfunction
 
 command! ToggleWritingMode call ToggleWritingModeFunc()
-
-" easily copy relative path to clipboard
-command! CopyPath let @+ = expand('%')
 
 " function to be used by snipMate.
 " Monday is first day: 0, Sunday last: 6
