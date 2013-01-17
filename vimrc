@@ -208,6 +208,7 @@ let php_htmlInStrings = 1               " html syntax highlighting inside PHP st
 let php_folding = 0                     " disable PHP syntax folding
 let g:DisableAutoPHPFolding = 1         " by default disable phpfolding.vim
 let g:is_bash=1                         " configure shell script syntax as being bash syntax
+let g:load_doxygen_syntax=1             " enable doxygen support in filetypes such as PHP
 
 " color scheme
 let g:molokai_original=0

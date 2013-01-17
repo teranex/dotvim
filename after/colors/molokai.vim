@@ -49,9 +49,8 @@ hi VimwikiNoteHeader guifg=#66D9EF gui=italic
 hi DbgBreakPt guibg=#973b46 guifg=white gui=bold
 hi DbgCurrent guibg=#ffec63 guifg=black gui=bold
 
-hi phpDocTags guifg=#367480
-hi phpDocParam guifg=#5e801a
-hi phpDocVariable guifg=#804c10
+hi clear doxygenSpecialMultilineDesc
+hi doxygenSpecialMultilineDesc guifg=#F92672 gui=NONE
 
 if &t_Co > 255
     hi Error           ctermfg=16 ctermbg=red
