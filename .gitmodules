@@ -10,9 +10,6 @@
 [submodule "bundle/vimwiki"]
 	path = bundle/vimwiki
 	url = git://github.com/vim-scripts/vimwiki.git
-[submodule "bundle/aftercolors"]
-	path = bundle/aftercolors
-	url = git://github.com/vim-scripts/AfterColors.vim.git
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = git://github.com/vim-scripts/matchit.zip.git
