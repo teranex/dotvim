@@ -10,9 +10,6 @@ if $SUDO_USER != ''
     call add(g:pathogen_disabled, 'neocomplcache')
 endif
 
-call add(g:pathogen_disabled, 'snipmate-fork')
-call add(g:pathogen_disabled, 'snipmate-snippets')
-
 runtime pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
