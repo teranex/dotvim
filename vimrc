@@ -336,9 +336,6 @@ inoremap <C-Del> <C-O>dw
 inoremap ;<cr> <C-O>A;<cr>
 inoremap ;; <Esc>m'A;<Esc>`'li
 
-" try to automagically align what should be aligned
-noremap <leader>a :Tab /\(=>\\|,\zs\\|=\\|\|\)<CR>
-
 " mappings for splitjoin
 noremap <leader>jj :SplitjoinJoin<CR>
 noremap <leader>js :SplitjoinSplit<CR>

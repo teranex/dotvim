@@ -1,6 +1,3 @@
-[submodule "bundle/tabular"]
-	path = bundle/tabular
-	url = git://github.com/godlygeek/tabular.git
 [submodule "bundle/rooter"]
 	path = bundle/rooter
 	url = git://github.com/airblade/vim-rooter.git
