@@ -4,7 +4,7 @@ runtime pathogen_init
 " first some settings copied from Debian config
 set nocompatible                        " no compatibility with old-skool vi
 set backspace=indent,eol,start          " define behavior of backspace key
-set history=500                         " keep the last 500 commands (was 50 in Debian config)
+set history=1000                        " keep more history (was 50 in Debian config)
 
 " and some other default options, just to be sure
 set encoding=utf-8                      " by default set the encoding to UTF-8
