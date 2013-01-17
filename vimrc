@@ -116,34 +116,6 @@ endif
 syntax on
 filetype plugin indent on
 
-" Status line configuration {{{
-function! FileSize()
-  let bytes = getfsize(expand("%:p"))
-  if bytes <= 0
-    return ""
-  endif
-  if bytes < 1024
-    return bytes . "b"
-  else
-    return (bytes / 1024) . "k"
-  endif
-endfunction
-
-set statusline=                                " completely reset statusline
-set statusline+=%f\                            " relative path of the file
-set statusline+=#%n~%{winnr()}\                           " buffer number
-set statusline+=%1*%m%r%*\ \                   " modified flag and read only flag
-set statusline+=[%{strlen(&filetype)?&filetype:'none'},      " filetype
-set statusline+=%{strlen(&fenc)?&fenc:'none'}, " file encoding
-set statusline+=%{&ff}]                        " file format
-set statusline+=%=                             " left/right separator
-set statusline+=[%{&wrap?'wrap':'nowrap'},     " wrap state
-set statusline+=%{&expandtab?'spaces':'tabs'}:%{&tabstop}]\  " expand tab and tab stop info
-set statusline+=%{FileSize()}\                 " filesize
-set statusline+=%l/%L:%-3c                     " cursor line/total lines:cursor column
-set statusline+=\ %P                           " percent through file
-" }}}
-
 " Title configuration {{{
 " helper function for titlestring. Returns the name of the current
 " session, if any is loaded, or an empty string when no session is loaded
@@ -262,7 +234,6 @@ call Pl#Theme#RemoveSegment('virtualenv:statusline')
 call Pl#Theme#ReplaceSegment('fugitive:branch', 'filesize')
 call Pl#Theme#ReplaceSegment('lineinfo', 'trex:lineinfo')
 call Pl#Theme#InsertSegment('trex:bufnumber', 'after', 'trex:lineinfo')
-" call Pl#Theme#InsertSegment('ws_marker', 'after', 'trex:bufnumber')
 
 " setting for colorizer ==================================================
 " do not map anything
