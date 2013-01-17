@@ -336,10 +336,6 @@ inoremap <C-Del> <C-O>dw
 inoremap ;<cr> <C-O>A;<cr>
 inoremap ;; <Esc>m'A;<Esc>`'li
 
-" mappings for splitjoin
-noremap <leader>jj :SplitjoinJoin<CR>
-noremap <leader>js :SplitjoinSplit<CR>
-
 " tab switching: easily switch back to the previous tab
 " see http://groups.google.com/group/vim_use/msg/b5f64d02a49b1348
 autocmd TabLeave * :let g:last_tab=tabpagenr()
