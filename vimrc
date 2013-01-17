@@ -318,12 +318,25 @@ cnoremap <expr> /  getcmdtype() == '/' ? '\/' : '/'
 nnoremap <c-]> g<c-]>
 vnoremap <c-]> g<c-]>
 
-" Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
-" Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
+" " Bubble single lines
+" nmap <C-Up> [e
+" nmap <C-Down> ]e
+" " Bubble multiple lines
+" vmap <C-Up> [egv
+" vmap <C-Down> ]egv
+" insert blank lines before and after (copied from unimpaired)
+function! s:BlankUp(count) abort
+  put!=repeat(nr2char(10), a:count)
+  ']+1
+endfunction
+
+function! s:BlankDown(count) abort
+  put =repeat(nr2char(10), a:count)
+  '[-1
+endfunction
+
+nmap [<Space> :<C-U>call <SID>BlankUp(v:count1)<CR>
+nmap ]<Space> :<C-U>call <SID>BlankDown(v:count1)<CR>
 
 " map control-backspace to delete the previous word in insert mode
 " imap <C-BS> <C-W>
