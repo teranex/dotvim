@@ -76,9 +76,6 @@
 [submodule "bundle/php-fold"]
 	path = bundle/php-fold
 	url = git://github.com/vim-scripts/phpfolding.vim.git
-[submodule "bundle/php-doc-fork"]
-	path = bundle/php-doc-fork
-	url = git://github.com/teranex/Vim-PHP-Doc.git
 [submodule "bundle/visual-star-search"]
 	path = bundle/visual-star-search
 	url = git://github.com/nelstrom/vim-visual-star-search.git
