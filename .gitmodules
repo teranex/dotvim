@@ -94,3 +94,6 @@
 [submodule "bundle/indentline"]
 	path = bundle/indentline
 	url = git://github.com/Yggdroot/indentLine.git
+[submodule "bundle/python-mode-fork"]
+	path = bundle/python-mode-fork
+	url = git://github.com/teranex/python-mode.git
