@@ -229,7 +229,7 @@ hi MatchParen      guifg=#000000 guibg=#3E3D32 gui=bold
 hi Todo            guifg=#000000 guibg=#E6DB74 gui=bold
 hi clear NonText
 hi NonText         guifg=#75715E
-hi VertSplit       guifg=#455354  guibg=#455354
+hi VertSplit       guibg=#455354
 hi ColorColumn     guibg=#232526
 hi CursorColumn    guibg=#232526
 hi CursorLine      guibg=#232526

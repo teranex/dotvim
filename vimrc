@@ -52,6 +52,7 @@ set display+=lastline                   " display wrapped lines at bottom instea
 if v:version > '702'
     set colorcolumn=80,120              " show a vertical line at these positions
 endif
+set fillchars=vert:\ ,fold:-            " fill vertical splitlines with spaces instead of the ugly |-char; Default - for folds
 
 set diffopt+=iwhite                     " diff options: ignore whitespace
 
