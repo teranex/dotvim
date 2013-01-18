@@ -241,18 +241,17 @@ hi DiffText                      guibg=#080808 gui=bold
 hi CursorLineNr    guifg=#232526 guibg=#465457 ctermfg=234 ctermbg=250
 hi Conceal         guifg=#31373a ctermfg=235
 
-" hi StatusLine       guifg=#FD971F ctermfg=208 ctermbg=black guibg=#121212 gui=bold,reverse
 if $SUDO_USER != ''
     hi StatusLine guifg=red ctermfg=red
 endif
 hi StatusLineInsert guifg=#A6E22E ctermfg=black guibg=black ctermbg=118 gui=reverse,bold
 hi StatusLineNC     guifg=#455354 guibg=fg
-hi User1 gui=bold guibg=#960050 guifg=white ctermfg=white ctermbg=162
+hi User1 gui=bold   guibg=#960050 guifg=white ctermfg=white ctermbg=162
 
-hi diffAdd      ctermfg=bg  guifg=bg      ctermbg=151 guibg=#afdfaf
-hi diffDelete   ctermfg=bg  guifg=bg      ctermbg=181 guibg=#dfafaf cterm=none gui=none
-hi diffChange   ctermfg=bg  guifg=bg      ctermbg=229 guibg=#E6DB74
-hi diffText     ctermfg=bg  guifg=bg      ctermbg=208 guibg=#FD971F cterm=bold gui=bold
+hi DiffAdd         guifg=bg ctermfg=black ctermbg=151 guibg=#afdfaf
+hi DiffDelete      guifg=bg ctermfg=black ctermbg=181 guibg=#dfafaf cterm=none gui=none
+hi DiffChange      guifg=bg ctermfg=black ctermbg=229 guibg=#E6DB74 cterm=none
+hi DiffText        guifg=bg ctermfg=black ctermbg=208 guibg=#FD971F cterm=none gui=bold
 
 hi clear Search
 hi Search           gui=reverse cterm=reverse
