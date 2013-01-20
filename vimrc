@@ -349,6 +349,11 @@ inoremap <C-BS> <C-W>
 " and map control-delete to delete the next word in insert mode
 inoremap <C-Del> <C-O>dw
 
+" even a bit of Emacs love...
+inoremap <C-A> <C-o>I
+cnoremap <C-A> <Home>
+inoremap <C-E> <End>
+
 " smart semi-colon insert at end of line
 inoremap ;<cr> <C-O>A;<cr>
 inoremap ;; <Esc>m'A;<Esc>`'li
