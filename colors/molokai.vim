@@ -270,6 +270,12 @@ hi VimwikiDate      guifg=#F92672
 hi VimwikiNoteDate  guifg=#E6DB74 gui=bold,underline
 hi VimwikiNoteHeader guifg=#66D9EF gui=italic
 
+hi MarkWord1 ctermbg=Yellow  guibg=#F92672 guifg=white
+hi MarkWord2 ctermbg=Magenta guibg=#A6E22E guifg=black
+hi MarkWord3 ctermbg=Red     guibg=#66D9EF guifg=black
+hi MarkWord4 ctermbg=Cyan    guibg=#AE81FF guifg=black
+hi MarkWord5 ctermbg=Green   guibg=#E6DB74 guifg=black
+
 hi DbgBreakPt guibg=#973b46 guifg=white gui=bold
 hi DbgCurrent guibg=#ffec63 guifg=black gui=bold
 

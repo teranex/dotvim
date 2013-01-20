@@ -240,14 +240,6 @@ let g:colorizer_nomap = 1
 let g:quickfixsigns_classes = ['marks', 'vcsdiff', 'breakpoints']
 let g:quickfixsigns#marks#texthl = 'Type'
 
-" settings for Mark ======================================================
-" Better highlighting for Marked words with the mark.vim plugin.
-highlight def MarkWord1 ctermbg=Yellow  guibg=#960050
-highlight def MarkWord2 ctermbg=Magenta guibg=#005000
-highlight def MarkWord3 ctermbg=Red     guibg=#465457
-highlight def MarkWord4 ctermbg=Cyan    guibg=#13354A
-highlight def MarkWord5 ctermbg=Green   guibg=#1E0010
-
 " settings for neocomplecache ============================================
 let g:neocomplcache_enable_at_startup = 1
 if !exists('g:neocomplcache_omni_patterns')
