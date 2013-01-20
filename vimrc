@@ -250,6 +250,10 @@ highlight def MarkWord5 ctermbg=Green   guibg=#1E0010
 
 " settings for neocomplecache ============================================
 let g:neocomplcache_enable_at_startup = 1
+if !exists('g:neocomplcache_omni_patterns')
+    let g:neocomplcache_omni_patterns = {}
+endif
+let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 
 " settings for smartinput ================================================
 " add a smartinput rule to enter-indent between empty html tags
