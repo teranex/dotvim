@@ -381,6 +381,8 @@ if exists('+relativenumber')
     autocmd InsertLeave * setlocal relativenumber
 endif
 
+autocmd InsertLeave * pclose
+
 function! s:ConfigurePHP()
     " fix indent of the entire block when inserting }.
     inoremap } }<ESC>m'=iB`'a
