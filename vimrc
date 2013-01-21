@@ -21,6 +21,7 @@ set mouse=a                             " enable the mouse
 set mousemodel=popup                    " produce pop up for right click
 set list                                " show special chars, such as tab and eol
 set listchars=tab:→\ ,eol:·,trail:☐,extends:❱,precedes:❰ " chars to show for list
+set showbreak=…\                        " when soft-wrapping, start lines which continue the previous line with these chars
 set laststatus=2                        " always show the statusline
 set title                               " set the title
 set ruler                               " show cursor position in left bottom corner
@@ -318,12 +319,6 @@ cnoremap <expr> /  getcmdtype() == '/' ? '\/' : '/'
 nnoremap <c-]> g<c-]>
 vnoremap <c-]> g<c-]>
 
-" " Bubble single lines
-" nmap <C-Up> [e
-" nmap <C-Down> ]e
-" " Bubble multiple lines
-" vmap <C-Up> [egv
-" vmap <C-Down> ]egv
 " insert blank lines before and after (copied from unimpaired)
 function! s:BlankUp(count) abort
     put!=repeat(nr2char(10), a:count)
