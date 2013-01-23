@@ -203,7 +203,7 @@ let g:Gitv_OpenHorizontal='auto'
 let g:vimwiki_hl_cb_checked=1
 let g:vimwiki_hl_headers=1
 let g:vimwiki_dir_link='index'
-let g:vimwiki_url_mingain=25
+let g:vimwiki_url_mingain=1000
 
 " settings for ctrlp =====================================================
 let g:ctrlp_working_path_mode = 0
