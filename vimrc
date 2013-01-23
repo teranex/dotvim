@@ -191,6 +191,7 @@ colorscheme molokai
 " settings for Syntastic =================================================
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
+let g:syntastic_python_checker_args='--builtins=_ --max-line-length=100'
 
 " settings for Ack =======================================================
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
@@ -291,10 +292,12 @@ let g:pymode_rope_enable_shortcuts=0 " Does this work??
 let g:pymode_rope_goto_def_newwin = 'vnew'
 let g:pymode_rope_extended_complete=1
 let g:pymode_run = 0
-let g:pymode_lint_ignore = "W191,E128,E501"
+let g:pymode_lint = 0 " disabe the lint script. Let Syntastic do this job
+" let g:pymode_lint_ignore = "W191,E128,E501"
 let g:pymode_lint_cwindow = 0
 let g:pymode_breakpoint = 0
 let g:pymode_utils_whitespaces = 0
+
 " }}}
 
 " Key mapping {{{
