@@ -286,7 +286,7 @@ if &t_Co > 255
     hi Error           ctermfg=16 ctermbg=red
     hi ErrorMsg        ctermfg=red ctermbg=16    cterm=bold
     hi NonText         ctermfg=59
-    hi clear SpellBad
+    " hi clear SpellBad
     hi SpellBad        cterm=underline
     hi VertSplit       ctermfg=244 ctermbg=244   cterm=bold
     hi ColorColumn     ctermbg=234
