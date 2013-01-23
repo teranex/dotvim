@@ -85,7 +85,7 @@ if exists('+autochdir')
 endif
 
 " options for sessions. These define what should be saved in a session
-set sessionoptions=buffers,help,resize,tabpages,winsize,winpos
+set sessionoptions=buffers,folds,resize,tabpages,winsize,winpos
 
 " set the path, so we can easily open files with the gf command etc
 set path+=./**;,,
