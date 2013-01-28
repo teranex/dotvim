@@ -376,7 +376,7 @@ autocmd BufRead,BufNewFile *.profile,*.install,*.test setlocal filetype=php
 autocmd BufRead,BufNewFile *.json setlocal ft=javascript
 
 " run the rooter plugin after a session is loaded
-autocmd SessionLoadPost * Rooter
+autocmd BufRead,BufNewFile * Rooter
 
 " Enable relativenumber only when in normal mode
 if exists('+relativenumber')
