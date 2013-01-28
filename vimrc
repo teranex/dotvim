@@ -389,7 +389,8 @@ autocmd InsertLeave * pclose
 function! s:ConfigurePHP()
     " fix indent of the entire block when inserting }.
     inoremap } }<ESC>m'=iB`'a
-    setlocal comments=sl:/*,mb:*,elx:*/ fdm=indent
+    setlocal fdm=indent
+    syn sync fromstart
 endfunction
 
 " configure Filetypes
