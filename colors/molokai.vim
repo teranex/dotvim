@@ -276,6 +276,7 @@ hi MarkWord3 ctermbg=Red     guibg=#66D9EF guifg=black
 hi MarkWord4 ctermbg=Cyan    guibg=#AE81FF guifg=black
 hi MarkWord5 ctermbg=Green   guibg=#E6DB74 guifg=black
 
+hi clear DbgBreakPt
 hi DbgBreakPt guibg=#973b46 guifg=white gui=bold
 hi DbgCurrent guibg=#ffec63 guifg=black gui=bold
 
