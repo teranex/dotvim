@@ -195,6 +195,7 @@ colorscheme molokai
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_python_checker_args='--builtins=_ --max-line-length=100'
+let g:syntastic_csslint_options="--ignore=ids,qualified-headings,unique-headings"
 
 " settings for Ack =======================================================
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
