@@ -118,6 +118,9 @@ endif
 syntax on
 filetype plugin indent on
 
+" load the matchit script
+runtime! macros/matchit.vim
+
 " Title configuration {{{
 " helper function for titlestring. Returns the name of the current
 " session, if any is loaded, or an empty string when no session is loaded
