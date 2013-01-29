@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<ruleset name="TeranexDrupal">
+<!--
+  This ruleset is my personal config which I use while doing Drupal development
+  with Vim. It runs automatically through the Syntastic plugin whenever a PHP
+  file is saved.
+  To use this ruleset, download the coder module from Drupal.org. This module
+  contains a Drupal Standard for PHPCodeSniffer. Then symlink the standard to the
+  standards folder like this:
+  `sudo ln -s /path/to/coder/coder_sniffer/Drupal $(pear config-get php_dir)/PHP/CodeSniffer/Standards/Drupal`
+-->
+  <description>Teranex Drupal coding standards</description>
+
+  <rule ref="Drupal">
+    <exclude name="Drupal.Array.Array"/>
+    <exclude name="Drupal.Files.LineLength"/>
+    <exclude name="Drupal.Strings.ConcatenationSpacing"/>
+    <exclude name="Drupal.ControlStructures.ElseCatchNewline"/>
+    <exclude name="Drupal.Commenting.FileComment"/>
+    <exclude name="Drupal.Commenting.InlineComment"/>
+    <exclude name="Drupal.Commenting.FunctionComment"/>
+    <exclude name="Squiz.Commenting.PostStatementComment" />
+  </rule>
+
+  <rule ref="Generic.Files.LineLength">
+    <properties>
+      <property name="lineLimit" value="150"/>
+      <property name="absoluteLineLimit" value="150"/>
+    </properties>
+  </rule>
+</ruleset>
