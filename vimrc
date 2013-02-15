@@ -316,7 +316,7 @@ let g:pymode_utils_whitespaces = 0
 cnoremap w!! %!sudo tee > /dev/null %
 
 " remove currently highlighted search by pressing Escape twice
-nnoremap <Esc><Esc> :nohlsearch<CR>
+nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
 
 " enter to the previous line
 inoremap <S-CR> <C-O>O
@@ -378,8 +378,9 @@ nnoremap <silent> <M-6> :call <sid>LastTab()<cr>
 
 " Auto Commands {{{
 " Configure certain extensions as the correct filetype
-autocmd BufRead,BufNewFile *.profile,*.install,*.test setlocal filetype=php
-autocmd BufRead,BufNewFile *.json setlocal ft=javascript
+autocmd BufRead,BufNewFile *.{profile,install,test} setlocal filetype=php
+autocmd BufRead,BufNewFile *.json setlocal filetype=javascript
+autocmd BufRead,BufNewFile *.{info,make,build} setlocal filetype=dosini
 
 " run the rooter plugin after a session is loaded
 autocmd BufRead,BufNewFile * Rooter
