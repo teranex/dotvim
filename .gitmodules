@@ -94,3 +94,6 @@
 [submodule "bundle/python-mode-fork"]
 	path = bundle/python-mode-fork
 	url = git://github.com/teranex/python-mode.git
+[submodule "bundle/autocomplpop"]
+	path = bundle/autocomplpop
+	url = git://github.com/vim-scripts/AutoComplPop.git
