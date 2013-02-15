@@ -39,7 +39,6 @@ set linebreak                           " only wrap after words, not inside word
 set cursorline                          " highlight the current line
 set cursorcolumn                        " highlight the current column
 set completeopt=menu,longest,preview    " options for insert mode completion
-set spell                               " enable spell check by default
 
 set tabstop=4                           " number of spaces that a tab counts for
 set shiftwidth=4                        " number of spaces to use for each step of indent
@@ -108,6 +107,9 @@ if has("gui_running")
     set guioptions+=c
     " but always show the tabline (window otherwise resizes when first showing tabline)
     set showtabline=2
+
+    " only enable spelling in Gvim, as it is a little annoying on the terminal
+    set spell
 
     if has("win32") || has("win64")
         set guifont=Consolas:h10:cANSI
