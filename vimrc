@@ -66,7 +66,9 @@ set noswapfile                          " disable swap files, most of the time t
 set nobackup                            " don't make a (permanent) backup when saving files
 set writebackup                         " make a (temporary) backup while saving files
 if v:version > '702'
-    set undofile                        " save undo history to an external file
+    if $VIM !~ 'vimtouch'               " check that we are not running on Android (VimTouch)
+        set undofile                    " save undo history to an external file
+    endif
     set undodir=~/.vimundo,.,/tmp       " where to save undo history files
     set relativenumber                  " use relative line numbering
     set nonumber                        " and disable default line numbering
