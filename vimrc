@@ -421,6 +421,15 @@ autocmd FileType gitcommit call s:ConfigureGitCommit()
 " open the quickfix window after grepping
 autocmd QuickFixCmdPost *grep* copen
 
+" configure the Pentadactyl and Thunderbird external editor buffers
+function! s:ConfigureTmpBuffer()
+    ToggleWritingMode
+    set columns=120
+    set backupskip=
+    set backup
+endfunction
+autocmd BufReadPost {/tmp/*.eml,pentadactyl.txt} call s:ConfigureTmpBuffer()
+
 " set up to change the status line based on mode
 autocmd InsertEnter * hi! link StatusLine StatusLineInsert
 autocmd InsertLeave * hi! link StatusLine NONE
