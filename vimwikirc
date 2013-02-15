@@ -51,21 +51,21 @@ function! s:ConfigureVimwiki()
 endfunction
 autocmd FileType vimwiki call s:ConfigureVimwiki()
 
-function! s:SyncVimwiki(op)
-    let old_shell=&shell
-    set shell=/bin/bash\ -i
-    let cmd = "!~/scripts/vimwiki-full-sync ".a:op
-    exec cmd
-    exec 'set shell='.old_shell
-endfunction
+" function! s:SyncVimwiki(op)
+"     let old_shell=&shell
+"     set shell=/bin/bash\ -i
+"     let cmd = "!~/scripts/vimwiki-full-sync ".a:op
+"     exec cmd
+"     exec 'set shell='.old_shell
+" endfunction
 
-command! Sync call s:SyncVimwiki("full")
+" command! Sync call s:SyncVimwiki("full")
 
-if has("gui_running")
-    call s:SyncVimwiki("pull")
+" if has("gui_running")
+    " call s:SyncVimwiki("pull")
 
-    autocmd VimLeave * call s:SyncVimwiki("full")
-endif
+    " autocmd VimLeave * call s:SyncVimwiki("full")
+" endif
 
 function! s:InsertWebpage(url)
     let startline = line('.')
