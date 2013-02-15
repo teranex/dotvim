@@ -10,6 +10,14 @@ if $SUDO_USER != ''
     call add(g:pathogen_disabled, 'neocomplcache')
 endif
 
+if $VIM =~ 'vimtouch'
+    " running on Android (VimTouch). Disable some bundles which are not required
+    call add(g:pathogen_disabled, 'neocomplcache')
+else
+    " running on another platform. Disable some Android specific bundles
+    call add(g:pathogen_disabled, 'autocomplpop')
+endif
+
 runtime pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
