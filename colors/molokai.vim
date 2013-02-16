@@ -234,12 +234,13 @@ hi ColorColumn     guibg=#232526
 hi CursorColumn    guibg=#232526
 hi CursorLine      guibg=#232526
 hi clear Cursor
-hi Cursor          gui=reverse
+hi Cursor          gui=reverse ctermfg=16  ctermbg=253
 hi SpecialKey      guifg=#66D9EF               gui=none
 hi SpecialKey      guifg=#888A85               gui=none
 hi DiffText                      guibg=#080808 gui=bold
 hi CursorLineNr    guifg=#232526 guibg=#465457 ctermfg=234 ctermbg=250
 hi Conceal         guifg=#31373a ctermfg=235
+hi Folded           ctermfg=59
 
 if $SUDO_USER != ''
     hi StatusLine guifg=red ctermfg=red
