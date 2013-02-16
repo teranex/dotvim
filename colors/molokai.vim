@@ -257,25 +257,25 @@ hi DiffText        guifg=bg ctermfg=black ctermbg=208 guibg=#FD971F cterm=none g
 hi clear Search
 hi Search           gui=reverse cterm=reverse
 
-hi VimwikiHeader1   guifg=#F92672 gui=bold
-hi VimwikiHeader2   guifg=#A6E22E gui=bold
-hi VimwikiHeader3   guifg=#66D9EF gui=bold
-hi VimwikiHeader4   guifg=#AE81FF gui=bold
+hi VimwikiHeader1   guifg=#F92672 gui=bold ctermfg=161 cterm=bold
+hi VimwikiHeader2   guifg=#A6E22E gui=bold ctermfg=118 cterm=bold
+hi VimwikiHeader3   guifg=#66D9EF gui=bold ctermfg=81 cterm=bold
+hi VimwikiHeader4   guifg=#AE81FF gui=bold ctermfg=135 cterm=bold
 hi VimwikiHeaderChar guifg=#465457
-hi VimwikiHR        guifg=#465457
+hi VimwikiHR        guifg=#465457 ctermfg=59
 hi VimwikiNoExistsLink guifg=#465457 gui=italic
 hi link VimwikiCellSeparator Ignore
 
-hi VimwikiTag       guifg=#66D9EF gui=italic,underline
-hi VimwikiDate      guifg=#F92672
-hi VimwikiNoteDate  guifg=#E6DB74 gui=bold,underline
-hi VimwikiNoteHeader guifg=#66D9EF gui=italic
+hi VimwikiTag       guifg=#66D9EF gui=italic,underline ctermfg=81 cterm=underline
+hi VimwikiDate      guifg=#F92672 ctermfg=161
+hi VimwikiNoteDate  guifg=#E6DB74 gui=bold,underline ctermfg=144
+hi VimwikiNoteHeader guifg=#66D9EF gui=italic ctermfg=81
 
-hi MarkWord1 ctermbg=Yellow  guibg=#F92672 guifg=white
-hi MarkWord2 ctermbg=Magenta guibg=#A6E22E guifg=black
-hi MarkWord3 ctermbg=Red     guibg=#66D9EF guifg=black
-hi MarkWord4 ctermbg=Cyan    guibg=#AE81FF guifg=black
-hi MarkWord5 ctermbg=Green   guibg=#E6DB74 guifg=black
+hi MarkWord1 ctermbg=Yellow  guibg=#F92672 guifg=white ctermbg=161 ctermfg=255
+hi MarkWord2 ctermbg=Magenta guibg=#A6E22E guifg=black ctermbg=118 ctermfg=16
+hi MarkWord3 ctermbg=Red     guibg=#66D9EF guifg=black ctermbg=81 ctermfg=16
+hi MarkWord4 ctermbg=Cyan    guibg=#AE81FF guifg=black ctermbg=135 ctermfg=16
+hi MarkWord5 ctermbg=Green   guibg=#E6DB74 guifg=black ctermbg=144 ctermfg=16
 
 hi clear DbgBreakPt
 hi DbgBreakPt guibg=#973b46 guifg=white gui=bold
