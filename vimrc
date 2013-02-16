@@ -214,6 +214,20 @@ let g:vimwiki_hl_cb_checked=1
 let g:vimwiki_hl_headers=1
 let g:vimwiki_dir_link='index'
 let g:vimwiki_url_mingain=1000
+" define the default wiki
+let wiki = {}
+let wiki.path = '~/vimwiki/'
+let wiki.nested_syntaxes = {
+    \ 'bash': 'sh',
+    \ 'python': 'python',
+    \ 'ruby': 'ruby',
+    \ 'html': 'html',
+    \ 'php': 'php',
+    \ 'vim': 'vim',
+    \ 'conf': 'conf',
+    \ 'gitconf': 'gitconfig',
+    \}
+let g:vimwiki_list = [wiki]
 
 " settings for ctrlp =====================================================
 let g:ctrlp_working_path_mode = 0
@@ -399,9 +413,9 @@ function! s:ConfigurePHP()
     setlocal fdm=indent
     syn sync fromstart
 endfunction
+autocmd FileType php call s:ConfigurePHP()
 
 " configure Filetypes
-autocmd FileType php call s:ConfigurePHP()
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2 | ColorHighlight
@@ -415,7 +429,6 @@ function! s:ConfigureGitCommit()
     setlocal foldexpr=UnifiedDiffFolds()
     setlocal foldlevel=0
 endfunction
-
 autocmd FileType gitcommit call s:ConfigureGitCommit()
 
 " open the quickfix window after grepping
@@ -429,6 +442,35 @@ function! s:ConfigureTmpBuffer()
     set backup
 endfunction
 autocmd BufReadPost {/tmp/*.eml,pentadactyl.txt} call s:ConfigureTmpBuffer()
+
+" configure vimwiki files
+function! s:ConfigureVimwiki()
+    Rooter
+    setlocal wrap
+    setlocal nolist
+    setlocal linebreak
+    setlocal foldmethod=marker
+    setlocal foldlevelstart=0
+    setlocal foldmarker=\ {{{,%%\ }}} " set foldmarkers so they don't include syntax regions
+    setlocal textwidth=100
+    if has('conceal')
+        setlocal concealcursor=c
+    endif
+    if has("gui_running")
+        setlocal spell
+        setlocal spelllang=en,nl          " check spelling in both English and Dutch by default
+    endif
+
+    " assign ctrl-j to expand snippets, tab is used for table cells
+    inoremap <buffer> <C-j> <C-R>=UltiSnips_ExpandSnippetOrJump()<CR>
+    " quickly open the general task list
+    map <buffer> ,tl :e tasks/index.wiki<CR>
+    " quickly add a new general task
+    map <buffer> ,ta ,tlggjO
+    " quickly archive (_F_ile) a task
+    map <buffer> ,tf :m$-1<CR>'.
+endfunction
+autocmd FileType vimwiki call s:ConfigureVimwiki()
 
 " set up to change the status line based on mode
 autocmd InsertEnter * hi! link StatusLine StatusLineInsert

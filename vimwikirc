@@ -1,56 +1,3 @@
-set wrap
-set textwidth=100
-set spell
-set spelllang=en,nl          " check spelling in both English and Dutch by default
-set nolist
-set lbr
-set foldmethod=marker
-set foldmarker=\ {{{,%%\ }}} " set foldmarkers so they don't include syntax regions
-set foldlevelstart=0
-if has('conceal')
-    set concealcursor=c
-endif
-
-" assign ctrl-j to expand snippets, tab is used for table cells
-inoremap <C-j> <C-R>=UltiSnips_ExpandSnippetOrJump()<CR>
-
-" natural j
-map j gj
-" natural k
-map k gk
-" quickly open the general task list
-map ,tl :e tasks/index.wiki<CR>
-" quickly add a new general task
-map ,ta ,tlggjO
-" quickly archive (_F_ile) a task
-" map ,tf ddzRGkp''
-map ,tf :m$-1<CR>'.
-
-" define the default wiki
-let wiki = {}
-let wiki.path = '~/vimwiki/'
-let wiki.nested_syntaxes = {
-    \ 'bash': 'sh',
-    \ 'python': 'python',
-    \ 'ruby': 'ruby',
-    \ 'html': 'html',
-    \ 'php': 'php',
-    \ 'vim': 'vim',
-    \ 'conf': 'conf',
-    \ 'gitconf': 'gitconfig',
-    \}
-let g:vimwiki_list = [wiki]
-
-" configure namazu
-let g:namazu_index = "~/vimwiki/.namazu"
-
-" configure vimwiki
-function! s:ConfigureVimwiki()
-    Rooter
-    setlocal wrap spell nolist lbr foldmethod=marker foldlevelstart=0
-endfunction
-autocmd FileType vimwiki call s:ConfigureVimwiki()
-
 " function! s:SyncVimwiki(op)
 "     let old_shell=&shell
 "     set shell=/bin/bash\ -i
@@ -67,24 +14,24 @@ autocmd FileType vimwiki call s:ConfigureVimwiki()
     " autocmd VimLeave * call s:SyncVimwiki("full")
 " endif
 
-function! s:InsertWebpage(url)
-    let startline = line('.')
-    exec "normal! a%% {{{ ".a:url
-    exec "read !links -dump ".a:url." -width ".&textwidth
-    exec "normal! o"
-    exec "normal! 0i%% }}}\<CR>"
-    let endline = line('.')
-    " jump back to the first line
-    exec startline
-endfunction
-
-command! -nargs=1 InsertWebpage call s:InsertWebpage(<f-args>)
-
-function! UpdateDiaryLinks()
-    VimwikiDiaryGenerateLinks
-    write
-endfunction
-
-autocmd BufRead diary.wiki call UpdateDiaryLinks()
+" function! s:InsertWebpage(url)
+"     let startline = line('.')
+"     exec "normal! a%% {{{ ".a:url
+"     exec "read !links -dump ".a:url." -width ".&textwidth
+"     exec "normal! o"
+"     exec "normal! 0i%% }}}\<CR>"
+"     let endline = line('.')
+"     " jump back to the first line
+"     exec startline
+" endfunction
+" 
+" command! -nargs=1 InsertWebpage call s:InsertWebpage(<f-args>)
+" 
+" function! UpdateDiaryLinks()
+"     VimwikiDiaryGenerateLinks
+"     write
+" endfunction
+" 
+" autocmd BufRead diary.wiki call UpdateDiaryLinks()
 
 " vim: ft=vim
