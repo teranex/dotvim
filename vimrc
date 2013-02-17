@@ -405,14 +405,6 @@ endif
 
 autocmd InsertLeave * pclose
 
-function! s:ConfigurePHP()
-    " fix indent of the entire block when inserting }.
-    inoremap } }<ESC>m'=iB`'a
-    setlocal fdm=indent
-    syn sync fromstart
-endfunction
-autocmd FileType php call s:ConfigurePHP()
-
 " configure Filetypes
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
@@ -420,14 +412,6 @@ autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2 | ColorHighli
 
 " close fugitive buffers when they are not shown anymore
 autocmd BufReadPost fugitive://* set bufhidden=wipe
-
-" configure git commit messages
-function! s:ConfigureGitCommit()
-    setlocal foldmethod=expr
-    setlocal foldexpr=UnifiedDiffFolds()
-    setlocal foldlevel=0
-endfunction
-autocmd FileType gitcommit call s:ConfigureGitCommit()
 
 " open the quickfix window after grepping
 autocmd QuickFixCmdPost *grep* copen
@@ -441,38 +425,12 @@ function! s:ConfigureTmpBuffer()
 endfunction
 autocmd BufReadPost {/tmp/*.eml,pentadactyl.txt} call s:ConfigureTmpBuffer()
 
-" configure vimwiki files
-function! s:ConfigureVimwiki()
-    Rooter
-    setlocal wrap
-    setlocal nolist
-    setlocal linebreak
-    setlocal foldmethod=marker
-    setlocal foldlevelstart=0
-    setlocal foldmarker=\ {{{,%%\ }}} " set foldmarkers so they don't include syntax regions
-    setlocal textwidth=100
-    setlocal spelllang=en,nl          " check spelling in both English and Dutch by default
-    if has('conceal')
-        setlocal concealcursor=c
-    endif
-
-    " assign ctrl-j to expand snippets, tab is used for table cells
-    inoremap <buffer> <C-j> <C-R>=UltiSnips_ExpandSnippetOrJump()<CR>
-    " quickly open the general task list
-    map <buffer> ,tl :e tasks/index.wiki<CR>
-    " quickly add a new general task
-    map <buffer> ,ta ,tlggjO
-    " quickly archive (_F_ile) a task
-    map <buffer> ,tf :m$-1<CR>'.
-endfunction
-autocmd FileType vimwiki call s:ConfigureVimwiki()
-
 " set up to change the status line based on mode
 autocmd InsertEnter * hi! link StatusLine StatusLineInsert
 autocmd InsertLeave * hi! link StatusLine NONE
 
 " automatically try to detect correct indent
-autocmd BufReadPost * :DetectIndent 
+autocmd BufReadPost * :DetectIndent
 
 " the following line makes vim ignore camelCase and CamelCase words so they
 " are not highlighted as spelling mistakes
