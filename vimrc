@@ -73,6 +73,7 @@ if v:version > '702'
     set undodir=~/.vimundo,.,/tmp       " where to save undo history files
     set relativenumber                  " use relative line numbering
     set nonumber                        " and disable default line numbering
+    set cryptmethod=blowfish            " use stronger blowfish encryption algorithm
 endif
 set updatetime=500                      " wait this many milliseconds before firing the CursorHold autocmd (and write swap files)
 
