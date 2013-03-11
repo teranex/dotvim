@@ -27,5 +27,6 @@
       <property name="lineLimit" value="150"/>
       <property name="absoluteLineLimit" value="150"/>
     </properties>
+    <exclude-pattern>*.tpl.php</exclude-pattern>
   </rule>
 </ruleset>
