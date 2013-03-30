@@ -228,6 +228,9 @@ let wiki.nested_syntaxes = {
     \}
 let g:vimwiki_list = [wiki]
 
+" quickly add a task in my default tasks file in vimwiki
+noremap <leader>a :e ~/vimwiki/tasks/index.wiki<CR>Go[ ]  ()<Left><Left><Left>
+
 " settings for ctrlp =====================================================
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_dotfiles=0
