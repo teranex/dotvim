@@ -25,6 +25,10 @@ set titleold=                           " don't set the title when quitting
 set showcmd                             " show the current command in the statusline
 set display+=lastline                   " display wrapped lines at bottom instead of @ symbols
 
+set noswapfile                          " don't use a swapfile
+set noundofile                          " don't use undofiles
+set nobackup                            " don't use backupfiles
+
 syntax on
 filetype plugin indent on
 
