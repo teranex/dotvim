@@ -439,8 +439,6 @@ abbr funciton function
 abbr functin function
 " command line only Abbreviations
 cabbrev h tab help
-cabbrev <expr> mv '!mv '.expand('%:p').' '.expand('%:p:h')
-cabbrev <expr> rm '!rm '.expand('%:p')
 " }}}
 
 " Functions {{{
