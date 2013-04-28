@@ -272,15 +272,6 @@ let g:quickfixsigns#marks#texthl = 'Type'
 " settings for neocomplecache ============================================
 let g:neocomplcache_enable_at_startup = 1
 
-" settings for smartinput ================================================
-" add a smartinput rule to enter-indent between empty html tags
-call smartinput#define_rule({
-            \   'at': '\v\<([a-z][a-z0-9]*)[^\>]*\>\s*%#\s*\<\/\1\>',
-            \   'char': '<Enter>',
-            \   'input': '<Enter><Enter><Up><Esc>"_S',
-            \   'filetype': ['html', 'php', 'xml'],
-            \ })
-
 " settings for vdebug ====================================================
 " set the default configuration (only options which are different from default
 " configuration)
