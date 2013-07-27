@@ -91,3 +91,6 @@
 [submodule "bundle/python-mode"]
 	path = bundle/python-mode
 	url = git://github.com/klen/python-mode.git
+[submodule "bundle/theme-soda"]
+	path = bundle/theme-soda
+	url = git@github.com:DAddYE/soda.vim.git
