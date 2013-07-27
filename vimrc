@@ -235,6 +235,7 @@ noremap <leader>a :e ~/vimwiki/tasks/index.wiki<CR>Go[ ]  ()<Left><Left><Left>
 " settings for ctrlp =====================================================
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_dotfiles=0
+let g:ctrlp_follow_symlinks = 1
 let g:ctrlp_extensions = ['tag', 'buffertag', 'filetype']
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_max_height = 25
