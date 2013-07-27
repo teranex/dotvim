@@ -31,4 +31,4 @@ iabbrev <buffer> <expr> saturday_  InsertDateForWeekday(5)
 iabbrev <buffer> <expr> sunday_    InsertDateForWeekday(6)
 iabbrev <buffer> <expr> today_     strftime("%Y-%m-%d")
 iabbrev <buffer> <expr> tomorrow_  strftime("%Y-%m-%d", localtime()+86400)
-iabbrev <buffer> <expr> n_ strftime("%Y-%m-%d %H:%M")."\<CR>----------------------------------------------------------------------------------------------------\<Up>"
+iabbrev <buffer> <expr> n_ "### ".strftime("%Y-%m-%d %H:%M")."\<CR>\<CR>----------------------------------------------------------------------------------------------------\<Up>\<Up>"

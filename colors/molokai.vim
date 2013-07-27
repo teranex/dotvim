@@ -259,7 +259,7 @@ hi Search           gui=reverse cterm=reverse
 
 hi VimwikiHeader1   guifg=#F92672 gui=bold ctermfg=161 cterm=bold
 hi VimwikiHeader2   guifg=#A6E22E gui=bold ctermfg=118 cterm=bold
-hi VimwikiHeader3   guifg=#66D9EF gui=bold ctermfg=81 cterm=bold
+hi VimwikiHeader3   guifg=#66D9EF gui=bold,italic ctermfg=81 cterm=bold
 hi VimwikiHeader4   guifg=#AE81FF gui=bold ctermfg=135 cterm=bold
 hi VimwikiHeaderChar guifg=#465457
 hi VimwikiHR        guifg=#465457 ctermfg=59
@@ -268,7 +268,8 @@ hi link VimwikiCellSeparator Ignore
 
 hi VimwikiTag       guifg=#66D9EF gui=italic,underline ctermfg=81 cterm=underline
 hi VimwikiDate      guifg=#F92672 ctermfg=161
-hi VimwikiNoteDate  guifg=#E6DB74 gui=bold,underline ctermfg=144
+" hi VimwikiNoteDate  guifg=#E6DB74 gui=italic,underline ctermfg=144
+hi VimwikiNoteDate  guifg=#66D9EF gui=italic ctermfg=144
 hi VimwikiNoteHeader guifg=#66D9EF gui=italic ctermfg=81
 
 hi MarkWord1 ctermbg=Yellow  guibg=#F92672 guifg=white ctermbg=161 ctermfg=255

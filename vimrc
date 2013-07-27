@@ -213,10 +213,9 @@ let g:vimwiki_hl_cb_checked=1
 let g:vimwiki_hl_headers=1
 let g:vimwiki_dir_link='index'
 let g:vimwiki_url_mingain=1000
+let g:vimwiki_ext2syntax = {'.md': 'markdown'}
 " define the default wiki
-let wiki = {}
-let wiki.path = '~/vimwiki/'
-let wiki.nested_syntaxes = {
+let wiki_nested_syntaxes = {
     \ 'bash': 'sh',
     \ 'python': 'python',
     \ 'ruby': 'ruby',
@@ -227,6 +226,11 @@ let wiki.nested_syntaxes = {
     \ 'gitconf': 'gitconfig',
     \ 'sql': 'sql',
     \}
+let wiki = {}
+let wiki.path = '~/vimwiki/'
+let wiki.syntax = 'markdown'
+let wiki.ext = '.md'
+let wiki.nested_syntaxes = wiki_nested_syntaxes
 let g:vimwiki_list = [wiki]
 
 " quickly add a task in my default tasks file in vimwiki
