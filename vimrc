@@ -66,6 +66,7 @@ set directory=~/.vimswaps,.,/tmp        " where to store the swap files
 set noswapfile                          " disable swap files, most of the time they are just annoying
 set nobackup                            " don't make a (permanent) backup when saving files
 set writebackup                         " make a (temporary) backup while saving files
+set backupcopy=yes                      " make a copy and overwrite the original file
 if v:version > '702'
     if $VIM !~? 'vimtouch'               " check that we are not running on Android (VimTouch)
         set undofile                    " save undo history to an external file
@@ -240,7 +241,7 @@ noremap <leader>a :e ~/vimwiki/tasks/index.wiki<CR>Go[ ]  ()<Left><Left><Left>
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_dotfiles=0
 let g:ctrlp_follow_symlinks = 1
-let g:ctrlp_extensions = ['tag', 'buffertag', 'filetype']
+let g:ctrlp_extensions = ['tag', 'buffertag', 'filetype', 'tjump']
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_max_height = 25
 let g:ctrlp_switch_buffer = 't'
@@ -251,6 +252,7 @@ noremap <leader>] :CtrlPTag<CR>
 noremap <leader>} :CtrlPBufTag<CR>
 noremap <leader>s :CtrlPSession<CR>
 noremap <leader>f :CtrlPFiletype<CR>
+nnoremap <c-]> :CtrlPtjump<cr>
 
 " settings for Powerline =================================================
 let g:Powerline_symbols_override = { 'LINE': '' }
@@ -342,8 +344,8 @@ nnoremap ? ?\V
 cnoremap <expr> /  getcmdtype() == '/' ? '\/' : '/'
 
 " remap ctrl-] to jump to tag, or display list of multiple results
-nnoremap <c-]> g<c-]>
-vnoremap <c-]> g<c-]>
+" nnoremap <c-]> g<c-]>
+" vnoremap <c-]> g<c-]>
 
 " insert blank lines before and after (copied from unimpaired)
 function! s:BlankUp(count) abort
