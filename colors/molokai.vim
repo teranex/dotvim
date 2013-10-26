@@ -268,9 +268,10 @@ hi link VimwikiCellSeparator Ignore
 
 hi VimwikiTag       guifg=#66D9EF gui=italic,underline ctermfg=81 cterm=underline
 hi VimwikiDate      guifg=#F92672 ctermfg=161
-" hi VimwikiNoteDate  guifg=#E6DB74 gui=italic,underline ctermfg=144
-hi VimwikiNoteDate  guifg=#66D9EF gui=italic ctermfg=144
-hi VimwikiNoteHeader guifg=#66D9EF gui=italic ctermfg=81
+hi VimwikiHeader2Date  guifg=#A6E22E gui=italic ctermfg=144
+hi VimwikiHeader3Date  guifg=#66D9EF gui=italic ctermfg=144
+hi VimwikiHeader4Date  guifg=#AE81FF gui=italic ctermfg=144
+" hi VimwikiNoteHeader guifg=#66D9EF gui=italic ctermfg=81
 
 hi MarkWord1 ctermbg=Yellow  guibg=#F92672 guifg=white ctermbg=161 ctermfg=255
 hi MarkWord2 ctermbg=Magenta guibg=#A6E22E guifg=black ctermbg=118 ctermfg=16
