@@ -19,13 +19,14 @@
     <exclude name="Drupal.Commenting.FileComment"/>
     <exclude name="Drupal.Commenting.InlineComment"/>
     <exclude name="Drupal.Commenting.FunctionComment"/>
+    <exclude name="Drupal.Semantics.InstallT"/>
     <exclude name="Squiz.Commenting.PostStatementComment" />
   </rule>
 
   <rule ref="Generic.Files.LineLength">
     <properties>
-      <property name="lineLimit" value="150"/>
-      <property name="absoluteLineLimit" value="150"/>
+      <property name="lineLimit" value="500"/>
+      <property name="absoluteLineLimit" value="500"/>
     </properties>
     <exclude-pattern>*.tpl.php</exclude-pattern>
   </rule>
