@@ -94,3 +94,6 @@
 [submodule "bundle/theme-soda"]
 	path = bundle/theme-soda
 	url = git@github.com:DAddYE/soda.vim.git
+[submodule "bundle/ctrlp-tjump"]
+	path = bundle/ctrlp-tjump
+	url = git@github.com:ivalkeen/vim-ctrlp-tjump.git
