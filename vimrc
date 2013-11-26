@@ -20,7 +20,7 @@ set foldmethod=indent                   " indent fold method by default
 set mouse=a                             " enable the mouse
 set mousemodel=popup                    " produce pop up for right click
 set list                                " show special chars, such as tab and eol
-set listchars=tab:→\ ,eol:·,trail:☐,extends:❱,precedes:❰ " chars to show for list
+set listchars=tab:→\ ,eol:·,trail:•,extends:❱,precedes:❰ " chars to show for list
 set showbreak=…\                        " when soft-wrapping, start lines which continue the previous line with these chars
 set laststatus=2                        " always show the statusline
 set title                               " set the title
