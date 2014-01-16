@@ -279,9 +279,14 @@ hi MarkWord3 ctermbg=Red     guibg=#66D9EF guifg=black ctermbg=81 ctermfg=16
 hi MarkWord4 ctermbg=Cyan    guibg=#AE81FF guifg=black ctermbg=135 ctermfg=16
 hi MarkWord5 ctermbg=Green   guibg=#E6DB74 guifg=black ctermbg=144 ctermfg=16
 
-hi clear DbgBreakPt
-hi DbgBreakPt guibg=#973b46 guifg=white gui=bold
-hi DbgCurrent guibg=#ffec63 guifg=black gui=bold
+hi clear DbgCurrentSign
+hi clear DbgCurrentLine
+hi clear DbgBreakptSign
+hi clear DbgBreakptLine
+hi DbgBreakptSign guibg=#973b46 guifg=white gui=bold
+hi link DbgBreakptLine DbgBreakptSign
+hi DbgCurrentSign guibg=#ffec63 guifg=black gui=bold
+hi link DbgCurrentLine DbgCurrentSign
 
 hi clear doxygenSpecialMultilineDesc
 hi doxygenSpecialMultilineDesc guifg=#F92672 gui=NONE

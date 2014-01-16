@@ -284,7 +284,7 @@ let g:neocomplcache_enable_at_startup = 1
 " configuration)
 let g:vdebug_options= {
     \    "watch_window_style" : 'compact',
-    \    "server"             : '192.168.56.1',
+    \    "server"             : '10.0.3.1',
     \    "timeout"            : 300,
     \    "break_on_open"      : 0,
     \    "continuous_mode"    : 1,
