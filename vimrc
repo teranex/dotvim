@@ -435,6 +435,18 @@ autocmd InsertLeave * hi! link StatusLine NONE
 " automatically try to detect correct indent
 autocmd BufReadPost * :DetectIndent
 
+" due to encfs on my home directory, writing an undofile will sometimes fail
+" as it results in a filename which is too long for encfs. In that case,
+" simply disable undofile.
+function! s:DisableUndofileWhenFailed()
+    if match(v:errmsg, '\v^E828: Cannot open undo file for writing') != -1
+        setlocal noundofile
+        let v:errmsg = ''
+        echo "Disabling undofile for this buffer"
+    endif
+endfunction
+autocmd BufWritePost * call <SID>DisableUndofileWhenFailed()
+
 " the following line makes vim ignore camelCase and CamelCase words so they
 " are not highlighted as spelling mistakes
 autocmd Syntax * syn match CamelCase "\(\<\|_\)\%(\u\l*\)\{2,}\(\>\|_\)\|\<\%(\l\l*\)\%(\u\l*\)\{1,}\>" transparent containedin=.*Comment.*,.*String.*,VimwikiLink contains=@NoSpell contained
@@ -552,7 +564,7 @@ if exists('*matchadd')
                         \ if exists('w:fFtT_command_highlight') && w:fFtT_line != line('.') |
                         \   call matchdelete(w:fFtT_command_highlight) |
                         \   unlet w:fFtT_command_highlight |
-                        \   setl nocursorcolumn nocursorline |
+                        " \   setl nocursorcolumn nocursorline |
                         \   exec 'au! fFtT_hi CursorMoved' |
                         \ endif
 
