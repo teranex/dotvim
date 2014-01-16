@@ -197,7 +197,7 @@ colorscheme molokai
 
 " settings for Syntastic =================================================
 let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=1
+let g:syntastic_auto_loc_list=0
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_args='--builtins=_ --max-line-length=100'
 let g:syntastic_php_phpcs_args="--report=csv --standard=".expand('<sfile>:p:h')."/.vim/misc/phpcs-drupal-ruleset.xml"
@@ -260,7 +260,7 @@ let g:Powerline_colorscheme = 'trex'
 call Pl#Theme#InsertSegment('trex:root_indicator', 'before', 'mode_indicator')
 call Pl#Theme#RemoveSegment('paste_indicator')
 call Pl#Theme#RemoveSegment('hgrev:branch')
-call Pl#Theme#RemoveSegment('syntastic:errors')
+" call Pl#Theme#RemoveSegment('syntastic:errors')
 call Pl#Theme#RemoveSegment('tagbar:currenttag')
 call Pl#Theme#RemoveSegment('rvm:string')
 call Pl#Theme#RemoveSegment('virtualenv:statusline')
