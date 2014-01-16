@@ -235,8 +235,10 @@ let wiki.ext = '.md'
 let wiki.nested_syntaxes = wiki_nested_syntaxes
 let g:vimwiki_list = [wiki]
 
-" quickly add a task in my default tasks file in vimwiki
-noremap <leader>a :e ~/vimwiki/tasks/index.wiki<CR>Go[ ]  ()<Left><Left><Left>
+" settings for vimwiki_task ==============================================
+let g:vimwiki_tasks_tags_duetime = '+notify'
+let g:vimwiki_tasks_note_path = 'tasks'
+" let g:vimwiki_tasks_task_args = 'rc:/media/cryptdata/dev/taskwarrior/testdata/.taskrc'
 
 " settings for ctrlp =====================================================
 let g:ctrlp_working_path_mode = 0
