@@ -226,6 +226,7 @@ let wiki_nested_syntaxes = {
     \ 'conf': 'conf',
     \ 'gitconf': 'gitconfig',
     \ 'sql': 'sql',
+    \ 'mail': 'mail',
     \}
 let wiki = {}
 let wiki.path = '~/vimwiki/'
@@ -244,7 +245,7 @@ let g:ctrlp_follow_symlinks = 1
 let g:ctrlp_extensions = ['tag', 'buffertag', 'filetype', 'tjump']
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_max_height = 25
-let g:ctrlp_switch_buffer = 't'
+let g:ctrlp_switch_buffer = 'Et'
 let g:ctrlp_buftag_types = {'php': '--language-force=php --php-types=cdfi'}
 noremap <leader>e :CtrlPCurFile<CR>
 noremap <leader>b :CtrlPBuffer<CR>
