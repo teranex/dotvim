@@ -12,7 +12,7 @@ if has('conceal')
 endif
 
 " assign ctrl-j to expand snippets, tab is used for table cells
-inoremap <buffer> <C-j> <C-R>=UltiSnips_ExpandSnippetOrJump()<CR>
+inoremap <buffer> <C-j> <C-R>=UltiSnips#ExpandSnippetOrJump()<CR>
 " quickly open the general task list
 map <buffer> ,tl :e tasks/index.wiki<CR>
 " quickly add a new general task
