@@ -2,6 +2,8 @@
 if $VIM =~? 'vimtouch'
     " if no file was provided, load the vimwiki session
     if len(argv()) == 0
-        SessionOpen vimwiki
+        " SessionOpen vimwiki
+        cd ~/vimwiki/
+        autocmd VimEnter * CtrlP
     endif
 endif
