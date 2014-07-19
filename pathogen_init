@@ -12,7 +12,17 @@ endif
 
 if $VIM =~ 'vimtouch'
     " running on Android (VimTouch). Disable some bundles which are not required
+    call add(g:pathogen_disabled, 'ack')
     call add(g:pathogen_disabled, 'neocomplcache')
+    call add(g:pathogen_disabled, 'autotag')
+    call add(g:pathogen_disabled, 'eunuch')
+    call add(g:pathogen_disabled, 'fugitive')
+    call add(g:pathogen_disabled, 'gitv')
+    call add(g:pathogen_disabled, 'python-mode')
+    call add(g:pathogen_disabled, 'syntastic')
+    call add(g:pathogen_disabled, 'tslime-fork')
+    call add(g:pathogen_disabled, 'ultisnips')
+    call add(g:pathogen_disabled, 'vdebug')
 else
     " running on another platform. Disable some Android specific bundles
     call add(g:pathogen_disabled, 'autocomplpop')
