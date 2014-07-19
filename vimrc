@@ -278,7 +278,7 @@ call Pl#Theme#InsertSegment('trex:bufnumber', 'after', 'trex:lineinfo')
 let g:colorizer_nomap = 1
 
 " settings for quickfixsigns =============================================
-let g:quickfixsigns_classes = ['marks', 'vcsdiff']
+let g:quickfixsigns_classes = ['marks', 'vcsdiff', 'qfl']
 let g:quickfixsigns#marks#texthl = 'Type'
 
 " settings for neocomplecache ============================================
@@ -301,7 +301,7 @@ nnoremap <leader>dr :BreakpointRemove *<CR>
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "snippets"]
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
 let g:UltiSnipsNoPythonWarning = 1
 
 " settings for tslime ====================================================
@@ -316,6 +316,7 @@ let g:detectindent_preferred_expandtab=1
 let g:indentLine_color_gui='#31373a'
 let g:indentLine_char='│'
 let g:indentLine_indentLevel=7
+let g:indentLine_noConcealCursor=1
 
 " settings for python-mode ===============================================
 let g:pymode_rope_enable_shortcuts=0 " Does this work??
@@ -328,6 +329,9 @@ let g:pymode_lint_cwindow = 0
 let g:pymode_breakpoint = 0
 let g:pymode_utils_whitespaces = 0
 
+" settings for php-refactoring
+let g:php_refactor_command='php /home/jeroen/dotvim/misc/refactor.phar'
+
 " }}}
 
 " Key mapping {{{
@@ -337,6 +341,8 @@ cnoremap w!! %!sudo tee > /dev/null %
 
 " remove currently highlighted search by pressing Escape twice
 nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
+" Delete all the other buffers with \B
+nnoremap <leader>B :Bonly<CR>
 
 " enter to the previous line
 inoremap <S-CR> <C-O>O
@@ -520,120 +526,120 @@ endfunction
 "
 " Also map <leader>f to show the highlight, and jump over the next char for ,
 " and ; operations if the cursor won't move normally.
-if exists('*matchadd')
-    nnoremap f :<C-U>call FindChar('f', v:count1)<CR>
-    nnoremap F :<C-U>call FindChar('F', v:count1)<CR>
-    nnoremap t :<C-U>call FindChar('t', v:count1)<CR>
-    nnoremap T :<C-U>call FindChar('T', v:count1)<CR>
-    onoremap f :<C-U>call FindChar('f', v:count1, 'v')<CR>
-    onoremap F :<C-U>call FindChar('F', v:count1, 'v')<CR>
-    onoremap t :<C-U>call FindChar('t', v:count1, 'v')<CR>
-    onoremap T :<C-U>call FindChar('T', v:count1, 'v')<CR>
-    xnoremap f :<C-U>call FindChar('f', v:count1, 'gv')<CR>
-    xnoremap F :<C-U>call FindChar('F', v:count1, 'gv')<CR>
-    xnoremap t :<C-U>call FindChar('t', v:count1, 'gv')<CR>
-    xnoremap T :<C-U>call FindChar('T', v:count1, 'gv')<CR>
-
-    nnoremap ;  :<C-U>call FindLastChar(v:count1, ';')<CR>
-    onoremap ; v:<C-U>call FindLastChar(v:count1, ';')<CR>
-    xnoremap ;  :<C-U>call FindLastChar(v:count1, ';', 1)<CR>
-    nnoremap ,  :<C-U>call FindLastChar(v:count1, ',')<CR>
-    onoremap , v:<C-U>call FindLastChar(v:count1, ',')<CR>
-    xnoremap ,  :<C-U>call FindLastChar(v:count1, ',', 1)<CR>
-
-    " <C-U> in normal mode to remove any count, in visual mode to remove range
-    " Do not provide this command in op-pending mode, it doesn't do anything
-    " nnoremap <Leader>f :<C-U>call HighlightFoundChar()<CR>
-    " xnoremap <Leader>f :<C-U>call HighlightFoundChar()<CR>gv
-
-    hi FindChar gui=bold,underline guisp=orange guibg=black
-
-    " highlight the last found character
-    function! HighlightFoundChar()
-        if &hlsearch
-            if exists('w:fFtT_command_highlight')
-                call matchdelete(w:fFtT_command_highlight)
-            endif
-            let w:fFtT_line = line('.')
-            let w:fFtT_command_highlight = matchadd(
-                        \'FindChar',
-                        \'\V\%' . w:fFtT_line . "l".escape(g:last_found_char,'/\'),
-                        \11)
-            setl cursorcolumn cursorline
-
-            " Set up autocmds to turn off highlighting for f, F, t, and T commands
-            " after a period of doing nothing, or moving to a new line. The
-            " CursorMoved one makes the cursor move slowly so remove it when not
-            " needed.
-            autocmd fFtT_hi CursorMoved *
-                        \ if exists('w:fFtT_command_highlight') && w:fFtT_line != line('.') |
-                        \   call matchdelete(w:fFtT_command_highlight) |
-                        \   unlet w:fFtT_command_highlight |
-                        " \   setl nocursorcolumn nocursorline |
-                        \   exec 'au! fFtT_hi CursorMoved' |
-                        \ endif
-
-        endif
-    endfunction
-
-    augroup fFtT_hi
-        au!
-        " Set up autocmds to turn off highlighting for f, F, t, and T commands after
-        " a period of doing nothing, or moving to a new line. The CursorMoved one
-        " makes the cursor move slowly so remove it when not needed.
-        " autocmd CursorHold,CursorHoldI *
-        "       \ if exists('w:fFtT_command_highlight') |
-        "       \   call matchdelete(w:fFtT_command_highlight) |
-        "       \   unlet w:fFtT_command_highlight |
-        "       \   setl nocursorcolumn nocursorline |
-        "       \   exec 'au! fFtT_hi CursorMoved' |
-        "       \ endif
-    augroup END
-
-    " Set the "last found character" and highlight it.
-    function! FindChar(op, count, ...)
-        " echo "Enter character to find"
-        let g:last_found_char = nr2char(getchar())
-        call HighlightFoundChar()
-        " clear the echo
-        echo ''
-        let cmdprefix=''
-        if a:0
-            let cmdprefix=a:1
-        endif
-        exec 'normal! ' . cmdprefix . a:count . a:op . g:last_found_char
-    endfunction
-
-    " Highlight the "last found character" if it exists and pass on the input
-    " operation which should be either , or ;
-    "
-    " Do a double-jump if a single jump doesn't move to allow ; and , to work
-    " intelligently when t or T is used.
-    function! FindLastChar(count, op, ...)
-        if exists('g:last_found_char') && g:last_found_char != ''
-            call HighlightFoundChar()
-        endif
-        if a:0
-            normal! gv
-        endif
-        if a:count==1
-            let curpos=getpos('.')
-            exec 'normal!' a:op
-            if curpos==getpos('.')
-                exec 'normal! 2'.a:op
-            endif
-        else
-            exec 'normal! '.a:count.a:op
-        endif
-    endfunction
-endif
-
-function! UnifiedDiffFolds()
-    if getline(v:lnum) =~ "^diff\ "
-        return ">1"
-    endif
-    return "="
-endfunction
+" if exists('*matchadd')
+"     nnoremap f :<C-U>call FindChar('f', v:count1)<CR>
+"     nnoremap F :<C-U>call FindChar('F', v:count1)<CR>
+"     nnoremap t :<C-U>call FindChar('t', v:count1)<CR>
+"     nnoremap T :<C-U>call FindChar('T', v:count1)<CR>
+"     onoremap f :<C-U>call FindChar('f', v:count1, 'v')<CR>
+"     onoremap F :<C-U>call FindChar('F', v:count1, 'v')<CR>
+"     onoremap t :<C-U>call FindChar('t', v:count1, 'v')<CR>
+"     onoremap T :<C-U>call FindChar('T', v:count1, 'v')<CR>
+"     xnoremap f :<C-U>call FindChar('f', v:count1, 'gv')<CR>
+"     xnoremap F :<C-U>call FindChar('F', v:count1, 'gv')<CR>
+"     xnoremap t :<C-U>call FindChar('t', v:count1, 'gv')<CR>
+"     xnoremap T :<C-U>call FindChar('T', v:count1, 'gv')<CR>
+"
+"     nnoremap ;  :<C-U>call FindLastChar(v:count1, ';')<CR>
+"     onoremap ; v:<C-U>call FindLastChar(v:count1, ';')<CR>
+"     xnoremap ;  :<C-U>call FindLastChar(v:count1, ';', 1)<CR>
+"     nnoremap ,  :<C-U>call FindLastChar(v:count1, ',')<CR>
+"     onoremap , v:<C-U>call FindLastChar(v:count1, ',')<CR>
+"     xnoremap ,  :<C-U>call FindLastChar(v:count1, ',', 1)<CR>
+"
+"     " <C-U> in normal mode to remove any count, in visual mode to remove range
+"     " Do not provide this command in op-pending mode, it doesn't do anything
+"     " nnoremap <Leader>f :<C-U>call HighlightFoundChar()<CR>
+"     " xnoremap <Leader>f :<C-U>call HighlightFoundChar()<CR>gv
+"
+"     hi FindChar gui=bold,underline guisp=orange guibg=black
+"
+"     " highlight the last found character
+"     function! HighlightFoundChar()
+"         if &hlsearch
+"             if exists('w:fFtT_command_highlight')
+"                 call matchdelete(w:fFtT_command_highlight)
+"             endif
+"             let w:fFtT_line = line('.')
+"             let w:fFtT_command_highlight = matchadd(
+"                         \'FindChar',
+"                         \'\V\%' . w:fFtT_line . "l".escape(g:last_found_char,'/\'),
+"                         \11)
+"             setl cursorcolumn cursorline
+"
+"             " Set up autocmds to turn off highlighting for f, F, t, and T commands
+"             " after a period of doing nothing, or moving to a new line. The
+"             " CursorMoved one makes the cursor move slowly so remove it when not
+"             " needed.
+"             autocmd fFtT_hi CursorMoved *
+"                         \ if exists('w:fFtT_command_highlight') && w:fFtT_line != line('.') |
+"                         \   call matchdelete(w:fFtT_command_highlight) |
+"                         \   unlet w:fFtT_command_highlight |
+"                         " \   setl nocursorcolumn nocursorline |
+"                         \   exec 'au! fFtT_hi CursorMoved' |
+"                         \ endif
+"
+"         endif
+"     endfunction
+"
+"     augroup fFtT_hi
+"         au!
+"         " Set up autocmds to turn off highlighting for f, F, t, and T commands after
+"         " a period of doing nothing, or moving to a new line. The CursorMoved one
+"         " makes the cursor move slowly so remove it when not needed.
+"         " autocmd CursorHold,CursorHoldI *
+"         "       \ if exists('w:fFtT_command_highlight') |
+"         "       \   call matchdelete(w:fFtT_command_highlight) |
+"         "       \   unlet w:fFtT_command_highlight |
+"         "       \   setl nocursorcolumn nocursorline |
+"         "       \   exec 'au! fFtT_hi CursorMoved' |
+"         "       \ endif
+"     augroup END
+"
+"     " Set the "last found character" and highlight it.
+"     function! FindChar(op, count, ...)
+"         " echo "Enter character to find"
+"         let g:last_found_char = nr2char(getchar())
+"         call HighlightFoundChar()
+"         " clear the echo
+"         echo ''
+"         let cmdprefix=''
+"         if a:0
+"             let cmdprefix=a:1
+"         endif
+"         exec 'normal! ' . cmdprefix . a:count . a:op . g:last_found_char
+"     endfunction
+"
+"     " Highlight the "last found character" if it exists and pass on the input
+"     " operation which should be either , or ;
+"     "
+"     " Do a double-jump if a single jump doesn't move to allow ; and , to work
+"     " intelligently when t or T is used.
+"     function! FindLastChar(count, op, ...)
+"         if exists('g:last_found_char') && g:last_found_char != ''
+"             call HighlightFoundChar()
+"         endif
+"         if a:0
+"             normal! gv
+"         endif
+"         if a:count==1
+"             let curpos=getpos('.')
+"             exec 'normal!' a:op
+"             if curpos==getpos('.')
+"                 exec 'normal! 2'.a:op
+"             endif
+"         else
+"             exec 'normal! '.a:count.a:op
+"         endif
+"     endfunction
+" endif
+"
+" function! UnifiedDiffFolds()
+"     if getline(v:lnum) =~ "^diff\ "
+"         return ">1"
+"     endif
+"     return "="
+" endfunction
 " }}}
 
 " Host specific config ===================================================
