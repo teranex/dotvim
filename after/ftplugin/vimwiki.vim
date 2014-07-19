@@ -32,3 +32,14 @@ iabbrev <buffer> <expr> sunday_    InsertDateForWeekday(6)
 iabbrev <buffer> <expr> today_     strftime("%Y-%m-%d")
 iabbrev <buffer> <expr> tomorrow_  strftime("%Y-%m-%d", localtime()+86400)
 iabbrev <buffer> <expr> n_ "### ".strftime("%Y-%m-%d %H:%M")."\<CR>\<CR>--------------------------------------------------<Up>\<Up>"
+
+function! PandocConvert(firstLine, lastLine)
+    let infile = tempname().'.md'
+    exec ':'.a:firstLine.','.a:lastLine.'w '.infile
+    let outfile = tempname().'.html'
+    exec '!pandoc -o '.outfile.' '.infile
+    exec '!firefox '.outfile
+    redraw
+endfunction
+
+command! -range=% Pandoc call PandocConvert(<line1>, <line2>)
