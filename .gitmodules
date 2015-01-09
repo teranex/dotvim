@@ -79,9 +79,6 @@
 [submodule "bundle/indentline"]
 	path = bundle/indentline
 	url = git://github.com/Yggdroot/indentLine.git
-[submodule "bundle/autocomplpop"]
-	path = bundle/autocomplpop
-	url = git://github.com/vim-scripts/AutoComplPop.git
 [submodule "bundle/eunuch"]
 	path = bundle/eunuch
 	url = git://github.com/tpope/vim-eunuch.git
