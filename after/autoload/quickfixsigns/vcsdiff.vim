@@ -1,0 +1,7 @@
+hi clear QuickFixSignsDiffAdd
+hi link QuickFixSignsDiffAdd DiffAdd
+hi clear QuickFixSignsDiffChange
+hi link QuickFixSignsDiffChange DiffChange
+hi clear QuickFixSignsDiffDelete
+hi link QuickFixSignsDiffDelete DiffDelete
+
