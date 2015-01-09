@@ -91,3 +91,6 @@
 [submodule "bundle/clever-f"]
 	path = bundle/clever-f
 	url = git@github.com:rhysd/clever-f.vim.git
+[submodule "bundle/pandoc-syntax"]
+	path = bundle/pandoc-syntax
+	url = git@github.com:vim-pandoc/vim-pandoc-syntax.git
