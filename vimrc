@@ -265,6 +265,7 @@ let g:ctrlp_map = '<leader>t'
 let g:ctrlp_max_height = 25
 let g:ctrlp_switch_buffer = 'Et'
 let g:ctrlp_buftag_types = {'php': '--language-force=php --php-types=cdfi'}
+let g:ctrlp_tjump_only_silent = 1
 noremap <leader>e :CtrlPCurFile<CR>
 noremap <leader>b :CtrlPBuffer<CR>
 noremap <leader>] :CtrlPTag<CR>
