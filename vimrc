@@ -253,6 +253,9 @@ let g:pandoc#syntax#conceal#blacklist = ['atx', 'list']
 let g:pandoc#syntax#codeblocks#embeds#langs = ['bash=sh', 'python', 'ruby', 'html', 'php', 'yaml', 'vim', 'conf', 'sql']
 let g:pandoc#formatting#smart_autoformat_on_cursormoved = 0
 
+" settings for table-mode ================================================
+let g:table_mode_map_prefix = '<Leader>='
+
 " settings for ctrlp =====================================================
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_dotfiles=0
