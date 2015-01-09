@@ -94,3 +94,6 @@
 [submodule "bundle/pandoc-syntax"]
 	path = bundle/pandoc-syntax
 	url = git@github.com:vim-pandoc/vim-pandoc-syntax.git
+[submodule "bundle/pandoc"]
+	path = bundle/pandoc
+	url = git@github.com:vim-pandoc/vim-pandoc.git
