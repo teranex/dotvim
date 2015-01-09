@@ -97,3 +97,6 @@
 [submodule "bundle/pandoc"]
 	path = bundle/pandoc
 	url = git@github.com:vim-pandoc/vim-pandoc.git
+[submodule "bundle/table-mode"]
+	path = bundle/table-mode
+	url = git@github.com:dhruvasagar/vim-table-mode.git
