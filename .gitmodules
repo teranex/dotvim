@@ -4,9 +4,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
-[submodule "bundle/vimwiki"]
-	path = bundle/vimwiki
-	url = git://github.com/vim-scripts/vimwiki.git
 [submodule "bundle/mark"]
 	path = bundle/mark
 	url = git://github.com/vim-scripts/Mark--Karkat.git
