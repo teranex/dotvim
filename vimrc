@@ -242,6 +242,17 @@ let g:vimwiki_tasks_tags_duetime = '+notify'
 let g:vimwiki_tasks_note_path = 'tasks'
 " let g:vimwiki_tasks_task_args = 'rc:/media/cryptdata/dev/taskwarrior/testdata/.taskrc'
 
+" settings for pandoc ====================================================
+let g:pandoc#folding#fdc = 0
+" let g:pandoc#formatting#mode = 'hA'
+let g:pandoc#modules#disabled = ["keyboard"]
+let g:pandoc#command#latex_engine = 'pdflatex'
+let g:pandoc#spell#default_langs = ['en', 'nl']
+let g:pandoc#syntax#conceal#blacklist = ['atx', 'list']
+" let g:pandoc#syntax#conceal#use = 0
+let g:pandoc#syntax#codeblocks#embeds#langs = ['bash=sh', 'python', 'ruby', 'html', 'php', 'yaml', 'vim', 'conf', 'sql']
+let g:pandoc#formatting#smart_autoformat_on_cursormoved = 0
+
 " settings for ctrlp =====================================================
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_dotfiles=0
