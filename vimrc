@@ -365,7 +365,7 @@ cnoremap w!! %!sudo tee > /dev/null %
 " remove currently highlighted search by pressing Escape twice
 nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
 " Delete all the other buffers with \B
-nnoremap <leader>B :Bonly<CR>
+nnoremap <silent> <leader>B :Bonly<CR>:tabonly<CR>
 
 " enter to the previous line
 inoremap <S-CR> <C-O>O
