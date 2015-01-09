@@ -88,3 +88,6 @@
 [submodule "bundle/color-highlight"]
 	path = bundle/color-highlight
 	url = git@github.com:chrisbra/color_highlight.git
+[submodule "bundle/clever-f"]
+	path = bundle/clever-f
+	url = git@github.com:rhysd/clever-f.vim.git
