@@ -94,6 +94,3 @@
 [submodule "bundle/color-highlight"]
 	path = bundle/color-highlight
 	url = git@github.com:chrisbra/color_highlight.git
-[submodule "bundle/gtfo"]
-	path = bundle/gtfo
-	url = git@github.com:justinmk/vim-gtfo.git
