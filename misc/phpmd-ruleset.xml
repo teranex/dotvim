@@ -8,6 +8,9 @@
     <rule ref="rulesets/codesize.xml">
         <exclude name="CyclomaticComplexity"/>
         <exclude name="ExcessiveMethodLength"/>
+        <exclude name="NPathComplexity"/>
+        <exclude name="TooManyMethods"/>
+        <exclude name="ExcessiveClassComplexity"/>
     </rule>
     <rule ref="rulesets/design.xml"/>
     <rule ref="rulesets/naming.xml/LongVariable">
