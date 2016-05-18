@@ -15,6 +15,9 @@ hi link pandocStrikeout     Comment
 hi pandocStrikeout guifg=#465457 gui=italic
 hi link pandocStrikeoutMark Comment
 
+syn match xPandocLine /\v^-----$/
+hi link xPandocLine String
+
 function! ToggleStrikeoutOnCurrentListItem()
     let l:line = getline(line('.'))
     let l:match = matchlist(l:line, '\v^(\s*[*-]\s+)((\~\~)?)(.{-})((\~\~)?)$')
@@ -43,7 +46,10 @@ function! <SID>UpdatePandocGeneratedFiles()
     endif
 endfunction
 
+TableModeEnable
+
 autocmd! BufWritePost <buffer> call <SID>UpdatePandocGeneratedFiles()
+autocmd! InsertLeave <buffer> :TableModeRealign
 
 " syn match xPandocMarker contained /\v(XXX|TODO|FIXME):/
 " hi link xPandocMarker Todo
