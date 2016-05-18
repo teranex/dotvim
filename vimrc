@@ -197,6 +197,10 @@ let g:load_doxygen_syntax=1             " enable doxygen support in filetypes su
 let g:molokai_original=0
 colorscheme molokai
 
+" settings for Rooter ====================================================
+let g:rooter_silent_chdir = 1
+let g:rooter_patterns = ['.rootmarker', '.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/']
+
 " settings for Syntastic =================================================
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
