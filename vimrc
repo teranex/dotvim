@@ -212,7 +212,8 @@ let g:syntastic_php_phpcs_args="--report=csv --standard=".expand('<sfile>:p:h').
 let g:syntastic_php_phpmd_post_args=expand('<sfile>:p:h')."/.vim/misc/phpmd-ruleset.xml"
 
 " settings for Ack =======================================================
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+" let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " settings for gitv ======================================================
 let g:Gitv_OpenHorizontal='auto'
