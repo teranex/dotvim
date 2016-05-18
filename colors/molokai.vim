@@ -228,7 +228,10 @@ hi ErrorMsg        guifg=red guibg=#232526 gui=bold
 hi MatchParen      guifg=#000000 guibg=#3E3D32 gui=bold
 hi Todo            guifg=#000000 guibg=#E6DB74 gui=bold
 hi clear NonText
-hi NonText         guifg=#75715E
+	
+" hi NonText         guifg=#75715E
+hi NonText         guifg=#373e42
+" hi NonText         guifg=#465457
 hi VertSplit       guibg=#455354
 hi ColorColumn     guibg=#232526
 hi CursorColumn    guibg=#232526
