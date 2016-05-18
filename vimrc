@@ -256,7 +256,7 @@ let g:pandoc#modules#disabled = ["keyboard"]
 let g:pandoc#command#latex_engine = 'pdflatex'
 let g:pandoc#spell#default_langs = ['en', 'nl']
 let g:pandoc#syntax#conceal#blacklist = ['atx', 'list']
-" let g:pandoc#syntax#conceal#use = 0
+let g:pandoc#syntax#conceal#use = 0
 let g:pandoc#syntax#codeblocks#embeds#langs = ['bash=sh', 'python', 'ruby', 'html', 'php', 'yaml', 'vim', 'conf', 'sql']
 let g:pandoc#formatting#smart_autoformat_on_cursormoved = 0
 
