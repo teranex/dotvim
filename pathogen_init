@@ -28,6 +28,9 @@ else
     call add(g:pathogen_disabled, 'autocomplpop')
 endif
 
+" disable indentline as it completely crashes Gvim under AwesomeWM
+call add(g:pathogen_disabled, 'indentline')
+
 runtime pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
