@@ -49,7 +49,12 @@ hi ErrorMsg        guifg=#F92672 guibg=#232526 gui=bold
 hi Exception       guifg=#A6E22E               gui=bold
 hi Float           guifg=#AE81FF
 hi FoldColumn      guifg=#465457 guibg=#000000
-hi Folded          guifg=#465457 guibg=#000000
+" hi Folded          guifg=#465457 guibg=#000000
+" hi Folded          guifg=#960050 guibg=bg
+" hi Folded          guifg=#13354A guibg=bg
+hi Folded          guifg=#1b4a68 guibg=bg
+" hi Folded          guifg=#F92672 guibg=bg
+" hi Folded          guifg=#89807D guibg=bg
 hi Function        guifg=#A6E22E
 hi Identifier      guifg=#FD971F
 hi Ignore          guifg=#808080 guibg=bg
@@ -225,7 +230,7 @@ end
 " ======= OWN MODIFICATIONS ==================================================
 hi Error           guifg=#1E0010 guibg=red
 hi ErrorMsg        guifg=red guibg=#232526 gui=bold
-hi MatchParen      guifg=#000000 guibg=#3E3D32 gui=bold
+hi MatchParen      guifg=#66D9EF guibg=#1b4a68
 hi Todo            guifg=#000000 guibg=#E6DB74 gui=bold
 hi clear NonText
 	
@@ -268,12 +273,17 @@ hi VimwikiHeaderChar guifg=#465457
 hi VimwikiHR        guifg=#465457 ctermfg=59
 hi VimwikiNoExistsLink guifg=#465457 gui=italic
 hi link VimwikiCellSeparator Ignore
+hi link VimwikiMarkers Comment
+hi link VimwikiDelText Comment
+hi link VimwikiCode Float
 
 hi VimwikiTag       guifg=#66D9EF gui=italic,underline ctermfg=81 cterm=underline
 hi VimwikiDate      guifg=#F92672 ctermfg=161
-hi VimwikiHeader2Date  guifg=#A6E22E gui=italic ctermfg=144
-hi VimwikiHeader3Date  guifg=#66D9EF gui=italic ctermfg=144
-hi VimwikiHeader4Date  guifg=#AE81FF gui=italic ctermfg=144
+hi xVimwikiMainTitle           guifg=#E6DB74               gui=italic,bold,underline
+" hi VimwikiHeader2Date  guifg=#A6E22E gui=italic ctermfg=144
+" hi link VimwikiHeader2Date Comment
+" hi VimwikiHeader3Date  guifg=#66D9EF gui=italic ctermfg=144
+" hi VimwikiHeader4Date  guifg=#AE81FF gui=italic ctermfg=144
 " hi VimwikiNoteHeader guifg=#66D9EF gui=italic ctermfg=81
 
 hi MarkWord1 ctermbg=Yellow  guibg=#F92672 guifg=white ctermbg=161 ctermfg=255
