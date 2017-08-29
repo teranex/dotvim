@@ -1,25 +1,30 @@
-snippet section "section"
-=== $1 ===
-%% {{{
-$0
-%% }}}
-endsnippet
+# snippet section "section"
+# === $1 ===
+# %% {{{
+# $0
+# %% }}}
+# endsnippet
 
-snippet t "task"
-* [ ] $0 [`!v strftime("%Y-%m-%d")`]
-endsnippet
+# snippet t "task"
+# * [ ] $0 [`!v strftime("%Y-%m-%d")`]
+# endsnippet
 
-snippet l "list"
-    * 
-endsnippet
+# snippet l "list"
+#     * 
+# endsnippet
 
-snippet - "line" b
---------------------------------------------------
+# snippet - "line" b
+# --------------------------------------------------
 
-endsnippet
+# endsnippet
+#
+# snippet n "note"
+# ### `!v strftime("%Y-%m-%d %H:%M")` $0
+#
+# --------------------------------------------------
+# endsnippet
 
 snippet n "note"
-### `!v strftime("%Y-%m-%d %H:%M")` $0
-
---------------------------------------------------
+# $1
+`!v strftime("%Y-%m-%d %H:%M")` $0
 endsnippet
