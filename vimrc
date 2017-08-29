@@ -89,7 +89,7 @@ set tags=tags;/                         " where to find the tags file: current d
 " endif
 
 " options for sessions. These define what should be saved in a session
-set sessionoptions=buffers,folds,resize,tabpages,winsize,winpos
+set sessionoptions=buffers,tabpages,winsize
 
 " set the path, so we can easily open files with the gf command etc
 set path+=./**;,,
@@ -97,7 +97,7 @@ set path+=./**;,,
 if has("gui_running")
     " GUI is running or is about to start.
     " Maximize GVim window.
-    set lines=37 columns=135
+    " set lines=37 columns=135
     " remove the menu bar
     set guioptions-=m
     " and remove the toolbar
@@ -111,7 +111,8 @@ if has("gui_running")
     " use console style dialogs
     set guioptions+=c
     " but always show the tabline (window otherwise resizes when first showing tabline)
-    set showtabline=2
+    " set showtabline=2
+    set showtabline=1
 
     if has("win32") || has("win64")
         set guifont=Consolas:h10:cANSI
@@ -219,10 +220,13 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:Gitv_OpenHorizontal='auto'
 
 " settings for vimwiki ===================================================
-let g:vimwiki_hl_cb_checked=1
+" let g:vimwiki_folding = 'expr'
+" let g:vimwiki_folding = 'marker' " no folding
+let g:vimwiki_hl_cb_checked=2
 let g:vimwiki_hl_headers=1
 let g:vimwiki_dir_link='index'
-let g:vimwiki_url_mingain=1000
+" let g:vimwiki_url_mingain=1000
+let g:vimwiki_url_maxsave=0
 let g:vimwiki_ext2syntax = {'.md': 'markdown'}
 " define the default wiki
 let wiki_nested_syntaxes = {
@@ -236,12 +240,16 @@ let wiki_nested_syntaxes = {
     \ 'gitconf': 'gitconfig',
     \ 'sql': 'sql',
     \ 'mail': 'mail',
+    \ 'xml': 'xml',
     \}
 let wiki = {}
 let wiki.path = '~/vimwiki/'
 let wiki.syntax = 'markdown'
 let wiki.ext = '.md'
 let wiki.nested_syntaxes = wiki_nested_syntaxes
+let wiki.automatic_nested_syntaxes = 1
+" let wiki.automatic_nested_syntaxes = 1
+let wiki.auto_tags = 1
 let g:vimwiki_list = [wiki]
 
 " settings for vimwiki_task ==============================================
@@ -252,7 +260,7 @@ let g:vimwiki_tasks_note_path = 'tasks'
 " settings for pandoc ====================================================
 let g:pandoc#folding#fdc = 0
 " let g:pandoc#formatting#mode = 'hA'
-let g:pandoc#modules#disabled = ["keyboard"]
+let g:pandoc#modules#disabled = ["keyboard", "folding"]
 let g:pandoc#command#latex_engine = 'pdflatex'
 let g:pandoc#spell#default_langs = ['en', 'nl']
 let g:pandoc#syntax#conceal#blacklist = ['atx', 'list']
@@ -482,6 +490,9 @@ fu! <sid>LastTab()
 endfu
 
 nnoremap <silent> <M-6> :call <sid>LastTab()<cr>
+
+nnoremap <C-Left> :cprevious<cr>
+nnoremap <C-Right> :cnext<cr>
 " }}}
 
 " Auto Commands {{{
