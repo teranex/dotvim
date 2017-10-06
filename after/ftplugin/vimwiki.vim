@@ -21,7 +21,8 @@ endif
 setlocal conceallevel=0
 
 " assign ctrl-j to expand snippets, tab is used for table cells
-" inoremap <buffer> <C-j> <C-R>=UltiSnips#ExpandSnippetOrJump()<CR>
+inoremap <buffer> <C-j> <C-R>=UltiSnips#ExpandSnippetOrJump()<CR>
+inoremap <buffer> <C-n> n<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>
 " quickly open the general task list
 " map <buffer> ,tl :e tasks/index.wiki<CR>
 " quickly add a new general task
@@ -60,21 +61,27 @@ endfunction
 
 command! -range=% Pandoc call PandocConvert(<line1>, <line2>)
 
-function! InsertNewNote()
-    call inputsave()
-    let title = input("Note Title: ")
-    let tags = input("Tags: ", ":REVIEW:")
-    if tags !~ "\:$"
-        let tags = l:tags . ":"
-    endif
-    call inputrestore()
-    let curline = line('.') - 1
-    call append(l:curline, "")
-    call append(l:curline + 1, "")
-    call append(l:curline + 2, "# ".l:title)
-    " let curline = l:curline + 1
-    call append(l:curline + 3, strftime("%Y-%m-%d %H:%M")." ".l:tags)
-endfunction
+" function! InsertNewNote()
+"     call inputsave()
+"     let title = input("Note Title: ")
+"     let tags = input("Tags: ", ":REVIEW:")
+"     if tags !~ "\:$"
+"         let tags = l:tags . ":"
+"     endif
+"     call inputrestore()
+"     let curline = line('.')
+"     if l:curline != 1
+"         call append(l:curline, "")
+"         let curline = l:curline + 1
+"         call append(l:curline, "")
+"         let curline = l:curline + 1
+"     endif
+"     call append(l:curline, "# ".l:title)
+"     let curline = l:curline + 1
+"     call append(l:curline, strftime("%Y-%m-%d %H:%M")." ".l:tags)
+"     let curline = l:curline + 1
+"     call append(l:curline, "")
+" endfunction
 
-nnoremap <buffer> <c-j> :call InsertNewNote()<CR>i
-inoremap <buffer> <c-j> <ESC>:call InsertNewNote()<CR>i
+" nnoremap <buffer> <c-j> :call InsertNewNote()<CR>i
+" inoremap <buffer> <c-j> <ESC>:call InsertNewNote()<CR>i
