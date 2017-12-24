@@ -32,6 +32,14 @@ inoremap <buffer> <C-n> n<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>
 " quickly archive (_F_ile) a task
 " map <buffer> ,tf :m$-1<CR>'.
 
+if $VIM =~? 'droidvim'
+    " running on Android in DroidVim on a tiny screen
+    set nonumber
+    set norelativenumber
+    set foldcolumn=0
+    :QuickfixsignsDisable
+endif
+
 " define some aabbreviations. These are available as snippets in UltiSnips as
 " well, but UltiSnips requires Python which is not available on all devices
 " iabbrev <buffer> <expr> monday_    InsertDateForWeekday(0)

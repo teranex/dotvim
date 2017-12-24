@@ -68,7 +68,7 @@ set nobackup                            " don't make a (permanent) backup when s
 set writebackup                         " make a (temporary) backup while saving files
 set backupcopy=yes                      " make a copy and overwrite the original file
 if v:version > '702'
-    if $VIM !~? 'vimtouch'               " check that we are not running on Android (VimTouch)
+    if $VIM !~? 'droidvim'               " check that we are not running on Android (VimTouch)
         set undofile                    " save undo history to an external file
     endif
     set undodir=~/.vimundo,.,/tmp       " where to save undo history files
