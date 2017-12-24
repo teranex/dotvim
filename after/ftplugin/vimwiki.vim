@@ -5,13 +5,15 @@ setlocal linebreak
 setlocal nocursorcolumn
 setlocal nocursorline
 setlocal colorcolumn=
-setlocal foldmethod=marker
+" setlocal foldmethod=marker
 setlocal foldlevelstart=0
+setlocal foldlevel=0
 setlocal foldmarker=\ {{{,%%\ }}} " set foldmarkers so they don't include syntax regions
 setlocal textwidth=0
 setlocal breakindent
 setlocal spelllang=en,nl          " check spelling in both English and Dutch by default
 setlocal nospell " disable spell by default
+setlocal foldcolumn=4
 if has('conceal')
     setlocal concealcursor=c
 endif
@@ -48,7 +50,6 @@ iabbrev <buffer> <expr> %d strftime("%Y-%m-%d")
 
 map <c-x> <Plug>VimwikiToggleListItem
 " nnoremap <buffer> <c-n> Go<C-U><CR><CR>n<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>
-
 
 function! PandocConvert(firstLine, lastLine)
     let infile = tempname().'.md'

@@ -225,6 +225,7 @@ let g:Gitv_OpenHorizontal='auto'
 let g:vimwiki_hl_cb_checked=2
 let g:vimwiki_hl_headers=1
 let g:vimwiki_dir_link='index'
+let g:vimwiki_folding='expr'
 " let g:vimwiki_url_mingain=1000
 let g:vimwiki_url_maxsave=0
 let g:vimwiki_ext2syntax = {'.md': 'markdown'}
