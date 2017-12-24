@@ -250,7 +250,7 @@ hi SpecialKey      guifg=#888A85               gui=none
 hi DiffText                      guibg=#080808 gui=bold
 hi CursorLineNr    guifg=#232526 guibg=#465457 ctermfg=234 ctermbg=250
 hi Conceal         guifg=#31373a ctermfg=235
-hi Folded           ctermfg=59
+" hi Folded           ctermfg=59
 
 if $SUDO_USER != ''
     hi StatusLine guifg=red ctermfg=red
