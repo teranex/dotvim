@@ -75,19 +75,19 @@
 	url = git://github.com/tpope/vim-eunuch.git
 [submodule "bundle/theme-soda"]
 	path = bundle/theme-soda
-	url = git@github.com:DAddYE/soda.vim.git
+	url = git://github.com/DAddYE/soda.vim.git
 [submodule "bundle/ctrlp-tjump"]
 	path = bundle/ctrlp-tjump
-	url = git@github.com:ivalkeen/vim-ctrlp-tjump.git
+	url = git://github.com/ivalkeen/vim-ctrlp-tjump.git
 [submodule "bundle/color-highlight"]
 	path = bundle/color-highlight
-	url = git@github.com:chrisbra/color_highlight.git
+	url = git://github.com/chrisbra/color_highlight.git
 [submodule "bundle/clever-f"]
 	path = bundle/clever-f
-	url = git@github.com:rhysd/clever-f.vim.git
+	url = git://github.com/rhysd/clever-f.vim.git
 [submodule "bundle/table-mode"]
 	path = bundle/table-mode
-	url = git@github.com:dhruvasagar/vim-table-mode.git
+	url = git://github.com/dhruvasagar/vim-table-mode.git
 [submodule "bundle/airline"]
 	path = bundle/airline
 	url = https://github.com/vim-airline/vim-airline.git
