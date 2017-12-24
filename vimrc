@@ -365,7 +365,7 @@ let g:quickfixsigns#marks#texthl = 'Type'
 " settings for neocomplecache ============================================
 " let g:neocomplcache_enable_at_startup = 1
 " settings for neocomplete ============================================
-let g:neocomplete#enable_at_startup=1
+let g:neocomplete#enable_at_startup=0
 
 " settings for vdebug ====================================================
 " set the default configuration (only options which are different from default
