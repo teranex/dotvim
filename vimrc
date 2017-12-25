@@ -230,24 +230,24 @@ let g:vimwiki_folding='expr'
 let g:vimwiki_url_maxsave=0
 let g:vimwiki_ext2syntax = {'.md': 'markdown'}
 " define the default wiki
-let wiki_nested_syntaxes = {
-    \ 'bash': 'sh',
-    \ 'python': 'python',
-    \ 'ruby': 'ruby',
-    \ 'html': 'html',
-    \ 'php': 'php',
-    \ 'vim': 'vim',
-    \ 'conf': 'conf',
-    \ 'gitconf': 'gitconfig',
-    \ 'sql': 'sql',
-    \ 'mail': 'mail',
-    \ 'xml': 'xml',
-    \}
+" let wiki_nested_syntaxes = {
+"     \ 'bash': 'sh',
+"     \ 'python': 'python',
+"     \ 'ruby': 'ruby',
+"     \ 'html': 'html',
+"     \ 'php': 'php',
+"     \ 'vim': 'vim',
+"     \ 'conf': 'conf',
+"     \ 'gitconf': 'gitconfig',
+"     \ 'sql': 'sql',
+"     \ 'mail': 'mail',
+"     \ 'xml': 'xml',
+"     \}
 let wiki = {}
 let wiki.path = '~/vimwiki/'
 let wiki.syntax = 'markdown'
 let wiki.ext = '.md'
-let wiki.nested_syntaxes = wiki_nested_syntaxes
+" let wiki.nested_syntaxes = wiki_nested_syntaxes
 let wiki.automatic_nested_syntaxes = 1
 " let wiki.automatic_nested_syntaxes = 1
 let wiki.auto_tags = 1
