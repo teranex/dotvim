@@ -22,9 +22,6 @@ endif
 " disable conceal
 setlocal conceallevel=0
 
-" assign ctrl-j to expand snippets, tab is used for table cells
-inoremap <buffer> <C-j> <C-R>=UltiSnips#ExpandSnippetOrJump()<CR>
-inoremap <buffer> <C-n> n<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>
 " quickly open the general task list
 " map <buffer> ,tl :e tasks/index.wiki<CR>
 " quickly add a new general task
@@ -32,12 +29,18 @@ inoremap <buffer> <C-n> n<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>
 " quickly archive (_F_ile) a task
 " map <buffer> ,tf :m$-1<CR>'.
 
-if $VIM =~? 'droidvim' && argc() == 0
+if $VIM =~? 'droidvim'
     " running on Android in DroidVim on a tiny screen
     set nonumber
     set norelativenumber
     set foldcolumn=0
     :QuickfixsignsDisable
+
+    iabbrev <buffer> <expr> n_ "## *".strftime("%Y-%m-%d %H:%M")."*\<CR>:REVIEW:<Up>\<End>"
+else
+    " assign ctrl-j to expand snippets, tab is used for table cells
+    inoremap <buffer> <C-j> <C-R>=UltiSnips#ExpandSnippetOrJump()<CR>
+    inoremap <buffer> <C-n> n<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>
 endif
 
 " define some aabbreviations. These are available as snippets in UltiSnips as
@@ -51,7 +54,6 @@ endif
 " iabbrev <buffer> <expr> sunday_    InsertDateForWeekday(6)
 " iabbrev <buffer> <expr> today_     strftime("%Y-%m-%d")
 " iabbrev <buffer> <expr> tomorrow_  strftime("%Y-%m-%d", localtime()+86400)
-" iabbrev <buffer> <expr> n_ "### ".strftime("%Y-%m-%d %H:%M")."\<CR>\<CR>--------------------------------------------------<Up>\<Up>"
 
 iabbrev <buffer> <expr> %t strftime("%Y-%m-%d %H:%M")
 iabbrev <buffer> <expr> %d strftime("%Y-%m-%d")
