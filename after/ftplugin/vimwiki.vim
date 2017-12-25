@@ -36,7 +36,7 @@ if $VIM =~? 'droidvim'
     set foldcolumn=0
     :QuickfixsignsDisable
 
-    iabbrev <buffer> <expr> n_ "## *".strftime("%Y-%m-%d %H:%M")."*\<CR>:REVIEW:<Up>\<End>"
+    iabbrev <buffer> <expr> nnn "## *".strftime("%Y-%m-%d %H:%M")."*\<CR>:REVIEW:<Up>\<End>"
 else
     " assign ctrl-j to expand snippets, tab is used for table cells
     inoremap <buffer> <C-j> <C-R>=UltiSnips#ExpandSnippetOrJump()<CR>
