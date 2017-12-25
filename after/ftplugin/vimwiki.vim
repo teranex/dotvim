@@ -32,7 +32,7 @@ inoremap <buffer> <C-n> n<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>
 " quickly archive (_F_ile) a task
 " map <buffer> ,tf :m$-1<CR>'.
 
-if $VIM =~? 'droidvim'
+if $VIM =~? 'droidvim' && argc() == 0
     " running on Android in DroidVim on a tiny screen
     set nonumber
     set norelativenumber
