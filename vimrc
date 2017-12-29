@@ -290,8 +290,8 @@ noremap <leader>s :CtrlPSession<CR>
 noremap <leader>f :CtrlPFiletype<CR>
 nnoremap <c-]> :CtrlPtjump<cr>
 " Use ripgrep for ctrlp if available
-if executable('/opt/ripgrep/rg')
-    let g:ctrlp_user_command = "/opt/ripgrep/rg --files %s"
+if executable('~/scripts/rg')
+    let g:ctrlp_user_command = "~/scripts/rg --files %s"
     let g:ctrlp_use_caching = 0
 endif
 
