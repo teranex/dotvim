@@ -295,7 +295,11 @@ if executable('/opt/ripgrep/rg')
     let g:ctrlp_use_caching = 0
 endif
 
-" settings for Airline =================================================
+" settings for ripgrep ===================================================
+let g:rg_binary = "~/scripts/rg --no-messages"
+let g:rg_highlight = 'true'
+
+" settings for Airline ===================================================
 let g:airline_theme='mymolokai'
 let g:airline_left_sep=''
 let g:airline_right_sep=''
