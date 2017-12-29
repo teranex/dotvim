@@ -103,3 +103,6 @@
 [submodule "bundle/vim-in-proportion"]
 	path = bundle/vim-in-proportion
 	url = https://github.com/drzel/vim-in-proportion.git
+[submodule "bundle/highlightedyank"]
+	path = bundle/highlightedyank
+	url = https://github.com/machakann/vim-highlightedyank.git
