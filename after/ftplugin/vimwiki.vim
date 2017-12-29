@@ -1,11 +1,9 @@
-" Rooter
 setlocal wrap
 setlocal nolist
 setlocal linebreak
 setlocal nocursorcolumn
 setlocal nocursorline
 setlocal colorcolumn=
-" setlocal foldmethod=marker
 setlocal foldlevelstart=0
 setlocal foldlevel=0
 setlocal foldmarker=\ {{{,%%\ }}} " set foldmarkers so they don't include syntax regions
@@ -17,17 +15,8 @@ setlocal foldcolumn=4
 if has('conceal')
     setlocal concealcursor=c
 endif
-" set showtabline=1
 
-" disable conceal
-setlocal conceallevel=0
-
-" quickly open the general task list
-" map <buffer> ,tl :e tasks/index.wiki<CR>
-" quickly add a new general task
-" map <buffer> ,ta ,tlggjO
-" quickly archive (_F_ile) a task
-" map <buffer> ,tf :m$-1<CR>'.
+setlocal conceallevel=0   " disable conceal
 
 if $VIM =~? 'droidvim'
     " running on Android in DroidVim on a tiny screen
@@ -43,23 +32,11 @@ else
     inoremap <buffer> <C-n> n<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>
 endif
 
-" define some aabbreviations. These are available as snippets in UltiSnips as
-" well, but UltiSnips requires Python which is not available on all devices
-" iabbrev <buffer> <expr> monday_    InsertDateForWeekday(0)
-" iabbrev <buffer> <expr> tuesday_   InsertDateForWeekday(1)
-" iabbrev <buffer> <expr> wednesday_ InsertDateForWeekday(2)
-" iabbrev <buffer> <expr> thursday_  InsertDateForWeekday(3)
-" iabbrev <buffer> <expr> friday_    InsertDateForWeekday(4)
-" iabbrev <buffer> <expr> saturday_  InsertDateForWeekday(5)
-" iabbrev <buffer> <expr> sunday_    InsertDateForWeekday(6)
-" iabbrev <buffer> <expr> today_     strftime("%Y-%m-%d")
-" iabbrev <buffer> <expr> tomorrow_  strftime("%Y-%m-%d", localtime()+86400)
-
 iabbrev <buffer> <expr> %t strftime("%Y-%m-%d %H:%M")
 iabbrev <buffer> <expr> %d strftime("%Y-%m-%d")
 
 map <c-x> <Plug>VimwikiToggleListItem
-" nnoremap <buffer> <c-n> Go<C-U><CR><CR>n<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>
+nnoremap <buffer> <leader>} :CtrlPFunky<cr>
 
 function! PandocConvert(firstLine, lastLine)
     let infile = tempname().'.md'
@@ -71,28 +48,3 @@ function! PandocConvert(firstLine, lastLine)
 endfunction
 
 command! -range=% Pandoc call PandocConvert(<line1>, <line2>)
-
-" function! InsertNewNote()
-"     call inputsave()
-"     let title = input("Note Title: ")
-"     let tags = input("Tags: ", ":REVIEW:")
-"     if tags !~ "\:$"
-"         let tags = l:tags . ":"
-"     endif
-"     call inputrestore()
-"     let curline = line('.')
-"     if l:curline != 1
-"         call append(l:curline, "")
-"         let curline = l:curline + 1
-"         call append(l:curline, "")
-"         let curline = l:curline + 1
-"     endif
-"     call append(l:curline, "# ".l:title)
-"     let curline = l:curline + 1
-"     call append(l:curline, strftime("%Y-%m-%d %H:%M")." ".l:tags)
-"     let curline = l:curline + 1
-"     call append(l:curline, "")
-" endfunction
-
-" nnoremap <buffer> <c-j> :call InsertNewNote()<CR>i
-" inoremap <buffer> <c-j> <ESC>:call InsertNewNote()<CR>i
