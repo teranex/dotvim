@@ -53,7 +53,8 @@ hi FoldColumn      guifg=#465457 guibg=#000000
 " hi Folded          guifg=#960050 guibg=bg
 " hi Folded          guifg=#13354A guibg=bg
 " hi Folded          guifg=#1b4a68 guibg=bg
-hi Folded          guifg=#66D9EF guibg=bg
+" hi Folded          guifg=#66D9EF guibg=bg gui=bold
+hi Folded          guifg=#66D9EF guibg=#232526
 " hi Folded          guifg=#F92672 guibg=bg
 " hi Folded          guifg=#89807D guibg=bg
 hi Function        guifg=#A6E22E
