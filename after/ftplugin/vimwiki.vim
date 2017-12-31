@@ -48,3 +48,27 @@ function! PandocConvert(firstLine, lastLine)
 endfunction
 
 command! -range=% Pandoc call PandocConvert(<line1>, <line2>)
+
+" Copy from default Vimwiki to overwrite with our own version
+function! VimwikiFoldText() "{{{
+  let line = getline(v:foldstart)
+  let main_text = substitute(line, '^\s*', repeat(' ',indent(v:foldstart)), '')
+  let main_text =  substitute(line, '\v^#{1,}', repeat('·', v:foldlevel), '')
+  let fold_len = v:foldend - v:foldstart + 1
+  let len_text = ' ['.fold_len.'] '
+  if line !~# g:vimwiki_rxPreStart
+    let [main_text, spare_len] = s:shorten_text(main_text, 50)
+    return main_text.len_text
+  else
+    " fold-text for code blocks: use one or two of the starting lines
+    let [main_text, spare_len] = s:shorten_text(main_text, 24)
+    let line1 = substitute(getline(v:foldstart+1), '^\s*', ' ', '')
+    let [content_text, spare_len] = s:shorten_text(line1, spare_len+20)
+    if spare_len > s:tolerance && fold_len > 3
+      let line2 = substitute(getline(v:foldstart+2), '^\s*', s:newline, '')
+      let [more_text, spare_len] = s:shorten_text(line2, spare_len+12)
+      let content_text .= more_text
+    endif
+    return main_text.len_text.content_text
+  endif
+endfunction "}}}
