@@ -4,7 +4,7 @@ setlocal linebreak
 setlocal nocursorcolumn
 setlocal nocursorline
 setlocal colorcolumn=
-setlocal foldlevelstart=0
+" setlocal foldlevelstart=0
 setlocal foldlevel=0
 setlocal foldmarker=\ {{{,%%\ }}} " set foldmarkers so they don't include syntax regions
 setlocal textwidth=0
@@ -20,9 +20,9 @@ setlocal conceallevel=0   " disable conceal
 
 if $VIM =~? 'droidvim'
     " running on Android in DroidVim on a tiny screen
-    set nonumber
-    set norelativenumber
-    set foldcolumn=0
+    setlocal nonumber
+    setlocal norelativenumber
+    setlocal foldcolumn=0
     :QuickfixsignsDisable
 
     iabbrev <buffer> <expr> nnn "## *".strftime("%Y-%m-%d %H:%M")."*\<CR>:REVIEW:<Up>\<End>"
