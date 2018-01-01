@@ -25,15 +25,16 @@ if $VIM =~? 'droidvim'
     setlocal foldcolumn=0
     :QuickfixsignsDisable
 
-    iabbrev <buffer> <expr> nnn "## *".strftime("%Y-%m-%d %H:%M")."*\<CR>:REVIEW:<Up>\<End>"
+    iabbrev <buffer> <expr> %n "# *".strftime("%Y-%m-%d %H:%M")."*\<CR>:REVIEW:<Up>\<End>"
 else
     " assign ctrl-j to expand snippets, tab is used for table cells
     inoremap <buffer> <C-j> <C-R>=UltiSnips#ExpandSnippetOrJump()<CR>
     inoremap <buffer> <C-n> n<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>
 endif
 
-iabbrev <buffer> <expr> %t strftime("%Y-%m-%d %H:%M")
+iabbrev <buffer> <expr> %t "*".strftime("%H:%M")."*:"
 iabbrev <buffer> <expr> %d strftime("%Y-%m-%d")
+iabbrev <buffer> <expr> %j "# *".strftime("%Y-%m-%d")."* Journal\<CR>:journal:REVIEW:\<CR>"
 
 map <c-x> <Plug>VimwikiToggleListItem
 nnoremap <buffer> <leader>} :CtrlPFunky<cr>
