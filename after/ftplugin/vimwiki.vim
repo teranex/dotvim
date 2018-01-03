@@ -20,6 +20,8 @@ endif
 
 setlocal conceallevel=0   " disable conceal
 
+autocmd InsertEnter *.md checktime " check for modifications to the file on disk
+
 if $VIM =~? 'droidvim'
     " running on Android in DroidVim on a tiny screen
     setlocal nonumber
