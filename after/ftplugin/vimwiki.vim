@@ -61,7 +61,7 @@ function! VimwikiFoldText() "{{{
   let len_text = ' ['.fold_len.'] '
   if line !~# g:vimwiki_rxPreStart
     let [main_text, spare_len] = s:shorten_text(main_text, 50)
-    return main_text.len_text
+    return main_text.len_text.' ↩'
   else
     " fold-text for code blocks: use one or two of the starting lines
     let [main_text, spare_len] = s:shorten_text(main_text, 24)
@@ -72,6 +72,6 @@ function! VimwikiFoldText() "{{{
       let [more_text, spare_len] = s:shorten_text(line2, spare_len+12)
       let content_text .= more_text
     endif
-    return main_text.len_text.content_text
+    return main_text.len_text.content_text.' ↩'
   endif
 endfunction "}}}
