@@ -223,6 +223,7 @@ let g:Gitv_OpenHorizontal='auto'
 " let g:vimwiki_folding = 'expr'
 " let g:vimwiki_folding = 'marker' " no folding
 let g:vimwiki_hl_cb_checked=2
+let g:vimwiki_autowriteall=0 " do not automatically save
 let g:vimwiki_hl_headers=1
 let g:vimwiki_dir_link='index'
 let g:vimwiki_folding='expr'
