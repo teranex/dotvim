@@ -10,6 +10,6 @@
 
 if $VIM =~? 'droidvim' && argc() == 0
     " we are running on DroidVim
-    cd /storage/emulated/0/vimwiki/
+    cd ~/vimwiki/
     exe "silent e diary/".strftime("%Y-%m-%d").".md"
 endif
