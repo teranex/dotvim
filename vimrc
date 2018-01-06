@@ -216,6 +216,19 @@ let g:syntastic_php_phpmd_post_args=expand('<sfile>:p:h')."/.vim/misc/phpmd-rule
 " let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
+" settings for Grepper ===================================================
+let g:grepper = {}
+let g:grepper.stop = 500
+let g:grepper.highlight = 1
+let g:grepper.rg = {}
+let g:grepper.rg.grepprg = '~/scripts/rg -H --no-heading --vimgrep --no-messages'
+
+function! s:ExecuteGrepper(tool, args)
+    execute("Grepper -tool ".a:tool." -query ".a:args)
+endfunction
+command! -nargs=1 Rg call s:ExecuteGrepper('rg', <q-args>)
+command! -nargs=1 Grep call s:ExecuteGrepper('grep', <q-args>)
+
 " settings for gitv ======================================================
 let g:Gitv_OpenHorizontal='auto'
 

@@ -16,9 +16,6 @@
 [submodule "bundle/gitv"]
 	path = bundle/gitv
 	url = git://github.com/gregsexton/gitv.git
-[submodule "bundle/ack"]
-	path = bundle/ack
-	url = git://github.com/mileszs/ack.vim.git
 [submodule "pathogen"]
 	path = pathogen
 	url = git://github.com/tpope/vim-pathogen.git
@@ -106,6 +103,6 @@
 [submodule "bundle/highlightedyank"]
 	path = bundle/highlightedyank
 	url = https://github.com/machakann/vim-highlightedyank.git
-[submodule "bundle/ripgrep"]
-	path = bundle/ripgrep
-	url = https://github.com/jremmen/vim-ripgrep.git
+[submodule "bundle/vim-grepper"]
+	path = bundle/vim-grepper
+	url = https://github.com/mhinz/vim-grepper.git
