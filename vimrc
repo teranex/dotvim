@@ -404,11 +404,14 @@ let g:vdebug_options= {
 nnoremap <leader>dr :BreakpointRemove *<CR>
 
 " settings for ultisnips =================================================
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
-let g:UltiSnipsNoPythonWarning = 1
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsJumpForwardTrigger="<tab>"
+" let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
+" let g:UltiSnipsNoPythonWarning = 1
+
+" settings for minisnip ==================================================
+let g:minisnip_trigger = '<C-j>'
 
 " settings for tslime ====================================================
 vmap <C-c><C-c> <Plug>SendSelectionToTmux
