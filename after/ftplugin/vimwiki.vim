@@ -6,6 +6,7 @@ setlocal nocursorline
 setlocal colorcolumn=
 " setlocal foldlevelstart=0
 setlocal foldlevel=0
+setlocal foldmethod=expr
 setlocal foldmarker=\ {{{,%%\ }}} " set foldmarkers so they don't include syntax regions
 setlocal textwidth=0
 setlocal breakindent
@@ -58,7 +59,7 @@ endfunction
 command! -range=% Pandoc call PandocConvert(<line1>, <line2>)
 
 " Copy from default Vimwiki to overwrite with our own version
-function! VimwikiFoldText() "{{{
+function! VimwikiFoldText()
   let line = getline(v:foldstart)
   let main_text = substitute(line, '^\s*', repeat(' ',indent(v:foldstart)), '')
   let main_text =  substitute(line, '\v^#{1,}', repeat('·', v:foldlevel), '')
@@ -79,4 +80,23 @@ function! VimwikiFoldText() "{{{
     endif
     return main_text.len_text.content_text.' ↩'
   endif
-endfunction "}}}
+endfunction
+
+" Copy from default Vimwiki to overwrite with our own version
+" which disables code folding as it acts weird
+function! VimwikiFoldLevel(lnum)
+  let line = getline(a:lnum)
+
+  " Header/section folding...
+  if line =~# g:vimwiki_rxHeader
+    return '>'.vimwiki#u#count_first_sym(line)
+  " Code block folding...
+  " elseif line =~# g:vimwiki_rxPreStart
+  "   return 'a1'
+  " elseif line =~# g:vimwiki_rxPreEnd
+  "   return 's1'
+  else
+    return "="
+  endif
+
+endfunction
