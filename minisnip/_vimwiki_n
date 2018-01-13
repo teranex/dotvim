@@ -1,3 +1,2 @@
 # *{{+~strftime("%Y-%m-%d %H:%M")+}}* {{+title+}}
-:REVIEW:
-{{++}}
+:REVIEW:{{++}}
