@@ -234,7 +234,8 @@ end
 hi Error           guifg=#1E0010 guibg=red
 hi ErrorMsg        guifg=red guibg=#232526 gui=bold
 hi MatchParen      guifg=#66D9EF guibg=#1b4a68
-hi Todo            guifg=#000000 guibg=#E6DB74 gui=bold
+" hi Todo            guifg=#000000 guibg=#E6DB74 gui=bold
+hi Todo            guifg=#FD971F guibg=#31373a gui=bold
 hi clear NonText
 	
 " hi NonText         guifg=#75715E
