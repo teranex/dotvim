@@ -9,8 +9,11 @@
 syn match xVimwikiDate /\v(\[|\*|^)\d{4}-\d\d-\d\d( \d\d:\d\d)?(\]|\*)?/ containedin=VimwikiHeader1,VimwikiHeader2,VimwikiHeader3,VimwikiHeader4,VimwikiHeader5,VimwikiHeader6
 hi link xVimwikiDate Comment
 
-syn match xVimwikiEsitmate /\v\[\d+[ud]\]/
+syn match xVimwikiEsitmate /\v\[\d+([\.,]\d+)?[udh]\]/
 hi link xVimwikiEsitmate VimwikiHeader4
+
+syn match xVimwikiIssueNumber /\v(#\d+|\w+-\d+)/
+hi link xVimwikiIssueNumber VimwikiHeader1
 
 syn match xVimwikiMainTitle /\v^\%\s.+/
 
