@@ -194,6 +194,9 @@ let g:DisableAutoPHPFolding = 1         " by default disable phpfolding.vim
 let g:is_bash=1                         " configure shell script syntax as being bash syntax
 let g:load_doxygen_syntax=1             " enable doxygen support in filetypes such as PHP
 
+" FastFold
+let g:fastfold_savehook=0
+
 " color scheme
 let g:molokai_original=0
 colorscheme molokai
@@ -241,6 +244,7 @@ let g:Gitv_OpenHorizontal='auto'
 " let g:vimwiki_folding = 'expr'
 " let g:vimwiki_folding = 'marker' " no folding
 let g:vimwiki_hl_cb_checked=2
+let g:vimwiki_table_mappings=0
 let g:vimwiki_autowriteall=0 " do not automatically save
 let g:vimwiki_hl_headers=1
 let g:vimwiki_dir_link='index'
@@ -339,6 +343,13 @@ let g:airline#extensions#branch#enabled = 0
 let g:airline#extensions#hunks#enabled = 0
 let g:airline#extensions#wordcount#enabled = 0
 let g:airline_detect_spell = 0
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_splits = 0
+let g:airline#extensions#tabline#tab_nr_type = 1 " splits and tab number
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#tab_min_count = 2
+let g:airline#extensions#tabline#show_close_button = 0
+let g:airline#extensions#tabline#show_tab_type = 0
 
 function! MyAirline_Filesize()
     let bytes = getfsize(expand("%:p"))
@@ -379,7 +390,7 @@ let g:airline_section_gutter = airline#section#create(['%='])
 let g:airline_section_x = airline#section#create_right(['tagbar'])
 let g:airline_section_y = airline#section#create(['my_filetype'])
 let g:airline_section_z = airline#section#create(['windowswap', 'c:%v |', 'my_linenr', 'my_maxlinenr', '| #%n'])
-let g:airline_section_error = airline#section#create(['ycm_error_count', 'syntastic', 'eclim'])
+let g:airline_section_error = airline#section#create(['ycm_error_count', 'eclim'])
 let g:airline_section_warning = airline#section#create(['ycm_warning_count', 'whitespace'])
 
 " setting for colorizer ==================================================
@@ -394,6 +405,15 @@ let g:quickfixsigns#marks#texthl = 'Type'
 " let g:neocomplcache_enable_at_startup = 1
 " settings for neocomplete ============================================
 let g:neocomplete#enable_at_startup=0
+
+" settings form mucomplete ===============================================
+set completeopt=menuone,noinsert
+
+inoremap <expr> <c-e> mucomplete#popup_exit("\<c-e>")
+inoremap <expr> <c-y> mucomplete#popup_exit("\<c-y>")
+inoremap <expr>  <cr> mucomplete#popup_exit("\<cr>")
+
+let g:mucomplete#enable_auto_at_startup = 0
 
 " settings for vdebug ====================================================
 " set the default configuration (only options which are different from default
@@ -511,10 +531,6 @@ inoremap <C-Del> <C-O>dw
 inoremap <C-A> <C-o>I
 cnoremap <C-A> <Home>
 inoremap <C-E> <End>
-
-" smart semi-colon insert at end of line
-inoremap ;<cr> <C-O>A;<cr>
-inoremap ;; <Esc>m'A;<Esc>`'li
 
 " tab switching: easily switch back to the previous tab
 " see http://groups.google.com/group/vim_use/msg/b5f64d02a49b1348
