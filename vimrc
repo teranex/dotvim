@@ -216,12 +216,17 @@ let g:syntastic_php_phpmd_post_args=expand('<sfile>:p:h')."/.vim/misc/phpmd-rule
 " let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
+" settings for Ferret ====================================================
+let g:FerretMap = 0 " do not setup mappings
+" define the command as Rg because, seriously, that's shorter
+" command! -bang -nargs=1 -complete=customlist,ferret#private#ackcomplete Rg call ferret#private#ack(<bang>0, <q-args>)
+
 " settings for Grepper ===================================================
 let g:grepper = {}
 let g:grepper.stop = 500
 let g:grepper.highlight = 1
-let g:grepper.rg = {}
-let g:grepper.rg.grepprg = '~/scripts/rg -H --no-heading --vimgrep --no-messages'
+" let g:grepper.rg = {}
+" let g:grepper.rg.grepprg = '~/scripts/rg -H --no-heading --vimgrep --no-messages'
 
 function! s:ExecuteGrepper(tool, args)
     execute("Grepper -tool ".a:tool." -query ".a:args)
