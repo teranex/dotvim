@@ -20,8 +20,7 @@ if has('conceal')
 endif
 
 setlocal conceallevel=0   " disable conceal
-
-autocmd InsertEnter *.md checktime " check for modifications to the file on disk
+setlocal dictionary=~/.vim/misc/vimwiki-dict
 
 if $VIM =~? 'droidvim'
     " running on Android in DroidVim on a tiny screen
@@ -39,6 +38,8 @@ else
     " inoremap <buffer> <C-j> <Plug>minisnip
     " inoremap <buffer> <C-n> n<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>
 endif
+
+call AddCycleGroup(['TODO', 'T̶O̶D̶O̶', 'XXX', 'X̶X̶X̶', 'DISCUSS', 'D̶I̶S̶C̶U̶S̶S̶', 'ISSUE', 'I̶S̶S̶U̶E̶' ])
 
 " iabbrev <buffer> <expr> %t "*".strftime("%H:%M")."*:"
 " iabbrev <buffer> <expr> %d strftime("%Y-%m-%d")

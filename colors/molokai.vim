@@ -284,6 +284,7 @@ hi link VimwikiCode Float
 hi VimwikiTag       guifg=#66D9EF gui=italic,underline ctermfg=81 cterm=underline
 hi VimwikiDate      guifg=#F92672 ctermfg=161
 hi xVimwikiMainTitle           guifg=#E6DB74 ctermfg=229 gui=italic,bold,underline
+hi xVimwikiTodoDone guifg=#A6E22E guibg=#31373a gui=bold
 " hi VimwikiHeader2Date  guifg=#A6E22E gui=italic ctermfg=144
 " hi link VimwikiHeader2Date Comment
 " hi VimwikiHeader3Date  guifg=#66D9EF gui=italic ctermfg=144

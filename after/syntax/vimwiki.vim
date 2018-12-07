@@ -13,3 +13,12 @@ syn match xVimwikiEsitmate /\v\[\d+[ud]\]/
 hi link xVimwikiEsitmate VimwikiHeader4
 
 syn match xVimwikiMainTitle /\v^\%\s.+/
+
+syntax match VimwikiTodo /\C\%(DISCUSS:\|ISSUE:\|TODO:\|STARTED:\|FIXME:\|FIXED:\|XXX:\)/
+syntax match xVimwikiTodoBlue /\C\%(DISCUSS:\)/
+hi link xVimwikiTodoBlue MatchParen
+syntax match xVimwikiTodoRed /\C\%(ISSUE:\)/
+hi link xVimwikiTodoRed User1
+
+syntax match xVimwikiTodoDone /\C\%(D̶I̶S̶C̶U̶S̶S̶:\|I̶S̶S̶U̶E̶:\|T̶O̶D̶O̶:\|X̶X̶X̶:\|D̶O̶N̶E̶:\)/
+" hi link xVimwikiTodoDone xVimwikiTodoDone
