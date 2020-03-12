@@ -666,6 +666,20 @@ function! InsertDateForWeekday(daynumber)
     return strftime("%Y-%m-%d", localtime()+86400*day_difference)
 endfunction
 
+function! VimWikiNewNote()
+    set nofoldenable
+    let title = input("Note title: ")
+    let tags = input("Tags: ", ":REVIEW:")
+    let filename = strftime("%Y-%m-%dT%H:%M.md")
+    exec ':edit ~/vimwiki/diary/'.filename
+    call append(0, "# *".strftime("%Y-%m-%d %H:%M")."* ".title)
+    call append(1, tags)
+    normal O
+    startinsert
+endfunction
+
+command! NewNote call VimWikiNewNote()
+
 " Highlight characters found by f, F, t, and T.
 " Unhighlights on a cursorhold.
 "
