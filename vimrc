@@ -680,6 +680,8 @@ endfunction
 
 command! NewNote call VimWikiNewNote()
 
+command! DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
+
 " Highlight characters found by f, F, t, and T.
 " Unhighlights on a cursorhold.
 "
