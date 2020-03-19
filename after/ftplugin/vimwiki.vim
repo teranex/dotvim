@@ -2,7 +2,7 @@ setlocal wrap
 setlocal nolist
 setlocal linebreak
 setlocal nocursorcolumn
-setlocal nocursorline
+" setlocal nocursorline
 setlocal colorcolumn=
 " setlocal foldlevelstart=0
 setlocal foldlevel=0
