@@ -666,19 +666,33 @@ function! InsertDateForWeekday(daynumber)
     return strftime("%Y-%m-%d", localtime()+86400*day_difference)
 endfunction
 
-function! VimWikiNewNote()
+function! GenerateUniqueID(length)
+    return strpart(sha256(strftime("%Y%m%d%H%M%S")), 0, a:length)
+endfunction
+
+function! GenerateTimestampedID()
+    return strftime("%Y%m%d-") . GenerateUniqueID(5)
+endfunction
+
+function! VimWikiNewNote(title)
     set nofoldenable
-    let title = input("Note title: ")
-    let tags = input("Tags: ", ":REVIEW:")
+    if strlen(a:title) == 0
+        let title = input("Note title: ")
+    else
+        let title = a:title
+    endif
+    " let tags = input("Tags: ", ":REVIEW:")
     let filename = strftime("%Y-%m-%dT%H:%M.md")
     exec ':edit ~/vimwiki/diary/'.filename
     call append(0, "# *".strftime("%Y-%m-%d %H:%M")."* ".title)
-    call append(1, tags)
-    normal O
-    startinsert
+    " call append(1, tags)
+    call append(1, ':REVIEW:'.GenerateTimestampedID().':')
+    " normal O
+    normal k
+    startinsert!
 endfunction
 
-command! NewNote call VimWikiNewNote()
+command! -nargs=* NewNote call VimWikiNewNote(<q-args>)
 
 command! DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
 
