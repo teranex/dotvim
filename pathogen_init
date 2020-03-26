@@ -34,6 +34,7 @@ endif
 call add(g:pathogen_disabled, 'vdebug')
 call add(g:pathogen_disabled, 'text-object-indent')
 call add(g:pathogen_disabled, 'tslime-fork')
+call add(g:pathogen_disabled, 'ctrlp-funky')
 
 runtime pathogen/autoload/pathogen.vim
 call pathogen#infect()
