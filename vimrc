@@ -409,9 +409,9 @@ let g:neocomplete#enable_at_startup=0
 " settings form mucomplete ===============================================
 set completeopt=menuone,noinsert
 
-inoremap <expr> <c-e> mucomplete#popup_exit("\<c-e>")
-inoremap <expr> <c-y> mucomplete#popup_exit("\<c-y>")
-inoremap <expr>  <cr> mucomplete#popup_exit("\<cr>")
+" inoremap <expr> <c-e> mucomplete#popup_exit("\<c-e>")
+" inoremap <expr> <c-y> mucomplete#popup_exit("\<c-y>")
+" inoremap <expr>  <cr> mucomplete#popup_exit("\<cr>")
 
 let g:mucomplete#enable_auto_at_startup = 0
 
