@@ -61,9 +61,6 @@
 [submodule "bundle/eunuch"]
 	path = bundle/eunuch
 	url = git://github.com/tpope/vim-eunuch.git
-[submodule "bundle/theme-soda"]
-	path = bundle/theme-soda
-	url = git://github.com/DAddYE/soda.vim.git
 [submodule "bundle/ctrlp-tjump"]
 	path = bundle/ctrlp-tjump
 	url = git://github.com/ivalkeen/vim-ctrlp-tjump.git

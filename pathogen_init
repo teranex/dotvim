@@ -34,7 +34,6 @@ endif
 call add(g:pathogen_disabled, 'vdebug')
 call add(g:pathogen_disabled, 'text-object-indent')
 call add(g:pathogen_disabled, 'text-object-left-and-right')
-call add(g:pathogen_disabled, 'theme-soda')
 call add(g:pathogen_disabled, 'tslime-fork')
 
 runtime pathogen/autoload/pathogen.vim
