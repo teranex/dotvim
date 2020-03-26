@@ -225,9 +225,11 @@ let g:FerretMap = 0 " do not setup mappings
 " command! -bang -nargs=1 -complete=customlist,ferret#private#ackcomplete Rg call ferret#private#ack(<bang>0, <q-args>)
 
 " settings for Grepper ===================================================
-let g:grepper = {}
+" let g:grepper = {}
+runtime plugin/grepper.vim
 let g:grepper.stop = 500
 let g:grepper.highlight = 1
+let g:grepper.rg.grepprg .= ' --smart-case --sort path'
 " let g:grepper.rg = {}
 " let g:grepper.rg.grepprg = '~/scripts/rg -H --no-heading --vimgrep --no-messages'
 
