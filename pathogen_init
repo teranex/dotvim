@@ -37,6 +37,7 @@ call add(g:pathogen_disabled, 'tslime-fork')
 call add(g:pathogen_disabled, 'FastFold')
 call add(g:pathogen_disabled, 'gitv')
 call add(g:pathogen_disabled, 'ctrlp-funky')
+call add(g:pathogen_disabled, 'neocomplete')
 
 runtime pathogen/autoload/pathogen.vim
 call pathogen#infect()
