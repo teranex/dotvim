@@ -58,9 +58,6 @@
 [submodule "bundle/detectindent"]
 	path = bundle/detectindent
 	url = git://github.com/ciaranm/detectindent.git
-[submodule "bundle/jk-jumps"]
-	path = bundle/jk-jumps
-	url = git://github.com/teranex/jk-jumps.vim.git
 [submodule "bundle/indentline"]
 	path = bundle/indentline
 	url = git://github.com/Yggdroot/indentLine.git
