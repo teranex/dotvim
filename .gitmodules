@@ -76,9 +76,6 @@
 [submodule "bundle/clever-f"]
 	path = bundle/clever-f
 	url = git://github.com/rhysd/clever-f.vim.git
-[submodule "bundle/table-mode"]
-	path = bundle/table-mode
-	url = git://github.com/dhruvasagar/vim-table-mode.git
 [submodule "bundle/airline"]
 	path = bundle/airline
 	url = https://github.com/vim-airline/vim-airline.git

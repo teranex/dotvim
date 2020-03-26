@@ -31,7 +31,6 @@ endif
 " disable indentline as it completely crashes Gvim under AwesomeWM
 " call add(g:pathogen_disabled, 'indentline')
 " call add(g:pathogen_disabled, 'clever-f')
-call add(g:pathogen_disabled, 'table-mode')
 call add(g:pathogen_disabled, 'vdebug')
 call add(g:pathogen_disabled, 'text-object-indent')
 call add(g:pathogen_disabled, 'text-object-left-and-right')
