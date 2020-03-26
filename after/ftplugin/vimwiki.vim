@@ -5,7 +5,7 @@ setlocal nocursorcolumn
 " setlocal nocursorline
 setlocal colorcolumn=
 " setlocal foldlevelstart=0
-setlocal foldlevel=0
+setlocal foldlevel=99
 " setlocal foldmethod=expr
 " setlocal foldmarker=\ {{{,%%\ }}} " set foldmarkers so they don't include syntax regions
 setlocal textwidth=0
