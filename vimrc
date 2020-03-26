@@ -478,9 +478,9 @@ let g:pymode_utils_whitespaces = 0
 let g:php_refactor_command='php /home/jeroen/dotvim/misc/refactor.phar'
 
 " settings for Highlightedyank ===========================================
-if !exists('##TextYankPost')
-    map y <Plug>(highlightedyank)
-endif
+" if !exists('##TextYankPost')
+"     map y <Plug>(highlightedyank)
+" endif
 " }}}
 
 " Key mapping {{{
