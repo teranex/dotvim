@@ -316,12 +316,12 @@ noremap <leader>f :CtrlPFiletype<CR>
 nnoremap <c-]> :CtrlPtjump<cr>
 " Use ripgrep for ctrlp if available
 if executable('/opt/ripgrep/rg')
-    let g:ctrlp_user_command = "/opt/ripgrep/rg --files %s"
+    let g:ctrlp_user_command = "rg --files %s"
     let g:ctrlp_use_caching = 0
 endif
 
 " settings for ripgrep ===================================================
-let g:rg_binary = "~/scripts/rg --no-messages"
+let g:rg_binary = "rg --no-messages"
 let g:rg_highlight = 'true'
 
 " settings for Airline ===================================================
