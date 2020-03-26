@@ -229,6 +229,7 @@ let g:FerretMap = 0 " do not setup mappings
 runtime plugin/grepper.vim
 let g:grepper.stop = 500
 let g:grepper.highlight = 1
+let g:grepper.prompt = 0
 let g:grepper.rg.grepprg .= ' --smart-case --sort path'
 " let g:grepper.rg = {}
 " let g:grepper.rg.grepprg = '~/scripts/rg -H --no-heading --vimgrep --no-messages'
