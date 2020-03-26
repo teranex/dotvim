@@ -452,7 +452,8 @@ let g:detectindent_preferred_expandtab=1
 let g:indentLine_color_gui='#31373a'
 let g:indentLine_char='│'
 let g:indentLine_indentLevel=7
-let g:indentLine_noConcealCursor=1
+" let g:indentLine_noConcealCursor=1
+let g:indentLine_concealcursor = 'nc'
 
 " settings for clever-f
 let g:clever_f_across_no_line=1
