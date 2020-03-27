@@ -1,8 +1,0 @@
-" options -----------------------------
-set shell=/bin/bash
-set noswapfile
-set sessionoptions-=resize
-
-" fix vimwiki -------------------------
-map ,o :VimwikiFollowLink<CR>
-map ,f <C-]>
