@@ -118,6 +118,8 @@ runtime vimrc-functions
 " setup plugins
 runtime vimrc-plugins
 
+runtime vimrc-vimplug
+
 " Host specific config ===================================================
 " check for the existence of a host-specific vimrc file and source it
 " by example: if your host is named 'andoria', this will source
