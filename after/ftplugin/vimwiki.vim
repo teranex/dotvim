@@ -10,7 +10,7 @@ setlocal foldlevel=99
 " setlocal foldmarker=\ {{{,%%\ }}} " set foldmarkers so they don't include syntax regions
 setlocal textwidth=0
 setlocal breakindent
-setlocal spelllang=en,nl          " check spelling in both English and Dutch by default
+" setlocal spelllang=en,nl          " check spelling in both English and Dutch by default
 setlocal nospell " disable spell by default
 setlocal foldcolumn=4
 setlocal shiftwidth=4
