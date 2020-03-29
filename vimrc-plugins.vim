@@ -24,6 +24,8 @@ Plug 'vimwiki/vimwiki'
 
 Plug 'djoshea/vim-autoread'
 
+Plug 'vim-scripts/AutoTag'
+
 call plug#end()
 
 
