@@ -46,6 +46,8 @@ Plug 'airblade/vim-rooter'
 
 Plug 'michaeljsmith/vim-indent-object'
 
+Plug 'tomtom/tcomment_vim'
+
 call plug#end()
 
 

@@ -13,9 +13,6 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
-[submodule "bundle/tcomment"]
-	path = bundle/tcomment
-	url = git://github.com/tomtom/tcomment_vim.git
 [submodule "bundle/quickfixsigns"]
 	path = bundle/quickfixsigns
 	url = git://github.com/tomtom/quickfixsigns_vim.git
