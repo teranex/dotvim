@@ -85,6 +85,8 @@ Plug 't9md/vim-quickhl'
     nmap <leader>m <Plug>(quickhl-manual-this)
     xmap <leader>m <Plug>(quickhl-manual-this)
 
+Plug 'axvr/zepl.vim'
+
 " Plug 'vim-scripts/BufOnly.vim'
 "     " Delete all the other buffers with \B
 "     nnoremap <silent> <leader>B :Bonly<CR>:tabonly<CR>
