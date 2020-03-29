@@ -32,6 +32,10 @@ Plug 'chrisbra/color_highlight'
 
 Plug 'tpope/vim-eunuch'
 
+Plug 'tpope/vim-fugitive'
+    " close fugitive buffers when they are not shown anymore
+    autocmd BufReadPost fugitive://* set bufhidden=wipe
+
 call plug#end()
 
 
@@ -49,10 +53,6 @@ let g:rooter_silent_chdir = 1
 let g:rooter_patterns = ['.rootmarker', '.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/']
 " run the rooter plugin after a session is loaded
 autocmd BufRead,BufNewFile * Rooter
-
-" settings for fugitive ==================================================
-" close fugitive buffers when they are not shown anymore
-autocmd BufReadPost fugitive://* set bufhidden=wipe
 
 " settings for Syntastic =================================================
 let g:syntastic_enable_signs=1

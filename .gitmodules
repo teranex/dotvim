@@ -7,9 +7,6 @@
 [submodule "bundle/mark"]
 	path = bundle/mark
 	url = git://github.com/vim-scripts/Mark--Karkat.git
-[submodule "bundle/fugitive"]
-	path = bundle/fugitive
-	url = git://github.com/tpope/vim-fugitive.git
 [submodule "bundle/gitv"]
 	path = bundle/gitv
 	url = git://github.com/gregsexton/gitv.git
