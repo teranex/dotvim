@@ -85,9 +85,6 @@
 [submodule "bundle/FastFold"]
 	path = bundle/FastFold
 	url = https://github.com/Konfekt/FastFold.git
-[submodule "bundle/autoread"]
-	path = bundle/autoread
-	url = https://github.com/djoshea/vim-autoread.git
 [submodule "bundle/mucomplete"]
 	path = bundle/mucomplete
 	url = https://github.com/lifepillar/vim-mucomplete.git

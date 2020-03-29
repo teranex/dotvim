@@ -22,6 +22,8 @@ Plug 'vimwiki/vimwiki'
     let wiki.auto_tags = 1
     let g:vimwiki_list = [wiki]
 
+Plug 'djoshea/vim-autoread'
+
 call plug#end()
 
 
