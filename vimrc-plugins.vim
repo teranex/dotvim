@@ -28,6 +28,8 @@ Plug 'vim-scripts/AutoTag'
 
 Plug 'rhysd/clever-f.vim'
 
+Plug 'chrisbra/color_highlight'
+
 call plug#end()
 
 

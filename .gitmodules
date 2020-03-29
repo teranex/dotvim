@@ -58,9 +58,6 @@
 [submodule "bundle/ctrlp-tjump"]
 	path = bundle/ctrlp-tjump
 	url = git://github.com/ivalkeen/vim-ctrlp-tjump.git
-[submodule "bundle/color-highlight"]
-	path = bundle/color-highlight
-	url = git://github.com/chrisbra/color_highlight.git
 [submodule "bundle/neocomplete"]
 	path = bundle/neocomplete
 	url = https://github.com/Shougo/neocomplete.vim.git
