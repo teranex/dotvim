@@ -44,6 +44,8 @@ Plug 'airblade/vim-rooter'
     " run the rooter plugin after a session is loaded
     autocmd BufRead,BufNewFile * Rooter
 
+Plug 'michaeljsmith/vim-indent-object'
+
 call plug#end()
 
 
