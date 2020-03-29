@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/goyo.vim'
 
 Plug 'vim-airline/vim-airline'
+    " XXX: config see after/plugin/airline.vim
 
 Plug 'vimwiki/vimwiki'
     let g:vimwiki_hl_cb_checked=2
@@ -27,6 +28,14 @@ Plug 'djoshea/vim-autoread'
 Plug 'vim-scripts/AutoTag'
 
 Plug 'rhysd/clever-f.vim'
+    let g:clever_f_across_no_line=1
+    let g:clever_f_timeout_ms=1
+    nmap ; <Plug>(clever-f-repeat-forward)
+    xmap ; <Plug>(clever-f-repeat-forward)
+    omap ; <Plug>(clever-f-repeat-forward)
+    nmap , <Plug>(clever-f-repeat-back)
+    xmap , <Plug>(clever-f-repeat-back)
+    omap , <Plug>(clever-f-repeat-back)
 
 Plug 'chrisbra/color_highlight'
 
