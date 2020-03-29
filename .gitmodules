@@ -4,9 +4,6 @@
 [submodule "bundle/mark"]
 	path = bundle/mark
 	url = git://github.com/vim-scripts/Mark--Karkat.git
-[submodule "bundle/gitv"]
-	path = bundle/gitv
-	url = git://github.com/gregsexton/gitv.git
 [submodule "pathogen"]
 	path = pathogen
 	url = git://github.com/tpope/vim-pathogen.git

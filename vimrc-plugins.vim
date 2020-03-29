@@ -112,8 +112,6 @@ endfunction
 command! -nargs=1 Rg call s:ExecuteGrepper('rg', <q-args>)
 command! -nargs=1 Grep call s:ExecuteGrepper('grep', <q-args>)
 
-" settings for gitv ======================================================
-let g:Gitv_OpenHorizontal='auto'
 
 " settings for vimwiki ===================================================
 " let g:vimwiki_folding = 'expr'
