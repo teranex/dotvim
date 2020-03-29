@@ -28,9 +28,6 @@
 [submodule "bundle/ctrlp-filetype"]
 	path = bundle/ctrlp-filetype
 	url = git://github.com/endel/ctrlp-filetype.vim.git
-[submodule "bundle/bufonly"]
-	path = bundle/bufonly
-	url = git://github.com/vim-scripts/BufOnly.vim.git
 [submodule "bundle/tslime-fork"]
 	path = bundle/tslime-fork
 	url = git://github.com/teranex/tslime.vim.git

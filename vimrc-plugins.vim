@@ -63,6 +63,10 @@ Plug 'Yggdroot/indentLine'
     let g:indentLine_indentLevel=7
     let g:indentLine_concealcursor = 'nc'
 
+" Plug 'vim-scripts/BufOnly.vim'
+"     " Delete all the other buffers with \B
+"     nnoremap <silent> <leader>B :Bonly<CR>:tabonly<CR>
+
 call plug#end()
 
 
@@ -191,10 +195,6 @@ let g:vdebug_options= {
     \}
 " add a keymapping to quickly remove all breakpoints
 nnoremap <leader>dr :BreakpointRemove *<CR>
-
-" settings for Bonly =====================================================
-" Delete all the other buffers with \B
-nnoremap <silent> <leader>B :Bonly<CR>:tabonly<CR>
 
 " settings for ultisnips =================================================
 " let g:UltiSnipsExpandTrigger="<tab>"
