@@ -120,6 +120,10 @@ Plug 'lifepillar/vim-mucomplete'
 "     " Delete all the other buffers with \B
 "     nnoremap <silent> <leader>B :Bonly<CR>:tabonly<CR>
 
+" Plug 'ciaranm/detectindent'
+"     let g:detectindent_preferred_expandtab=1
+"     autocmd BufReadPost * :DetectIndent
+"
 call plug#end()
 
 
@@ -178,11 +182,6 @@ let g:minisnip_trigger = '<C-j>'
 vmap <C-c><C-c> <Plug>SendSelectionToTmux
 nmap <C-c><C-c> <Plug>NormalModeSendToTmux
 nmap <C-c>r <Plug>SetTmuxVars
-
-" settings for detectindent ==============================================
-let g:detectindent_preferred_expandtab=1
-" automatically try to detect correct indent
-autocmd BufReadPost * :DetectIndent
 
 " settings for python-mode ===============================================
 let g:pymode_rope_enable_shortcuts=0 " Does this work??

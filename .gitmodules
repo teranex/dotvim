@@ -7,9 +7,6 @@
 [submodule "bundle/sessionman-fork"]
 	path = bundle/sessionman-fork
 	url = git://github.com/teranex/sessionman.vim.git
-[submodule "bundle/detectindent"]
-	path = bundle/detectindent
-	url = git://github.com/ciaranm/detectindent.git
 [submodule "bundle/minisnip"]
 	path = bundle/minisnip
 	url = https://github.com/joereynolds/vim-minisnip.git
