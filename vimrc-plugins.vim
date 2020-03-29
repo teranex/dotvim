@@ -179,18 +179,6 @@ set completeopt=menuone,noinsert
 
 let g:mucomplete#enable_auto_at_startup = 0
 
-" settings for vdebug ====================================================
-" set the default configuration (only options which are different from default
-" configuration)
-let g:vdebug_options= {
-    \    "watch_window_style" : 'compact',
-    \    "server"             : '10.0.3.1',
-    \    "timeout"            : 300,
-    \    "break_on_open"      : 0,
-    \    "continuous_mode"    : 1,
-    \}
-" add a keymapping to quickly remove all breakpoints
-nnoremap <leader>dr :BreakpointRemove *<CR>
 
 " settings for ultisnips =================================================
 " let g:UltiSnipsExpandTrigger="<tab>"
