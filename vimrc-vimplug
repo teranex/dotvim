@@ -5,4 +5,6 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
     map <leader>p :Files<cr>
 
+Plug 'liuchengxu/vim-clap'
+
 call plug#end()
