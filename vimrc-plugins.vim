@@ -4,6 +4,24 @@ Plug 'junegunn/goyo.vim'
 
 Plug 'vim-airline/vim-airline'
 
+Plug 'vimwiki/vimwiki'
+    let g:vimwiki_hl_cb_checked=2
+    let g:vimwiki_table_mappings=0
+    let g:vimwiki_autowriteall=0 " do not automatically save
+    let g:vimwiki_hl_headers=1
+    let g:vimwiki_dir_link='index'
+    let g:vimwiki_folding='expr'
+    let g:vimwiki_url_maxsave=0
+    let g:vimwiki_ext2syntax = {'.md': 'markdown'}
+
+    let wiki = {}
+    let wiki.path = '~/vimwiki/'
+    let wiki.syntax = 'markdown'
+    let wiki.ext = '.md'
+    let wiki.automatic_nested_syntaxes = 1
+    let wiki.auto_tags = 1
+    let g:vimwiki_list = [wiki]
+
 call plug#end()
 
 
@@ -67,43 +85,6 @@ let g:Gitv_OpenHorizontal='auto'
 " settings for vimwiki ===================================================
 " let g:vimwiki_folding = 'expr'
 " let g:vimwiki_folding = 'marker' " no folding
-let g:vimwiki_hl_cb_checked=2
-let g:vimwiki_table_mappings=0
-let g:vimwiki_autowriteall=0 " do not automatically save
-let g:vimwiki_hl_headers=1
-let g:vimwiki_dir_link='index'
-let g:vimwiki_folding='expr'
-" let g:vimwiki_url_mingain=1000
-let g:vimwiki_url_maxsave=0
-let g:vimwiki_ext2syntax = {'.md': 'markdown'}
-" define the default wiki
-" let wiki_nested_syntaxes = {
-"     \ 'bash': 'sh',
-"     \ 'python': 'python',
-"     \ 'ruby': 'ruby',
-"     \ 'html': 'html',
-"     \ 'php': 'php',
-"     \ 'vim': 'vim',
-"     \ 'conf': 'conf',
-"     \ 'gitconf': 'gitconfig',
-"     \ 'sql': 'sql',
-"     \ 'mail': 'mail',
-"     \ 'xml': 'xml',
-"     \}
-let wiki = {}
-let wiki.path = '~/vimwiki/'
-let wiki.syntax = 'markdown'
-let wiki.ext = '.md'
-" let wiki.nested_syntaxes = wiki_nested_syntaxes
-let wiki.automatic_nested_syntaxes = 1
-" let wiki.automatic_nested_syntaxes = 1
-let wiki.auto_tags = 1
-let g:vimwiki_list = [wiki]
-
-" settings for vimwiki_task ==============================================
-let g:vimwiki_tasks_tags_duetime = '+notify'
-let g:vimwiki_tasks_note_path = 'tasks'
-" let g:vimwiki_tasks_task_args = 'rc:/media/cryptdata/dev/taskwarrior/testdata/.taskrc'
 
 " settings for pandoc ====================================================
 let g:pandoc#folding#fdc = 0
