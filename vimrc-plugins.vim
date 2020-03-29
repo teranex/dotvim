@@ -116,6 +116,9 @@ Plug 'lifepillar/vim-mucomplete'
     set completeopt=menuone,noinsert
     let g:mucomplete#enable_auto_at_startup = 0
 
+Plug 'editorconfig/editorconfig-vim'
+    let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
 " Plug 'vim-scripts/BufOnly.vim'
 "     " Delete all the other buffers with \B
 "     nnoremap <silent> <leader>B :Bonly<CR>:tabonly<CR>
