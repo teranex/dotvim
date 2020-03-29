@@ -77,6 +77,9 @@ Plug 'tomtom/quickfixsigns_vim'
     let g:quickfixsigns_classes = ['marks', 'vcsdiff', 'qfl']
     let g:quickfixsigns#marks#texthl = 'Type'
 
+Plug 'mhinz/vim-grepper'
+    " XXX: config see after/plugin/grepper.vim
+
 " Plug 'vim-scripts/BufOnly.vim'
 "     " Delete all the other buffers with \B
 "     nnoremap <silent> <leader>B :Bonly<CR>:tabonly<CR>
@@ -98,20 +101,6 @@ let g:FerretMap = 0 " do not setup mappings
 " command! -bang -nargs=1 -complete=customlist,ferret#private#ackcomplete Rg call ferret#private#ack(<bang>0, <q-args>)
 
 " settings for Grepper ===================================================
-" let g:grepper = {}
-runtime plugin/grepper.vim
-let g:grepper.stop = 500
-let g:grepper.highlight = 1
-let g:grepper.prompt = 0
-let g:grepper.rg.grepprg .= ' --smart-case --sort path'
-" let g:grepper.rg = {}
-" let g:grepper.rg.grepprg = '~/scripts/rg -H --no-heading --vimgrep --no-messages'
-
-function! s:ExecuteGrepper(tool, args)
-    execute("Grepper -tool ".a:tool." -query ".a:args)
-endfunction
-command! -nargs=1 Rg call s:ExecuteGrepper('rg', <q-args>)
-command! -nargs=1 Grep call s:ExecuteGrepper('grep', <q-args>)
 
 
 " settings for vimwiki ===================================================

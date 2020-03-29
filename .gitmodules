@@ -31,9 +31,6 @@
 [submodule "bundle/ctrlp-funky"]
 	path = bundle/ctrlp-funky
 	url = https://github.com/tacahiroy/ctrlp-funky.git
-[submodule "bundle/vim-grepper"]
-	path = bundle/vim-grepper
-	url = https://github.com/mhinz/vim-grepper.git
 [submodule "bundle/minisnip"]
 	path = bundle/minisnip
 	url = https://github.com/joereynolds/vim-minisnip.git
