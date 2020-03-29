@@ -112,6 +112,10 @@ Plug 'ivalkeen/vim-ctrlp-tjump'
         let g:ctrlp_use_caching = 0
     endif
 
+Plug 'lifepillar/vim-mucomplete'
+    set completeopt=menuone,noinsert
+    let g:mucomplete#enable_auto_at_startup = 0
+
 " Plug 'vim-scripts/BufOnly.vim'
 "     " Delete all the other buffers with \B
 "     nnoremap <silent> <leader>B :Bonly<CR>:tabonly<CR>
@@ -159,16 +163,6 @@ let g:rg_highlight = 'true'
 " setting for colorizer ==================================================
 " do not map anything
 let g:colorizer_nomap = 1
-
-" settings form mucomplete ===============================================
-set completeopt=menuone,noinsert
-
-" inoremap <expr> <c-e> mucomplete#popup_exit("\<c-e>")
-" inoremap <expr> <c-y> mucomplete#popup_exit("\<c-y>")
-" inoremap <expr>  <cr> mucomplete#popup_exit("\<cr>")
-
-let g:mucomplete#enable_auto_at_startup = 0
-
 
 " settings for ultisnips =================================================
 " let g:UltiSnipsExpandTrigger="<tab>"
