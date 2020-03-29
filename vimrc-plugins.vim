@@ -122,7 +122,7 @@ let g:pandoc#formatting#smart_autoformat_on_cursormoved = 0
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_dotfiles=0
 let g:ctrlp_follow_symlinks = 1
-let g:ctrlp_extensions = ['tag', 'buffertag', 'filetype', 'tjump']
+let g:ctrlp_extensions = ['tag', 'buffertag', 'tjump']
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_max_height = 25
 let g:ctrlp_switch_buffer = 'Et'
@@ -133,7 +133,6 @@ noremap <leader>b :CtrlPBuffer<CR>
 noremap <leader>] :CtrlPTag<CR>
 noremap <leader>} :CtrlPBufTag<CR>
 noremap <leader>s :CtrlPSession<CR>
-noremap <leader>f :CtrlPFiletype<CR>
 nnoremap <c-]> :CtrlPtjump<cr>
 " Use ripgrep for ctrlp if available
 if executable('fd')

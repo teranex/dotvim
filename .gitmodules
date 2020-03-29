@@ -13,9 +13,6 @@
 [submodule "bundle/sessionman-fork"]
 	path = bundle/sessionman-fork
 	url = git://github.com/teranex/sessionman.vim.git
-[submodule "bundle/ctrlp-filetype"]
-	path = bundle/ctrlp-filetype
-	url = git://github.com/endel/ctrlp-filetype.vim.git
 [submodule "bundle/tslime-fork"]
 	path = bundle/tslime-fork
 	url = git://github.com/teranex/tslime.vim.git
