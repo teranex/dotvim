@@ -26,6 +26,8 @@ Plug 'djoshea/vim-autoread'
 
 Plug 'vim-scripts/AutoTag'
 
+Plug 'rhysd/clever-f.vim'
+
 call plug#end()
 
 
@@ -195,16 +197,6 @@ let g:indentLine_char='│'
 let g:indentLine_indentLevel=7
 " let g:indentLine_noConcealCursor=1
 let g:indentLine_concealcursor = 'nc'
-
-" settings for clever-f
-let g:clever_f_across_no_line=1
-let g:clever_f_timeout_ms=1
-nmap ; <Plug>(clever-f-repeat-forward)
-xmap ; <Plug>(clever-f-repeat-forward)
-omap ; <Plug>(clever-f-repeat-forward)
-nmap , <Plug>(clever-f-repeat-back)
-xmap , <Plug>(clever-f-repeat-back)
-omap , <Plug>(clever-f-repeat-back)
 
 " settings for python-mode ===============================================
 let g:pymode_rope_enable_shortcuts=0 " Does this work??
