@@ -94,6 +94,13 @@ set path+=./**;,,
 syntax on
 filetype plugin indent on
 
+" syntax configuring
+let php_htmlInStrings = 1               " html syntax highlighting inside PHP strings
+let php_folding = 0                     " disable PHP syntax folding
+let g:DisableAutoPHPFolding = 1         " by default disable phpfolding.vim
+let g:is_bash=1                         " configure shell script syntax as being bash syntax
+let g:load_doxygen_syntax=1             " enable doxygen support in filetypes such as PHP
+
 " the following line makes vim ignore camelCase and CamelCase words so they
 " are not highlighted as spelling mistakes
 autocmd Syntax * syn match CamelCase "\(\<\|_\)\%(\u\l*\)\{2,}\(\>\|_\)\|\<\%(\l\l*\)\%(\u\l*\)\{1,}\>" transparent containedin=.*Comment.*,.*String.*,VimwikiLink contains=@NoSpell contained
