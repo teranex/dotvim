@@ -104,19 +104,19 @@ autocmd BufRead,BufNewFile *.{profile,install,test} setlocal filetype=php
 runtime! macros/matchit.vim
 
 " configure GUI, tab labels and titles
-runtime vimrc-ui
+runtime vimrc-ui.vim
 
 " setup keymappings
-runtime vimrc-keymappings
+runtime vimrc-keymappings.vim
 
 " setup abbreviations
-runtime vimrc-abbreviations
+runtime vimrc-abbreviations.vim
 
 " setup functions and commands
-runtime vimrc-functions
+runtime vimrc-functions.vim
 
 " setup plugins
-runtime vimrc-plugins
+runtime vimrc-plugins.vim
 
 " Host specific config ===================================================
 " check for the existence of a host-specific vimrc file and source it
