@@ -90,6 +90,10 @@ set sessionoptions=buffers,tabpages,winsize
 " set the path, so we can easily open files with the gf command etc
 set path+=./**;,,
 
+" color scheme
+let g:molokai_original=0
+colorscheme molokai
+
 " enable filetype detection and indentation specific for filetype
 syntax on
 filetype plugin indent on

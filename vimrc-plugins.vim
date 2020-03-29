@@ -73,9 +73,6 @@ call plug#end()
 
 
 
-" color scheme
-let g:molokai_original=0
-colorscheme molokai
 
 " settings for Syntastic =================================================
 let g:syntastic_enable_signs=1
