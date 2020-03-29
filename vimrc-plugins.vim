@@ -30,6 +30,8 @@ Plug 'rhysd/clever-f.vim'
 
 Plug 'chrisbra/color_highlight'
 
+Plug 'tpope/vim-eunuch'
+
 call plug#end()
 
 

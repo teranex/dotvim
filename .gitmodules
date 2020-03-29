@@ -52,9 +52,6 @@
 [submodule "bundle/indentline"]
 	path = bundle/indentline
 	url = git://github.com/Yggdroot/indentLine.git
-[submodule "bundle/eunuch"]
-	path = bundle/eunuch
-	url = git://github.com/tpope/vim-eunuch.git
 [submodule "bundle/ctrlp-tjump"]
 	path = bundle/ctrlp-tjump
 	url = git://github.com/ivalkeen/vim-ctrlp-tjump.git
