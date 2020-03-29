@@ -1,9 +1,6 @@
 [submodule "pathogen"]
 	path = pathogen
 	url = git://github.com/tpope/vim-pathogen.git
-[submodule "bundle/ctrlp"]
-	path = bundle/ctrlp
-	url = https://github.com/ctrlpvim/ctrlp.vim.git
 [submodule "bundle/powerline"]
 	path = bundle/powerline
 	url = git://github.com/Lokaltog/vim-powerline.git
@@ -13,9 +10,6 @@
 [submodule "bundle/detectindent"]
 	path = bundle/detectindent
 	url = git://github.com/ciaranm/detectindent.git
-[submodule "bundle/ctrlp-tjump"]
-	path = bundle/ctrlp-tjump
-	url = git://github.com/ivalkeen/vim-ctrlp-tjump.git
 [submodule "bundle/minisnip"]
 	path = bundle/minisnip
 	url = https://github.com/joereynolds/vim-minisnip.git

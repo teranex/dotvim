@@ -87,6 +87,31 @@ Plug 't9md/vim-quickhl'
 
 Plug 'axvr/zepl.vim'
 
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ivalkeen/vim-ctrlp-tjump'
+    let g:ctrlp_working_path_mode = 0
+    let g:ctrlp_dotfiles=0
+    let g:ctrlp_follow_symlinks = 1
+    let g:ctrlp_extensions = ['tag', 'buffertag', 'tjump']
+    let g:ctrlp_map = '<leader>t'
+    let g:ctrlp_max_height = 25
+    let g:ctrlp_switch_buffer = 'Et'
+    let g:ctrlp_buftag_types = {'php': '--language-force=php --php-types=cdfi'}
+    let g:ctrlp_tjump_only_silent = 1
+    noremap <leader>e :CtrlPCurFile<CR>
+    noremap <leader>b :CtrlPBuffer<CR>
+    noremap <leader>] :CtrlPTag<CR>
+    noremap <leader>} :CtrlPBufTag<CR>
+    noremap <leader>s :CtrlPSession<CR>
+    nnoremap <c-]> :CtrlPtjump<cr>
+    " Use ripgrep for ctrlp if available
+    if executable('fd')
+        echom 'using fd'
+        let g:ctrlp_user_command = 'fd -c never "" "%s"'
+        " let g:ctrlp_user_command = "rg --files %s"
+        let g:ctrlp_use_caching = 0
+    endif
+
 " Plug 'vim-scripts/BufOnly.vim'
 "     " Delete all the other buffers with \B
 "     nnoremap <silent> <leader>B :Bonly<CR>:tabonly<CR>
@@ -124,30 +149,6 @@ let g:pandoc#syntax#conceal#blacklist = ['atx', 'list']
 let g:pandoc#syntax#conceal#use = 0
 let g:pandoc#syntax#codeblocks#embeds#langs = ['bash=sh', 'python', 'ruby', 'html', 'php', 'yaml', 'vim', 'conf', 'sql']
 let g:pandoc#formatting#smart_autoformat_on_cursormoved = 0
-
-" settings for ctrlp =====================================================
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_dotfiles=0
-let g:ctrlp_follow_symlinks = 1
-let g:ctrlp_extensions = ['tag', 'buffertag', 'tjump']
-let g:ctrlp_map = '<leader>t'
-let g:ctrlp_max_height = 25
-let g:ctrlp_switch_buffer = 'Et'
-let g:ctrlp_buftag_types = {'php': '--language-force=php --php-types=cdfi'}
-let g:ctrlp_tjump_only_silent = 1
-noremap <leader>e :CtrlPCurFile<CR>
-noremap <leader>b :CtrlPBuffer<CR>
-noremap <leader>] :CtrlPTag<CR>
-noremap <leader>} :CtrlPBufTag<CR>
-noremap <leader>s :CtrlPSession<CR>
-nnoremap <c-]> :CtrlPtjump<cr>
-" Use ripgrep for ctrlp if available
-if executable('fd')
-    echom 'using fd'
-    let g:ctrlp_user_command = 'fd -c never "" "%s"'
-    " let g:ctrlp_user_command = "rg --files %s"
-    let g:ctrlp_use_caching = 0
-endif
 
 " settings for ripgrep ===================================================
 let g:rg_binary = "rg --no-messages"
