@@ -1,6 +1,3 @@
-[submodule "bundle/mark"]
-	path = bundle/mark
-	url = git://github.com/vim-scripts/Mark--Karkat.git
 [submodule "pathogen"]
 	path = pathogen
 	url = git://github.com/tpope/vim-pathogen.git

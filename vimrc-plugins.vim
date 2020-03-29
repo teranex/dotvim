@@ -80,6 +80,11 @@ Plug 'tomtom/quickfixsigns_vim'
 Plug 'mhinz/vim-grepper'
     " XXX: config see after/plugin/grepper.vim
 
+" Plug 'inkarkat/vim-mark', { 'branch': 'stable' }
+Plug 't9md/vim-quickhl'
+    nmap <leader>m <Plug>(quickhl-manual-this)
+    xmap <leader>m <Plug>(quickhl-manual-this)
+
 " Plug 'vim-scripts/BufOnly.vim'
 "     " Delete all the other buffers with \B
 "     nnoremap <silent> <leader>B :Bonly<CR>:tabonly<CR>
