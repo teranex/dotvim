@@ -73,6 +73,10 @@ Plug 'scrooloose/syntastic'
     let g:syntastic_php_phpcs_args="--report=csv --standard=".expand('<sfile>:p:h')."/.vim/misc/phpcs-drupal-ruleset.xml"
     let g:syntastic_php_phpmd_post_args=expand('<sfile>:p:h')."/.vim/misc/phpmd-ruleset.xml"
 
+Plug 'tomtom/quickfixsigns_vim'
+    let g:quickfixsigns_classes = ['marks', 'vcsdiff', 'qfl']
+    let g:quickfixsigns#marks#texthl = 'Type'
+
 " Plug 'vim-scripts/BufOnly.vim'
 "     " Delete all the other buffers with \B
 "     nnoremap <silent> <leader>B :Bonly<CR>:tabonly<CR>
@@ -157,10 +161,6 @@ let g:rg_highlight = 'true'
 " setting for colorizer ==================================================
 " do not map anything
 let g:colorizer_nomap = 1
-
-" settings for quickfixsigns =============================================
-let g:quickfixsigns_classes = ['marks', 'vcsdiff', 'qfl']
-let g:quickfixsigns#marks#texthl = 'Type'
 
 " settings for neocomplecache ============================================
 " let g:neocomplcache_enable_at_startup = 1
