@@ -37,9 +37,6 @@
 [submodule "bundle/detectindent"]
 	path = bundle/detectindent
 	url = git://github.com/ciaranm/detectindent.git
-[submodule "bundle/indentline"]
-	path = bundle/indentline
-	url = git://github.com/Yggdroot/indentLine.git
 [submodule "bundle/ctrlp-tjump"]
 	path = bundle/ctrlp-tjump
 	url = git://github.com/ivalkeen/vim-ctrlp-tjump.git

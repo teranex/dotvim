@@ -48,6 +48,12 @@ Plug 'michaeljsmith/vim-indent-object'
 
 Plug 'tomtom/tcomment_vim'
 
+Plug 'Yggdroot/indentLine'
+    let g:indentLine_color_gui='#31373a'
+    let g:indentLine_char='│'
+    let g:indentLine_indentLevel=7
+    let g:indentLine_concealcursor = 'nc'
+
 call plug#end()
 
 
@@ -200,13 +206,6 @@ nmap <C-c>r <Plug>SetTmuxVars
 let g:detectindent_preferred_expandtab=1
 " automatically try to detect correct indent
 autocmd BufReadPost * :DetectIndent
-
-" settings for indent lines ==============================================
-let g:indentLine_color_gui='#31373a'
-let g:indentLine_char='│'
-let g:indentLine_indentLevel=7
-" let g:indentLine_noConcealCursor=1
-let g:indentLine_concealcursor = 'nc'
 
 " settings for python-mode ===============================================
 let g:pymode_rope_enable_shortcuts=0 " Does this work??
