@@ -72,8 +72,6 @@ call plug#end()
 
 
 
-" FastFold
-let g:fastfold_savehook=0
 
 " color scheme
 let g:molokai_original=0

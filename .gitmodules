@@ -49,9 +49,6 @@
 [submodule "bundle/minisnip"]
 	path = bundle/minisnip
 	url = https://github.com/joereynolds/vim-minisnip.git
-[submodule "bundle/FastFold"]
-	path = bundle/FastFold
-	url = https://github.com/Konfekt/FastFold.git
 [submodule "bundle/mucomplete"]
 	path = bundle/mucomplete
 	url = https://github.com/lifepillar/vim-mucomplete.git
