@@ -1,3 +1,11 @@
+call plug#begin('~/.vim/plugged')
+
+
+call plug#end()
+
+
+
+
 " FastFold
 let g:fastfold_savehook=0
 
