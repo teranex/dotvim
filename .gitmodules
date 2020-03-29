@@ -28,6 +28,3 @@
 [submodule "bundle/mucomplete"]
 	path = bundle/mucomplete
 	url = https://github.com/lifepillar/vim-mucomplete.git
-[submodule "bundle/vim-cycle"]
-	path = bundle/vim-cycle
-	url = https://github.com/zef/vim-cycle.git
