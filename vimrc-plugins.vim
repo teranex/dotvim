@@ -152,11 +152,6 @@ let g:rg_highlight = 'true'
 " do not map anything
 let g:colorizer_nomap = 1
 
-" settings for neocomplecache ============================================
-" let g:neocomplcache_enable_at_startup = 1
-" settings for neocomplete ============================================
-let g:neocomplete#enable_at_startup=0
-
 " settings form mucomplete ===============================================
 set completeopt=menuone,noinsert
 
