@@ -38,6 +38,12 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'machakann/vim-highlightedyank'
 
+Plug 'airblade/vim-rooter'
+    let g:rooter_silent_chdir = 1
+    let g:rooter_patterns = ['.rootmarker', '.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/']
+    " run the rooter plugin after a session is loaded
+    autocmd BufRead,BufNewFile * Rooter
+
 call plug#end()
 
 
@@ -49,12 +55,6 @@ let g:fastfold_savehook=0
 " color scheme
 let g:molokai_original=0
 colorscheme molokai
-
-" settings for Rooter ====================================================
-let g:rooter_silent_chdir = 1
-let g:rooter_patterns = ['.rootmarker', '.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/']
-" run the rooter plugin after a session is loaded
-autocmd BufRead,BufNewFile * Rooter
 
 " settings for Syntastic =================================================
 let g:syntastic_enable_signs=1
