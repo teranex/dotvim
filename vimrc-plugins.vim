@@ -36,6 +36,8 @@ Plug 'tpope/vim-fugitive'
     " close fugitive buffers when they are not shown anymore
     autocmd BufReadPost fugitive://* set bufhidden=wipe
 
+Plug 'machakann/vim-highlightedyank'
+
 call plug#end()
 
 
