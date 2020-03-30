@@ -16,8 +16,8 @@ nnoremap ? ?\V
 cnoremap <expr> /  getcmdtype() == '/' ? '\/' : '/'
 
 " remap ctrl-] to jump to tag, or display list of multiple results
-" nnoremap <c-]> g<c-]>
-" vnoremap <c-]> g<c-]>
+nnoremap <c-]> g<c-]>
+vnoremap <c-]> g<c-]>
 
 " insert blank lines before and after (copied from unimpaired)
 function! s:BlankUp(count) abort
