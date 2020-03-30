@@ -45,8 +45,10 @@ endif
 " iabbrev <buffer> <expr> %d strftime("%Y-%m-%d")
 " iabbrev <buffer> <expr> %j "# *".strftime("%Y-%m-%d")."* Journal\<CR>:journal:REVIEW:\<CR>"
 
+map <leader>r :Rg :REVIEW:<CR>
+
 map <c-x> <Plug>VimwikiToggleListItem
-nnoremap <buffer> <leader>} :CtrlPFunky<cr>
+" nnoremap <buffer> <leader>} :CtrlPFunky<cr>
 
 function! PandocConvert(firstLine, lastLine)
     let infile = tempname().'.md'

@@ -77,8 +77,6 @@ Plug 'tomtom/quickfixsigns_vim'
     let g:quickfixsigns_classes = ['marks', 'vcsdiff', 'qfl']
     let g:quickfixsigns#marks#texthl = 'Type'
 
-Plug 'mhinz/vim-grepper'
-    " XXX: config see after/plugin/grepper.vim
 
 " Plug 'inkarkat/vim-mark', { 'branch': 'stable' }
 Plug 't9md/vim-quickhl'
@@ -87,30 +85,56 @@ Plug 't9md/vim-quickhl'
 
 Plug 'axvr/zepl.vim'
 
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'ivalkeen/vim-ctrlp-tjump'
-    let g:ctrlp_working_path_mode = 0
-    let g:ctrlp_dotfiles=0
-    let g:ctrlp_follow_symlinks = 1
-    let g:ctrlp_extensions = ['tag', 'buffertag', 'tjump']
-    let g:ctrlp_map = '<leader>t'
-    let g:ctrlp_max_height = 25
-    let g:ctrlp_switch_buffer = 'Et'
-    let g:ctrlp_buftag_types = {'php': '--language-force=php --php-types=cdfi'}
-    let g:ctrlp_tjump_only_silent = 1
-    noremap <leader>e :CtrlPCurFile<CR>
-    noremap <leader>b :CtrlPBuffer<CR>
-    noremap <leader>] :CtrlPTag<CR>
-    noremap <leader>} :CtrlPBufTag<CR>
-    noremap <leader>s :CtrlPSession<CR>
-    nnoremap <c-]> :CtrlPtjump<cr>
-    " Use ripgrep for ctrlp if available
-    if executable('fd')
-        echom 'using fd'
-        let g:ctrlp_user_command = 'fd -c never "" "%s"'
-        " let g:ctrlp_user_command = "rg --files %s"
-        let g:ctrlp_use_caching = 0
-    endif
+if $VIM =~? 'droidvim'
+    Plug 'mhinz/vim-grepper'
+        " XXX: config see after/plugin/grepper.vim
+
+    Plug 'ctrlpvim/ctrlp.vim'
+    " Plug 'ivalkeen/vim-ctrlp-tjump'
+        let g:ctrlp_working_path_mode = 0
+        let g:ctrlp_dotfiles=0
+        let g:ctrlp_follow_symlinks = 1
+        let g:ctrlp_extensions = ['tag'] ", 'buffertag', 'tjump']
+        let g:ctrlp_map = '<leader>t'
+        let g:ctrlp_max_height = 25
+        let g:ctrlp_switch_buffer = 'Et'
+        let g:ctrlp_buftag_types = {'php': '--language-force=php --php-types=cdfi'}
+        " let g:ctrlp_tjump_only_silent = 1
+        noremap <leader>e :CtrlPCurFile<CR>
+        noremap <leader>b :CtrlPBuffer<CR>
+        noremap <leader>] :CtrlPTag<CR>
+        noremap <leader>} :CtrlPBufTag<CR>
+        " noremap <leader>s :CtrlPSession<CR>
+        " nnoremap <c-]> :CtrlPtjump<cr>
+        " Use ripgrep for ctrlp if available
+        if executable('fd')
+            echom 'using fd'
+            let g:ctrlp_user_command = 'fd -c never "" "%s"'
+            " let g:ctrlp_user_command = "rg --files %s"
+            let g:ctrlp_use_caching = 0
+        endif
+else
+    Plug 'junegunn/fzf'
+    Plug 'junegunn/fzf.vim'
+        noremap <leader>t :Files<CR>
+        noremap <leader>b :Buffers<CR>
+        noremap <leader>] :Tags<cr>
+        noremap <leader>} :BTags<CR>
+        let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
+
+        function! s:build_quickfix_list(lines)
+            call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
+            copen
+            cc
+        endfunction
+
+        let g:fzf_action = {
+        \ 'ctrl-q': function('s:build_quickfix_list'),
+        \ 'ctrl-t': 'tab split',
+        \ 'ctrl-s': 'split',
+        \ 'ctrl-v': 'vsplit' }
+
+endif
 
 Plug 'lifepillar/vim-mucomplete'
     set completeopt=menuone,noinsert
