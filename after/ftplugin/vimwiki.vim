@@ -42,7 +42,9 @@ endif
 " call AddCycleGroup(['TODO', 'T̶O̶D̶O̶', 'XXX', 'X̶X̶X̶', 'DISCUSS', 'D̶I̶S̶C̶U̶S̶S̶', 'ISSUE', 'I̶S̶S̶U̶E̶' ])
 
 " iabbrev <buffer> <expr> %t "*".strftime("%H:%M")."*:"
-" iabbrev <buffer> <expr> %d strftime("%Y-%m-%d")
+iabbrev <buffer> <expr> :d: '*'.strftime("%Y-%m-%d").'*'
+iabbrev <buffer> <expr> :id: ':'.GenerateTimestampedID().':'
+iabbrev <buffer> <expr> :rev: ':REVIEW:'.GenerateTimestampedID().':'
 " iabbrev <buffer> <expr> %j "# *".strftime("%Y-%m-%d")."* Journal\<CR>:journal:REVIEW:\<CR>"
 
 map <leader>r :Rg :REVIEW:<CR>

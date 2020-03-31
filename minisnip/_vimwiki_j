@@ -1,3 +1,0 @@
-# *{{+~strftime("%Y-%m-%d")+}}* Journal
-:journal:REVIEW:
-* {{+~"*".strftime("%H:%M")."*:"+}}{{++}}
