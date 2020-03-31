@@ -6,7 +6,7 @@
 " syn match VimwikiHeader4Date /\v\d{4}-\d\d-\d\d( \d\d:\d\d)?/ contained containedin=VimwikiHeader4
 
 
-syn match xVimwikiDate /\v(\[|\*|^)\d{4}-\d\d-\d\d( \d\d:\d\d)?(\]|\*)?/ containedin=VimwikiHeader1,VimwikiHeader2,VimwikiHeader3,VimwikiHeader4,VimwikiHeader5,VimwikiHeader6
+syn match xVimwikiDate /\v(\*|^)\d{4}-\d\d-\d\d( \d\d:\d\d)?(\*)?/ containedin=VimwikiHeader1,VimwikiHeader2,VimwikiHeader3,VimwikiHeader4,VimwikiHeader5,VimwikiHeader6
 hi link xVimwikiDate Comment
 
 syn match xVimwikiEsitmate /\v\[\d+([\.,]\d+)?[udh]\]/
