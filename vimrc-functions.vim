@@ -73,5 +73,15 @@ endfunction
 
 command! -nargs=* NewNote call VimWikiNewNote(<q-args>)
 
+" see https://github.com/garybernhardt/dotfiles/blob/master/.vimrc#L285
 command! DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
-
+function! RenameFile()
+    let old_name = expand('%')
+    let new_name = input('New file name: ', expand('%'), 'file')
+    if new_name != '' && new_name != old_name
+        exec ':saveas ' . new_name
+        exec ':silent !rm ' . old_name
+        redraw!
+    endif
+endfunction
+command! FRename call RenameFile()
