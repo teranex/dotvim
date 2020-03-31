@@ -16,13 +16,10 @@ are just annoying and vim (almost :)) never crashes so I simply disable them.
 If you don't trust this, you should remove the corresponding lines from the
 vimrc. You have been warned :)!
 
-### Pathogen
-I use Pathogen to manage my plugins. (https://github.com/tpope/vim-pathogen).
-By default vim plugins are stored all together in the .vim folder. When you
-start to use more than just a few plugins this quickly becomes a mess and it
-is nearly impossible to disable or remove a single plugin. With Pathogen you
-create one folder for every plugin in .vim/bundle. This keeps your .vim-folder
-nice and clean.
+### Vim-Plug
+Plugins are managed with vim-plug: <https://github.com/junegunn/vim-plug>
+After cloning this repository run `:PlugInstall` inside Vim or `vim
++PlugInstall` in your shell to install all the plugins
 
 ### host-specific vimrc
 As I use my vim configuration on multiple machines, I like to be able to make
