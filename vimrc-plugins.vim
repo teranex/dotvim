@@ -120,6 +120,8 @@ Plug 'lifepillar/vim-mucomplete'
 Plug 'editorconfig/editorconfig-vim'
     let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
+Plug 'dense-analysis/ale'
+
 " Plug 'vim-scripts/BufOnly.vim'
 "     " Delete all the other buffers with \B
 "     nnoremap <silent> <leader>B :Bonly<CR>:tabonly<CR>
