@@ -11,6 +11,7 @@ set fileformats=unix,dos,mac            " also read mac files correctly, just in
 set nowrap                              " disable wrapping of text
 set number                              " show line numbers by default
 set t_Co=256                            " force the terminal to use 256 colors
+let $TERM='xterm-256colors'
 set showcmd                             " show the current command in the statusline
 set foldlevelstart=99                   " by default, open all folds
 set foldmethod=indent                   " indent fold method by default
