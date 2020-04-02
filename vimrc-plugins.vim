@@ -63,16 +63,6 @@ Plug 'Yggdroot/indentLine'
     let g:indentLine_indentLevel=7
     let g:indentLine_concealcursor = 'nc'
 
-Plug 'scrooloose/syntastic'
-    let g:syntastic_enable_signs=1
-    let g:syntastic_auto_loc_list=1
-    let g:syntastic_loc_list_height=5
-    let g:syntastic_aggregate_errors=1
-    let g:syntastic_python_checkers = ['flake8']
-    let g:syntastic_python_flake8_args='--builtins=_ --max-line-length=100'
-    let g:syntastic_php_phpcs_args="--report=csv --standard=".expand('<sfile>:p:h')."/.vim/misc/phpcs-drupal-ruleset.xml"
-    let g:syntastic_php_phpmd_post_args=expand('<sfile>:p:h')."/.vim/misc/phpmd-ruleset.xml"
-
 Plug 'tomtom/quickfixsigns_vim'
     let g:quickfixsigns_classes = ['marks', 'vcsdiff', 'qfl']
     let g:quickfixsigns#marks#texthl = 'Type'
