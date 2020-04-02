@@ -1,6 +1,3 @@
-" first enable pathogen by sourcing pathogen_init from runtime
-runtime pathogen_init
-
 " first some settings copied from Debian config
 set nocompatible                        " no compatibility with old-skool vi
 set backspace=indent,eol,start          " define behavior of backspace key
