@@ -319,3 +319,18 @@ if &t_Co > 255
     hi VertSplit       ctermfg=244 ctermbg=244   cterm=bold
     hi ColorColumn     ctermbg=234
 endif
+
+let g:fzf_colors =
+    \ { 'fg':    ['fg', 'Normal'],
+    \ 'bg':      ['bg', 'Normal'],
+    \ 'hl':      ['fg', 'Identifier'],
+    \ 'fg+':     ['fg', 'Pmenu', 'CursorColumn', 'Normal'],
+    \ 'bg+':     ['bg', 'Pmenu', 'CursorColumn'],
+    \ 'hl+':     ['fg', 'Statement'],
+    \ 'info':    ['fg', 'PreProc'],
+    \ 'border':  ['fg', 'Ignore'],
+    \ 'prompt':  ['fg', 'Conditional'],
+    \ 'pointer': ['fg', 'Exception'],
+    \ 'marker':  ['fg', 'Keyword'],
+    \ 'spinner': ['fg', 'Label'],
+    \ 'header':  ['fg', 'Comment'] }
