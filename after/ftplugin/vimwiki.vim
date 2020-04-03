@@ -1,5 +1,5 @@
 setlocal wrap
-setlocal nolist
+setlocal list
 setlocal linebreak
 setlocal nocursorcolumn
 " setlocal nocursorline
