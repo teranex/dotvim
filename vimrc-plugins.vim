@@ -111,6 +111,7 @@ else
         noremap <leader>] :Tags<cr>
         noremap <leader>} :BTags<CR>
         let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
+        let $FZF_DEFAULT_COMMAND='fdfind --type f --no-ignore-vcs'
 endif
 
 Plug 'lifepillar/vim-mucomplete'
