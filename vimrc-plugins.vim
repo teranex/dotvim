@@ -112,8 +112,9 @@ else
         noremap <leader>} :BTags<CR>
         let $RIPGREP_CONFIG_PATH=expand('~/.vim/misc/ripgreprc')
         let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
-        if executable('fdfind')
+        if executable('fd')
             let $FZF_DEFAULT_COMMAND='fdfind --type f --no-ignore-vcs'
+            let $FZF_DEFAULT_COMMAND='fd --type f --no-ignore-vcs'
         endif
 endif
 
