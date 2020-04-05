@@ -60,17 +60,23 @@ function! VimWikiNewNote(title)
     else
         let title = a:title
     endif
+
+    let slug = ''
+    if strlen(title) > 0
+        " taken from vim-zettel
+        let slug = substitute(title, " ", "-","g")
+        let slug = tolower(slug)
+        let slug = "-".slug
+    endif
+
     let id = GenerateTimestampedID()
     let id_split = split(id, '-')
     echom id_split
-    " let tags = input("Tags: ", ":REVIEW:")
-    let filename = strftime("%Y-%m-%d-").get(id_split, 1).'.md'
-    " let filename = id.'.md'
+    let filename = strftime("%Y-%m-%d-").get(id_split, 1).slug.'.md'
+
     exec ':edit ~/vimwiki/diary/'.filename
     call append(0, "# *".strftime("%Y-%m-%d %H:%M")."* ".title)
-    " call append(1, tags)
     call append(1, ':REVIEW:'.id.':')
-    " normal O
     normal k
     startinsert!
 endfunction
