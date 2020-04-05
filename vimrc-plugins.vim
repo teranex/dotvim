@@ -104,7 +104,7 @@ if $VIM =~? 'droidvim'
             let g:ctrlp_use_caching = 0
         endif
 else
-    Plug 'junegunn/fzf'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
         noremap <leader>t :Files<CR>
         noremap <leader>b :Buffers<CR>
