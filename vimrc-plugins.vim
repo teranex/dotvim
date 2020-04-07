@@ -5,7 +5,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'vim-airline/vim-airline'
     " XXX: config see after/plugin/airline.vim
 
-Plug 'vimwiki/vimwiki'
+Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
     let g:vimwiki_hl_cb_checked=2
     let g:vimwiki_table_mappings=0
     let g:vimwiki_autowriteall=0 " do not automatically save
