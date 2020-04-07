@@ -126,6 +126,8 @@ Plug 'editorconfig/editorconfig-vim'
     let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 Plug 'dense-analysis/ale'
+    let g:ale_php_phpcs_standard = 'PSR2'
+    let g:ale_php_phpcs_use_global = 1
 
 " Plug 'vim-scripts/BufOnly.vim'
 "     " Delete all the other buffers with \B
