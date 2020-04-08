@@ -25,3 +25,7 @@ hi link xVimwikiTodoRed User1
 
 syntax match xVimwikiTodoDone /\C\%(D̶I̶S̶C̶U̶S̶S̶:\|I̶S̶S̶U̶E̶:\|T̶O̶D̶O̶:\|X̶X̶X̶:\|D̶O̶N̶E̶:\)/
 " hi link xVimwikiTodoDone xVimwikiTodoDone
+
+syntax match xVimwikiFootnote /\C\[\^\w\{-}\]/
+hi link xVimwikiFootnote Character
+
