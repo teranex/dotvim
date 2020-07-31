@@ -70,12 +70,14 @@ function! VimWikiNewNote(title)
     endif
 
     let id = GenerateTimestampedID()
-    let id_split = split(id, '-')
-    echom id_split
-    let filename = strftime("%Y-%m-%d-").get(id_split, 1).slug.'.md'
+    " let id_split = split(id, '-')
+    " echom id_split
+    " let filename = strftime("%Y-%m-%d-").get(id_split, 1).slug.'.md'
+    let filename = id.slug.'.md'
 
     exec ':edit ~/vimwiki/diary/'.filename
-    call append(0, "# *".strftime("%Y-%m-%d %H:%M")."* ".title)
+    " call append(0, "# *".strftime("%Y-%m-%d %H:%M")."* ".title)
+    call append(0, "# *".strftime("%Y-%m-%d")."* ".title)
     call append(1, ':REVIEW:'.id.':')
     normal k
     startinsert!
