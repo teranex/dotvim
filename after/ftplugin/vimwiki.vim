@@ -64,6 +64,9 @@ function! PandocConvert(firstLine, lastLine)
 endfunction
 
 command! -range=% Pandoc call PandocConvert(<line1>, <line2>)
+command! Okular exec '!okular '.expand('%').'&'
+
+command! Trash :Move .trash/
 
 " Copy from default Vimwiki to overwrite with our own version
 " function! VimwikiFoldText()
