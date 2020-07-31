@@ -1,0 +1,4 @@
+#!/bin/sh
+
+rm ~/vimwiki/.vimwiki_tags
+vi ~/vimwiki/index.md +VimwikiRebuildTags! +qa
