@@ -12,7 +12,7 @@ hi link xVimwikiDate Comment
 syn match xVimwikiEsitmate /\v\[\d+([\.,]\d+)?[udh]\]/
 hi link xVimwikiEsitmate VimwikiHeader4
 
-syn match xVimwikiIssueNumber /\v(#\d+|\w+-\d+)/
+syn match xVimwikiIssueNumber /\v(#\d+|[A-Z]+-\d+[^\-])/
 hi link xVimwikiIssueNumber VimwikiHeader1
 
 syn match xVimwikiMainTitle /\v^\%\s.+/
