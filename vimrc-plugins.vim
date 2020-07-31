@@ -64,7 +64,7 @@ Plug 'Yggdroot/indentLine'
     let g:indentLine_color_gui='#31373a'
     let g:indentLine_char='│'
     let g:indentLine_indentLevel=7
-    let g:indentLine_concealcursor = 'nc'
+    let g:indentLine_concealcursor = 'c'
 
 Plug 'tomtom/quickfixsigns_vim'
     let g:quickfixsigns_classes = ['marks', 'vcsdiff', 'qfl']
