@@ -19,6 +19,8 @@ if has('conceal')
     setlocal concealcursor=c
 endif
 
+setlocal iskeyword+=- " add a dash as keyword symbol to allow to jump to my id's such as 20200409-cb90f
+
 setlocal conceallevel=0   " disable conceal
 setlocal dictionary=~/.vim/misc/vimwiki-dict
 
