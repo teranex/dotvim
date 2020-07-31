@@ -54,7 +54,7 @@ Plug 'airblade/vim-rooter'
     let g:rooter_silent_chdir = 1
     let g:rooter_patterns = ['.rootmarker', '.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/']
     " run the rooter plugin after a session is loaded
-    autocmd BufRead,BufNewFile * Rooter
+    " autocmd BufRead,BufNewFile * Rooter
 
 Plug 'michaeljsmith/vim-indent-object'
 
@@ -77,6 +77,16 @@ Plug 't9md/vim-quickhl'
     xmap <leader>m <Plug>(quickhl-manual-this)
 
 Plug 'axvr/zepl.vim'
+
+Plug 'skywind3000/vim-terminal-help'
+    let g:terminal_default_mapping = 0
+    function TerminalToggleWrap()
+        RooterToggle
+        call TerminalToggle()
+        RooterToggle
+    endfunction
+    nnoremap <silent><m-=> :call TerminalToggleWrap()<cr>
+    tnoremap <silent><m-=> <c-\><c-n>:call TerminalToggleWrap()<cr>
 
 if $VIM =~? 'droidvim'
     Plug 'mhinz/vim-grepper'
