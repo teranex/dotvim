@@ -1,0 +1,3 @@
+" remap K to : in normal mode to for more easy access to commandmode on the
+" GPD P2 Max, where the : is hidden behind fn+k
+nnoremap K :
