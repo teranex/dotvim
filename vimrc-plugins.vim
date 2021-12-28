@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'junegunn/goyo.vim'
+" Plug 'junegunn/goyo.vim'
 
 Plug 'vim-airline/vim-airline'
     " XXX: config see after/plugin/airline.vim
@@ -14,6 +14,7 @@ Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
     let g:vimwiki_folding='expr'
     let g:vimwiki_url_maxsave=0
     let g:vimwiki_ext2syntax = {'.md': 'markdown'}
+    let g:vimwiki_listsyms = ' .oOx'
 
     let wiki = {}
     let wiki.path = '~/vimwiki/'
