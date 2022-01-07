@@ -24,8 +24,8 @@ Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
     let wiki.auto_tags = 1
     let g:vimwiki_list = [wiki]
 
-Plug 'michal-h21/vim-zettel'
-    let g:zettel_use_absolute_paths = 1
+" Plug 'michal-h21/vim-zettel'
+    " let g:zettel_use_absolute_paths = 1
 
 Plug 'djoshea/vim-autoread'
 
