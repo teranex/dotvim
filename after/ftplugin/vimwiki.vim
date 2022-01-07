@@ -68,6 +68,15 @@ command! Okular exec '!okular '.expand('%').'&'
 
 command! Trash :Move .trash/
 
+command! Backlinks call BacklinksSearch()
+
+function! BacklinksSearch()
+    let page_match = "(.*/)?".expand('%:t:r').'([\|#].*)?'
+    let link_match = '\[\['.l:page_match.'\]\]|\('.l:page_match.'\)'
+    echo l:link_match
+    exec ":Rg ".l:link_match
+endfunction
+
 " Copy from default Vimwiki to overwrite with our own version
 " function! VimwikiFoldText()
 "   let line = getline(v:foldstart)
