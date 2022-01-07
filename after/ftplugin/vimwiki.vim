@@ -79,9 +79,6 @@ endfunction
 
 command! MissingBacklinks exec ':Rg [^\[\(/]'.expand('%:t:r')
 
-function! MissingBacklinksSearch()
-endfunction
-
 " Copy from default Vimwiki to overwrite with our own version
 " function! VimwikiFoldText()
 "   let line = getline(v:foldstart)
