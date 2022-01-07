@@ -77,17 +77,17 @@ Plug 't9md/vim-quickhl'
     nmap <leader>m <Plug>(quickhl-manual-this)
     xmap <leader>m <Plug>(quickhl-manual-this)
 
-Plug 'axvr/zepl.vim'
+" Plug 'axvr/zepl.vim'
 
-Plug 'skywind3000/vim-terminal-help'
-    let g:terminal_default_mapping = 0
-    function TerminalToggleWrap()
-        RooterToggle
-        call TerminalToggle()
-        RooterToggle
-    endfunction
-    nnoremap <silent><m-=> :call TerminalToggleWrap()<cr>
-    tnoremap <silent><m-=> <c-\><c-n>:call TerminalToggleWrap()<cr>
+" Plug 'skywind3000/vim-terminal-help'
+"     let g:terminal_default_mapping = 0
+"     function TerminalToggleWrap()
+"         RooterToggle
+"         call TerminalToggle()
+"         RooterToggle
+"     endfunction
+"     nnoremap <silent><m-=> :call TerminalToggleWrap()<cr>
+"     tnoremap <silent><m-=> <c-\><c-n>:call TerminalToggleWrap()<cr>
 
 if $VIM =~? 'droidvim'
     Plug 'mhinz/vim-grepper'
