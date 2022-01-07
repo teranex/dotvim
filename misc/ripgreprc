@@ -1,3 +1,4 @@
 --colors=path:fg:176,244,40
 --colors=match:fg:255,61,131
 --colors=line:fg:174,129,255
+--glob=!_templates
