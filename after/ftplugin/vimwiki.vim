@@ -12,7 +12,7 @@ setlocal textwidth=0
 setlocal breakindent
 " setlocal spelllang=en,nl          " check spelling in both English and Dutch by default
 setlocal nospell " disable spell by default
-setlocal foldcolumn=4
+setlocal foldcolumn=0
 setlocal shiftwidth=4
 setlocal tabstop=4
 if has('conceal')
@@ -28,7 +28,7 @@ if $VIM =~? 'droidvim'
     " running on Android in DroidVim on a tiny screen
     setlocal nonumber
     setlocal norelativenumber
-    setlocal foldcolumn=0
+    " setlocal foldcolumn=0
     :QuickfixsignsDisable
 
     " iabbrev <buffer> <expr> %n "# *".strftime("%Y-%m-%d %H:%M")."*\<CR>:REVIEW:<Up>\<End>"
