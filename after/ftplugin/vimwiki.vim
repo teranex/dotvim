@@ -73,7 +73,6 @@ command! Backlinks call BacklinksSearch()
 function! BacklinksSearch()
     let page_match = "(.*/)?".expand('%:t:r').'([\|#].*)?'
     let link_match = '\[\['.l:page_match.'\]\]|\('.l:page_match.'\)'
-    echo l:link_match
     exec ":Rg ".l:link_match
 endfunction
 
