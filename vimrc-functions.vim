@@ -53,7 +53,7 @@ function! GenerateTimestampedID()
     return strftime("%Y%m%d-") . GenerateUniqueID(5)
 endfunction
 
-function! VimWikiNewNote(title)
+function! VimWikiNewNote(path, title)
     set nofoldenable
     if strlen(a:title) == 0
         let title = input("Note title: ")
@@ -75,7 +75,7 @@ function! VimWikiNewNote(title)
     " let filename = strftime("%Y-%m-%d-").get(id_split, 1).slug.'.md'
     let filename = id.slug.'.md'
 
-    exec ':edit ~/vimwiki/diary/'.filename
+    exec ':edit ~/vimwiki/'.a:path.'/'.filename
     " call append(0, "# *".strftime("%Y-%m-%d %H:%M")."* ".title)
     call append(0, "# *".strftime("%Y-%m-%d")."* ".title)
     call append(1, ':REVIEW:'.id.':')
@@ -83,7 +83,9 @@ function! VimWikiNewNote(title)
     startinsert!
 endfunction
 
-command! -nargs=* NewNote call VimWikiNewNote(<q-args>)
+" command! -nargs=* NewNote call VimWikiNewNote('diary', <q-args>)
+command! -nargs=* Note call VimWikiNewNote('notes', <q-args>)
+command! -nargs=* Meeting call VimWikiNewNote('work/meetings', <q-args>)
 
 " see https://github.com/garybernhardt/dotfiles/blob/master/.vimrc#L285
 command! DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
