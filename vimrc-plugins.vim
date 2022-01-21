@@ -57,6 +57,8 @@ Plug 'airblade/vim-rooter'
     " run the rooter plugin after a session is loaded
     " autocmd BufRead,BufNewFile * Rooter
 
+Plug 'airblade/vim-gitgutter'
+
 Plug 'michaeljsmith/vim-indent-object'
 
 Plug 'tomtom/tcomment_vim'
@@ -68,7 +70,7 @@ Plug 'Yggdroot/indentLine'
     let g:indentLine_concealcursor = 'c'
 
 Plug 'tomtom/quickfixsigns_vim'
-    let g:quickfixsigns_classes = ['marks', 'vcsdiff', 'qfl']
+    let g:quickfixsigns_classes = ['marks', 'qfl']
     let g:quickfixsigns#marks#texthl = 'Type'
 
 
