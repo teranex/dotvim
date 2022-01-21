@@ -21,7 +21,7 @@ Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
     let wiki.syntax = 'markdown'
     let wiki.ext = '.md'
     let wiki.automatic_nested_syntaxes = 1
-    let wiki.auto_tags = 1
+    let wiki.auto_tags = 0
     let g:vimwiki_list = [wiki]
 
 " Plug 'michal-h21/vim-zettel'
