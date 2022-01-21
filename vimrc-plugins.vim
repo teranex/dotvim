@@ -150,9 +150,10 @@ Plug 'dense-analysis/ale'
     let g:ale_php_phpcs_standard = 'PSR2'
     let g:ale_php_phpcs_use_global = 1
 
-" Plug 'vim-scripts/BufOnly.vim'
-"     " Delete all the other buffers with \B
-"     nnoremap <silent> <leader>B :Bonly<CR>:tabonly<CR>
+Plug 'SirVer/ultisnips'
+"     let g:UltiSnipsExpandTrigger="<c-j>"
+"     let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"     let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Plug 'ciaranm/detectindent'
 "     let g:detectindent_preferred_expandtab=1
