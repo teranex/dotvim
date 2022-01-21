@@ -11,7 +11,7 @@ Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
     let g:vimwiki_autowriteall=1 " automatically save
     let g:vimwiki_hl_headers=1
     let g:vimwiki_dir_link='index'
-    let g:vimwiki_folding='expr'
+    let g:vimwiki_folding='expr:quick'
     let g:vimwiki_url_maxsave=0
     let g:vimwiki_ext2syntax = {'.md': 'markdown'}
     let g:vimwiki_listsyms = ' .oOx'
