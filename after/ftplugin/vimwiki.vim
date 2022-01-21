@@ -15,6 +15,7 @@ setlocal nospell " disable spell by default
 setlocal foldcolumn=0
 setlocal shiftwidth=4
 setlocal tabstop=4
+setlocal infercase
 if has('conceal')
     setlocal concealcursor=c
 endif
