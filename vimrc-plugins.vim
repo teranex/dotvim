@@ -135,8 +135,13 @@ else
 endif
 
 Plug 'lifepillar/vim-mucomplete'
-    set completeopt=menuone,noinsert
-    let g:mucomplete#enable_auto_at_startup = 0
+    set completeopt=menuone,noselect
+    set shortmess+=c
+    let g:mucomplete#enable_auto_at_startup = 1
+    let g:mucomplete#chains = {
+    \ 'default' : ['path', 'omni', 'keyn', 'dict', 'uspl'],
+    \ 'vimwiki' : ['omni', 'ulti', 'keyn']
+    \ }
 
 Plug 'editorconfig/editorconfig-vim'
     let g:EditorConfig_exclude_patterns = ['fugitive://.*']
