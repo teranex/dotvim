@@ -7,7 +7,7 @@ Plug 'vim-airline/vim-airline'
 
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
     let g:vimwiki_hl_cb_checked=2
-    let g:vimwiki_table_mappings=0
+    let g:vimwiki_key_mappings = { 'table_mappings': 0, }
     let g:vimwiki_autowriteall=1 " automatically save
     let g:vimwiki_hl_headers=1
     let g:vimwiki_dir_link='index'
