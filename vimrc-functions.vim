@@ -2,38 +2,13 @@ function! GenerateUniqueID(length)
     return strpart(sha256(strftime("%Y%m%d%H%M%S")), 0, a:length)
 endfunction
 
+function! GenerateIDFromTimestamp(timestamp)
+    return strftime("%Y%m%d-", a:timestamp) . GenerateUniqueID(5)
+endfunction
+
 function! GenerateTimestampedID()
-    return strftime("%Y%m%d-") . GenerateUniqueID(5)
+    return GenerateIDFromTimestamp(localtime())
 endfunction
-
-function! VimWikiNewNote(path, title)
-    set nofoldenable
-    if strlen(a:title) == 0
-        let title = input("Note title: ")
-    else
-        let title = a:title
-    endif
-
-    let slug = ''
-    if strlen(title) > 0
-        " taken from vim-zettel
-        let slug = substitute(title, " ", "-","g")
-        let slug = tolower(slug)
-        let slug = "-".slug
-    endif
-
-    let id = GenerateTimestampedID()
-    let filename = id.slug.'.md'
-
-    exec ':edit ~/vimwiki/'.a:path.'/'.filename
-    call append(0, "# *".strftime("%Y-%m-%d")."* ".title)
-    call append(1, ':REVIEW:'.id.':')
-    normal k
-    startinsert!
-endfunction
-
-command! -nargs=* Note call VimWikiNewNote('notes', <q-args>)
-command! -nargs=* Meeting call VimWikiNewNote('work/meetings', <q-args>)
 
 " see https://github.com/garybernhardt/dotfiles/blob/master/.vimrc#L285
 command! DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
@@ -48,3 +23,36 @@ function! RenameFile()
     endif
 endfunction
 command! FRename call RenameFile()
+
+" A more logical place to define this function would be
+" after/ftplugin/vimwiki.vim
+" However, that gives an error as the function then gets redefined when the
+" buffer is created and set to filetype `vimwiki`
+function! CreateNoteFromSnippet(snippet, path, title, timestamp)
+    " taken from vim-zettel
+    let slug = substitute(a:title, " ", "-","g")
+    let slug = tolower(slug)
+    let slug = "-".slug
+
+    let id = GenerateIDFromTimestamp(a:timestamp)
+    let filename = id.slug.'.md'
+
+    let g:vwsnip_id = id
+    let g:vwsnip_title = a:title
+    let g:vwsnip_date = strftime("%Y-%m-%d", a:timestamp)
+
+    exec ':edit ~/vimwiki/'a:path.'/'.filename
+    exec "normal a".a:snippet."\<C-R>=UltiSnips#ExpandSnippet()\<CR>"
+    startinsert!
+
+    unlet g:vwsnip_id g:vwsnip_title g:vwsnip_date
+endfunction
+
+function! AskDateForNote()
+    let date = input("date> ", strftime("%Y-%m-%d"))
+    return strptime("%Y-%m-%d", date)
+endfunction
+
+command! -nargs=* Meeting call CreateNoteFromSnippet('__meeting', 'work/meetings', <q-args>, AskDateForNote())
+command! -nargs=* Note call CreateNoteFromSnippet('__note', 'notes', <q-args>, localtime())
+command! -nargs=* WorkNote call CreateNoteFromSnippet('__note', 'work', <q-args>, localtime())

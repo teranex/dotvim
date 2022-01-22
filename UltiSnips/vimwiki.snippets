@@ -1,0 +1,54 @@
+snippet today "Today"
+*`!v strftime("%Y-%m-%d")`* ${0}
+endsnippet
+
+snippet yesterday "Yesterday"
+*`!v strftime("%Y-%m-%d", localtime() - 24*60*60)`* ${0}
+endsnippet
+
+snippet tomorrow "Tomorrow"
+*`!v strftime("%Y-%m-%d", localtime() + 24*60*60)`* ${0}
+endsnippet
+
+snippet review "Review"
+:REVIEW:`!v GenerateTimestampedID()`:${0}
+endsnippet
+
+snippet id "ID"
+:`!v GenerateTimestampedID()`:${0}
+endsnippet
+
+snippet diary "Diary"
+*`!v expand('%:t:r')`*
+
+# Log
+
+# Journal
+
+# Meetings
+${0}
+
+endsnippet
+
+snippet __meeting "Meeting"
+# *`!v g:vwsnip_date`* `!v g:vwsnip_title`
+:REVIEW:`!v g:vwsnip_id`:${0}
+
+## Voorbereiding
+
+## Aanwezig
+
+## Meeting
+
+endsnippet
+
+snippet __note "Note"
+# *`!v g:vwsnip_date`* `!v g:vwsnip_title`
+:REVIEW:`!v g:vwsnip_id`:${0}
+
+endsnippet
+
+snippet todo "Todo"
+[ ] TODO: ${0}
+endsnippet
+

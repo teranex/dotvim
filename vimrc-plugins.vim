@@ -102,6 +102,7 @@ Plug 'dense-analysis/ale'
     let g:ale_php_phpcs_use_global = 1
 
 Plug 'SirVer/ultisnips'
+    let g:UltiSnipsEditSplit='context'
 "     let g:UltiSnipsExpandTrigger="<c-j>"
 "     let g:UltiSnipsJumpForwardTrigger="<c-b>"
 "     let g:UltiSnipsJumpBackwardTrigger="<c-z>"
