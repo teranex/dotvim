@@ -10,6 +10,10 @@ snippet tomorrow "Tomorrow"
 *`!v strftime("%Y-%m-%d", localtime() + 24*60*60)`* ${0}
 endsnippet
 
+snippet time "Time"
+`!v strftime("%H:%M")` ${0}
+endsnippet
+
 snippet review "Review"
 :REVIEW:`!v GenerateTimestampedID()`:${0}
 endsnippet
