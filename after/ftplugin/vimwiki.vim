@@ -12,25 +12,14 @@ setlocal foldcolumn=0
 setlocal shiftwidth=4
 setlocal tabstop=4
 setlocal infercase
+setlocal iskeyword+=- " add a dash as keyword symbol to allow to jump to my id's such as 20200409-cb90f
+setlocal conceallevel=0   " disable conceal
+setlocal tags=.vimwiki_tags
 if has('conceal')
     setlocal concealcursor=c
 endif
 
-setlocal iskeyword+=- " add a dash as keyword symbol to allow to jump to my id's such as 20200409-cb90f
-
-setlocal conceallevel=0   " disable conceal
-setlocal dictionary=~/.vim/misc/vimwiki-dict
-setlocal tags=.vimwiki_tags
-
 " call AddCycleGroup(['TODO', 'T̶O̶D̶O̶', 'XXX', 'X̶X̶X̶', 'DISCUSS', 'D̶I̶S̶C̶U̶S̶S̶', 'ISSUE', 'I̶S̶S̶U̶E̶' ])
-
-iabbrev <buffer> <expr> :d: '*'.strftime("%y-%m-%d").'*'
-iabbrev <buffer> <expr> insert-date '*'.strftime("%Y-%m-%d").'*'
-iabbrev <buffer> <expr> :id: ':'.GenerateTimestampedID().':'
-iabbrev <buffer> <expr> insert-id ':'.GenerateTimestampedID().':'
-iabbrev <buffer> <expr> :rev: ':REVIEW:'.GenerateTimestampedID().':'
-iabbrev <buffer> <expr> insert-review ':REVIEW:'.GenerateTimestampedID().':'
-iabbrev <buffer> <expr> insert-diary "*".strftime("%Y-%m-%d")."*\<CR>:REVIEW:\<CR>\<CR>"
 
 map <leader>r :Rg :REVIEW:<CR>
 
