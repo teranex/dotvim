@@ -41,7 +41,7 @@ function! CreateNoteFromSnippet(snippet, path, title, timestamp)
     let g:vwsnip_title = a:title
     let g:vwsnip_date = strftime("%Y-%m-%d", a:timestamp)
 
-    exec ':edit ~/vimwiki/'a:path.'/'.filename
+    exec ':edit ~/vimwiki/'.a:path.'/'.filename
     exec "normal a".a:snippet."\<C-R>=UltiSnips#ExpandSnippet()\<CR>"
     startinsert!
 
