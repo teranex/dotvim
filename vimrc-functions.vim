@@ -53,6 +53,17 @@ function! AskDateForNote()
     return strptime("%Y-%m-%d", date)
 endfunction
 
+function! CreateDiaryFromSnippet(diary_date)
+    let diary_file = '~/vimwiki/diary/'.a:diary_date.'.md'
+
+    exec ':edit '.diary_file
+    if getfsize(expand(diary_file)) <= 0
+        exec "normal adiary\<C-R>=UltiSnips#ExpandSnippet()\<CR>"
+        startinsert!
+    endif
+endfunction
+
 command! -nargs=* Meeting call CreateNoteFromSnippet('__meeting', 'work/meetings', <q-args>, AskDateForNote())
 command! -nargs=* Note call CreateNoteFromSnippet('__note', 'notes', <q-args>, localtime())
 command! -nargs=* WorkNote call CreateNoteFromSnippet('__note', 'work', <q-args>, localtime())
+command! Diary call CreateDiaryFromSnippet(input("date> ", strftime("%Y-%m-%d")))
