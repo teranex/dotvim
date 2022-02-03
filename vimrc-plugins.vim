@@ -22,6 +22,8 @@ Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
     let wiki.auto_tags = 0
     let g:vimwiki_list = [wiki]
 
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
 Plug 'djoshea/vim-autoread'
 
 Plug 'vim-scripts/AutoTag'
