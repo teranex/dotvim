@@ -49,3 +49,5 @@ endfunction
 
 command! MissingBacklinks exec ':Rg [^\[\(/]'.expand('%:t:r')
 
+" au BufWinLeave * mkview
+" au BufWinEnter * silent loadview
