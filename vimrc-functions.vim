@@ -30,7 +30,7 @@ command! FRename call RenameFile()
 " buffer is created and set to filetype `vimwiki`
 function! CreateNoteFromSnippet(snippet, path, title, timestamp)
     " taken from vim-zettel
-    let slug = substitute(a:title, " ", "-","g")
+    let slug = substitute(a:title, "[ /:]", "-","g")
     let slug = tolower(slug)
     let slug = "-".slug
 
