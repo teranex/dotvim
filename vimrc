@@ -11,6 +11,10 @@ set fileformats=unix,dos,mac            " also read mac files correctly, just in
 set nowrap                              " disable wrapping of text
 set number                              " show line numbers by default
 set t_Co=256                            " force the terminal to use 256 colors
+let &t_ut=''                            " Set background color erase, so Vim works correctly in Kitty
+let &t_SI = "\<Esc>[6 q"                " enable different cursors in terminal https://github.com/kovidgoyal/kitty/issues/2045#issuecomment-714295572
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[2 q"
 set termguicolors
 let $TERM='xterm-256colors'
 set showcmd                             " show the current command in the statusline
