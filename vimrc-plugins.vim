@@ -83,11 +83,15 @@ Plug 'junegunn/fzf.vim'
     noremap <leader>] :Tags<cr>
     noremap <leader>} :BTags<CR>
     let $RIPGREP_CONFIG_PATH=expand('~/.vim/misc/ripgreprc')
-    let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
+    let $FZF_DEFAULT_OPTS = "--bind ctrl-a:select-all"
     if executable('fd')
-        let $FZF_DEFAULT_COMMAND='fdfind --type f --no-ignore-vcs'
+        " let $FZF_DEFAULT_COMMAND='fdfind --type f --no-ignore-vcs'
         let $FZF_DEFAULT_COMMAND='fd --type f --no-ignore-vcs'
     endif
+" Plug 'kg8m/vim-fzf-tjump'
+"
+" Plug 'dyng/ctrlsf.vim'
+"     let g:ctrlsf_auto_focus = { "at": "start" }
 
 Plug 'lifepillar/vim-mucomplete'
     set completeopt=menuone,noselect
