@@ -1,0 +1,8 @@
+" vimrc init file to run vim on Termux
+" instead of symlinking .vimrc -> dotvim/vimrc
+" create a symlink .vimrc -> dotvim/termux-vimrc
+" inside Termux
+
+let mapleader=" "
+
+source ~/.vim/vimrc
