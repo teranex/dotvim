@@ -7,7 +7,7 @@ setlocal foldlevel=99
 setlocal textwidth=0
 setlocal breakindent
 setlocal spelllang=en,nl          " check spelling in both English and Dutch by default
-setlocal nospell " disable spell by default
+setlocal spell " enable spell by default
 setlocal foldcolumn=0
 setlocal shiftwidth=4
 setlocal tabstop=4
