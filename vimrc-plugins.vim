@@ -115,5 +115,7 @@ Plug 'SirVer/ultisnips'
 "     let g:UltiSnipsJumpForwardTrigger="<c-b>"
 "     let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+Plug 'hashivim/vim-terraform'
+
 call plug#end()
 
