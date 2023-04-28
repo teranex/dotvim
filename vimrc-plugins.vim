@@ -24,7 +24,7 @@ Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
-Plug 'mracos/mermaid.vim'
+" Plug 'mracos/mermaid.vim'
 
 Plug 'djoshea/vim-autoread'
 
