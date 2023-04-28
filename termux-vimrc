@@ -4,5 +4,6 @@
 " inside Termux
 
 let mapleader=" "
+nnoremap <leader>x :qa<CR>
 
 source ~/.vim/vimrc
