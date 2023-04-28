@@ -22,6 +22,7 @@ endif
 " call AddCycleGroup(['TODO', 'T̶O̶D̶O̶', 'XXX', 'X̶X̶X̶', 'DISCUSS', 'D̶I̶S̶C̶U̶S̶S̶', 'ISSUE', 'I̶S̶S̶U̶E̶' ])
 
 map <leader>r :Rg :REVIEW:<CR>
+map <leader>l :set nohlsearch<CR><leader>w<leader>wgg/# Journal<CR>/\v^$<CR>Otime<tab>
 
 map <c-x> <Plug>VimwikiToggleListItem
 
