@@ -67,3 +67,23 @@ command! -nargs=* Meeting call CreateNoteFromSnippet('__meeting', 'work/meetings
 command! -nargs=* Note call CreateNoteFromSnippet('__note', 'notes', <q-args>, localtime())
 command! -nargs=* WorkNote call CreateNoteFromSnippet('__note', 'work', <q-args>, localtime())
 command! Diary call CreateDiaryFromSnippet(input("date> ", strftime("%Y-%m-%d")))
+
+function! AppendLogEntry()
+    " open today's diary file
+    " norm <leader>w<leader>w
+    let diary_file = '~/vimwiki/diary/'.strftime("%Y-%m-%d").'.md'
+    exec ':edit '.diary_file
+    " move to the top so we can correctly search
+    call cursor(1, 1)
+    " search Journal heading and last line
+    call search("# Journal")
+    let last_line = search("^$")
+    " insert new line starting with * and current time
+    call append(l:last_line-1, "* ".strftime("%H:%M")." ")
+    " move cursor to end of the newly added line
+    call cursor(l:last_line, 20)
+    startinsert
+endfunction
+
+command! VimwikiLogEntry call AppendLogEntry()
+
