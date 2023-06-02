@@ -117,5 +117,10 @@ Plug 'SirVer/ultisnips'
 
 Plug 'hashivim/vim-terraform'
 
+Plug 'TaDaa/vimade'
+    let g:vimade = {}
+    let g:vimade.fadelevel = 0.6
+    let g:vimade.usecursorhold=1
+
 call plug#end()
 
