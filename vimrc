@@ -78,6 +78,7 @@ if v:version > '702'
     set relativenumber                  " use relative line numbering
     " set nonumber                        " and disable default line numbering
 endif
+set signcolumn=number                   " merge signs-gutter and numbers-bar
 set cryptmethod=blowfish2               " use stronger blowfish encryption algorithm
 set updatetime=500                      " wait this many milliseconds before firing the CursorHold autocmd (and write swap files)
 
