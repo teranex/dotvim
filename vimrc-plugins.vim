@@ -117,6 +117,8 @@ Plug 'SirVer/ultisnips'
 
 Plug 'hashivim/vim-terraform'
 
+Plug 'mtdl9/vim-log-highlighting'
+
 Plug 'TaDaa/vimade'
     let g:vimade = {}
     let g:vimade.fadelevel = 0.6
