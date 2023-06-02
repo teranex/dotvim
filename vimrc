@@ -70,14 +70,9 @@ set noswapfile                          " disable swap files, most of the time t
 set nobackup                            " don't make a (permanent) backup when saving files
 set writebackup                         " make a (temporary) backup while saving files
 set backupcopy=yes                      " make a copy and overwrite the original file
-if v:version > '702'
-    " if $VIM !~? 'droidvim'               " check that we are not running on Android (VimTouch)
-    set undofile                        " save undo history to an external file
-    " endif
-    set undodir=~/.vimundo,.,/tmp       " where to save undo history files
-    set relativenumber                  " use relative line numbering
-    " set nonumber                        " and disable default line numbering
-endif
+set undofile                        " save undo history to an external file
+set undodir=~/.vimundo,.,/tmp       " where to save undo history files
+set relativenumber                  " use relative line numbering
 set signcolumn=number                   " merge signs-gutter and numbers-bar
 set cryptmethod=blowfish2               " use stronger blowfish encryption algorithm
 set updatetime=500                      " wait this many milliseconds before firing the CursorHold autocmd (and write swap files)
