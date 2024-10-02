@@ -73,7 +73,7 @@ set backupcopy=yes                      " make a copy and overwrite the original
 set undofile                        " save undo history to an external file
 set undodir=~/.vimundo,.,/tmp       " where to save undo history files
 set relativenumber                  " use relative line numbering
-set signcolumn=number                   " merge signs-gutter and numbers-bar
+" set signcolumn=number                   " merge signs-gutter and numbers-bar
 set cryptmethod=blowfish2               " use stronger blowfish encryption algorithm
 set updatetime=500                      " wait this many milliseconds before firing the CursorHold autocmd (and write swap files)
 
