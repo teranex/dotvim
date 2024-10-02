@@ -44,12 +44,13 @@ command! Trash :Move .trash/
 command! Backlinks call BacklinksSearch()
 
 function! BacklinksSearch()
-    let page_match = "(.*/)?".expand('%:t:r').'([\|#].*)?'
+    let page_match = ".*/?".expand('%:t:r').'([\|#].*)?'
     let link_match = '\[\['.l:page_match.'\]\]|\('.l:page_match.'\)'
+    echom l:link_match
     exec ":Rg ".l:link_match
 endfunction
 
-command! MissingBacklinks exec ':Rg [^\[\(/]'.expand('%:t:r')
+command! MissingBacklinks exec ':Rg [^\[\(/]'.tolower(expand('%:t:r'))
 
 function! DoSearchWithKeyword(keyword, ...)
     let search = join(a:000, ' ')
