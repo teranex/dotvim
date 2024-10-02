@@ -105,9 +105,9 @@ Plug 'lifepillar/vim-mucomplete'
 Plug 'editorconfig/editorconfig-vim'
     let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
-Plug 'dense-analysis/ale'
-    let g:ale_php_phpcs_standard = 'PSR2'
-    let g:ale_php_phpcs_use_global = 1
+" Plug 'dense-analysis/ale'
+"     let g:ale_php_phpcs_standard = 'PSR2'
+"     let g:ale_php_phpcs_use_global = 1
 
 Plug 'SirVer/ultisnips'
     let g:UltiSnipsEditSplit='context'
