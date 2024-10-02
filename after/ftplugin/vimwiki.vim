@@ -51,5 +51,13 @@ endfunction
 
 command! MissingBacklinks exec ':Rg [^\[\(/]'.expand('%:t:r')
 
+function! DoSearchWithKeyword(keyword, ...)
+    let search = join(a:000, ' ')
+    let cmd = 'rg --column --line-number --no-heading --color=always -i '.fzf#shellescape(l:search).' $(echo "$(fd '.a:keyword.';rg -l '':'.a:keyword.':'')" | sort | uniq)'
+    call fzf#vim#grep(l:cmd, fzf#vim#with_preview())
+endfunction
+
+command! -nargs=+ SearchWithKeyword call DoSearchWithKeyword(<f-args>)
+
 " au BufWinLeave * mkview
 " au BufWinEnter * silent loadview
