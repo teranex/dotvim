@@ -280,6 +280,7 @@ hi link VimwikiCellSeparator Ignore
 hi link VimwikiMarkers Comment
 hi link VimwikiDelText Comment
 hi link VimwikiCode Float
+hi VimwikiMarkTag guifg=#66D9EF guibg=#1b4a68 ctermfg=16  ctermbg=208 cterm=bold
 
 hi VimwikiTag       guifg=#66D9EF gui=italic,underline ctermfg=81 cterm=underline
 hi VimwikiDate      guifg=#F92672 ctermfg=161
