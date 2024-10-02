@@ -99,3 +99,21 @@ endfunction
 
 command! VimwikiLogEntry call AppendLogEntry()
 
+function! ParseVimwikiURL(url)
+    " strip quote when it was passed as an argument from desktop entry
+    let url = substitute(a:url, "'", '', 'g')
+    let url = substitute(url, '^vimwiki://', '', '')
+    let wiki_dir = $HOME . '/vimwiki/'
+
+    if match(url, '^tag=') >= 0
+      " exec 'cd '.l:wiki_dir
+      exec 'set tags='.wiki_dir.'.vimwiki_tags'
+      let tag = substitute(url, '^tag=', '', '')
+      execute 'tag ' . tag
+    else
+      let file_path = wiki_dir . url . '.md'
+      execute 'e ' . file_path
+    endif
+endfunction
+
+command! -nargs=1 OpenVimwikiURL call ParseVimwikiURL(<q-args>)
