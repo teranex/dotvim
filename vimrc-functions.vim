@@ -28,7 +28,7 @@ command! FRename call RenameFile()
 " after/ftplugin/vimwiki.vim
 " However, that gives an error as the function then gets redefined when the
 " buffer is created and set to filetype `vimwiki`
-function! CreateNoteFromSnippet(snippet, path, title, timestamp)
+function! CreateNoteFromSnippet(snippet, path, title, timestamp, diary_header)
     " taken from vim-zettel
     let slug = substitute(a:title, "[ /:]", "-","g")
     let slug = tolower(slug)
@@ -40,6 +40,18 @@ function! CreateNoteFromSnippet(snippet, path, title, timestamp)
     let g:vwsnip_id = id
     let g:vwsnip_title = a:title
     let g:vwsnip_date = strftime("%Y-%m-%d", a:timestamp)
+
+    if a:diary_header != ''
+        let diary_file = '~/vimwiki/diary/'.strftime("%Y-%m-%d").'.md'
+        exec ':edit '.diary_file
+        " move to the top so we can correctly search
+        call cursor(1, 1)
+        " search Journal heading and last line
+        call search("# ".a:diary_header)
+        let last_line = search("^$")
+        " insert new line starting with * and current time
+        call append(l:last_line-1, "* [[/".a:path.'/'.id.slug."]]")
+    endif
 
     exec ':edit ~/vimwiki/'.a:path.'/'.filename
     exec "normal a".a:snippet."\<C-R>=UltiSnips#ExpandSnippet()\<CR>"
@@ -63,9 +75,9 @@ function! CreateDiaryFromSnippet(diary_date)
     endif
 endfunction
 
-command! -nargs=* Meeting call CreateNoteFromSnippet('__meeting', 'work/meetings', <q-args>, AskDateForNote())
-command! -nargs=* Note call CreateNoteFromSnippet('__note', 'notes', <q-args>, localtime())
-command! -nargs=* WorkNote call CreateNoteFromSnippet('__note', 'work', <q-args>, localtime())
+command! -nargs=* Meeting call CreateNoteFromSnippet('__meeting', 'work/meetings', <q-args>, AskDateForNote(), 'Meetings')
+command! -nargs=* Note call CreateNoteFromSnippet('__note', 'notes', <q-args>, localtime(), '')
+command! -nargs=* WorkNote call CreateNoteFromSnippet('__note', 'work', <q-args>, localtime(), '')
 command! Diary call CreateDiaryFromSnippet(input("date> ", strftime("%Y-%m-%d")))
 
 function! AppendLogEntry()
