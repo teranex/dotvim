@@ -30,6 +30,8 @@ Plug 'djoshea/vim-autoread'
 
 Plug 'vim-scripts/AutoTag'
 
+Plug 'junegunn/goyo.vim'
+
 Plug 'rhysd/clever-f.vim'
     let g:clever_f_across_no_line=1
     let g:clever_f_timeout_ms=1
