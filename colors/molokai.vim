@@ -138,10 +138,10 @@ end
 "
 if &t_Co > 255
    if s:molokai_original == 1
-      hi Normal                   ctermbg=234
+      hi Normal                   ctermbg=234 cterm=none
       hi CursorLine               ctermbg=235   cterm=none
    else
-      hi Normal       ctermfg=252 ctermbg=233
+      hi Normal       ctermfg=252 ctermbg=233 cterm=none
       hi CursorLine               ctermbg=234   cterm=none
    endif
    hi Boolean         ctermfg=135
@@ -250,7 +250,7 @@ hi Cursor          gui=reverse ctermfg=16  ctermbg=253
 hi SpecialKey      guifg=#66D9EF               gui=none
 hi SpecialKey      guifg=#888A85               gui=none
 hi DiffText                      guibg=#080808 gui=bold
-hi CursorLineNr    guifg=#232526 guibg=#465457 ctermfg=234 ctermbg=250
+hi CursorLineNr    guifg=#232526 guibg=#465457 ctermfg=234 ctermbg=250 cterm=none
 hi Conceal         guifg=#31373a ctermfg=235
 " hi Folded           ctermfg=59
 
@@ -282,11 +282,11 @@ hi link VimwikiDelText Comment
 hi link VimwikiCode Float
 hi VimwikiMarkTag guifg=#66D9EF guibg=#1b4a68 ctermfg=16  ctermbg=208 cterm=bold
 
-hi VimwikiTag       guifg=#66D9EF gui=italic,underline ctermfg=81 cterm=underline
+hi VimwikiTag       guifg=#66D9EF gui=italic,underline ctermfg=81 cterm=underline,italic
 hi VimwikiDate      guifg=#F92672 ctermfg=161
 hi xVimwikiMainTitle           guifg=#E6DB74 ctermfg=229 gui=italic,bold,underline
 hi xVimwikiTodoDone guifg=#A6E22E guibg=#31373a gui=bold
-hi xVimwikiDate guifg=#F8F8F2 guibg=#465457 gui=italic
+hi xVimwikiDate guifg=#F8F8F2 guibg=#465457 gui=italic cterm=italic
 " hi VimwikiHeader2Date  guifg=#A6E22E gui=italic ctermfg=144
 " hi link VimwikiHeader2Date Comment
 " hi VimwikiHeader3Date  guifg=#66D9EF gui=italic ctermfg=144
@@ -316,7 +316,8 @@ if &t_Co > 255
     hi ErrorMsg        ctermfg=red ctermbg=16    cterm=bold
     hi NonText         ctermfg=59
     " hi clear SpellBad
-    hi SpellBad        cterm=bold ctermbg=52
+    hi SpellBad        cterm=underline ctermbg=NONE guisp=#FF0000
+    hi SpellCap        guisp=#7070F0 cterm=underline ctermbg=NONE
     hi VertSplit       ctermfg=244 ctermbg=244   cterm=bold
     hi ColorColumn     ctermbg=234
 endif
