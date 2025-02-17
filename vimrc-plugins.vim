@@ -95,6 +95,8 @@ Plug 'junegunn/fzf.vim'
 " Plug 'dyng/ctrlsf.vim'
 "     let g:ctrlsf_auto_focus = { "at": "start" }
 
+Plug 'nanotee/zoxide.vim'
+
 Plug 'lifepillar/vim-mucomplete'
     set completeopt=menuone,noselect
     set shortmess+=c
