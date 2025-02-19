@@ -75,7 +75,7 @@ function! CreateDiaryFromSnippet(diary_date)
     endif
 endfunction
 
-command! -nargs=* Meeting call CreateNoteFromSnippet('__meeting', 'work/meetings', <q-args>, AskDateForNote(), 'Meetings')
+command! -nargs=* Meeting call CreateNoteFromSnippet('__meeting', 'work', <q-args>, AskDateForNote(), 'Meetings')
 command! -nargs=* Note call CreateNoteFromSnippet('__note', 'notes', <q-args>, localtime(), '')
 command! -nargs=* WorkNote call CreateNoteFromSnippet('__note', 'work', <q-args>, localtime(), '')
 command! Diary call CreateDiaryFromSnippet(input("date> ", strftime("%Y-%m-%d")))
