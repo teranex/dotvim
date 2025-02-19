@@ -42,8 +42,11 @@ function! CreateNoteFromSnippet(snippet, path, title, timestamp, diary_header)
     let g:vwsnip_date = strftime("%Y-%m-%d", a:timestamp)
 
     if a:diary_header != ''
-        let diary_file = '~/vimwiki/diary/'.strftime("%Y-%m-%d").'.md'
+        let diary_file = '~/vimwiki/diary/'.g:vwsnip_date.'.md'
         exec ':edit '.diary_file
+        if getfsize(expand(diary_file)) <= 0 " if the file is still empty, expand the diary template
+            call CreateDiaryFromSnippet(g:vwsnip_date)
+        endif
         " move to the top so we can correctly search
         call cursor(1, 1)
         " search Journal heading and last line
