@@ -22,7 +22,7 @@ if has("gui_running")
         set guifont=Consolas:h10:cANSI
     else
         " set guifont=Hack
-        let &guifont="0xProto 10"
+        let &guifont="0xProto Nerd Font 10"
     endif
 endif
 
