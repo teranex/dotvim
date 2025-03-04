@@ -15,6 +15,10 @@ let &t_ut=''                            " Set background color erase, so Vim wor
 let &t_SI = "\<Esc>[6 q"                " enable different cursors in terminal https://github.com/kovidgoyal/kitty/issues/2045#issuecomment-714295572
 let &t_SR = "\<Esc>[4 q"
 let &t_EI = "\<Esc>[2 q"
+" let &t_Cs = "\e[60m"
+" let &t_Ce = "\e[24m"
+let &t_Cs = "\e[4:3m"
+let &t_Ce = "\e[4:0m"
 set termguicolors
 let $TERM='xterm-256colors'
 set showcmd                             " show the current command in the statusline

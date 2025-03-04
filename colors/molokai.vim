@@ -316,8 +316,8 @@ if &t_Co > 255
     hi ErrorMsg        ctermfg=red ctermbg=16    cterm=bold
     hi NonText         ctermfg=59
     " hi clear SpellBad
-    hi SpellBad        cterm=underline ctermbg=NONE guisp=#FF0000
-    hi SpellCap        guisp=#7070F0 cterm=underline ctermbg=NONE
+    hi SpellBad        cterm=undercurl term=underline ctermbg=NONE guisp=#FF0000
+    hi SpellCap        guisp=#7070F0 cterm=undercurl term=underline ctermbg=NONE
     hi VertSplit       ctermfg=244 ctermbg=244   cterm=bold
     hi ColorColumn     ctermbg=234
 endif
@@ -336,3 +336,4 @@ let g:fzf_colors =
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
     \ 'header':  ['fg', 'Comment'] }
+
