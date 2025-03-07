@@ -21,7 +21,6 @@ if has("gui_running")
     if has("win32") || has("win64")
         set guifont=Consolas:h10:cANSI
     else
-        set guifont=Hack
         " set guifont=Hack
         let &guifont="0xProto Nerd Font Mono 10"
     endif
