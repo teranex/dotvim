@@ -1,0 +1,3 @@
+#!/bin/sh
+
+find /home/jeroen/.vimundo -type f -mtime +90 -delete
