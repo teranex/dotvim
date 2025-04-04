@@ -18,6 +18,8 @@ if has("gui_running")
     " set showtabline=2
     set showtabline=1
 
+    set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
+
     if has("win32") || has("win64")
         set guifont=Consolas:h10:cANSI
     else
